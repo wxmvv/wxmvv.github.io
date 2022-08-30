@@ -6,7 +6,7 @@
   <link href="https://wxm546.github.io/atom.xml" rel="self"/>
   
   <link href="https://wxm546.github.io/"/>
-  <updated>2020-11-03T11:05:43.000Z</updated>
+  <updated>2022-08-30T11:03:41.586Z</updated>
   <id>https://wxm546.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://wxm546.github.io/2020/11/03/%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2hexo/"/>
     <id>https://wxm546.github.io/2020/11/03/%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2hexo/</id>
     <published>2020-11-03T10:47:39.000Z</published>
-    <updated>2020-11-03T11:05:43.000Z</updated>
+    <updated>2022-08-30T11:03:41.586Z</updated>
     
     
       
@@ -48,7 +48,7 @@
     <link href="https://wxm546.github.io/2018/12/25/%E9%A9%AC%E5%8F%8B%E5%8F%8B-%E7%88%B1%E7%9A%84%E7%A4%BC%E8%B5%9E/"/>
     <id>https://wxm546.github.io/2018/12/25/%E9%A9%AC%E5%8F%8B%E5%8F%8B-%E7%88%B1%E7%9A%84%E7%A4%BC%E8%B5%9E/</id>
     <published>2018-12-24T16:00:00.000Z</published>
-    <updated>2020-10-30T08:02:42.000Z</updated>
+    <updated>2022-08-30T11:00:59.298Z</updated>
     
     
       
@@ -73,23 +73,17 @@
     <link href="https://wxm546.github.io/2018/06/24/markdown%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
     <id>https://wxm546.github.io/2018/06/24/markdown%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</id>
     <published>2018-06-23T16:00:00.000Z</published>
-    <updated>2020-10-30T08:08:13.000Z</updated>
+    <updated>2022-08-30T11:03:08.315Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h2&gt;&lt;h3 id=&quot;图片&quot;&gt;&lt;a href=&quot;#图片&quot; class=&quot;headerlink&quot; title=&quot;图片&quot;&gt;&lt;/a&gt;图片&lt;/h3&gt;&lt;p&gt;&lt;code&gt;![备注](https://test.com/test.jpg)&lt;/code&gt;&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h1&gt;&lt;h3 id=&quot;图片&quot;&gt;&lt;a href=&quot;#图片&quot; class=&quot;headerlink&quot; title=&quot;图片&quot;&gt;&lt;/a&gt;图片&lt;/h3&gt;&lt;p&gt;&lt;code&gt;![备注](https://test.com/test.jpg)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn.pixabay.com/photo/2017/12/26/04/01/bird-3039692_640.jpg&quot; alt=&quot;备注&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h3&gt;&lt;p&gt;1 ~ 6 个 &lt;code&gt;#&lt;/code&gt; 号加空格开头：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 这是 H1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;###### 这是 H6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;字体&quot;&gt;&lt;a href=&quot;#字体&quot; class=&quot;headerlink&quot; title=&quot;字体&quot;&gt;&lt;/a&gt;字体&lt;/h3&gt;&lt;p&gt;&lt;code&gt;**加粗**&lt;/code&gt;, &lt;strong&gt;加粗&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;*强调*&lt;/code&gt;, &lt;em&gt;强调&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;~~删除线~~&lt;/code&gt;, &lt;del&gt;删除线&lt;/del&gt;&lt;/p&gt;
-&lt;h3 id=&quot;引用&quot;&gt;&lt;a href=&quot;#引用&quot; class=&quot;headerlink&quot; title=&quot;引用&quot;&gt;&lt;/a&gt;引用&lt;/h3&gt;&lt;p&gt;右尖括号&lt;code&gt;&amp;gt;&lt;/code&gt;开头，引用一段话：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;右尖括号 &amp;gt; 表示引用。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h3&gt;&lt;p&gt;邮箱: &lt;a href=&quot;mailto:&amp;#120;&amp;#97;&amp;#x70;&amp;#x70;&amp;#x62;&amp;#x6f;&amp;#120;&amp;#64;&amp;#x67;&amp;#x6d;&amp;#97;&amp;#105;&amp;#x6c;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#120;&amp;#97;&amp;#x70;&amp;#x70;&amp;#x62;&amp;#x6f;&amp;#120;&amp;#64;&amp;#x67;&amp;#x6d;&amp;#97;&amp;#105;&amp;#x6c;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&lt;/a&gt;.&lt;br&gt;链接: &lt;a href=&quot;http://lessfun.com/app&quot;&gt;http://lessfun.com/app&lt;/a&gt;.&lt;br&gt;链接: &lt;a href=&quot;http://blog.lessfun.com/&quot;&gt;Lessfun Blog&lt;/a&gt;.  &lt;/p&gt;
-&lt;p&gt;引用样式的链接: &lt;a href=&quot;http://lessfun.com/app/marktext/&quot; title=&quot;Markdown text editor for iOS&quot;&gt;引用&lt;/a&gt;, 输入id，然后在文档内任意处定义该id所指向的地址，标题是可选的：&lt;/p&gt;</summary>
+&lt;p&gt;&lt;code&gt;~~删除线~~&lt;/code&gt;, &lt;del&gt;删除线&lt;/del&gt;&lt;/p&gt;</summary>
     
     
     
