@@ -6,7 +6,7 @@
   <link href="https://wxm546.github.io/atom.xml" rel="self"/>
   
   <link href="https://wxm546.github.io/"/>
-  <updated>2022-08-30T11:33:56.402Z</updated>
+  <updated>2022-08-30T17:27:26.358Z</updated>
   <id>https://wxm546.github.io/</id>
   
   <author>
@@ -21,10 +21,11 @@
     <link href="https://wxm546.github.io/2020/11/03/%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2hexo/"/>
     <id>https://wxm546.github.io/2020/11/03/%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2hexo/</id>
     <published>2020-11-03T10:47:39.000Z</published>
-    <updated>2022-08-30T11:33:56.402Z</updated>
+    <updated>2022-08-30T17:27:26.358Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;重新部署hexo静态博客&quot;&gt;&lt;a href=&quot;#重新部署hexo静态博客&quot; class=&quot;headerlink&quot; title=&quot;重新部署hexo静态博客&quot;&gt;&lt;/a&gt;重新部署hexo静态博客&lt;/h1&gt;&lt;h2 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;p&gt;最近购买下载了IA writer，确实是一个十分干净的md编辑器，能激发自己写字的欲望。于是考虑重新开始博客部署。翻出了以前的hexo博客（大概18年部署的一直没更新，并且原来的设置文件都丢失了），整理一下重新部署。&lt;/p&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;重新部署hexo静态博客&quot;&gt;&lt;a href=&quot;#重新部署hexo静态博客&quot; class=&quot;headerlink&quot; title=&quot;重新部署hexo静态博客&quot;&gt;&lt;/a&gt;重新部署hexo静态博客&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/image/hexo.jpeg&quot; alt=&quot;hexo&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;p&gt;最近购买下载了IA writer，确实是一个十分干净的md编辑器，能激发自己写字的欲望。于是考虑重新开始博客部署。翻出了以前的hexo博客（大概18年部署的一直没更新，并且原来的设置文件都丢失了），整理一下重新部署。&lt;/p&gt;</summary>
     
     
     
@@ -67,17 +68,10 @@
     <link href="https://wxm546.github.io/2018/06/24/markdown%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
     <id>https://wxm546.github.io/2018/06/24/markdown%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</id>
     <published>2018-06-23T16:00:00.000Z</published>
-    <updated>2022-08-30T11:35:11.182Z</updated>
+    <updated>2022-08-30T17:33:17.411Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h2&gt;&lt;h3 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h3&gt;&lt;p&gt;1 ~ 6 个 &lt;code&gt;#&lt;/code&gt; 号加空格开头：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 这是 H1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;###### 这是 H6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;字体&quot;&gt;&lt;a href=&quot;#字体&quot; class=&quot;headerlink&quot; title=&quot;字体&quot;&gt;&lt;/a&gt;字体&lt;/h3&gt;&lt;p&gt;&lt;code&gt;**加粗**&lt;/code&gt;, &lt;strong&gt;加粗&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;*强调*&lt;/code&gt;, &lt;em&gt;强调&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;~~删除线~~&lt;/code&gt;, &lt;del&gt;删除线&lt;/del&gt;&lt;/p&gt;
-&lt;h3 id=&quot;图片&quot;&gt;&lt;a href=&quot;#图片&quot; class=&quot;headerlink&quot; title=&quot;图片&quot;&gt;&lt;/a&gt;图片&lt;/h3&gt;&lt;p&gt;&lt;code&gt;![备注](https://test.com/test.jpg)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.pixabay.com/photo/2017/12/26/04/01/bird-3039692_640.jpg&quot; alt=&quot;备注&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/image/markdown.jpg&quot; alt=&quot;markdown&quot;&gt;&lt;/p&gt;</summary>
     
     
     
