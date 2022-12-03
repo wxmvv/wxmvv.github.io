@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - minimal blog concept</title>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Nunito:400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div :class="['logo', selected ? 'logo--absolute': '', ready ? 'logo--active' : '']" @click="closePost()">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 60 60"><path d="M20.8 2.3C15.5 4 8.5 9.3 5.6 13.7c-4 5.8-5.8 14.8-4.6 21 1.2 6.7 3.3 10.8 8 15.6 15.4 16.4 43.3 9.5 49.6-12C64 19.5 49.6.7 30.2 1c-3 0-7.4.7-9.4 1.3zm15.8 6.2c20 6 22.4 32.4 4 42-1.7.7-3.2 1.3-3.3 1-.2 0 2.6-5 6.2-10.6 6.7-10.6 7.3-12.5 4.4-14.3-1.3-.7-4 .4-11.4 4.7L26.4 37c-.3 0-.2-5 .2-11.3.6-9.5.4-11.4-1-12.5-2.5-2.2-4.7 0-11 10.7C11 29.3 8 34 7.7 34c-1.3 0-1-6.5.7-11C11 16 16.8 10.3 24 8.3c5-1.4 7-1.4 12.6.3zM20.2 36c-.4 10.3.5 10.8 10 5.5 4-2 7-3.4 6.7-3l-4.5 7.7c-3.8 6.4-4.2 6.8-7 6.2-4.3-.8-11.2-5-13-8C10.8 42.3 11 42 15 35c2.3-3.8 4.5-7 4.8-7 .3 0 .4 3.6.2 8z"/></svg>
+  </div>
+  <div :class="['post-view', selected ? 'post-view--active' : '' , ready ? 'post-view--ready' : '' ]">
+    <div class="post-view__image" :style="'background-image:url('+postImage+');clip-path:'+clipPath">
+    </div>
+    <div class="post-view__container" v-if="selected">
+      <div class="post-controls">
+        <div class="post-control post-control--close" @click="closePost()"><i class="ion-ios-close-empty"></i></div>
+        <div class="post-control" id="next-post" @click="nextPost()"><i class="ion-ios-arrow-right"></i></div>
+        <div class="post-control" id="prev-post" @click="prevPost()"><i class="ion-ios-arrow-left"></i></div>
+      </div>
+      <h2 class="post-view__title">{{currentPost.title}}</h2>
+      <h3 class="post-view__date">{{currentPost.date}}</h3>
+      <div class="post-view__content" v-html="currentPost.description"></div>
+    </div>
+  </div>
+  <div :class="['post-list', selected ? 'post-list--hide' : '']">
+    <div class="post" v-for="(item, index) in posts" v-on:mouseenter="changePost(index)" @click="selectedPost(index)">
+      <h2 class="post__title">{{item.title}} <span class="post__date">{{item.date}}</span></h2>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.3.1/vue-resource.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

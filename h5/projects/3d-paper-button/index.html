@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 3D Paper button effects</title>
+  <link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- I made this demo to try out and illustrate some of the subtle button effects you can create just using box-shadow and borders on pseudo–elements.
+
+Inspired by the work I saw a while back over on Beemuse (http://beemuse.com/paper) and so this is a heavily tweaked more dynamic version of those effects.
+
+Also see Nicolas Gallaghers previous post on effects like this:
+http://nicolasgallagher.com/css-drop-shadows-without-images/
+
+Tested in latest Chrome and Firefox, but no reason it shouldn't work in all latest browsers. -->
+
+
+<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+
+<h2 class="no-separator">Raise on hover from flat</h2>
+<a href="" class="btn paper-raise">Try Me</a>
+
+<h2>Flatten on hover from raised</h2>
+<a href="" class="btn paper paper-raise-flatten">Try Me</a>
+  
+<h2>Raise from Less flat position on hover</h2>
+<a href="" class="btn paper paper-raise">Try Me</a>
+  
+<h2>Lift sides on Hover</h2>
+<a href="" class="btn paper-lift">Try Me</a>
+  
+<h2>Flatten sides on hover</h2>
+<a href="" class="btn paper-flatten">Try Me</a>
+  
+<h2>Curl right corner on hover</h2>
+<a href="" class="btn paper paper-curl-right">Try Me</a>
+  
+<h2>Curl right side on hover</h2>
+<a href="" class="btn paper paper-curl-right-side">Try Me</a>
+
+<h2>Curl bottom corners on hover</h2>
+<a href="" class="btn paper paper-curl">Try Me</a>
+  
+  
+<h2>Group examples</h2>
+<h2>Raise on hover</h2>
+<ul>
+  <li><a href="" class="btn paper-raise">Button One</a></li>
+  <li><a href="" class="btn paper-raise">Button Two</a></li>
+  <li><a href="" class="btn paper-raise">Button Three</a></li>
+</ul>
+  
+<h2>Flatten on hover</h2>
+<ul>
+  <li><a href="" class="btn paper paper-raise-flatten">Button One</a></li>
+  <li><a href="" class="btn paper paper-raise-flatten">Button Two</a></li>
+  <li><a href="" class="btn paper paper-raise-flatten">Button Three</a></li>
+</ul>
+  
+<h2>Less flat raise on hover</h2>
+<ul>
+  <li><a href="" class="btn paper paper-raise">Button One</a></li>
+  <li><a href="" class="btn paper paper-raise">Button Two</a></li>
+  <li><a href="" class="btn paper paper-raise">Button Three</a></li>
+</ul>
+
+<h2>Lift sides on hover</h2>
+<ul>
+  <li><a href="" class="btn paper-lift">Button One</a></li>
+  <li><a href="" class="btn paper-lift">Button Two</a></li>
+  <li><a href="" class="btn paper-lift">Button Three</a></li>
+</ul>
+
+<h2>Flatten sides on hover</h2>
+<ul>
+  <li><a href="" class="btn paper-flatten">Button One</a></li>
+  <li><a href="" class="btn paper-flatten">Button Two</a></li>
+  <li><a href="" class="btn paper-flatten">Button Three</a></li>
+</ul>
+
+<h2>Curl right corner on hover</h2>
+<ul>
+  <li><a href="" class="btn paper paper-curl-right">Button One</a></li>
+  <li><a href="" class="btn paper paper-curl-right">Button Two</a></li>
+  <li><a href="" class="btn paper paper-curl-right">Button Three</a></li>
+</ul>
+  
+<h2>Curl right side on hover</h2>
+<ul>
+  <li><a href="" class="btn paper paper-curl-right-side">Button One</a></li>
+  <li><a href="" class="btn paper paper-curl-right-side">Button Two</a></li>
+  <li><a href="" class="btn paper paper-curl-right-side">Button Three</a></li>
+</ul>
+
+<h2>Curl bottom corners on hover</h2>
+<ul>
+  <li><a href="" class="btn paper paper-curl">Button One</a></li>
+  <li><a href="" class="btn paper paper-curl">Button Two</a></li>
+  <li><a href="" class="btn paper paper-curl">Button Three</a></li>
+</ul>
+
+
+<a href="https://twitter.com/AshNolan_" target="_blank" class="footerLink">made by @AshNolan_</a>
+<!-- partial -->
+  
+</body>
+</html>
