@@ -6,7 +6,7 @@
   <link href="https://wxm546.github.io/atom.xml" rel="self"/>
   
   <link href="https://wxm546.github.io/"/>
-  <updated>2022-12-27T06:37:08.480Z</updated>
+  <updated>2022-12-27T06:43:52.098Z</updated>
   <id>https://wxm546.github.io/</id>
   
   <author>
@@ -18,19 +18,13 @@
   
   <entry>
     <title>Pjax实现无刷新加载</title>
-    <link href="https://wxm546.github.io/2021/12/05/pjax/"/>
-    <id>https://wxm546.github.io/2021/12/05/pjax/</id>
+    <link href="https://wxm546.github.io/2021/12/05/Pjax%E5%AE%9E%E7%8E%B0%E6%97%A0%E5%88%B7%E6%96%B0%E5%8A%A0%E8%BD%BD/"/>
+    <id>https://wxm546.github.io/2021/12/05/Pjax%E5%AE%9E%E7%8E%B0%E6%97%A0%E5%88%B7%E6%96%B0%E5%8A%A0%E8%BD%BD/</id>
     <published>2021-12-04T16:00:00.000Z</published>
-    <updated>2022-12-27T06:37:08.480Z</updated>
+    <updated>2022-12-27T06:43:52.098Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;Pjax&quot;&gt;&lt;a href=&quot;#Pjax&quot; class=&quot;headerlink&quot; title=&quot;Pjax&quot;&gt;&lt;/a&gt;Pjax&lt;/h1&gt;&lt;p&gt;给朋友制作网站的时候，收到一个需求，就是要无刷新完成页面切换，最好还要有过渡动画。&lt;br&gt;于是考虑使用pjax解决问题。&lt;br&gt;使用了不需要引入jquery的&lt;a href=&quot;https://github.com/MoOx/pjax&quot;&gt;pjax&lt;/a&gt;。 &lt;/p&gt;</summary>
     
     
     
@@ -44,11 +38,11 @@
   </entry>
   
   <entry>
-    <title>重新部署hexo</title>
-    <link href="https://wxm546.github.io/2020/11/03/%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2hexo/"/>
-    <id>https://wxm546.github.io/2020/11/03/%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2hexo/</id>
+    <title>hexo重新部署</title>
+    <link href="https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/"/>
+    <id>https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/</id>
     <published>2020-11-03T10:47:39.000Z</published>
-    <updated>2022-12-07T02:08:26.045Z</updated>
+    <updated>2022-12-27T06:50:04.308Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;重新部署hexo静态博客&quot;&gt;&lt;a href=&quot;#重新部署hexo静态博客&quot; class=&quot;headerlink&quot; title=&quot;重新部署hexo静态博客&quot;&gt;&lt;/a&gt;重新部署hexo静态博客&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/image/hexo.jpeg&quot; alt=&quot;hexo&quot;&gt;&lt;/p&gt;
@@ -91,11 +85,11 @@
   </entry>
   
   <entry>
-    <title>markdown使用方法</title>
-    <link href="https://wxm546.github.io/2018/06/24/markdown%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
-    <id>https://wxm546.github.io/2018/06/24/markdown%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</id>
+    <title>markdown以及hexo扩展</title>
+    <link href="https://wxm546.github.io/2018/06/24/markdown%E4%BB%A5%E5%8F%8Ahexo%E6%89%A9%E5%B1%95/"/>
+    <id>https://wxm546.github.io/2018/06/24/markdown%E4%BB%A5%E5%8F%8Ahexo%E6%89%A9%E5%B1%95/</id>
     <published>2018-06-23T16:00:00.000Z</published>
-    <updated>2022-12-07T02:08:47.368Z</updated>
+    <updated>2022-12-27T06:49:25.022Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;/image/markdown.jpg&quot; alt=&quot;markdown&quot;&gt;&lt;/p&gt;</summary>
