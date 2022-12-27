@@ -6,7 +6,7 @@
   <link href="https://wxm546.github.io/atom.xml" rel="self"/>
   
   <link href="https://wxm546.github.io/"/>
-  <updated>2022-12-07T02:43:10.876Z</updated>
+  <updated>2022-12-27T06:28:00.937Z</updated>
   <id>https://wxm546.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Pjax的使用</title>
+    <title>Pjax实现无刷新加载</title>
     <link href="https://wxm546.github.io/2021/12/05/pjax/"/>
     <id>https://wxm546.github.io/2021/12/05/pjax/</id>
     <published>2021-12-04T16:00:00.000Z</published>
-    <updated>2022-12-07T02:43:10.876Z</updated>
+    <updated>2022-12-27T06:28:00.937Z</updated>
     
     
       
