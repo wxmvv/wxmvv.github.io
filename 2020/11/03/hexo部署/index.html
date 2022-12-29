@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="重新部署hexo静态博客 起因最近购买下载了IA writer，确实是一个十分干净的md编辑器，能激发自己写字的欲望。于是考虑重新开始博客部署。翻出了以前的hexo博客（大概18年部署的一直没更新，并且原来的设置文件都丢失了），整理一下重新部署。">
+    <meta name="description" content="重新部署hexo静态博客 起因最近购买下载了IA writer，确实是一个十分干净的md编辑器，能激发自己写字的欲望。于是考虑重新开始博客部署。翻出了以前的hexo博客（大概18年部署的一直没更新，并且原来的设置文件都丢失了），整理一下重新部署。 安装hexo和next主题hexonext主题cactus主题 hexo安装12345npm install hexo-cli -ghexo init">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo重新部署">
-<meta property="og:url" content="https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/">
+<meta property="og:title" content="hexo部署">
+<meta property="og:url" content="https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/">
 <meta property="og:site_name" content="wxm546">
-<meta property="og:description" content="重新部署hexo静态博客 起因最近购买下载了IA writer，确实是一个十分干净的md编辑器，能激发自己写字的欲望。于是考虑重新开始博客部署。翻出了以前的hexo博客（大概18年部署的一直没更新，并且原来的设置文件都丢失了），整理一下重新部署。">
+<meta property="og:description" content="重新部署hexo静态博客 起因最近购买下载了IA writer，确实是一个十分干净的md编辑器，能激发自己写字的欲望。于是考虑重新开始博客部署。翻出了以前的hexo博客（大概18年部署的一直没更新，并且原来的设置文件都丢失了），整理一下重新部署。 安装hexo和next主题hexonext主题cactus主题 hexo安装12345npm install hexo-cli -ghexo init">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wxm546.github.io/image/hexo.jpeg">
 <meta property="article:published_time" content="2020-11-03T10:47:39.000Z">
-<meta property="article:modified_time" content="2022-12-27T14:32:29.246Z">
+<meta property="article:modified_time" content="2022-12-29T03:23:05.445Z">
 <meta property="article:author" content="wxm546">
 <meta property="article:tag" content="markdown">
 <meta property="article:tag" content="hexo">
@@ -40,7 +40,7 @@
       
     
     <!-- title -->
-    <title>hexo重新部署</title>
+    <title>hexo部署</title>
     <!-- styles -->
     
 <link rel="stylesheet" href="/css/style.css">
@@ -81,7 +81,7 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" aria-label="上一篇" href="/2021/12/05/Pjax%E5%AE%9E%E7%8E%B0%E6%97%A0%E5%88%B7%E6%96%B0%E5%8A%A0%E8%BD%BD/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="上一篇" href="/2021/12/05/Pjax%E5%AE%9E%E7%8E%B0%E6%97%A0%E5%88%B7%E6%96%B0%E5%8A%A0%E8%BD%BD%E9%A1%B5%E9%9D%A2/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" aria-label="下一篇" href="/2018/12/25/%E9%A9%AC%E5%8F%8B%E5%8F%8B-%E7%88%B1%E7%9A%84%E7%A4%BC%E8%B5%9E/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
@@ -97,18 +97,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&text=hexo重新部署"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&title=hexo重新部署"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&is_video=false&description=hexo重新部署"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=hexo重新部署&body=Check out this article: https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&title=hexo重新部署"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&title=hexo重新部署"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&title=hexo重新部署"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&title=hexo重新部署"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&name=hexo重新部署&description=&lt;h1 id=&#34;重新部署hexo静态博客&#34;&gt;&lt;a href=&#34;#重新部署hexo静态博客&#34; class=&#34;headerlink&#34; title=&#34;重新部署hexo静态博客&#34;&gt;&lt;/a&gt;重新部署hexo静态博客&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/image/hexo.jpeg&#34; alt=&#34;hexo&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;起因&#34;&gt;&lt;a href=&#34;#起因&#34; class=&#34;headerlink&#34; title=&#34;起因&#34;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;p&gt;最近购买下载了IA writer，确实是一个十分干净的md编辑器，能激发自己写字的欲望。于是考虑重新开始博客部署。翻出了以前的hexo博客（大概18年部署的一直没更新，并且原来的设置文件都丢失了），整理一下重新部署。&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&t=hexo重新部署"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&text=hexo部署"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&title=hexo部署"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&is_video=false&description=hexo部署"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=hexo部署&body=Check out this article: https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&title=hexo部署"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&title=hexo部署"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&title=hexo部署"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&title=hexo部署"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&name=hexo部署&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&t=hexo部署"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -125,7 +124,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        hexo重新部署
+        hexo部署
     </h1>
 
 
@@ -164,8 +163,6 @@
   <div class="content" itemprop="articleBody">
     <h1 id="重新部署hexo静态博客"><a href="#重新部署hexo静态博客" class="headerlink" title="重新部署hexo静态博客"></a>重新部署hexo静态博客</h1><p><img src="/image/hexo.jpeg" alt="hexo"></p>
 <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>最近购买下载了IA writer，确实是一个十分干净的md编辑器，能激发自己写字的欲望。于是考虑重新开始博客部署。翻出了以前的hexo博客（大概18年部署的一直没更新，并且原来的设置文件都丢失了），整理一下重新部署。</p>
-<span id="more"></span> 
-
 <h2 id="安装hexo和next主题"><a href="#安装hexo和next主题" class="headerlink" title="安装hexo和next主题"></a>安装hexo和next主题</h2><p><a href="https://hexo.io/zh-cn/">hexo</a><br><a href="https://github.com/theme-next/hexo-theme-next">next主题</a><br><a href="https://github.com/probberechts/hexo-theme-cactus">cactus主题</a></p>
 <h3 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server   #启动服务</span><br></pre></td></tr></table></figure>
 
@@ -209,18 +206,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&text=hexo重新部署"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&title=hexo重新部署"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&is_video=false&description=hexo重新部署"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=hexo重新部署&body=Check out this article: https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&title=hexo重新部署"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&title=hexo重新部署"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&title=hexo重新部署"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&title=hexo重新部署"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&name=hexo重新部署&description=&lt;h1 id=&#34;重新部署hexo静态博客&#34;&gt;&lt;a href=&#34;#重新部署hexo静态博客&#34; class=&#34;headerlink&#34; title=&#34;重新部署hexo静态博客&#34;&gt;&lt;/a&gt;重新部署hexo静态博客&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/image/hexo.jpeg&#34; alt=&#34;hexo&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;起因&#34;&gt;&lt;a href=&#34;#起因&#34; class=&#34;headerlink&#34; title=&#34;起因&#34;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;p&gt;最近购买下载了IA writer，确实是一个十分干净的md编辑器，能激发自己写字的欲望。于是考虑重新开始博客部署。翻出了以前的hexo博客（大概18年部署的一直没更新，并且原来的设置文件都丢失了），整理一下重新部署。&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://wxm546.github.io/2020/11/03/hexo%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/&t=hexo重新部署"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&text=hexo部署"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&title=hexo部署"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&is_video=false&description=hexo部署"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=hexo部署&body=Check out this article: https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&title=hexo部署"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&title=hexo部署"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&title=hexo部署"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&title=hexo部署"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&name=hexo部署&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://wxm546.github.io/2020/11/03/hexo%E9%83%A8%E7%BD%B2/&t=hexo部署"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -241,7 +237,7 @@
     Copyright &copy;
     
     
-    2016-2022
+    2017-2022
     wxm546
   </div>
   <div class="footer-right">

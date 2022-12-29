@@ -31,8 +31,9 @@ $(document).ready(function() {
 
     /**
      * Display the menu on hi-res laptops and desktops.
+     * 如果屏幕宽度大于1200px，显示菜单
      */
-    if ($(document).width() >= 1440) {
+    if ($(document).width() >= 1200) {
       menu.show();
       menuIcon.addClass("active");
     }
