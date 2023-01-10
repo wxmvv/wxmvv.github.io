@@ -20,7 +20,12 @@ $(document).ready(function () {
 			},
 		},
 	});
+	// pjax.
+
+
+
 });
+
 
 document.addEventListener("pjax:complete", function () {
 	//pjax时重载点js脚本 pjax_reload()

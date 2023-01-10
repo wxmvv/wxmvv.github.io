@@ -485,10 +485,9 @@ footer {
 	position: absolute;
 }
 /* CSS animations */
-.Animated {
-	/* animation-fill-mode: both; */
+/* .Animated {
 	animation-duration: 0.5s;
-}
+} */
 .Animated-easeOut {
 	animation-fill-mode: forwards;
 	animation-name: Animation-easeOut;
@@ -500,7 +499,7 @@ footer {
 .Animated-easeIn {
 	animation-fill-mode: backwards;
 	animation-name: Animation-easeIn;
-	animation-duration: 1s;
+	animation-duration: 0.5s;
 	animation-delay: 200ms;
 	/* opacity: 0; */
 }
