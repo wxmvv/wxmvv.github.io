@@ -493,13 +493,13 @@ footer {
 	animation-name: Animation-easeOut;
 	animation-duration: 0.1s;
 }
-.Animate--noDelay {
+/* .Animate--noDelay {
 	animation-delay: 0s !important;
-}
+} */
 .Animated-easeIn {
 	animation-fill-mode: backwards;
 	animation-name: Animation-easeIn;
-	animation-duration: 0.5s;
+	animation-duration: 0.4s;
 	animation-delay: 200ms;
 	/* opacity: 0; */
 }

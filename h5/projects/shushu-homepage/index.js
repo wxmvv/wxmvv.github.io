@@ -12,7 +12,7 @@ $(document).ready(function () {
 			main: {
 				//动画效果
 				classNames: {
-					remove: "Animated-easeOut Animate--noDelay",
+					remove: "Animated-easeOut",
 					add: "Animated-easeIn",
 					backward: "Animated-easeOut",
 					forward: "Animated-easeOut",
