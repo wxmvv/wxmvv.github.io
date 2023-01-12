@@ -491,7 +491,7 @@ footer {
 .Animated-easeOut {
 	animation-fill-mode: forwards;
 	animation-name: Animation-easeOut;
-	animation-duration: 0.1s;
+	animation-duration: 0.4s;
 }
 /* .Animate--noDelay {
 	animation-delay: 0s !important;
