@@ -52,7 +52,7 @@ body {
 
 /* 内容区 */
 /* MARK:内容整体设置 */
-.main {
+main {
 	position: relative;
 	z-index: 1;
 	display: flex;

@@ -20,15 +20,15 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Init Pjax instance
 	pjax = new Pjax({
 		elements: "a", // default is "a[href], form[action]"
-		selectors: [".main"],
+		selectors: ["main"],
 		cacheBust: false, //When set to true, Pjax appends a timestamp query string segment to the requested URL in order to skip the browser cache.
 		scrollRestoration: false, //When set to true, Pjax will attempt to restore the scroll position when navigating backwards or forwards.
 		debugg: true, //When set to true, Pjax will log messages to the console.
 		switches: {
-			".main": Pjax.switches.sideBySide,
+			"main": Pjax.switches.sideBySide,
 		},
 		switchesOptions: {
-			".main": {
+			"main": {
 				// 动画效果
 				classNames: {
 					remove: "Animated Animated--reverse Animate--fast Animate--noDelay",
@@ -81,7 +81,7 @@ function init_anmimationPreview() {
 
 // 暂时无用
 function stopAnima(){
-	let all = $(".main").has()
+	let all = $("main").has()
 	for (let i = 0; i < all.length; i++) {
 		all[i].stop(true);
 	}
