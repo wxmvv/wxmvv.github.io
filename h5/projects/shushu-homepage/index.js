@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Init Pjax instance
 	pjax = new Pjax({
 		elements: "a", // default is "a[href], form[action]"
-		selectors: ["main"],
+		selectors: ["main","title"],
 		cacheBust: false, //When set to true, Pjax appends a timestamp query string segment to the requested URL in order to skip the browser cache.
 		scrollRestoration: false, //When set to true, Pjax will attempt to restore the scroll position when navigating backwards or forwards.
 		debugg: true, //When set to true, Pjax will log messages to the console.
