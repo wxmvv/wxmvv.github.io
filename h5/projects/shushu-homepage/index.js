@@ -1,40 +1,61 @@
-$(document).ready(function () {
-	anmimationPreview();
-	var pjax = new Pjax({
+var pjax;
+
+console.log("Document initialized:", window.location.href);
+document.addEventListener("pjax:send", function () {
+	console.log("Event: pjax:send", arguments);
+});
+document.addEventListener("pjax:error", function () {
+	console.log("Event: pjax:error", arguments);
+});
+document.addEventListener("pjax:complete", function () {
+	//pjax时重载点js脚本 pjax_reload()
+	init_anmimationPreview();
+	console.log("Event: pjax:complete", arguments);
+});
+document.addEventListener("pjax:success", function () {
+	console.log("Event: pjax:success", arguments);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+	// Init Pjax instance
+	pjax = new Pjax({
 		elements: "a", // default is "a[href], form[action]"
-		selectors: ["main"],
+		selectors: [".main"],
 		cacheBust: false, //When set to true, Pjax appends a timestamp query string segment to the requested URL in order to skip the browser cache.
 		scrollRestoration: false, //When set to true, Pjax will attempt to restore the scroll position when navigating backwards or forwards.
+		debugg: true, //When set to true, Pjax will log messages to the console.
 		switches: {
-			main: Pjax.switches.sideBySide,
+			".main": Pjax.switches.sideBySide,
 		},
 		switchesOptions: {
-			main: {
-				//动画效果
+			".main": {
+				// 动画效果
 				classNames: {
-					remove: "Animated-easeOut",
+					remove: "Animated Animated--reverse Animate--fast Animate--noDelay",
 					add: "Animated-easeIn",
 					backward: "Animated-easeOut",
 					forward: "Animated-easeOut",
 				},
+				// callbacks: {
+				// 	// to make a nice transition with 2 pages at the same time
+				// 	// we are playing with absolute positioning for the element we are removing
+				// 	// & we need live metrics to have something great
+				// 	// see associated CSS below
+				// 	removeElement: function (el) {
+				// 		el.style.marginLeft = "-" + el.getBoundingClientRect().width / 2 + "px";
+				// 	},
+				// },
 			},
 		},
 	});
-	// pjax.
-
-
-
+	console.log("Pjax initialized.", pjax);
+	init_anmimationPreview();
 });
 
 
-document.addEventListener("pjax:complete", function () {
-	//pjax时重载点js脚本 pjax_reload()
-	anmimationPreview();
-});
-
-function anmimationPreview() {
+function init_anmimationPreview() {
 	$(".previewbutton").click(function () {
-		var buttonId = $(this).attr("id"); //modal-one
+		let buttonId = $(this).attr("id"); //modal-one
 		$("#modal-container").removeAttr("class").addClass(buttonId);
 		//点击添加图片
 		let imgsrc = $(this).children("img").attr("src");
@@ -50,7 +71,18 @@ function anmimationPreview() {
 		$(this).addClass("out");
 
 		$("body").removeClass("modal-active");
+
 		//离开时候清空modal
 		// $(".modal").empty();
 	});
+}
+
+
+
+// 暂时无用
+function stopAnima(){
+	let all = $(".main").has()
+	for (let i = 0; i < all.length; i++) {
+		all[i].stop(true);
+	}
 }
