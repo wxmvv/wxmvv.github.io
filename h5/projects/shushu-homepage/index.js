@@ -1,4 +1,31 @@
+//MARK:pjax设置
 var pjax;
+document.addEventListener("DOMContentLoaded", function () {
+	// Init Pjax instance
+	pjax = new Pjax({
+		elements: "a", // default is "a[href], form[action]"
+		selectors: ["main", "title"],
+		cacheBust: false, //When set to true, Pjax appends a timestamp query string segment to the requested URL in order to skip the browser cache.
+		scrollRestoration: false, //When set to true, Pjax will attempt to restore the scroll position when navigating backwards or forwards.
+		debugg: true, //When set to true, Pjax will log messages to the console.
+		switches: {
+			main: Pjax.switches.sideBySide,
+		},
+		switchesOptions: {
+			main: {
+				// 动画效果
+				classNames: {
+					remove: "Animated Animated--reverse Animate--fast Animate--noDelay",
+					add: "Animated-easeIn",
+					backward: "Animated-easeOut",
+					forward: "Animated-easeOut",
+				},
+			},
+		},
+	});
+	console.log("Pjax initialized.", pjax);
+	init_anmimationPreview();
+});
 
 console.log("Document initialized:", window.location.href);
 document.addEventListener("pjax:send", function () {
@@ -16,43 +43,7 @@ document.addEventListener("pjax:success", function () {
 	console.log("Event: pjax:success", arguments);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-	// Init Pjax instance
-	pjax = new Pjax({
-		elements: "a", // default is "a[href], form[action]"
-		selectors: ["main","title"],
-		cacheBust: false, //When set to true, Pjax appends a timestamp query string segment to the requested URL in order to skip the browser cache.
-		scrollRestoration: false, //When set to true, Pjax will attempt to restore the scroll position when navigating backwards or forwards.
-		debugg: true, //When set to true, Pjax will log messages to the console.
-		switches: {
-			"main": Pjax.switches.sideBySide,
-		},
-		switchesOptions: {
-			"main": {
-				// 动画效果
-				classNames: {
-					remove: "Animated Animated--reverse Animate--fast Animate--noDelay",
-					add: "Animated-easeIn",
-					backward: "Animated-easeOut",
-					forward: "Animated-easeOut",
-				},
-				// callbacks: {
-				// 	// to make a nice transition with 2 pages at the same time
-				// 	// we are playing with absolute positioning for the element we are removing
-				// 	// & we need live metrics to have something great
-				// 	// see associated CSS below
-				// 	removeElement: function (el) {
-				// 		el.style.marginLeft = "-" + el.getBoundingClientRect().width / 2 + "px";
-				// 	},
-				// },
-			},
-		},
-	});
-	console.log("Pjax initialized.", pjax);
-	init_anmimationPreview();
-});
-
-
+//MARK:初始化图片预览
 function init_anmimationPreview() {
 	$(".previewbutton").click(function () {
 		let buttonId = $(this).attr("id"); //modal-one
@@ -69,20 +60,6 @@ function init_anmimationPreview() {
 
 	$("#modal-container").click(function () {
 		$(this).addClass("out");
-
 		$("body").removeClass("modal-active");
-
-		//离开时候清空modal
-		// $(".modal").empty();
 	});
-}
-
-
-
-// 暂时无用
-function stopAnima(){
-	let all = $("main").has()
-	for (let i = 0; i < all.length; i++) {
-		all[i].stop(true);
-	}
 }

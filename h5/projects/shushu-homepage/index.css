@@ -11,26 +11,8 @@
 	font-family: "sister";
 	src: url("./source/font/Love_Ya_Like_A_Sister/LoveYaLikeASister-Regular.ttf");
 }
-/* @font-face {
-	font-family: "droid_serif";
-	src: url("./source/font/Droid_Serif/DroidSerif-Regular.ttf");
-	font-family: "playfair_display";
-	src: url("./source/font/playfair_display/static/PlayfairDisplay-Regular.ttf");
-	font-family: "得意黑";
-	src: url("./source/font/smiley-sans/SmileySans-Oblique.otf");
-	font-family: "pacifico";
-	src: url("./source/font/Pacifico/Pacifico-Regular.ttf");
-	font-family: "flower";
-	src: url("./source/font/Indie_Flower/IndieFlower-Regular.ttf");
-	font-family: "gloria";
-	src: url("./source/font/Gloria_Hallelujah/GloriaHallelujah-Regular.ttf");
-	font-family: "fascinate";
-	src: url("./source/font/Fascinate/Fascinate-Regular.ttf");
-	font-family: "redressed";
-	src: url("./source/font/Redressed/Redressed-Regular.ttf");
-} */
 
-/* MARK: 主入口 */
+/* MARK: html主要设置 */
 * {
 	margin: 0;
 	padding: 0;
@@ -49,29 +31,90 @@ body {
 	background-size: auto 125%;
 	background-color: #f8f4e8;
 }
+h0 { 
+	font-family: "sister";
+	align-self: flex-end;
+	font-size: 50px;
+	
+}
 
-/* 内容区 */
-/* MARK:内容整体设置 */
+h1 {
+	font-family: "sister";
+	align-self: flex-end;
+	font-size: 40px;
+}
+h2 {
+	font-family: "playfair_display", serif;
+	font-size: 30px;
+	font-weight: 600;
+}
+h3 {
+	font-family: "dancing";
+	font-size: 25px;
+}
+music {
+	font-family: "noto_music";
+	font-size: 38px;
+	align-self: flex-end;
+	padding-bottom: 10px;
+	/* justify-content: flex-end; */
+	/* width: auto; */
+	/* height: auto; */
+}
+
+/* MARK:header footer 整体设置 页面宽度边距 */
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 100%;
+	max-width: 1200px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-block-start: auto;
+}
+.hearder-logo {
+	display: flex;
+	flex-direction: column;
+	min-width: 200px;
+	height: 100px;
+	margin: 20px 0px 10px 20px;
+}
+.hearder-logo-shushu {
+ 	display: flex;
+ 	flex-direction:row;
+	width: auto;
+	height: auto;
+	/* overflow: hidden; */
+}
+.header-block {
+	flex: 1;
+}
+/* 底部 */
+footer {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+	font-size: 12px;
+	color: #999;
+}
+.link-frend {
+	color: #999;
+}
+
+/* MARK:main内容 整体设置 */
 main {
 	position: relative;
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
-	max-width: 1000px;
+	max-width: 1200px;
 	flex: 1;
 }
-/* .main {
-	position: relative;
-} */
-.main-body {
-	margin: 10px 20px 10px 20px;
-}
-.main-title {
-	text-align: center;
-	margin: 0px 0px 10px 0px;
-}
-/* .back-btn */
+/* 房子和home */
 .back-btn {
 	display: flex;
 	flex-direction: row;
@@ -80,11 +123,23 @@ main {
 .back-btn-home {
 	color: black;
 	text-decoration: none;
-	margin-right: 20px;
-	margin-top: -12px;
+	color: #f45252;
+	margin-right: 15px;
+	margin-top: -10px;
+}
+/* 标题 */
+.main-title {
+	height: auto;
+	text-align: center;
+	margin: 10px 0px 10px 0px;
 }
 
-/* index */
+/* about 文字部分 */
+.main-body {
+	margin: 10px 20px 10px 20px;
+}
+
+/* index 菜单 */
 .main-menubtn {
 	color: rgb(9, 8, 8);
 	text-decoration: none;
@@ -118,81 +173,18 @@ main {
 		background-color: rgb(20, 187, 187);
 	}
 }
-/* about */
 
-/* 头部 */
-/* MARK:头部整体设置 页面宽度边距 */
-.header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-end;
-	width: 100%;
-	max-width: 1000px;
-	margin-top: 10px;
-	margin-bottom: 0px;
-	margin-block-start: auto;
-}
-.hearder-logo {
-	display: flex;
-	flex-direction: column;
-	min-width: 200px;
-	height: 100px;
-	margin: 20px 0px 10px 20px;
-}
-.header-block {
-	flex: 1;
-}
-h1 {
-	font-family: "sister";
-	font-size: 38px;
-}
-h2 {
-	font-family: "playfair_display", serif;
-	/* font-family: "得意黑" , serif; */
-	/* font-family: "playfair_display" , serif; */
-	font-size: 30px;
-	font-weight: 600;
-}
-h3 {
-	font-family: "dancing";
-	font-size: 25px;
-}
-music {
-	font-family: "noto_music";
-	width: 250;
-	height: 130px;
-}
-/* 底部 */
-footer {
-	display: flex;
-	flex-direction: column;
-	padding: 10px 0px 10px 0px;
-	text-align: center;
-	font-size: 12px;
-	color: #999;
-}
-.link-frend {
-	color: #999;
-}
 
-/* MARK:页面切换效果 */
-
-/*
-  Note: If your content elements don't have a fixed width it can cause
-  an issue when positioning absolutely
-*/
+/* MARK:pjax页面切换 与动画 */
 .js-Pjax {
 	position: relative;
-} /* parent element where switch will be made */
-
+}
 .js-Pjax-child {
 	width: 100%;
 }
-/* position for the elements that will be removed */
 .js-Pjax-remove {
 	position: absolute;
-	left: 10%;
+	left: 100%;
 }
 .Animated {
 	animation-fill-mode: both;
@@ -212,8 +204,6 @@ footer {
 	animation-fill-mode: both;
 	animation-name: "Animation-easeOut";
 	animation-duration: 0.1s;
-	/* animation-delay: 0s !important; */
-	/* opacity: 0; */
 }
 .Animated-easeIn {
 	animation-fill-mode: both;
@@ -239,8 +229,7 @@ footer {
 		scale: 0;
 	}
 }
-
-/* MARK：gallary展示 */
+/* MARK：gallary 瀑布流展示 */
 @media (max-width: 767px) {
 	.main-gallary {
 		columns: 2;
@@ -256,7 +245,6 @@ footer {
 @media (min-width: 768px) {
 	.main-gallary {
 		columns: 3;
-		/* background-color: coral */
 	}
 }
 @media (min-width: 992px) {
@@ -268,39 +256,71 @@ footer {
 @media (min-width: 1600px) {
 	.main-gallary {
 		columns: 4;
-		/* background-color: yellow; */
 	}
 }
 .main-gallary {
-	width: 95%;
-	grid-gap: 10px;
-	margin: 20px 0px 20px 1.5rem;
+	/* justify-self: flex-start; */
+	/* align-self: flex-start; */
+	/* width: 100%; */
+	column-gap: 20px;
+	/* padding: 0px 20px 0px 20px; */
+	margin: 20px 45px 20px 45px;
+	/* border: red 2px solid; */
 }
 .gallary-item {
 	display: inline-block;
-	margin: 0 1.5rem 1.5rem 0;
+	margin: 0 0 30px 0;
 	border: solid 2px black;
-	padding: 5px;
+	padding: 6px 6px 0 6px;
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-	border-radius: 5px;
+	border-radius: 10px;
 	background-color: #f8f4e8;
 	transition: all 0.25s ease-in-out;
 }
 .gallary-img {
 	width: 100%;
-	border-radius: 5px;
+	border-radius: 8px;
 }
 .gallary-img-view {
 	object-fit: contain;
 }
-
 .gallary-item:hover {
 	border-color: coral;
 }
 
-/* TODO:弹窗预览效果 */
-/* MARK: modal的动画 */
-/* TODO:弹窗预览效果 */
+/* MARK: modal的弹窗预览效果 */
+#modal-container {
+	position: fixed;
+	/* table不能改变 */
+	display: table;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	transform: scale(0);
+	z-index: 1;
+	color: rgb(252, 43, 43);
+}
+#modal-container .modal-background {
+	display: table-cell;
+	/* 这里添加modal背景颜色 */
+	background: rgba(0, 0, 0, 0.8);
+	text-align: center;
+	vertical-align: middle;
+}
+#modal-container .modal-background .modal {
+	padding: 0 20px 0 20px;
+	display: inline-block;
+	border-radius: 3px;
+	font-weight: 300;
+	position: relative;
+}
+/* html.modal-active, */
+body.modal-active {
+	overflow: hidden;
+}
+
+/* modal动画 one */
 @keyframes unfoldIn {
 	0% {
 		transform: scaleY(0.005) scaleX(0);
@@ -339,39 +359,6 @@ footer {
 		transform: scale(0);
 	}
 }
-
-#modal-container {
-	position: fixed;
-	/* TODO:table不能改变 */
-	display: table;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	transform: scale(0);
-	z-index: 1;
-	color: rgb(252, 43, 43);
-}
-#modal-container .modal-background {
-	display: table-cell;
-	/* MARK:背景灰色 */
-	background: rgba(0, 0, 0, 0.8);
-	text-align: center;
-	vertical-align: middle;
-}
-#modal-container .modal-background .modal {
-	/* MARK:这里添加背景颜色 */
-	padding: 0 20px 0 20px;
-	display: inline-block;
-	border-radius: 3px;
-	font-weight: 300;
-	position: relative;
-}
-/* html.modal-active, */
-body.modal-active {
-	overflow: hidden;
-}
-
 #modal-container.one {
 	transform: scaleY(0.01) scaleX(0);
 	animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
@@ -387,10 +374,6 @@ body.modal-active {
 #modal-container.one.out .modal-background .modal {
 	animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-/* #modal-container.seven.out .modal-background .modal h2,
-#modal-container.seven.out .modal-background .modal p {
-	animation: modalContentFadeOut 0.5s 0.5 cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-} */
 
 
 /* MARK: 相关屏幕大小 */
