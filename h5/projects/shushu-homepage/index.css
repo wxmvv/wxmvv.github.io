@@ -35,7 +35,6 @@ h0 {
 	font-family: "sister";
 	align-self: flex-end;
 	font-size: 50px;
-	
 }
 
 h1 {
@@ -57,9 +56,6 @@ music {
 	font-size: 38px;
 	align-self: flex-end;
 	padding-bottom: 10px;
-	/* justify-content: flex-end; */
-	/* width: auto; */
-	/* height: auto; */
 }
 
 /* MARK:header footer 整体设置 页面宽度边距 */
@@ -230,40 +226,42 @@ main {
 	}
 }
 /* MARK：gallary 瀑布流展示 */
-@media (max-width: 767px) {
+@media (max-width: 700px) {
 	.main-gallary {
 		columns: 2;
+		column-gap: 20px;
 		/* background-color: red; */
 	}
 }
-@media (max-width: 380px) {
+@media (max-width: 420px) {
 	.main-gallary {
 		columns: 1;
+		column-gap: 20px;
 		/* background-color: blue; */
 	}
 }
-@media (min-width: 768px) {
+@media (min-width: 701px) {
 	.main-gallary {
 		columns: 3;
+		column-gap: 25px;
 	}
 }
 @media (min-width: 992px) {
 	.main-gallary {
 		columns: 3;
+		column-gap: 25px;
 		/* background-color: green; */
 	}
 }
 @media (min-width: 1600px) {
 	.main-gallary {
 		columns: 4;
+		column-gap: 30px;
 	}
 }
 .main-gallary {
-	/* justify-self: flex-start; */
-	/* align-self: flex-start; */
 	/* width: 100%; */
-	column-gap: 20px;
-	/* padding: 0px 20px 0px 20px; */
+	
 	margin: 20px 45px 20px 45px;
 	/* border: red 2px solid; */
 }
@@ -271,7 +269,7 @@ main {
 	display: inline-block;
 	margin: 0 0 30px 0;
 	border: solid 2px black;
-	padding: 6px 6px 0 6px;
+	padding: 6px 6px 3px 6px;
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 	border-radius: 10px;
 	background-color: #f8f4e8;
