@@ -15,9 +15,9 @@ $(document).ready(function() {
   /**
    * Shows the responsive navigation menu on mobile.
    */
-  $("#header > #nav > ul > .icon").click(function() {
-    $("#header > #nav > ul").toggleClass("responsive");
-  });
+  // $("#header > #nav > ul > .icon").click(function() {
+  //   $("#header > #nav > ul").toggleClass("responsive");
+  // });
 
 
   /**
@@ -31,7 +31,7 @@ $(document).ready(function() {
 
     /**
      * Display the menu on hi-res laptops and desktops.
-     * 如果屏幕宽度大于1300px，显示菜单
+     * 如果屏幕宽度大于1300px，打开后展开目录
      */
     if ($(document).width() >= 1300) {
       menu.show();
