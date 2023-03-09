@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="用SwiftUI开发我的第一款APP做什么经常逛app store，对笔记&#x2F;日记类的应用很感兴趣，于是决定做一个。 怎么做搜索如何制作ios的应用，会有各种各样的方式，比如用框架flutter，uniapp之类，或者原生的UIKit，SwiftUI，经过比较最后决定使用SwiftUI作为入门开发的方式。SwiftUI最大优势：相比同样原生的UIKit构建界面更方便！通过简单声明就可以实现各种效果。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用SwiftUI开发的我的第一款APP">
+<meta property="og:url" content="https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/">
+<meta property="og:site_name" content="wxmvv">
+<meta property="og:description" content="用SwiftUI开发我的第一款APP做什么经常逛app store，对笔记&#x2F;日记类的应用很感兴趣，于是决定做一个。 怎么做搜索如何制作ios的应用，会有各种各样的方式，比如用框架flutter，uniapp之类，或者原生的UIKit，SwiftUI，经过比较最后决定使用SwiftUI作为入门开发的方式。SwiftUI最大优势：相比同样原生的UIKit构建界面更方便！通过简单声明就可以实现各种效果。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-03-09T04:36:04.117Z">
+<meta property="article:author" content="wxmvv">
+<meta property="article:tag" content="swift">
+<meta property="article:tag" content="swiftUI">
+<meta property="article:tag" content="ios">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/icon.jpg">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/icon.jpg" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.jpg">
+        
+      
+    
+    <!-- title -->
+    <title>使用SwiftUI开发的我的第一款APP</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="wxmvv" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2023/02/10/%E8%A7%A3%E5%86%B3nvm%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <!-- <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li> -->
+  <li><a class="icon" href="https://twitter.com/share?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&text=使用SwiftUI开发的我的第一款APP"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <!-- <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&title=使用SwiftUI开发的我的第一款APP"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li> -->
+  <!-- <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&is_video=false&description=使用SwiftUI开发的我的第一款APP"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li> -->
+  <li><a class="icon" href="mailto:?subject=使用SwiftUI开发的我的第一款APP&body=Check out this article: https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <!-- <li><a class="icon" href=""></a></li> -->
+  <!-- <li><a class="icon" href="https://getpocket.com/save?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&title=使用SwiftUI开发的我的第一款APP"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li> -->
+  <!-- <li><a class="icon" href="http://reddit.com/submit?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&title=使用SwiftUI开发的我的第一款APP"><i class="fab fa-reddit " aria-hidden="true"></i></a></li> -->
+  <!-- <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&title=使用SwiftUI开发的我的第一款APP"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li> -->
+  <!-- <li><a class="icon" href="http://digg.com/submit?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&title=使用SwiftUI开发的我的第一款APP"><i class="fab fa-digg " aria-hidden="true"></i></a></li> -->
+  <!-- <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&name=使用SwiftUI开发的我的第一款APP&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li> -->
+  <!-- <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&t=使用SwiftUI开发的我的第一款APP"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li> -->
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP"><span class="toc-number">1.</span> <span class="toc-text">用SwiftUI开发我的第一款APP</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%9A%E4%BB%80%E4%B9%88"><span class="toc-number">1.1.</span> <span class="toc-text">做什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E5%81%9A"><span class="toc-number">1.2.</span> <span class="toc-text">怎么做</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">1.3.</span> <span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#App"><span class="toc-number">1.4.</span> <span class="toc-text">App</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91-amp-%E4%B8%8A%E7%BA%BF"><span class="toc-number">1.5.</span> <span class="toc-text">开发&amp;上线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E4%BA%8B"><span class="toc-number">1.6.</span> <span class="toc-text">其他事</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        使用SwiftUI开发的我的第一款APP
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">wxmvv</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-02-28T16:00:00.000Z" itemprop="datePublished">2023-03-01</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a> › <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81/ios/">ios</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/ios/" rel="tag">ios</a>, <a class="tag-link-link" href="/tags/swift/" rel="tag">swift</a>, <a class="tag-link-link" href="/tags/swiftui/" rel="tag">swiftUI</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="用SwiftUI开发我的第一款APP"><a href="#用SwiftUI开发我的第一款APP" class="headerlink" title="用SwiftUI开发我的第一款APP"></a>用SwiftUI开发我的第一款APP</h1><h2 id="做什么"><a href="#做什么" class="headerlink" title="做什么"></a>做什么</h2><p>经常逛app store，对笔记/日记类的应用很感兴趣，于是决定做一个。</p>
+<h2 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h2><p>搜索如何制作ios的应用，会有各种各样的方式，比如用框架flutter，uniapp之类，或者原生的UIKit，SwiftUI，经过比较最后决定使用SwiftUI作为入门开发的方式。<br>SwiftUI最大优势：相比同样原生的UIKit构建界面更方便！通过简单声明就可以实现各种效果。<br>当然也有不少缺点：ios系统版本要求较高，自带组件可定制有点少等等问题。<br>不过作为入门来说是一个很优秀的方式，因为真的足够简单。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://sspai.com/series/147">sspai的教学</a></li>
+</ul>
+<h2 id="App"><a href="#App" class="headerlink" title="App"></a>App</h2><p>名称：mwDiary</p>
+<h2 id="开发-amp-上线"><a href="#开发-amp-上线" class="headerlink" title="开发&amp;上线"></a>开发&amp;上线</h2><p>断断续续弄了大概3个月，终于做好了。<br>其中也出现不少问题，不过最终也都顺利解决。<br>其中最浪费时间的是设计，一开始没有想好做什么样的界面，然后不断做不断改，浪费了很多时间，引以为戒。</p>
+<h2 id="其他事"><a href="#其他事" class="headerlink" title="其他事"></a>其他事</h2><p>有时间我也会把swiftUI相关基础知识，以及我碰到的问题和解决放在另一篇文章中，希望能有帮助。</p>
+<p>#待更新</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP"><span class="toc-number">1.</span> <span class="toc-text">用SwiftUI开发我的第一款APP</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%9A%E4%BB%80%E4%B9%88"><span class="toc-number">1.1.</span> <span class="toc-text">做什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E5%81%9A"><span class="toc-number">1.2.</span> <span class="toc-text">怎么做</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">1.3.</span> <span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#App"><span class="toc-number">1.4.</span> <span class="toc-text">App</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91-amp-%E4%B8%8A%E7%BA%BF"><span class="toc-number">1.5.</span> <span class="toc-text">开发&amp;上线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E4%BA%8B"><span class="toc-number">1.6.</span> <span class="toc-text">其他事</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <!-- <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li> -->
+  <li><a class="icon" href="https://twitter.com/share?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&text=使用SwiftUI开发的我的第一款APP"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <!-- <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&title=使用SwiftUI开发的我的第一款APP"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li> -->
+  <!-- <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&is_video=false&description=使用SwiftUI开发的我的第一款APP"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li> -->
+  <li><a class="icon" href="mailto:?subject=使用SwiftUI开发的我的第一款APP&body=Check out this article: https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <!-- <li><a class="icon" href=""></a></li> -->
+  <!-- <li><a class="icon" href="https://getpocket.com/save?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&title=使用SwiftUI开发的我的第一款APP"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li> -->
+  <!-- <li><a class="icon" href="http://reddit.com/submit?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&title=使用SwiftUI开发的我的第一款APP"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li> -->
+  <!-- <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&title=使用SwiftUI开发的我的第一款APP"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li> -->
+  <!-- <li><a class="icon" href="http://digg.com/submit?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&title=使用SwiftUI开发的我的第一款APP"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li> -->
+  <!-- <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&name=使用SwiftUI开发的我的第一款APP&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li> -->
+  <!-- <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://wxmvv.github.io/2023/03/01/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91%E7%9A%84%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BEAPP/&t=使用SwiftUI开发的我的第一款APP"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li> -->
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2017-2023
+    wxmvv
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
