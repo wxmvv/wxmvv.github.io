@@ -6,7 +6,7 @@
   <link href="https://wxmvv.github.io/atom.xml" rel="self"/>
   
   <link href="https://wxmvv.github.io/"/>
-  <updated>2023-03-09T04:36:04.117Z</updated>
+  <updated>2023-03-11T15:28:37.551Z</updated>
   <id>https://wxmvv.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>chatGPT API 快捷指令分享</title>
+    <link href="https://wxmvv.github.io/2023/03/09/chatGPT%20API%20%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4%E5%88%86%E4%BA%AB/"/>
+    <id>https://wxmvv.github.io/2023/03/09/chatGPT%20API%20%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4%E5%88%86%E4%BA%AB/</id>
+    <published>2023-03-09T02:13:03.000Z</published>
+    <updated>2023-03-11T15:28:37.551Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="ios" scheme="https://wxmvv.github.io/categories/ios/"/>
+    
+    
+    <category term="快捷指令" scheme="https://wxmvv.github.io/tags/%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4/"/>
+    
+    <category term="ios" scheme="https://wxmvv.github.io/tags/ios/"/>
+    
+  </entry>
   
   <entry>
     <title>使用SwiftUI开发的我的第一款APP</title>
@@ -39,11 +66,11 @@
     <category term="ios" scheme="https://wxmvv.github.io/categories/%E4%BB%A3%E7%A0%81/ios/"/>
     
     
+    <category term="ios" scheme="https://wxmvv.github.io/tags/ios/"/>
+    
     <category term="swift" scheme="https://wxmvv.github.io/tags/swift/"/>
     
     <category term="swiftUI" scheme="https://wxmvv.github.io/tags/swiftui/"/>
-    
-    <category term="ios" scheme="https://wxmvv.github.io/tags/ios/"/>
     
   </entry>
   
