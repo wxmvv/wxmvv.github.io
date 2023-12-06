@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="shortcut icon" href="/image/icon.png" type="image/x-icon" />
+    <title>
+        
+            goframe开发学习（一）基础流程开发一个API |
+         
+        wxmvv
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/solid.min.css">
+
+     
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXXXX"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXXXX');
+        </script>
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/feed.xml" title="wxmvv" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body>
+    <div class="body-container">
+        <div class="header-wrapper"><header>
+    <div class="header-container">
+        <div class="header-menu-list">
+            <ul>
+            
+                <li>
+                    <a href="/">Home</a>
+                </li>
+            
+                <li>
+                    <a href="/wiki">Wiki</a>
+                </li>
+            
+                <li>
+                    <a href="/about">About</a>
+                </li>
+            
+            </ul>
+        </div>
+    </div>
+</header>
+</div>
+        <div class="main-wrapper"><main>
+    <div class="main-container">
+        <div class="post-details">
+            
+            <div class="post-title">
+                <h1>goframe开发学习（一）基础流程开发一个API</h1>
+            </div>
+            <div class="post-meta">
+                <i class="fa-solid fa-clock"></i>&nbsp;<span class="post-date">2023/10/11</span>
+                <span class="post-date"><a class="tag-link-link" href="/tags/goframe/" rel="tag">goframe<span class="tag-link-count">2</span></a>, <a class="tag-link-link" href="/tags/golang/" rel="tag">golang<span class="tag-link-count">2</span></a>, <a class="tag-link-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端<span class="tag-link-count">2</span></a></span>
+            </div>
+            
+            <div class="post-content">
+                <p>我是一名普普通通的前端程序员，并没有进过大厂工作，也不太了解各种设计模式，之前只用过flask，或者一些serverless的项目做一些简单的后端程序。第一次使用goframe的我其实也是有点一头雾水，看什么设计模式云里雾里，不过摸索了一阵子后，发现里面确实有很多设计方面的思想，不一定能用上，但是了解了也是很有帮助的（比如面试哈哈😂），总是学习是让人快乐的！</p>
+<p>下面直接进入主题，我会用最精炼的步骤来开发，如果我的学习分享能给你帮助或者有任何问题，都欢迎留言或邮件联系我。</p>
+<h2 id="开发准备"><a href="#开发准备" class="headerlink" title="开发准备"></a>开发准备</h2><h3 id="安装goframe"><a href="#安装goframe" class="headerlink" title="安装goframe"></a>安装goframe</h3><h3 id="初始化项目设置"><a href="#初始化项目设置" class="headerlink" title="初始化项目设置"></a>初始化项目设置</h3><h2 id="开发流程！重要-gf-v2-5"><a href="#开发流程！重要-gf-v2-5" class="headerlink" title="开发流程！重要 gf-v2.5"></a>开发流程！重要 gf-v2.5</h2><ol>
+<li>设计数据库</li>
+<li>设置(dao，数据库等)<ul>
+<li>在main.go中加入一行 _ “github.com&#x2F;gogf&#x2F;gf&#x2F;contrib&#x2F;drivers&#x2F;mysql&#x2F;v2” （如果你使用的是mysql；只需写一次）</li>
+</ul>
+</li>
+<li>gf gen dao 生成对应的 dao&#x2F;do&#x2F;model</li>
+<li>编写api层：定义业务侧数据结构，提供对外接口的输入&#x2F;输出数据结构</li>
+<li>gf gen ctrl 生成对应的 controller</li>
+<li>编写model层：定义数据侧数据结构，提供对内的数据处理的输入&#x2F;输出数据结构 </li>
+<li>编写logic层，自动生成service层代码<ul>
+<li>在main.go中 加入一行 _ “project-name&#x2F;internal&#x2F;logic” （只需写一次）</li>
+</ul>
+</li>
+<li>gf gen service 生成对应的 service</li>
+<li>编写controller层，接收&#x2F;解析用户输入的参数，调用service层的服务</li>
+<li>在cmd.go中注册路由</li>
+</ol>
+<h2 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h2><p>然后是分别详解对应步骤，我只会把和goframe相关的写出来，像数据库设计这种，请自己找资料学习。</p>
+<h3 id="1-设计数据库"><a href="#1-设计数据库" class="headerlink" title="1.设计数据库"></a>1.设计数据库</h3><p>注意：</p>
+<ol>
+<li>给需要的表添加 	<pre class="line-numbers language-sql"><code class="language-sql"><span class="token punctuation">`</span>created_at<span class="token punctuation">`</span> <span class="token keyword">datetime</span> <span class="token keyword">DEFAULT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'创建时间'</span><span class="token punctuation">,</span>
+<span class="token punctuation">`</span>updated_at<span class="token punctuation">`</span> <span class="token keyword">datetime</span> <span class="token keyword">DEFAULT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'修改时间'</span><span class="token punctuation">,</span>
+<span class="token punctuation">`</span>deleted_at<span class="token punctuation">`</span> <span class="token keyword">datetime</span> <span class="token keyword">DEFAULT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'删除时间'</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><a href="https://goframe.org/pages/viewpage.action?pageId=84103192">官方参考</a></li>
+</ol>
+<h3 id="4-编写api"><a href="#4-编写api" class="headerlink" title="4.编写api"></a>4.编写api</h3><p>注意：</p>
+<ol>
+<li>使用指针类型的属性参数，用于实现：当传递该参数时执行修改，不传递时不修改。(具体可以看<a href="https://goframe.org/pages/viewpage.action?pageId=84103192">官方参考</a>)</li>
+</ol>
+<p>主要参考文档:</p>
+<ol>
+<li><a href="https://goframe.org/pages/viewpage.action?pageId=47703679">g.Meta使用</a></li>
+<li><a href="https://goframe.org/pages/viewpage.action?pageId=93880327">官方文档编写规范</a></li>
+</ol>
+<pre class="line-numbers language-go"><code class="language-go"><span class="token comment" spellcheck="true">// MARK:你好 顺便获取全部管理员</span>
+<span class="token comment" spellcheck="true">// 收到的请求request的格式</span>
+<span class="token keyword">type</span> Admin_HelloReq <span class="token keyword">struct</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    g<span class="token punctuation">.</span>Meta <span class="token string">`path:"/jkmap/admin/_hello" tags:"Admin" method:"get" summary:"🌟 Hello 拿来吧你全部admin"`</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 返回的response格式</span>
+<span class="token keyword">type</span> Admin_HelloRes <span class="token keyword">struct</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    Hello <span class="token builtin">string</span> <span class="token string">`json:"hello" dc:"你好世界"`</span>
+    AdminList <span class="token operator">*</span><span class="token punctuation">[</span><span class="token punctuation">]</span>model<span class="token punctuation">.</span>AdminAll <span class="token string">`json:"admin_list" dc:"拿来吧你"`</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="6-编写model"><a href="#6-编写model" class="headerlink" title="6.编写model"></a>6.编写model</h3><p>其实就是各种数据类型都可以放在这里，一般是input output的数据类型。</p>
+<pre class="line-numbers language-go"><code class="language-go"><span class="token comment" spellcheck="true">//有没有发现 其实API中也是这么写的，所以model其实也可以用于API编写中</span>
+<span class="token comment" spellcheck="true">//</span>
+<span class="token keyword">type</span> AdminAll <span class="token keyword">struct</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    Admin_id <span class="token builtin">int</span> <span class="token string">`json:"admin_id"`</span>
+    Role_id <span class="token builtin">int</span> <span class="token string">`json:"role_id"`</span>
+    Name <span class="token builtin">string</span> <span class="token string">`json:"name"`</span>
+    Password <span class="token builtin">string</span> <span class="token string">`json:"password"`</span>
+    Salt <span class="token builtin">string</span> <span class="token string">`json:"salt"`</span>
+    Status <span class="token builtin">string</span> <span class="token string">`json:"status"`</span>
+    Nick_name <span class="token builtin">string</span> <span class="token string">`json:"nick_name"`</span>
+    Email <span class="token builtin">string</span> <span class="token string">`json:"email"`</span>
+    Phonenumber <span class="token builtin">string</span> <span class="token string">`json:"phonenumber"`</span>
+    Sex <span class="token builtin">string</span> <span class="token string">`json:"sex"`</span>
+    Avatar <span class="token builtin">string</span> <span class="token string">`json:"avatar"`</span>
+    Login_ip <span class="token builtin">string</span> <span class="token string">`json:"login_ip"`</span>
+    Login_date <span class="token operator">*</span>gtime<span class="token punctuation">.</span>Time <span class="token string">`json:"login_date"`</span>
+    Remark <span class="token builtin">string</span> <span class="token string">`json:"remark"`</span>
+    Created_at <span class="token operator">*</span>gtime<span class="token punctuation">.</span>Time <span class="token string">`json:"created_at"`</span>
+    Updated_at <span class="token operator">*</span>gtime<span class="token punctuation">.</span>Time <span class="token string">`json:"updated_at"`</span>
+    Deleted_at <span class="token operator">*</span>gtime<span class="token punctuation">.</span>Time <span class="token string">`json:"deleted_at"`</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+<span class="token keyword">type</span> AdminGetAllOutput <span class="token keyword">struct</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    AdminAllList <span class="token punctuation">[</span><span class="token punctuation">]</span>AdminAll <span class="token string">`json:"list"`</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="7-编写logic"><a href="#7-编写logic" class="headerlink" title="7.编写logic"></a>7.编写logic</h3><p>这个我在一开始使用的时候其实很困惑，为啥要弄这个，直接在controller里把这些逻辑都写在一起不就好了,不过文档中说明是在面对复杂项目上，用于封装业务。可能是我的项目太简单了吧🦉(汗…</p>
+<p>在看过官方示例后可以可以模仿来写。</p>
+<pre class="line-numbers language-go"><code class="language-go"><span class="token comment" spellcheck="true">// /logic/jkmap_admin/admin.go</span>
+<span class="token comment" spellcheck="true">//记得加上init 和new方法,每个logic都需要</span>
+<span class="token keyword">type</span> sAdmin <span class="token keyword">struct</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token keyword">func</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    service<span class="token punctuation">.</span><span class="token function">RegisterAdmin</span><span class="token punctuation">(</span><span class="token function">New</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token keyword">func</span> <span class="token function">New</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>sAdmin <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token operator">&amp;</span>sAdmin<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Hello 获得所有方法</span>
+<span class="token keyword">func</span> <span class="token punctuation">(</span>s <span class="token operator">*</span>sAdmin<span class="token punctuation">)</span> <span class="token function">GetAll</span><span class="token punctuation">(</span>ctx context<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">(</span>out <span class="token operator">*</span>model<span class="token punctuation">.</span>AdminGetAllOutput<span class="token punctuation">,</span> err <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    l <span class="token operator">:=</span> dao<span class="token punctuation">.</span>JkAdmin<span class="token punctuation">.</span><span class="token function">Ctx</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">//实例化响应结构体</span>
+    out <span class="token operator">=</span> <span class="token operator">&amp;</span>model<span class="token punctuation">.</span>AdminGetAllOutput<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>AdminAllList<span class="token punctuation">:</span> <span class="token boolean">nil</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    err <span class="token operator">=</span> l<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Scan</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>out<span class="token punctuation">.</span>AdminAllList<span class="token punctuation">)</span>
+    <span class="token keyword">return</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="9-编写controller"><a href="#9-编写controller" class="headerlink" title="9.编写controller"></a>9.编写controller</h3><p>在这里调用你在logic中写的业务方法，来实现接口。</p>
+<h3 id="10-在cmd中绑定接口"><a href="#10-在cmd中绑定接口" class="headerlink" title="10.在cmd中绑定接口"></a>10.在cmd中绑定接口</h3><pre class="line-numbers language-go"><code class="language-go"><span class="token comment" spellcheck="true">//像这样在 cmd.go 文件中绑定你生成的controller</span>
+group<span class="token punctuation">.</span><span class="token function">Bind</span><span class="token punctuation">(</span>
+    <span class="token comment" spellcheck="true">//hello.NewV1(),</span>
+    jkmap_admin<span class="token punctuation">.</span><span class="token function">NewV1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">//jkmap_mp.NewV1(),</span>
+<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后执行<code>gf run main.go</code><br>是不是看到自己的接口啦～</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>现在只是写了基本的用法，以后也会慢慢用也会写一些更具体的用法，一些细节之类的。</p>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://utteranc.es/client.js"
+    repo="wxmvv/wxmvv.github.io"
+    issue-term="pathname"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+</script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+  
+
+</div>
+        <div class="footer-wrapper"><footer>
+    <div class="footer-container">
+        <div class="footer-meta">
+            
+                <div class="footer-meta-copyright">
+                    &copy; 2023 wxm.
+                </div>
+            
+            
+                <div class="footer-meta-licenese">
+                    Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0</a>
+                </div>
+            
+            
+                <div class="footer-meta-rss">
+                    <a href="/feed.xml"><i class="fa-solid fa-rss"></i></a>
+                </div>
+            
+        </div>
+    </div>
+</footer>
+</div>
+    </div>
+</body>
+</html>

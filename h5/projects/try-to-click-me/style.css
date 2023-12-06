@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@800&display=swap');
+
+body,
+html {
+  height: 100%;
+  display: grid;
+  background-color: #FFE5EC;
+}
+
+#container {
+  margin: auto;
+}
+
+button {
+  position: relative;
+  padding: 20px;
+  background-color: #FFC2D1;
+  box-shadow: 5px 5px #FB6F92;
+  border: none;
+  font-family: 'Sono', sans-serif;
+}
