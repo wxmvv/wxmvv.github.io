@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>wxmvv</title>
+  <icon>https://wxmvv.github.io/icon.png</icon>
+  <subtitle>千言万语</subtitle>
+  <link href="https://wxmvv.github.io/feed.xml" rel="self"/>
+  
+  <link href="https://wxmvv.github.io/"/>
+  <updated>2024-05-29T10:33:23.272Z</updated>
+  <id>https://wxmvv.github.io/</id>
+  
+  <author>
+    <name>wxmvv</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最近在学习sketch来设计原型</title>
+    <link href="https://wxmvv.github.io/2024/03/17/Note/%E6%9C%80%E8%BF%91%E5%9C%A8%E5%AD%A6%E4%B9%A0sketch%E6%9D%A5%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%9E%8B/"/>
+    <id>https://wxmvv.github.io/2024/03/17/Note/%E6%9C%80%E8%BF%91%E5%9C%A8%E5%AD%A6%E4%B9%A0sketch%E6%9D%A5%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%9E%8B/</id>
+    <published>2024-03-17T08:40:00.000Z</published>
+    <updated>2024-05-29T10:33:23.272Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在学习间隙写一些最近的感想</p><p>我也是从最开始的编程小白一路走来，学习编程的过程中，我也走过很多弯路，到现在也快三年了，今天也随便写点东西</p><h2 id="我在学习编程的过程中额外学习了哪些技能"><a href="#我在学习编程的过程中额外学习了哪些技能" class="headerlink" title="我在学习编程的过程中额外学习了哪些技能"></a>我在学习编程的过程中额外学习了哪些技能</h2><ul><li>做项目计划</li><li>项目谈判</li><li>设计</li><li>excel表和BI报表的基础</li><li>PS图片，简单的图片处理</li><li>设计Logo等</li></ul><h2 id="为什么会学习各种技能"><a href="#为什么会学习各种技能" class="headerlink" title="为什么会学习各种技能"></a>为什么会学习各种技能</h2><p>原因还是因为缺少经费.只能自己学习来减少预算…<br>不过在学习中，我也知道了很多。<br>各个科目中互相融合的部分，我也能更好地去理解了。</p><h2 id="其他感想"><a href="#其他感想" class="headerlink" title="其他感想"></a>其他感想</h2><p>不论什么软件开发，在这些日子的学习中，我逐渐才发现，“编程”不过是一种工具，而解决对方问题才是真正重要的。</p><p>不管怎样的程序或者其他什么的东西，都是一定要落地的，考虑到实际情况的，这个才是最重要的。</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://wxmvv.github.io/categories/note/"/>
+    
+    <category term="diary" scheme="https://wxmvv.github.io/categories/note/diary/"/>
+    
+    
+    <category term="note" scheme="https://wxmvv.github.io/tags/note/"/>
+    
+    <category term="diary" scheme="https://wxmvv.github.io/tags/diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Macos隐藏文件&amp;显示隐藏文件</title>
+    <link href="https://wxmvv.github.io/2023/11/16/Macos/Macos%E9%9A%90%E8%97%8F%E4%B8%8E%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6/"/>
+    <id>https://wxmvv.github.io/2023/11/16/Macos/Macos%E9%9A%90%E8%97%8F%E4%B8%8E%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6/</id>
+    <published>2023-11-16T04:20:00.000Z</published>
+    <updated>2024-05-29T10:33:23.268Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="macos命令使用-chflags"><a href="#macos命令使用-chflags" class="headerlink" title="macos命令使用 chflags"></a>macos命令使用 chflags</h2><p>最近在使用obsidian的时候，出现了文件会变成隐藏，目前原因不明，最后使用chflags nohidden命令将它们取消隐藏。</p><p>使用man chflags可以了解大致使用方式</p><pre class="line-numbers language-shell"><code class="language-shell">#常用指令chflags hidden  # 隐藏单一文件或文件夹chflags nohidden # 取消隐藏单一文件或文件夹chflags -R hidden # 隐藏或取消隐藏目录所有文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>还有官方论坛相关的回答<a href="https://discussionschinese.apple.com/thread/250178608">url</a></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="macos" scheme="https://wxmvv.github.io/categories/macos/"/>
+    
+    <category term="macos使用心得" scheme="https://wxmvv.github.io/categories/macos/macos%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/"/>
+    
+    
+    <category term="macos" scheme="https://wxmvv.github.io/tags/macos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Arc浏览器使用体会</title>
+    <link href="https://wxmvv.github.io/2023/11/04/App%E6%8E%A8%E8%8D%90/Arc%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BD%BF%E7%94%A8%E4%BD%93%E4%BC%9A/"/>
+    <id>https://wxmvv.github.io/2023/11/04/App%E6%8E%A8%E8%8D%90/Arc%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BD%BF%E7%94%A8%E4%BD%93%E4%BC%9A/</id>
+    <published>2023-11-04T06:47:00.000Z</published>
+    <updated>2024-05-29T10:33:23.268Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>把总结放在前面：<br>我的使用arc浏览器的感觉就是两个字：<strong>舒服！</strong>（个人观点仅供参考）<br>优点：</p><ul><li>外观花哨（有好有坏吧）</li><li>画架功能</li><li>快捷键可以实现更简单的分屏，新页面等等</li><li>调试方便</li><li>多用户切换方便<br>缺点：</li><li>性能开销大（笔记本可能会影响续航，如果外出还是safari）</li><li>有一些bug（比如总是提示翻译网页）</li><li>没有书签功能（对应的pin功能，不过很难用）</li></ul><p>新奇的设计和花哨的外观，真的可以先体验一下，看看适不适合你。<br>当然如果习惯不同也不要勉强，适合自己的才是对的。</p><h2 id="心路历程"><a href="#心路历程" class="headerlink" title="心路历程"></a>心路历程</h2><p>其实我很早就有关注到这个浏览器，也早早参与了测试（好像是2021年吧，有点模糊），不过当时第一次打开然后CPU飙升，风扇狂扇，本来清爽的macbook直接煎蛋，给我留下了不小的心理阴影，然后惊恐的删掉了。<br>这次偶然间在b站看到有人推荐，看着让人舒适的界面，我最后还是下载了使用。之前的发热问题也没了（可能也和系统版本有关），可以使用了。</p><h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><table><thead><tr><th>按键</th><th>功能</th></tr></thead><tbody><tr><td>command+s</td><td>打开左侧siderbar</td></tr><tr><td>ctrl+⬆️+&#x3D;</td><td>新建分屏</td></tr><tr><td>ctrl+数字</td><td>切换空间</td></tr><tr><td>command+数字</td><td>切换空间中的页面</td></tr><tr><td>command+⬆️+L</td><td>打开资料库</td></tr><tr><td>command+⬆️+C</td><td>复制当前url</td></tr><tr><td>command+W</td><td>关闭当前页面(设置里叫归档)</td></tr><tr><td>command+F</td><td>搜索</td></tr><tr><td>command+L</td><td>打开command输入</td></tr></tbody></table><h2 id="画架"><a href="#画架" class="headerlink" title="画架"></a>画架</h2><p>我觉得arc最优秀的功能就是这个画架！如果你有用arc一定要尝试！！</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="App推荐" scheme="https://wxmvv.github.io/categories/app%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="arc" scheme="https://wxmvv.github.io/categories/app%E6%8E%A8%E8%8D%90/arc/"/>
+    
+    
+    <category term="app" scheme="https://wxmvv.github.io/tags/app/"/>
+    
+    <category term="chrome" scheme="https://wxmvv.github.io/tags/chrome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20231104 思考：为什么要写博客？</title>
+    <link href="https://wxmvv.github.io/2023/11/04/Note/%E6%80%9D%E8%80%83%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E5%8D%9A%E5%AE%A2%EF%BC%9F/"/>
+    <id>https://wxmvv.github.io/2023/11/04/Note/%E6%80%9D%E8%80%83%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E5%8D%9A%E5%AE%A2%EF%BC%9F/</id>
+    <published>2023-11-04T04:40:00.000Z</published>
+    <updated>2024-05-29T10:33:23.272Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="为什么要写博客？"><a href="#为什么要写博客？" class="headerlink" title="为什么要写博客？"></a>为什么要写博客？</h2><p>最开始只是觉得大家都写，我也想写，总是坚持写了两天，第三天就放弃了，有点像朋友戒烟哈哈。</p><p>最近还是重新开始弄博客，不过今天无聊时候就在思考，我为什么要做博客呢，有什么用吗？真的有人看吗？</p><p>以下是我的思考和对应答案</p><p>为什么做博客：</p><ul><li>记录与整理（生活工作）</li><li>锻炼写文案</li></ul><p>这两个理由对我来说</p><ol><li><p><strong>记录与整理</strong>：</p><ul><li><strong>个人成长：</strong> 通过博客记录生活和工作的点点滴滴，你可以更清晰地看到自己的成长和变化，这也有助于更好地了解自己。</li><li><strong>知识积累：</strong> 将学到的知识整理成博客形式，不仅有助于巩固所学，还能为他人提供有用的信息，同时也激励你更深入地学习。</li><li><strong>问题解决：</strong> 在博客中记录遇到的问题和解决方法，不仅能帮助他人，也有助于自己更系统地思考和解决问题。</li></ul></li><li><p><strong>锻炼写文案</strong>：</p><ul><li><strong>沟通能力提升：</strong> 不仅在写作方面，博客还能帮助你提高表达和沟通能力。这对于工作和日常生活中的各种情境都是有益的。</li><li><strong>建立个人品牌：</strong> 通过博客展示你的专业知识和独特见解，逐渐建立个人品牌，这对职业发展和网络影响力都有积极作用。</li><li><strong>创造共鸣：</strong> 通过真实、有趣、引人入胜的文章，你有可能吸引到和你有共鸣的读者，建立起有意义的社交关系。</li></ul></li></ol><p>当然，写博客是一个长期的过程，可能一开始不容易看到明显的回报。但是随着时间的推移，你会发现这不仅仅是一种记录和表达方式，更是一次自我发现和不断进步的过程。</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://wxmvv.github.io/categories/note/"/>
+    
+    <category term="diary" scheme="https://wxmvv.github.io/categories/note/diary/"/>
+    
+    
+    <category term="note" scheme="https://wxmvv.github.io/tags/note/"/>
+    
+    <category term="diary" scheme="https://wxmvv.github.io/tags/diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的项目StarlightDiary重构开始!</title>
+    <link href="https://wxmvv.github.io/2023/10/31/swiftUI/StarlightDiary%E9%87%8D%E6%9E%84%E5%BC%80%E5%A7%8B!/"/>
+    <id>https://wxmvv.github.io/2023/10/31/swiftUI/StarlightDiary%E9%87%8D%E6%9E%84%E5%BC%80%E5%A7%8B!/</id>
+    <published>2023-10-31T16:00:00.000Z</published>
+    <updated>2024-05-29T10:33:23.272Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="重构快乐🎉！"><a href="#重构快乐🎉！" class="headerlink" title="重构快乐🎉！"></a>重构快乐🎉！</h2><p>最近在忙很多各种各样的工作(大多数小程序以及前端项目)，最近终于闲下来一点，看着自己过去做的这个日记App实在是惨不忍睹，正好就重构一下，而且SwiftUI经过快两年的更新也加入了不少东西，都一起来用一下吧！</p><h2 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h2><p><a href="https://github.com/wxmvv/StarlightDiary">StarLightDiary</a></p><h2 id="主要重构方向"><a href="#主要重构方向" class="headerlink" title="主要重构方向"></a>主要重构方向</h2><ul><li>新的UI界面，blingbling的✨</li><li>更多的设定（字体，色彩）</li><li>markdown支持</li><li>ICloud的支持</li><li>Mac支持（看情况）</li></ul><h2 id="其他要说的"><a href="#其他要说的" class="headerlink" title="其他要说的"></a>其他要说的</h2><p>也许可以顺便把之前定下的流程经验教学安排一下？</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="swiftUI" scheme="https://wxmvv.github.io/categories/swiftui/"/>
+    
+    
+    <category term="swift" scheme="https://wxmvv.github.io/tags/swift/"/>
+    
+    <category term="swiftUI" scheme="https://wxmvv.github.io/tags/swiftui/"/>
+    
+    <category term="ios" scheme="https://wxmvv.github.io/tags/ios/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>goframe开发学习（一）基础流程开发一个API</title>
+    <link href="https://wxmvv.github.io/2023/10/11/golang/goframe%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97/goframe%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E6%B5%81%E7%A8%8B/"/>
+    <id>https://wxmvv.github.io/2023/10/11/golang/goframe%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97/goframe%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E6%B5%81%E7%A8%8B/</id>
+    <published>2023-10-11T04:47:00.000Z</published>
+    <updated>2024-05-29T10:33:23.272Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我是一名普普通通的前端程序员，并没有进过大厂工作，也不太了解各种设计模式，之前只用过flask，或者一些serverless的项目做一些简单的后端程序。第一次使用goframe的我其实也是有点一头雾水，看什么设计模式云里雾里，不过摸索了一阵子后，发现里面确实有很多设计方面的思想，不一定能用上，但是了解了也是很有帮助的（比如面试哈哈😂），总是学习是让人快乐的！</p><p>下面直接进入主题，我会用最精炼的步骤来开发，如果我的学习分享能给你帮助或者有任何问题，都欢迎留言或邮件联系我。</p><h2 id="开发准备"><a href="#开发准备" class="headerlink" title="开发准备"></a>开发准备</h2><h3 id="安装goframe"><a href="#安装goframe" class="headerlink" title="安装goframe"></a>安装goframe</h3><h3 id="初始化项目设置"><a href="#初始化项目设置" class="headerlink" title="初始化项目设置"></a>初始化项目设置</h3><h2 id="开发流程！重要-gf-v2-5"><a href="#开发流程！重要-gf-v2-5" class="headerlink" title="开发流程！重要 gf-v2.5"></a>开发流程！重要 gf-v2.5</h2><ol><li>设计数据库</li><li>设置(dao，数据库等)<ul><li>在main.go中加入一行 _ “github.com&#x2F;gogf&#x2F;gf&#x2F;contrib&#x2F;drivers&#x2F;mysql&#x2F;v2” （如果你使用的是mysql；只需写一次）</li></ul></li><li>gf gen dao 生成对应的 dao&#x2F;do&#x2F;model</li><li>编写api层：定义业务侧数据结构，提供对外接口的输入&#x2F;输出数据结构</li><li>gf gen ctrl 生成对应的 controller</li><li>编写model层：定义数据侧数据结构，提供对内的数据处理的输入&#x2F;输出数据结构 </li><li>编写logic层，自动生成service层代码<ul><li>在main.go中 加入一行 _ “project-name&#x2F;internal&#x2F;logic” （只需写一次）</li></ul></li><li>gf gen service 生成对应的 service</li><li>编写controller层，接收&#x2F;解析用户输入的参数，调用service层的服务</li><li>在cmd.go中注册路由</li></ol><h2 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h2><p>然后是分别详解对应步骤，我只会把和goframe相关的写出来，像数据库设计这种，请自己找资料学习。</p><h3 id="1-设计数据库"><a href="#1-设计数据库" class="headerlink" title="1.设计数据库"></a>1.设计数据库</h3><p>注意：</p><ol><li>给需要的表添加 <pre class="line-numbers language-sql"><code class="language-sql"><span class="token punctuation">`</span>created_at<span class="token punctuation">`</span> <span class="token keyword">datetime</span> <span class="token keyword">DEFAULT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'创建时间'</span><span class="token punctuation">,</span><span class="token punctuation">`</span>updated_at<span class="token punctuation">`</span> <span class="token keyword">datetime</span> <span class="token keyword">DEFAULT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'修改时间'</span><span class="token punctuation">,</span><span class="token punctuation">`</span>deleted_at<span class="token punctuation">`</span> <span class="token keyword">datetime</span> <span class="token keyword">DEFAULT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'删除时间'</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li><li><a href="https://goframe.org/pages/viewpage.action?pageId=84103192">官方参考</a></li></ol><h3 id="4-编写api"><a href="#4-编写api" class="headerlink" title="4.编写api"></a>4.编写api</h3><p>注意：</p><ol><li>使用指针类型的属性参数，用于实现：当传递该参数时执行修改，不传递时不修改。(具体可以看<a href="https://goframe.org/pages/viewpage.action?pageId=84103192">官方参考</a>)</li></ol><p>主要参考文档:</p><ol><li><a href="https://goframe.org/pages/viewpage.action?pageId=47703679">g.Meta使用</a></li><li><a href="https://goframe.org/pages/viewpage.action?pageId=93880327">官方文档编写规范</a></li></ol><pre class="line-numbers language-go"><code class="language-go"><span class="token comment" spellcheck="true">// MARK:你好 顺便获取全部管理员</span><span class="token comment" spellcheck="true">// 收到的请求request的格式</span><span class="token keyword">type</span> Admin_HelloReq <span class="token keyword">struct</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    g<span class="token punctuation">.</span>Meta <span class="token string">`path:"/jkmap/admin/_hello" tags:"Admin" method:"get" summary:"🌟 Hello 拿来吧你全部admin"`</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 返回的response格式</span><span class="token keyword">type</span> Admin_HelloRes <span class="token keyword">struct</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    Hello <span class="token builtin">string</span> <span class="token string">`json:"hello" dc:"你好世界"`</span>    AdminList <span class="token operator">*</span><span class="token punctuation">[</span><span class="token punctuation">]</span>model<span class="token punctuation">.</span>AdminAll <span class="token string">`json:"admin_list" dc:"拿来吧你"`</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="6-编写model"><a href="#6-编写model" class="headerlink" title="6.编写model"></a>6.编写model</h3><p>其实就是各种数据类型都可以放在这里，一般是input output的数据类型。</p><pre class="line-numbers language-go"><code class="language-go"><span class="token comment" spellcheck="true">//有没有发现 其实API中也是这么写的，所以model其实也可以用于API编写中</span><span class="token comment" spellcheck="true">//</span><span class="token keyword">type</span> AdminAll <span class="token keyword">struct</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    Admin_id <span class="token builtin">int</span> <span class="token string">`json:"admin_id"`</span>    Role_id <span class="token builtin">int</span> <span class="token string">`json:"role_id"`</span>    Name <span class="token builtin">string</span> <span class="token string">`json:"name"`</span>    Password <span class="token builtin">string</span> <span class="token string">`json:"password"`</span>    Salt <span class="token builtin">string</span> <span class="token string">`json:"salt"`</span>    Status <span class="token builtin">string</span> <span class="token string">`json:"status"`</span>    Nick_name <span class="token builtin">string</span> <span class="token string">`json:"nick_name"`</span>    Email <span class="token builtin">string</span> <span class="token string">`json:"email"`</span>    Phonenumber <span class="token builtin">string</span> <span class="token string">`json:"phonenumber"`</span>    Sex <span class="token builtin">string</span> <span class="token string">`json:"sex"`</span>    Avatar <span class="token builtin">string</span> <span class="token string">`json:"avatar"`</span>    Login_ip <span class="token builtin">string</span> <span class="token string">`json:"login_ip"`</span>    Login_date <span class="token operator">*</span>gtime<span class="token punctuation">.</span>Time <span class="token string">`json:"login_date"`</span>    Remark <span class="token builtin">string</span> <span class="token string">`json:"remark"`</span>    Created_at <span class="token operator">*</span>gtime<span class="token punctuation">.</span>Time <span class="token string">`json:"created_at"`</span>    Updated_at <span class="token operator">*</span>gtime<span class="token punctuation">.</span>Time <span class="token string">`json:"updated_at"`</span>    Deleted_at <span class="token operator">*</span>gtime<span class="token punctuation">.</span>Time <span class="token string">`json:"deleted_at"`</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token keyword">type</span> AdminGetAllOutput <span class="token keyword">struct</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    AdminAllList <span class="token punctuation">[</span><span class="token punctuation">]</span>AdminAll <span class="token string">`json:"list"`</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="7-编写logic"><a href="#7-编写logic" class="headerlink" title="7.编写logic"></a>7.编写logic</h3><p>这个我在一开始使用的时候其实很困惑，为啥要弄这个，直接在controller里把这些逻辑都写在一起不就好了,不过文档中说明是在面对复杂项目上，用于封装业务。可能是我的项目太简单了吧🦉(汗…</p><p>在看过官方示例后可以可以模仿来写。</p><pre class="line-numbers language-go"><code class="language-go"><span class="token comment" spellcheck="true">// /logic/jkmap_admin/admin.go</span><span class="token comment" spellcheck="true">//记得加上init 和new方法,每个logic都需要</span><span class="token keyword">type</span> sAdmin <span class="token keyword">struct</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token keyword">func</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    service<span class="token punctuation">.</span><span class="token function">RegisterAdmin</span><span class="token punctuation">(</span><span class="token function">New</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token keyword">func</span> <span class="token function">New</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>sAdmin <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    <span class="token keyword">return</span> <span class="token operator">&amp;</span>sAdmin<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// Hello 获得所有方法</span><span class="token keyword">func</span> <span class="token punctuation">(</span>s <span class="token operator">*</span>sAdmin<span class="token punctuation">)</span> <span class="token function">GetAll</span><span class="token punctuation">(</span>ctx context<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">(</span>out <span class="token operator">*</span>model<span class="token punctuation">.</span>AdminGetAllOutput<span class="token punctuation">,</span> err <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    l <span class="token operator">:=</span> dao<span class="token punctuation">.</span>JkAdmin<span class="token punctuation">.</span><span class="token function">Ctx</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">//实例化响应结构体</span>    out <span class="token operator">=</span> <span class="token operator">&amp;</span>model<span class="token punctuation">.</span>AdminGetAllOutput<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>AdminAllList<span class="token punctuation">:</span> <span class="token boolean">nil</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>    err <span class="token operator">=</span> l<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Scan</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>out<span class="token punctuation">.</span>AdminAllList<span class="token punctuation">)</span>    <span class="token keyword">return</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="9-编写controller"><a href="#9-编写controller" class="headerlink" title="9.编写controller"></a>9.编写controller</h3><p>在这里调用你在logic中写的业务方法，来实现接口。</p><h3 id="10-在cmd中绑定接口"><a href="#10-在cmd中绑定接口" class="headerlink" title="10.在cmd中绑定接口"></a>10.在cmd中绑定接口</h3><pre class="line-numbers language-go"><code class="language-go"><span class="token comment" spellcheck="true">//像这样在 cmd.go 文件中绑定你生成的controller</span>group<span class="token punctuation">.</span><span class="token function">Bind</span><span class="token punctuation">(</span>    <span class="token comment" spellcheck="true">//hello.NewV1(),</span>    jkmap_admin<span class="token punctuation">.</span><span class="token function">NewV1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>    <span class="token comment" spellcheck="true">//jkmap_mp.NewV1(),</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>然后执行<code>gf run main.go</code><br>是不是看到自己的接口啦～</p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>现在只是写了基本的用法，以后也会慢慢用也会写一些更具体的用法，一些细节之类的。</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="golang" scheme="https://wxmvv.github.io/categories/golang/"/>
+    
+    <category term="goframe开发学习系列" scheme="https://wxmvv.github.io/categories/golang/goframe%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97/"/>
+    
+    
+    <category term="后端" scheme="https://wxmvv.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="golang" scheme="https://wxmvv.github.io/tags/golang/"/>
+    
+    <category term="goframe" scheme="https://wxmvv.github.io/tags/goframe/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>goframe开发学习（零）前言</title>
+    <link href="https://wxmvv.github.io/2023/10/06/golang/goframe%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97/goframe%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%EF%BC%88%E9%9B%B6%EF%BC%89%E5%89%8D%E8%A8%80/"/>
+    <id>https://wxmvv.github.io/2023/10/06/golang/goframe%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97/goframe%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%EF%BC%88%E9%9B%B6%EF%BC%89%E5%89%8D%E8%A8%80/</id>
+    <published>2023-10-06T04:47:00.000Z</published>
+    <updated>2024-05-29T10:33:23.272Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>记录自己学习的过程，同时把自己的心得分享出来，如果你也和我一样刚开始接触golang或者goframe，想要尽快入门使用，那么可以关注我的这些文章，肯定会有帮助的。</p><h2 id="goframe是什么"><a href="#goframe是什么" class="headerlink" title="goframe是什么"></a>goframe是什么</h2><p>goframe是一个基于golang的web框架，它的特点是集成了很多功能，比如orm、缓存、日志、配置、定时任务、命令行、内置服务等等，而且使用起来也很简单，只需要简单的配置就可以使用。</p><h2 id="为什么选择goframe"><a href="#为什么选择goframe" class="headerlink" title="为什么选择goframe"></a>为什么选择goframe</h2><p>我选择goframe的原因是因为它的功能很全面，而且使用起来也很简单，而且它的文档也很详细，基本上能想到的功能都有，而且还有很多案例，可以很快的上手。</p><h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><ul><li>VSCode</li><li>ApiPost(不是广告，真的蛮好用，而且是本地的)</li><li>TablePlus(看数据库的，随便用哪个都行)</li><li><a href="https://goframe.org/">goframe官网</a>(怎么能不看文档！)</li></ul><h2 id="加油！"><a href="#加油！" class="headerlink" title="加油！"></a>加油！</h2><p>让我们一起努力，共同进步！</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="golang" scheme="https://wxmvv.github.io/categories/golang/"/>
+    
+    <category term="goframe开发学习系列" scheme="https://wxmvv.github.io/categories/golang/goframe%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97/"/>
+    
+    
+    <category term="后端" scheme="https://wxmvv.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="golang" scheme="https://wxmvv.github.io/tags/golang/"/>
+    
+    <category term="goframe" scheme="https://wxmvv.github.io/tags/goframe/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何美化github profile？</title>
+    <link href="https://wxmvv.github.io/2023/09/24/github/%E5%A6%82%E4%BD%95%E7%BE%8E%E5%8C%96github%20profile%EF%BC%9F/"/>
+    <id>https://wxmvv.github.io/2023/09/24/github/%E5%A6%82%E4%BD%95%E7%BE%8E%E5%8C%96github%20profile%EF%BC%9F/</id>
+    <published>2023-09-24T06:45:00.000Z</published>
+    <updated>2024-05-29T10:33:23.272Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="我要变美！"><a href="#我要变美！" class="headerlink" title="我要变美！"></a>我要变美！</h2><p>好像是去年更新的功能，今天整理github文件顺便尝试一下。</p><p>原理就是新建一个和你的github账号名一样的仓库，然后这个仓库中的read me就会显示在profile页面。</p><p>这是一个md文件，可以使用markdown，也可以使用html+css来制作样式。</p><p>也有一些相关美化的项目可以用来搭配使用</p><ul><li><a href="https://skillicons.dev/">skillicons</a> 添加小图标</li><li><a href="https://github.com/anuraghazra/github-readme-stats">github-readme-stats</a> 你的github状态</li></ul><p>好啦！快去试一下吧～(^_−)−☆</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="github" scheme="https://wxmvv.github.io/categories/github/"/>
+    
+    <category term="profile" scheme="https://wxmvv.github.io/categories/github/profile/"/>
+    
+    
+    <category term="github" scheme="https://wxmvv.github.io/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>音乐分享 second-wind</title>
+    <link href="https://wxmvv.github.io/2023/09/20/Music/%E9%9F%B3%E4%B9%90%E5%88%86%E4%BA%AB-second-wind/"/>
+    <id>https://wxmvv.github.io/2023/09/20/Music/%E9%9F%B3%E4%B9%90%E5%88%86%E4%BA%AB-second-wind/</id>
+    <published>2023-09-20T09:12:45.000Z</published>
+    <updated>2024-05-29T10:33:23.268Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3yx7NLldcqxw39HoKLPaRG?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><p>最近听到的非常棒的一张专辑，非常喜欢其中的曲子的solo部分，非常有趣，整体音色会让人很舒适放松，然后solo又会像小精灵一样不多不少制造一点紧张，并且完美解决，确实很棒。</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;iframe</summary>
+        
+      
+    
+    
+    
+    <category term="music" scheme="https://wxmvv.github.io/categories/music/"/>
+    
+    <category term="cpop" scheme="https://wxmvv.github.io/categories/music/cpop/"/>
+    
+    
+    <category term="music" scheme="https://wxmvv.github.io/tags/music/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试 github action</title>
+    <link href="https://wxmvv.github.io/2023/09/17/github/github%20action%20test/"/>
+    <id>https://wxmvv.github.io/2023/09/17/github/github%20action%20test/</id>
+    <published>2023-09-17T16:23:03.000Z</published>
+    <updated>2024-05-29T10:33:23.272Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>如果看到说明成功啦 哈哈～</p><p>参考<a href="https://github.com/FuShaoLei/auto-hexo-template">auto-hexo-template</a></p><p>脚本做了一些更新,后续会发。</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;如果看到说明成功啦</summary>
+        
+      
+    
+    
+    
+    <category term="github" scheme="https://wxmvv.github.io/categories/github/"/>
+    
+    <category term="actions" scheme="https://wxmvv.github.io/categories/github/actions/"/>
+    
+    
+    <category term="hexo" scheme="https://wxmvv.github.io/tags/hexo/"/>
+    
+    <category term="test" scheme="https://wxmvv.github.io/tags/test/"/>
+    
+    <category term="github" scheme="https://wxmvv.github.io/tags/github/"/>
+    
+    <category term="github-actions" scheme="https://wxmvv.github.io/tags/github-actions/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>surge个人使用配置</title>
+    <link href="https://wxmvv.github.io/2023/09/03/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/surge%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE/"/>
+    <id>https://wxmvv.github.io/2023/09/03/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/surge%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE/</id>
+    <published>2023-09-03T03:13:00.000Z</published>
+    <updated>2024-05-29T10:33:23.272Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="为什么是surge"><a href="#为什么是surge" class="headerlink" title="为什么是surge"></a>为什么是surge</h2><p>之前一直在用shadowrocket，很简单，最近因为在淘宝花几块钱买了个ios软件用，结果发现店铺居然是用网球app，或者圈x解锁，于是想研究一下。</p><p>包括圈x，loon，surge，我都用了一圈，确实是surge更加顺手一些，主要是有小挂件的支持在ios上可以更快捷的开关、查看状态。还有一个重要的原因，是因为网上都说surge会更稳定，更省电(我持保留意见)，于是折腾一番弄出了自己的配置表，欢迎使用参考。</p><p>模块的话，其实我并没开很多，只有一个必开<a href="https://raw.githubusercontent.com/ExaAlice/Alice/main/Module/MitMAllHostnames.sgmodule">MIITAllHost</a>,这个打开后可以方便抓包，其他的可以在网上自行搜索，或者在各种电报群获取。</p><h2 id="个人配置"><a href="#个人配置" class="headerlink" title="个人配置"></a>个人配置</h2><p><a href="https://wxmvv.github.io/static/surge.conf">surge个人配置</a><br>导入后替换配置中的订阅地址即可使用</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>surge官方</p><ul><li>[官方-使用手册]</li><li><a href="https://wiki.surge.community/">社区-入门指南</a></li></ul><p>参考仓库</p><ul><li><a href="https://limbopro.com/">毒奶</a></li><li><a href="https://blankmagic.github.io/surge/">blankmagic</a></li><li><a href="https://github.com/blackmatrix7/ios_rule_script">blackmatrix7 ios-rule-script</a></li><li><a href="https://github.com/Rabbit-Spec">Rabbit-Spec</a></li></ul><p>模块参考</p><ul><li><a href="https://wiki.surge.community/modules">社区推荐</a></li><li><a href="https://github.com/deezertidal/Surge_Module">deezertidal</a></li><li><a href="https://github.com/Yu9191/Rewrite/tree/main/Surge">Yu9191</a></li></ul><p>一些特殊模块</p><ul><li><a href="https://github.com/sub-store-org/Sub-Store">sub-store</a> 订阅转换</li><li><a href="https://docs.boxjs.app/">box.js</a> <a href="https://github.com/chavyleung/scripts">boxjs脚本</a>  </li><li><a href="https://github.com/VirgilClyne/iRingo">iRingo</a> 解锁苹果功能</li><li><a href="https://github.com/Script-Hub-Org/Script-Hub">script.hub</a> 脚本转换</li><li><a href="https://raw.githubusercontent.com/ExaAlice/Alice/main/Module/MitMAllHostnames.sgmodule">MIITAllHost</a> 抓包使用</li></ul><p>一些工具</p><ul><li><a href="https://github.com/surgioproject/surgio">surgio</a> 规则转换</li></ul>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="科学上网" scheme="https://wxmvv.github.io/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    <category term="surge" scheme="https://wxmvv.github.io/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/surge/"/>
+    
+    
+    <category term="科学上网" scheme="https://wxmvv.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    <category term="surge" scheme="https://wxmvv.github.io/tags/surge/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>把obsidian变成IA writer</title>
+    <link href="https://wxmvv.github.io/2023/08/21/obsidian/%E6%8A%8Aobsidian%E5%8F%98%E6%88%90IA%20writer(%E5%93%88%E5%93%88)/"/>
+    <id>https://wxmvv.github.io/2023/08/21/obsidian/%E6%8A%8Aobsidian%E5%8F%98%E6%88%90IA%20writer(%E5%93%88%E5%93%88)/</id>
+    <published>2023-08-21T06:34:00.000Z</published>
+    <updated>2024-05-29T10:33:23.272Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="随便说"><a href="#随便说" class="headerlink" title="随便说"></a>随便说</h2><p>用了obsidian好久了，真的是符合我心中电子笔记最完美样子的软件，唯一的问题就是界面太乱，所以利用闲暇时间好好整理了一下！</p><p>之前用过IA writer，真的很干净、很舒服的界面，字体也是我喜欢的，所以我们今天的目标就是把obsidian变成IA writer！(obsidian:所以我只是IA的替身吗😭)</p><p><img src="https://wxmvv.github.io/image/%E9%A2%84%E8%A7%88%E7%9C%8B%E7%9C%8B.jpg" alt="预览看看！"></p><h2 id="换装开始！╮-￣▽￣””-╭"><a href="#换装开始！╮-￣▽￣””-╭" class="headerlink" title="换装开始！╮(￣▽￣””)╭"></a>换装开始！╮(￣▽￣””)╭</h2><p>首先是先大体上整理一下外表！<br>让我们换一个主题 - 对的没错！就是你 minimal ！(主题店常年第一名的)<br>虽然有直接copy IA的主题比如IB，不过实际使用效果不是很理想，minimal凭借她优秀的可调教性成为我们的选择！</p><p>我们同时还需要3个插件配合</p><ul><li>Hider</li><li>Minimal Theme Settings</li><li>Style Settings</li><li>Focus Active Sentence (可选)</li></ul><p>然后是IA的字体</p><ul><li><a href="https://github.com/iaolo/iA-Fonts">IA-Fonts</a> 选择你喜欢的下载并安装</li></ul><p>OK！ 前期准备完成！</p><h2 id="设置设置！"><a href="#设置设置！" class="headerlink" title="设置设置！"></a>设置设置！</h2><p><a href="https://docs.obsidian.md/Home">官方文档</a></p><p><img src="https://wxmvv.github.io/image/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE1.png" alt="外观设置1.png"></p><pre class="line-numbers language-palette"><code class="language-palette">#00C6FF<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>IA的大蓝色</p><p><img src="https://wxmvv.github.io/image/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE2.png" alt="外观设置2.png"><br><img src="https://wxmvv.github.io/image/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE3.png" alt="外观设置3.png"><br>点击import将下面的拷贝进去</p><pre class="line-numbers language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>  <span class="token property">"minimal-style@@bg1@@dark"</span><span class="token operator">:</span> <span class="token string">"#191A1A"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@bg1@@light"</span><span class="token operator">:</span> <span class="token string">"#F7F7F7"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@ui1@@light"</span><span class="token operator">:</span> <span class="token string">"#00BEFF"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@ax1@@dark"</span><span class="token operator">:</span> <span class="token string">"#CCCCCC"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@ax1@@light"</span><span class="token operator">:</span> <span class="token string">"#1A1A1A"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@ax2@@dark"</span><span class="token operator">:</span> <span class="token string">"#CCCCCC"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@ax2@@light"</span><span class="token operator">:</span> <span class="token string">"#1A1A1A"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@code-background@@dark"</span><span class="token operator">:</span> <span class="token string">"#252524"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@code-background@@light"</span><span class="token operator">:</span> <span class="token string">"#EEEEEE"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@h1-size"</span><span class="token operator">:</span> <span class="token string">"1.5em"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@h2-size"</span><span class="token operator">:</span> <span class="token string">"1.2em"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@h3-size"</span><span class="token operator">:</span> <span class="token string">"1.125em"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@h3-weight"</span><span class="token operator">:</span> <span class="token number">600</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@h3-style"</span><span class="token operator">:</span> <span class="token string">"italic"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@active-line-on"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@checkbox-shape"</span><span class="token operator">:</span> <span class="token string">"checkbox-square"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@ribbon-style"</span><span class="token operator">:</span> <span class="token string">"ribbon-hidden"</span><span class="token punctuation">,</span>  <span class="token property">"minimal-style@@bold-weight"</span><span class="token operator">:</span> <span class="token number">600</span>&amp;#<span class="token number">125</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="https://wxmvv.github.io/image/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE4.png" alt="外观设置4.png"><br>新建一个 随便的名字.css 然后放在里面 并且打开就能看到啦！</p><pre class="line-numbers language-css"><code class="language-css"><span class="token number">.</span>markdown-source-view<span class="token number">.</span>mod-cm<span class="token number">6</span> <span class="token number">.</span>cm-content &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">/* 光标颜色 */</span>    <span class="token property">caret-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--ia-primary-color<span class="token punctuation">)</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*修改顶部导航栏  hover时候才显示*/</span><span class="token number">.</span><span class="token property">view-header</span><span class="token punctuation">:</span>hover &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>    <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">1</span> <span class="token important">!important</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token number">.</span>workspace-tabs<span class="token number">.</span>mod-stacked<span class="token number">.</span>mod-top <span class="token number">.</span><span class="token property">workspace-tab-header-container</span><span class="token punctuation">:</span>hover &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>    <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">1</span> <span class="token important">!important</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token number">.</span>view-header &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>    <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token number">.</span>workspace-tabs<span class="token number">.</span>mod-stacked<span class="token number">.</span>mod-top <span class="token number">.</span>workspace-tab-header-container &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>    <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*选中的tab 标题栏和边框颜色*/</span><span class="token number">.</span>workspace-tab-container <span class="token number">.</span>workspace-tab-header&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>    <span class="token property">box-shadow</span><span class="token punctuation">:</span> -<span class="token number">1</span>px <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token function">var</span><span class="token punctuation">(</span>--ia-link-color<span class="token punctuation">)</span>, <span class="token function">var</span><span class="token punctuation">(</span>--tab-stacked-shadow<span class="token punctuation">)</span><span class="token important">!important</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token number">.</span>workspace-tab-container <span class="token number">.</span>workspace-tab-header<span class="token number">.</span>mod-active<span class="token number">.</span>is-active&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>    <span class="token property">box-shadow</span><span class="token punctuation">:</span> -<span class="token number">1</span>px <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token function">var</span><span class="token punctuation">(</span>--ia-primary-color<span class="token punctuation">)</span>, <span class="token function">var</span><span class="token punctuation">(</span>--tab-stacked-shadow<span class="token punctuation">)</span><span class="token important">!important</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token number">.</span>workspace-tab-header<span class="token number">.</span>mod-active<span class="token number">.</span>is-active <span class="token number">.</span>workspace-tab-header-inner-title,<span class="token number">.</span>workspace-tab-header<span class="token number">.</span>mod-active<span class="token number">.</span>is-active <span class="token number">.</span>workspace-tab-header-inner-icon&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--ia-primary-color<span class="token punctuation">)</span> <span class="token important">!important</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">/* font-weight:600 !important; */</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">/* 外部链接url和括号颜色 */</span><span class="token number">.</span>cm-string<span class="token number">.</span>cm-url,<span class="token number">.</span>cm-formatting<span class="token number">.</span>cm-formatting-link<span class="token number">.</span>cm-link,<span class="token number">.</span>cm-active > <span class="token number">.</span>cm-formatting<span class="token number">.</span>cm-formatting-link-string<span class="token number">.</span>cm-string<span class="token number">.</span>cm-url &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--ia-link-color<span class="token punctuation">)</span> <span class="token important">!important</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">/* 内部链接括号颜色 */</span><span class="token number">.</span>cm-formatting-link<span class="token number">.</span>cm-formatting-link-end,<span class="token number">.</span>cm-formatting-link<span class="token number">.</span>cm-formatting-link-start &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--ia-link-color<span class="token punctuation">)</span> <span class="token important">!important</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">/* 选中后的外部链接url和括号颜色 */</span><span class="token number">.</span>cm-active > <span class="token number">.</span>cm-string<span class="token number">.</span>cm-url &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--ia-active-link-color<span class="token punctuation">)</span> <span class="token important">!important</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/* theme-dark */</span><span class="token number">.</span>theme-dark &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>    <span class="token property">--ia-link-color</span><span class="token punctuation">:</span> <span class="token hexcode">#7b7a79</span><span class="token punctuation">;</span>    <span class="token property">--ia-active-link-color</span><span class="token punctuation">:</span> <span class="token hexcode">#00bbff</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/* theme-light */</span><span class="token number">.</span>theme-light &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>    <span class="token property">--ia-link-color</span><span class="token punctuation">:</span> <span class="token hexcode">#b5b3b0</span><span class="token punctuation">;</span>    <span class="token property">--ia-active-link-color</span><span class="token punctuation">:</span> <span class="token hexcode">#00bbff</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/* theme-dark &amp; theme-light */</span><span class="token number">.</span>theme-dark,<span class="token number">.</span>theme-light &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>    <span class="token property">--ia-primary-color</span><span class="token punctuation">:</span> <span class="token hexcode">#00bbff</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>设置好了吗？是不是大变样了呢？哈哈</p><h2 id="变装结束"><a href="#变装结束" class="headerlink" title="变装结束"></a>变装结束</h2><p>还是有很多没有弄好的，比如光标宽度，选中文字颜色等，有空再折腾你啦！<br>╮(￣▽￣””)╭</p><p>有什么更好的建议也欢迎邮件我哦！</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="obsidian" scheme="https://wxmvv.github.io/categories/obsidian/"/>
+    
+    
+    <category term="markdown" scheme="https://wxmvv.github.io/tags/markdown/"/>
+    
+    <category term="obsidian" scheme="https://wxmvv.github.io/tags/obsidian/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>tailwindCSS以及svelte使用尝试</title>
+    <link href="https://wxmvv.github.io/2023/05/20/svelte/svelte%E4%BB%A5%E5%8F%8Atailwindcss%E4%BD%BF%E7%94%A8%E5%B0%9D%E8%AF%95/"/>
+    <id>https://wxmvv.github.io/2023/05/20/svelte/svelte%E4%BB%A5%E5%8F%8Atailwindcss%E4%BD%BF%E7%94%A8%E5%B0%9D%E8%AF%95/</id>
+    <published>2023-05-20T16:00:00.000Z</published>
+    <updated>2024-05-29T10:33:23.272Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.jpg" alt="daisy"></p><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p>先看文档，tailwindCSS真的我花了一小会时间适应了一下就可以算是入门了吧，真的太方便了，但是svelte则需要认真读一下文档，要不连文件怎么建都不知道… 和vue使用有很多相似地方，不同的地方更多，尤其是使用方法似乎变简单了，不过我也没有特别深入的使用，不好做评价。</p><ul><li><a href="https://svelte.dev/">svelte</a></li><li><a href="https://kit.svelte.dev/">svelte.kit - 最新项目都会使用kit</a></li><li><a href="https://tailwindcss.com/" title="台风天">tailwindCSS</a></li><li><a href="https://tailwindui.com/components">tailwindCSS官方组件库</a></li><li><a href="https://daisyui.com/">DaisyUI - 基于tailwind的UI库</a></li></ul><h2 id="我的项目"><a href="#我的项目" class="headerlink" title="我的项目"></a>我的项目</h2><ul><li><a href="https://wxmvv.github.io/softwhite-homepage-svelte/">softwhite</a></li></ul><h2 id="随便说"><a href="#随便说" class="headerlink" title="随便说"></a>随便说</h2><p>去年了解到的tailwindCSS不过也没花时间去尝试，最近用了一下简直是停不下来，使用体验极为舒适，这里记录一下顺便也做下推荐。</p><p>另一个svelte，是在我看DaisyUI的示例项目时候，看到的框架，搜了下说是前端届一颗冉冉升起的新星，就一起用起来了。(vue自认为用的还不是很好，也不知道哪来的勇气在这瞎试，笑)</p><p>使用过程中也学到很多新的东西，或者一些踩的坑，有时间也会写下来给大家参考。</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="svelte" scheme="https://wxmvv.github.io/categories/svelte/"/>
+    
+    
+    <category term="前端" scheme="https://wxmvv.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="svelte" scheme="https://wxmvv.github.io/tags/svelte/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>这个网站帮你选择Linux</title>
+    <link href="https://wxmvv.github.io/2023/02/09/Linux/Linux%E5%8F%91%E8%A1%8C%E7%89%88%E9%80%89%E6%8B%A9/"/>
+    <id>https://wxmvv.github.io/2023/02/09/Linux/Linux%E5%8F%91%E8%A1%8C%E7%89%88%E9%80%89%E6%8B%A9/</id>
+    <published>2023-02-09T16:00:00.000Z</published>
+    <updated>2024-05-29T10:33:23.268Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="https://distrochooser.de/zh-hans">这个网站帮你选择</a></p><p>我最后选择了debian。你呢？</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="https://wxmvv.github.io/categories/linux/"/>
+    
+    
+    <category term="linux" scheme="https://wxmvv.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决nvm启动速度慢的问题</title>
+    <link href="https://wxmvv.github.io/2023/02/09/Linux/%E8%A7%A3%E5%86%B3nvm%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://wxmvv.github.io/2023/02/09/Linux/%E8%A7%A3%E5%86%B3nvm%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</id>
+    <published>2023-02-09T16:00:00.000Z</published>
+    <updated>2024-05-29T10:33:23.268Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><pre class="line-numbers language-shell"><code class="language-shell">export NVM_DIR="$HOME/.nvm"export PATH=$HOME/.nvm/versions/node/v18.14.0/bin/:$PATHnvm() &#123; . "$NVM_DIR/nvm.sh" ; nvm $@ ; &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>注释掉之前添加的nvm启动命令</p><p>然后将上面代码中的版本号改为自己想默认启动的node，存入配置文件</p><p><a href="https://www.jianshu.com/p/e1598eb2df8e">参考</a></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="https://wxmvv.github.io/categories/linux/"/>
+    
+    <category term="nvm" scheme="https://wxmvv.github.io/categories/linux/nvm/"/>
+    
+    
+    <category term="shell" scheme="https://wxmvv.github.io/tags/shell/"/>
+    
+    <category term="macos" scheme="https://wxmvv.github.io/tags/macos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用SwiftUI开发APP</title>
+    <link href="https://wxmvv.github.io/2022/02/28/swiftUI/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91App/"/>
+    <id>https://wxmvv.github.io/2022/02/28/swiftUI/%E4%BD%BF%E7%94%A8SwiftUI%E5%BC%80%E5%8F%91App/</id>
+    <published>2022-02-28T16:00:00.000Z</published>
+    <updated>2024-05-29T10:33:23.272Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="做什么"><a href="#做什么" class="headerlink" title="做什么"></a>做什么</h2><p>经常逛app store，对笔记&#x2F;日记类的应用很感兴趣，于是决定做一个。</p><h2 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h2><p>搜索如何制作ios的应用，会有各种各样的方式，比如用框架flutter，uniapp之类，或者原生的UIKit，SwiftUI，经过比较最后决定使用SwiftUI作为入门开发的方式。<br>SwiftUI最大优势：相比同样原生的UIKit构建界面更方便！通过简单声明就可以实现各种效果。<br>当然也有不少缺点：ios系统版本要求较高，自带组件可定制有点少等等问题。<br>不过作为入门来说是一个很优秀的方式，因为真的足够简单。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://sspai.com/series/147">sspai的教学</a></li></ul><h2 id="App"><a href="#App" class="headerlink" title="App"></a>App</h2><p>名称：StarlightDiary<br><a href="https://wxmvv.github.io/StarlightDiary/">项目地址</a></p><h2 id="开发-上线"><a href="#开发-上线" class="headerlink" title="开发&amp;上线"></a>开发&amp;上线</h2><p>断断续续弄了大概3个月，终于做好了。<br>其中也出现不少问题，不过最终也都顺利解决。<br>其中最浪费时间的是设计，一开始没有想好做什么样的界面，然后不断做不断改，浪费了很多时间，引以为戒。</p><h2 id="其他事"><a href="#其他事" class="headerlink" title="其他事"></a>其他事</h2><p>有时间我也会把swiftUI相关基础知识，以及我碰到的问题和解决放在另一篇文章中，希望能有帮助。</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="swiftUI" scheme="https://wxmvv.github.io/categories/swiftui/"/>
+    
+    
+    <category term="swift" scheme="https://wxmvv.github.io/tags/swift/"/>
+    
+    <category term="swiftUI" scheme="https://wxmvv.github.io/tags/swiftui/"/>
+    
+    <category term="ios" scheme="https://wxmvv.github.io/tags/ios/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pjax实现无刷新加载页面</title>
+    <link href="https://wxmvv.github.io/2021/12/04/js/Pjax%E5%AE%9E%E7%8E%B0%E6%97%A0%E5%88%B7%E6%96%B0%E5%8A%A0%E8%BD%BD%E9%A1%B5%E9%9D%A2/"/>
+    <id>https://wxmvv.github.io/2021/12/04/js/Pjax%E5%AE%9E%E7%8E%B0%E6%97%A0%E5%88%B7%E6%96%B0%E5%8A%A0%E8%BD%BD%E9%A1%B5%E9%9D%A2/</id>
+    <published>2021-12-04T16:00:00.000Z</published>
+    <updated>2024-05-29T10:33:23.272Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>给朋友制作网站的时候，收到一个需求，就是要无刷新完成页面切换，最好还要有过渡动画。</p><p>因为是原生js做的网页，便想到使用jquery的ajax解决问题。<br>不过由于考虑到文件大小并且也并没有使用jq其他功能，最后决定使用了不需要引入jq的<a href="https://github.com/MoOx/pjax">pjax</a>。 </p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="引入pjax"><a href="#引入pjax" class="headerlink" title="引入pjax"></a>引入<a href="https://github.com/MoOx/pjax">pjax</a></h3><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="script"><a href="#script" class="headerlink" title="script"></a>script</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    <span class="token keyword">var</span> pjax <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Pjax</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>        elements<span class="token punctuation">:</span> <span class="token string">"a"</span><span class="token punctuation">,</span>         selectors<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"main"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>        cacheBust<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>         scrollRestoration<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>         switches<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>            main<span class="token punctuation">:</span> Pjax<span class="token punctuation">.</span>switches<span class="token punctuation">.</span>sideBySide<span class="token punctuation">,</span>        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>        <span class="token comment" spellcheck="true">//切换动画效果</span>        switchesOptions<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>            main<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>                classNames<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>                    remove<span class="token punctuation">:</span> <span class="token string">"Animated-easeOut Animate--noDelay"</span><span class="token punctuation">,</span>                    add<span class="token punctuation">:</span> <span class="token string">"Animated-easeIn"</span><span class="token punctuation">,</span>                    backward<span class="token punctuation">:</span> <span class="token string">"Animated-easeOut"</span><span class="token punctuation">,</span>                    forward<span class="token punctuation">:</span> <span class="token string">"Animated-easeOut"</span><span class="token punctuation">,</span>                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="script重载"><a href="#script重载" class="headerlink" title="script重载"></a>script重载</h3><h4 id="问题-1"><a href="#问题-1" class="headerlink" title="问题:"></a>问题:</h4><p>因为pjax切换页面并没有完全刷新，所以页面的js不会从头执行一遍，导致js不生效。</p><h4 id="解决"><a href="#解决" class="headerlink" title="解决:"></a>解决:</h4><ul><li>方式1 - 重载部分js</li></ul><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">pjax_reload</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//需要执行的js</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// Pjax 完成后，重新加载上面的函数</span>document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"pjax:complete"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>  <span class="token function">pjax_reload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>方式2 - 重载js文件<br>这种情况多数用于第三方文件，比如，卜算子统计的脚本、谷歌&#x2F;百度&#x2F;腾讯分析的脚本等，这些脚本在每一次页面加载后都需要执行。<br>在引入这些文件的标签上添加 data-pjax 属性，然后将具有这个属性的标签重新添加在页面中。有时候不方便在这些标签上添加额外的属性，那么你可以在这些标签外套一层标签，如<code>&lt;div class=&quot;.pjax-reload&quot;&gt;&lt;/div&gt;</code>，然后将 .pjax-reload 里的元素全部重新添加到页面中即可。</li></ul><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">data-pjax</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/gh/sukkaw/busuanzi/bsz.pure.mini.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>.pjax-reload<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://www.google-analytics.com/analytics.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// jQuery 写法</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"script[data-pjax], .pjax-reload script"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>  <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://liuyib.github.io/2019/09/24/use-pjax-to-your-site/#:~:text=%E9%87%8D%E8%BD%BD%20JS%20%E8%84%9A%E6%9C%AC%201%20%E9%A1%B5%E9%9D%A2%E4%B8%8D%E5%8F%98%E9%83%A8%E5%88%86%E5%AF%B9%E5%BA%94%E7%9A%84%E4%BA%8B%E4%BB%B6%20%E6%AF%94%E5%A6%82%EF%BC%8C%E9%A1%B5%E9%9D%A2%E9%A1%B6%E9%83%A8%E6%A0%8F%E6%9C%89%E4%B8%80%E4%B8%AA%E6%90%9C%E7%B4%A2%E6%8C%89%E9%92%AE%EF%BC%8C%E7%82%B9%E5%87%BB%E4%B9%8B%E5%90%8E%E4%BC%9A%E5%BC%B9%E5%87%BA%E6%90%9C%E7%B4%A2%E6%A1%86%EF%BC%9A%20%E7%94%B1%E4%BA%8E%E9%A1%B5%E9%9D%A2%E9%A1%B6%E9%83%A8%E6%A0%8F%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E4%BB%A5%E5%85%B6%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E4%B8%8A%E7%BB%91%E5%AE%9A%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BB%8D%E7%84%B6%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%EF%BC%8C%E8%BF%99%E9%83%A8%E5%88%86%E5%85%83%E7%B4%A0%E5%AF%B9%E5%BA%94%E7%9A%84%20JS,%E4%BA%8B%E4%BB%B6%E4%B8%8D%E9%9C%80%E8%A6%81%E9%87%8D%E8%BD%BD%E3%80%82%202%20%E9%A1%B5%E9%9D%A2%E5%8F%AF%E5%8F%98%E9%83%A8%E5%88%86%E5%AF%B9%E5%BA%94%E7%9A%84%E4%BA%8B%E4%BB%B6%20%E6%AF%94%E5%A6%82%EF%BC%8C%E9%A1%B5%E9%9D%A2%E4%B8%BB%E4%BD%93%E9%83%A8%E5%88%86%E6%98%AF%E5%8F%98%E5%8C%96%E7%9A%84%EF%BC%8C%E6%87%92%E5%8A%A0%E8%BD%BD%E5%85%B6%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%EF%BC%9A%20%E5%BD%93%E9%80%9A%E8%BF%87%20Pjax%20%E5%88%87%E6%8D%A2%E9%A1%B5%E9%9D%A2%E5%90%8E%EF%BC%8C%E7%94%B1%E4%BA%8E%E4%B8%BB%E4%BD%93%E9%83%A8%E5%88%86%E6%94%B9%E5%8F%98%EF%BC%8C%E4%B8%8A%E8%BF%B0%E4%BB%A3%E7%A0%81%E5%B7%B2%E7%BB%8F%E5%A4%B1%E6%95%88%EF%BC%8C%E5%9B%A0%E6%AD%A4%E9%9C%80%E8%A6%81%E8%BF%9B%E8%A1%8C%E9%87%8D%E8%BD%BD%E3%80%82%20%E4%B8%BA%E4%BA%86%E6%96%B9%E4%BE%BF%E4%BD%BF%E7%94%A8%EF%BC%8C%E6%88%91%E4%BB%AC%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%8B%EF%BC%9A">pjax使用</a></li><li><a href="https://github.com/MoOx/pjax">pjax</a></li></ul>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="js" scheme="https://wxmvv.github.io/categories/js/"/>
+    
+    <category term="pjax" scheme="https://wxmvv.github.io/categories/js/pjax/"/>
+    
+    
+    <category term="pjax" scheme="https://wxmvv.github.io/tags/pjax/"/>
+    
+    <category term="js" scheme="https://wxmvv.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo部署静态博客</title>
+    <link href="https://wxmvv.github.io/2020/11/03/Hexo/hexo%E9%83%A8%E7%BD%B2/"/>
+    <id>https://wxmvv.github.io/2020/11/03/Hexo/hexo%E9%83%A8%E7%BD%B2/</id>
+    <published>2020-11-03T10:47:39.000Z</published>
+    <updated>2024-05-29T10:33:23.268Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><img src="/image/hexo.jpeg" alt="hexo"></p><p>最近购买下载了IA writer，确实是一个十分干净的md编辑器，能激发自己写字的欲望。于是考虑重新开始博客部署。翻出了以前的hexo博客（大概18年部署的一直没更新，并且原来的设置文件都丢失了），整理一下重新部署。</p><h2 id="安装hexo和cactus主题"><a href="#安装hexo和cactus主题" class="headerlink" title="安装hexo和cactus主题"></a>安装hexo和cactus主题</h2><p><a href="https://hexo.io/zh-cn/">hexo</a><br><a href="https://github.com/probberechts/hexo-theme-cactus">cactus</a></p><h3 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h3><pre class="line-numbers language-shell"><code class="language-shell">npm install hexo-cli -ghexo init blogcd blognpm installhexo server   #启动服务<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="cactus主题安装"><a href="#cactus主题安装" class="headerlink" title="cactus主题安装"></a>cactus主题安装</h3><pre class="line-numbers language-shell"><code class="language-shell">cd bloggit clone https://github.com/probberechts/hexo-theme-cactus.git themes/cactus<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="配置文件参考"><a href="#配置文件参考" class="headerlink" title="配置文件参考"></a>配置文件参考</h3><p><a href="https://hexo.io/zh-cn/docs/">hexo文档</a><br><a href="https://github.com/probberechts/hexo-theme-cactus">cactus主题</a></p><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>hexo new 文件名<br>hexo clean 或 hexo c    清除缓存<br>hexo generate  或 hexo g   生成静态文件<br>hexo server 或 hexo s  本地查看<br>hexo deploy 或 hexo d  上传</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://hexo.io/zh-cn/">hexo</a></li><li><a href="https://github.com/probberechts/hexo-theme-cactus">cactus主题</a></li></ul>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="https://wxmvv.github.io/categories/hexo/"/>
+    
+    
+    <category term="markdown" scheme="https://wxmvv.github.io/tags/markdown/"/>
+    
+    <category term="hexo" scheme="https://wxmvv.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>音乐分享 Salut d&#39;Amour Op12 爱的礼赞</title>
+    <link href="https://wxmvv.github.io/2018/12/24/Music/%E9%9F%B3%E4%B9%90%E5%88%86%E4%BA%AB-%E7%88%B1%E7%9A%84%E7%A4%BC%E8%B5%9E/"/>
+    <id>https://wxmvv.github.io/2018/12/24/Music/%E9%9F%B3%E4%B9%90%E5%88%86%E4%BA%AB-%E7%88%B1%E7%9A%84%E7%A4%BC%E8%B5%9E/</id>
+    <published>2018-12-24T16:00:00.000Z</published>
+    <updated>2024-05-29T10:33:23.268Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>        <div id="aplayer-HNxxKpBS" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:60%;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-HNxxKpBS"),            narrow: false,            autoplay: true,            showlrc: false,            music: {              title: "Salut d'Amour Op12",              author: "Yo-Yo Ma / Kathryn Stott",              url: "/music/Salut d'Amour Op12.mp3",              pic: "/image/yoyoma.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>爱的礼赞（Salut d’Amour, Op. 12）</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;
+        &lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="music" scheme="https://wxmvv.github.io/categories/music/"/>
+    
+    <category term="classical" scheme="https://wxmvv.github.io/categories/music/classical/"/>
+    
+    
+    <category term="music" scheme="https://wxmvv.github.io/tags/music/"/>
+    
+    <category term="youoma" scheme="https://wxmvv.github.io/tags/youoma/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown以及hexo扩展语法</title>
+    <link href="https://wxmvv.github.io/2018/06/23/Hexo/markdown%E4%BB%A5%E5%8F%8Ahexo%E6%89%A9%E5%B1%95/"/>
+    <id>https://wxmvv.github.io/2018/06/23/Hexo/markdown%E4%BB%A5%E5%8F%8Ahexo%E6%89%A9%E5%B1%95/</id>
+    <published>2018-06-23T16:00:00.000Z</published>
+    <updated>2024-05-29T10:33:23.268Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>1 ~ 6 个 <code>#</code> 号加空格开头：</p><pre class="line-numbers language-markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 这是 H1</span><span class="token title important"><span class="token punctuation">######</span> 这是 H6</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p><code>**加粗**</code>, <strong>加粗</strong></p><p><code>*强调*</code>, <em>强调</em></p><p><code>~~删除线~~</code>, <del>删除线</del></p><h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p><code>![备注](https://test.com/test.jpg)</code></p><p><img src="https://cdn.pixabay.com/photo/2017/12/26/04/01/bird-3039692_640.jpg" alt="备注"></p><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>右尖括号<code>&gt;</code>开头，引用一段话：</p><blockquote><p>右尖括号 &gt; 表示引用。</p></blockquote><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>邮箱: <a href="mailto:&#120;&#x61;&#112;&#x70;&#x62;&#x6f;&#120;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#120;&#x61;&#112;&#x70;&#x62;&#x6f;&#120;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a>.<br>链接: <a href="http://lessfun.com/app">http://lessfun.com/app</a>.<br>链接: <a href="http://blog.lessfun.com/">Lessfun Blog</a>.  </p><p>引用样式的链接: <code>[引用][id]</code>, 输入id，然后在文档内任意处定义该id所指向的地址，标题是可选的：</p><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="内嵌代码"><a href="#内嵌代码" class="headerlink" title="内嵌代码"></a>内嵌代码</h4><p>用两个<code>反引号</code>键包围起来。  </p><h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><pre><code>每一行以一个Tab键、或者4个空格缩进。int var = 100; </code></pre><h4 id="固定的代码块"><a href="#固定的代码块" class="headerlink" title="固定的代码块"></a>固定的代码块</h4><p>以三个<code>反引号</code>开始一行，并且以同数量的<code>反引号</code>结束一行，中间的内容就是固定的代码块。</p><pre class="line-numbers language-markdown"><code class="language-markdown">NSString *str = @"Hello Markdown";<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>有序列表以 “数字.” + “空格”开始：</p><ol><li>选项1</li><li>选项2</li></ol><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>无序列表以 <code>*</code> 或 <code>-</code> 或 <code>+</code> + <code>空格</code>开始：</p><ul><li>选项1</li><li>选项2</li></ul><h3 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h3><p>可以在有序列表或无序列表的基础上，加上 <code>[ ]</code> 创建任务列表；如果任务已完成，用 <code>[x]</code> 或 <code>[X]</code>。</p><ul><li><input checked="" disabled="" type="checkbox"> 任务1</li><li><input disabled="" type="checkbox"> 任务2</li></ul><h3 id="强制换行"><a href="#强制换行" class="headerlink" title="强制换行"></a>强制换行</h3><p>在行末输入两个空格，会被转换成HTML的 <code>&lt;br /&gt;</code> 标志。  </p><h3 id="水平分割线"><a href="#水平分割线" class="headerlink" title="水平分割线"></a>水平分割线</h3><p>三个以上的星号或破折号：</p><pre class="line-numbers language-markdown"><code class="language-markdown"><span class="token hr punctuation">***</span><span class="token hr punctuation">---</span><span class="token hr punctuation">- - - -</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><hr><h2 id="扩展语法"><a href="#扩展语法" class="headerlink" title="扩展语法"></a>扩展语法</h2><h3 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h3><p>脚注类似于引用样式的链接。脚注用于完成两件事：标志的文本会变成上标符号；脚注定义将被放置在一个文档末尾的列表。一个脚注看起来是这样的：</p><p>这是包含脚注的文本。<a href="%E8%BF%99%E6%98%AF%E8%84%9A%E6%B3%A8%E5%86%85%E5%AE%B9%E3%80%82">^1</a></p><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>简单的表格：</p><table><thead><tr><th>Header 1</th><th>Header 2</th><th>Header 3</th></tr></thead><tbody><tr><td>Cell</td><td>Cell</td><td>Cell</td></tr><tr><td>Cell</td><td>Cell</td><td>Cell</td></tr></tbody></table><p>也可以在首、尾加上分割线：</p><table><thead><tr><th>Header 1</th><th>Header 2</th><th>Header 3</th></tr></thead><tbody><tr><td>Cell</td><td>Cell</td><td>Cell</td></tr><tr><td>Cell</td><td>Cell</td><td>Cell</td></tr></tbody></table><p>通过冒号来决定单元格内容的对齐方式：</p><table><thead><tr><th align="left">Header 1</th><th align="center">Header 2</th><th align="right">Header 3</th></tr></thead><tbody><tr><td align="left">左</td><td align="center">中</td><td align="right">右</td></tr><tr><td align="left">左</td><td align="center">中</td><td align="right">右</td></tr></tbody></table><h2 id="hexo扩展"><a href="#hexo扩展" class="headerlink" title="hexo扩展"></a>hexo扩展</h2><h3 id="如何设置「阅读全文」"><a href="#如何设置「阅读全文」" class="headerlink" title="如何设置「阅读全文」?"></a>如何设置「阅读全文」?</h3><pre class="line-numbers language-markdown"><code class="language-markdown">在文章中使用 <span class="token comment" spellcheck="true">&lt;!-- more --></span> 手动进行截断，Hexo 提供的方式<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="如何修改图片样式？"><a href="#如何修改图片样式？" class="headerlink" title="如何修改图片样式？"></a>如何修改图片样式？</h3><pre class="line-numbers language-markdown"><code class="language-markdown"><span class="token url">![title](path)</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>链接<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>宽度<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>高度<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>图片名称<span class="token punctuation">"</span></span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="插入音乐"><a href="#插入音乐" class="headerlink" title="插入音乐"></a>插入音乐</h3><pre class="line-numbers language-markdown"><code class="language-markdown">使用aplayer 在文章内添加音频 https://github.com/MoePlayer/hexo-tag-aplayernpm install hexo-tag-aplayer --save<span class="token entity" title="&#123;">&amp;#123;</span>% aplayer "Salut d'Amour Op12" "Yo-Yo Ma / Kathryn Stott" "/music/马友友-爱的礼赞/Salut d'Amour Op12.mp3" "/image/马友友-爱的礼赞/yoyoma.jpg" autoplay width:60% %<span class="token entity" title="&#125;">&amp;#125;</span>title : 曲目标题author: 曲目作者url: 音乐文件 URL 地址picture_url: (可选) 音乐对应的图片地址narrow （可选）播放器袖珍风格autoplay (可选) 自动播放，移动端浏览器暂时不支持此功能width:xxx (可选) 播放器宽度(默认: 100%)lrc:xxx (可选）歌词文件 URL 地址<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><a href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md">文档</a></p><pre class="line-numbers language-markdown"><code class="language-markdown">在主页添加播放器 https://aplayer.js.org/#/zh-Hans/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ul><li>其他选择<a href="https://github.com/EYHN/hexo-tag-cplayer">cplayer</a></li></ul><h3 id="插入pdf"><a href="#插入pdf" class="headerlink" title="插入pdf"></a>插入pdf</h3><pre class="line-numbers language-markdown"><code class="language-markdown">npm install --save hexo-pdf<span class="token entity" title="&#123;">&amp;#123;</span>% pdf http://7xov2f.com1.z0.glb.clouddn.com/bash_freshman.pdf %<span class="token entity" title="&#125;">&amp;#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h3 id="插入视频"><a href="#插入视频" class="headerlink" title="插入视频"></a>插入视频</h3><p><a href="https://ultrafish.cn/2020/08/23/online-or-local-video-gif-in-markdown/">参考</a></p><h3 id="添加图片预览"><a href="#添加图片预览" class="headerlink" title="添加图片预览"></a>添加图片预览</h3><p><a href="https://fancyapps.com/docs/ui/quick-start">fancyapps</a></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://www.markdownguide.org/basic-syntax/">markdown</a></li><li><a href="https://probberechts.github.io/hexo-theme-cactus/cactus-classic/public/2016/11/01/An-overview-of-all-Markdown-elements/">An-overview-of-all-Markdown-elements</a></li><li><a href="https://hexo.io/zh-cn/">HEXO</a></li><li><a href="http://theme-next.iissnan.com/getting-started.html">next主题</a></li><li><a href="https://github.com/probberechts/hexo-theme-cactus">cactus主题</a></li></ul>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="https://wxmvv.github.io/categories/hexo/"/>
+    
+    
+    <category term="markdown" scheme="https://wxmvv.github.io/tags/markdown/"/>
+    
+    <category term="hexo" scheme="https://wxmvv.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>

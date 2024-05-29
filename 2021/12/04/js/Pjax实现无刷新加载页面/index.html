@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="shortcut icon" href="/image/icon.png" type="image/x-icon" />
+    <title>
+        
+            Pjax实现无刷新加载页面 |
+         
+        wxmvv
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/solid.min.css">
+
+     
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXXXX"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXXXX');
+        </script>
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/feed.xml" title="wxmvv" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body>
+    <div class="body-container">
+        <div class="header-wrapper"><header>
+    <div class="header-container">
+        <div class="header-menu-list">
+            <ul>
+            
+                <li>
+                    <a href="/">Home</a>
+                </li>
+            
+                <li>
+                    <a href="/wiki">Wiki</a>
+                </li>
+            
+                <li>
+                    <a href="/about">About</a>
+                </li>
+            
+            </ul>
+        </div>
+    </div>
+</header>
+</div>
+        <div class="main-wrapper"><main>
+    <div class="main-container">
+        <div class="post-details">
+            
+            <div class="post-title">
+                <h1>Pjax实现无刷新加载页面</h1>
+            </div>
+            <div class="post-meta">
+                <i class="fa-solid fa-clock"></i>&nbsp;<span class="post-date">2021/12/05</span>
+                <span class="post-date"><a class="tag-link-link" href="/tags/js/" rel="tag">js<span class="tag-link-count">1</span></a>, <a class="tag-link-link" href="/tags/pjax/" rel="tag">pjax<span class="tag-link-count">1</span></a></span>
+            </div>
+            
+            <div class="post-content">
+                <p>给朋友制作网站的时候，收到一个需求，就是要无刷新完成页面切换，最好还要有过渡动画。</p>
+<p>因为是原生js做的网页，便想到使用jquery的ajax解决问题。<br>不过由于考虑到文件大小并且也并没有使用jq其他功能，最后决定使用了不需要引入jq的<a href="https://github.com/MoOx/pjax">pjax</a>。 </p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="引入pjax"><a href="#引入pjax" class="headerlink" title="引入pjax"></a>引入<a href="https://github.com/MoOx/pjax">pjax</a></h3><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="script"><a href="#script" class="headerlink" title="script"></a>script</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> pjax <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Pjax</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        elements<span class="token punctuation">:</span> <span class="token string">"a"</span><span class="token punctuation">,</span> 
+        selectors<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"main"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        cacheBust<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> 
+        scrollRestoration<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> 
+        switches<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            main<span class="token punctuation">:</span> Pjax<span class="token punctuation">.</span>switches<span class="token punctuation">.</span>sideBySide<span class="token punctuation">,</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//切换动画效果</span>
+        switchesOptions<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            main<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                classNames<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                    remove<span class="token punctuation">:</span> <span class="token string">"Animated-easeOut Animate--noDelay"</span><span class="token punctuation">,</span>
+                    add<span class="token punctuation">:</span> <span class="token string">"Animated-easeIn"</span><span class="token punctuation">,</span>
+                    backward<span class="token punctuation">:</span> <span class="token string">"Animated-easeOut"</span><span class="token punctuation">,</span>
+                    forward<span class="token punctuation">:</span> <span class="token string">"Animated-easeOut"</span><span class="token punctuation">,</span>
+                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="script重载"><a href="#script重载" class="headerlink" title="script重载"></a>script重载</h3><h4 id="问题-1"><a href="#问题-1" class="headerlink" title="问题:"></a>问题:</h4><p>因为pjax切换页面并没有完全刷新，所以页面的js不会从头执行一遍，导致js不生效。</p>
+<h4 id="解决"><a href="#解决" class="headerlink" title="解决:"></a>解决:</h4><ul>
+<li>方式1 - 重载部分js</li>
+</ul>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">pjax_reload</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">//需要执行的js</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// Pjax 完成后，重新加载上面的函数</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"pjax:complete"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token function">pjax_reload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>方式2 - 重载js文件<br>这种情况多数用于第三方文件，比如，卜算子统计的脚本、谷歌&#x2F;百度&#x2F;腾讯分析的脚本等，这些脚本在每一次页面加载后都需要执行。<br>在引入这些文件的标签上添加 data-pjax 属性，然后将具有这个属性的标签重新添加在页面中。有时候不方便在这些标签上添加额外的属性，那么你可以在这些标签外套一层标签，如<code>&lt;div class=&quot;.pjax-reload&quot;&gt;&lt;/div&gt;</code>，然后将 .pjax-reload 里的元素全部重新添加到页面中即可。</li>
+</ul>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">data-pjax</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/gh/sukkaw/busuanzi/bsz.pure.mini.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>.pjax-reload<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://www.google-analytics.com/analytics.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// jQuery 写法</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"script[data-pjax], .pjax-reload script"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://liuyib.github.io/2019/09/24/use-pjax-to-your-site/#:~:text=%E9%87%8D%E8%BD%BD%20JS%20%E8%84%9A%E6%9C%AC%201%20%E9%A1%B5%E9%9D%A2%E4%B8%8D%E5%8F%98%E9%83%A8%E5%88%86%E5%AF%B9%E5%BA%94%E7%9A%84%E4%BA%8B%E4%BB%B6%20%E6%AF%94%E5%A6%82%EF%BC%8C%E9%A1%B5%E9%9D%A2%E9%A1%B6%E9%83%A8%E6%A0%8F%E6%9C%89%E4%B8%80%E4%B8%AA%E6%90%9C%E7%B4%A2%E6%8C%89%E9%92%AE%EF%BC%8C%E7%82%B9%E5%87%BB%E4%B9%8B%E5%90%8E%E4%BC%9A%E5%BC%B9%E5%87%BA%E6%90%9C%E7%B4%A2%E6%A1%86%EF%BC%9A%20%E7%94%B1%E4%BA%8E%E9%A1%B5%E9%9D%A2%E9%A1%B6%E9%83%A8%E6%A0%8F%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E4%BB%A5%E5%85%B6%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E4%B8%8A%E7%BB%91%E5%AE%9A%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BB%8D%E7%84%B6%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%EF%BC%8C%E8%BF%99%E9%83%A8%E5%88%86%E5%85%83%E7%B4%A0%E5%AF%B9%E5%BA%94%E7%9A%84%20JS,%E4%BA%8B%E4%BB%B6%E4%B8%8D%E9%9C%80%E8%A6%81%E9%87%8D%E8%BD%BD%E3%80%82%202%20%E9%A1%B5%E9%9D%A2%E5%8F%AF%E5%8F%98%E9%83%A8%E5%88%86%E5%AF%B9%E5%BA%94%E7%9A%84%E4%BA%8B%E4%BB%B6%20%E6%AF%94%E5%A6%82%EF%BC%8C%E9%A1%B5%E9%9D%A2%E4%B8%BB%E4%BD%93%E9%83%A8%E5%88%86%E6%98%AF%E5%8F%98%E5%8C%96%E7%9A%84%EF%BC%8C%E6%87%92%E5%8A%A0%E8%BD%BD%E5%85%B6%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%EF%BC%9A%20%E5%BD%93%E9%80%9A%E8%BF%87%20Pjax%20%E5%88%87%E6%8D%A2%E9%A1%B5%E9%9D%A2%E5%90%8E%EF%BC%8C%E7%94%B1%E4%BA%8E%E4%B8%BB%E4%BD%93%E9%83%A8%E5%88%86%E6%94%B9%E5%8F%98%EF%BC%8C%E4%B8%8A%E8%BF%B0%E4%BB%A3%E7%A0%81%E5%B7%B2%E7%BB%8F%E5%A4%B1%E6%95%88%EF%BC%8C%E5%9B%A0%E6%AD%A4%E9%9C%80%E8%A6%81%E8%BF%9B%E8%A1%8C%E9%87%8D%E8%BD%BD%E3%80%82%20%E4%B8%BA%E4%BA%86%E6%96%B9%E4%BE%BF%E4%BD%BF%E7%94%A8%EF%BC%8C%E6%88%91%E4%BB%AC%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%8B%EF%BC%9A">pjax使用</a></li>
+<li><a href="https://github.com/MoOx/pjax">pjax</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+  
+
+</div>
+        <div class="footer-wrapper"><footer>
+    <div class="footer-container">
+        <div class="footer-meta">
+            
+                <div class="footer-meta-copyright">
+                    &copy; 2024 wxm.
+                </div>
+            
+            
+                <div class="footer-meta-licenese">
+                    Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0</a>
+                </div>
+            
+            
+                <div class="footer-meta-rss">
+                    <a href="/feed.xml"><i class="fa-solid fa-rss"></i></a>
+                </div>
+            
+        </div>
+    </div>
+</footer>
+</div>
+    </div>
+</body>
+</html>
