@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://wxmvv.github.io/</loc>
-<lastmod>2024-07-15</lastmod>
+<lastmod>2024-07-17</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog</loc>
-<lastmod>2024-07-15</lastmod>
+<lastmod>2024-07-17</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/projects</loc>
-<lastmod>2024-07-15</lastmod>
+<lastmod>2024-07-17</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/tags</loc>
-<lastmod>2024-07-15</lastmod>
+<lastmod>2024-07-17</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/devtoys</loc>
@@ -71,6 +71,10 @@
 <url>
 <loc>https://wxmvv.github.io/blog/system/surge个人使用配置</loc>
 <lastmod>2023-09-03T11:13:00.000Z</lastmod>
+</url>
+<url>
+<loc>https://wxmvv.github.io/blog/Note/ukulele/SmileInTheMorning</loc>
+<lastmod>2024-07-16T00:00:00.000Z</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/golang/goframe开发学习系列/goframe开发学习（一）基础流程</loc>
