@@ -7,9 +7,108 @@
       <language>zh-cn</language>
       <managingEditor>w05172075@outlook.com (wxm)</managingEditor>
       <webMaster>w05172075@outlook.com (wxm)</webMaster>
-      <lastBuildDate>Tue, 16 Jul 2024 10:17:00 GMT</lastBuildDate>
+      <lastBuildDate>Sun, 11 Aug 2024 20:47:00 GMT</lastBuildDate>
       <atom:link href="https://wxmvv.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://wxmvv.github.io/blog/capacitor/Capacitor</guid>
+    <title>使用Capacitor来构建你的app吧！</title>
+    <link>https://wxmvv.github.io/blog/capacitor/Capacitor</link>
+    <description>&lt;h1&gt;尝试使用Capacitor来丰富你的app吧！&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://capacitorjs.com&quot;&gt;capacitor&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;capacitor作为一个跨平台ios和安卓的框架，本身和flutter、RN并不是同一赛道，capacitor在官网也清晰的写着，基于两个平台webview来展示你的html静态网站，我们可以先用各种框架如vue、react来写一个静态网站，然后使用capacitor来把它变成app，或者仅仅把它当成一个app的扩展工具，用js库来实现一些原生不太好实现的功能。相比直接用capacitor来构建app，把它作为一个js扩展应该是一个更好的选择。&lt;/p&gt;
+&lt;h2&gt;简单尝试&lt;/h2&gt;
+&lt;h3&gt;随便新建一个项目&lt;/h3&gt;
+&lt;p&gt;我这里新建了一个nextjs项目。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;npx create-next-app@latest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;记得在next.config中设定output。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;output: &amp;quot;export&amp;quot;,
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;安装Capacitor&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;# 安装cap命令
+npm install @capacitor/cli @capacitor/core
+# 新建cap项目
+npx cap init
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;你可以看到目录中出现了capacitor.config.json
+下面有一个简单的设置。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{
+    &amp;quot;appId&amp;quot;: &amp;quot;com.example.captest&amp;quot;, //唯一id 
+    &amp;quot;appName&amp;quot;: &amp;quot;captest&amp;quot;, 
+    &amp;quot;webDir&amp;quot;: &amp;quot;out&amp;quot;, //这个是静态网站的位置，nextjs导出的静态页面在out文件夹
+    &amp;quot;server&amp;quot;: {
+        &amp;quot;url&amp;quot;: &amp;quot;http://127.0.0.1:3000&amp;quot;,  //这里设定是对应nextjs dev模式的端口，设定后可以热更新
+        &amp;quot;cleartext&amp;quot;: true
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;安装cap对应sdk&lt;/h3&gt;
+&lt;p&gt;这里以ios项目为例，&lt;/p&gt;
+&lt;p&gt;这里特别说一下在ios开发中需要安装cocoapods，如果正常安装出错可以使用brew安装，我有个专门的日志写了如何解决这个问题。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;# 先把nextjs的预览打开
+npm run dev
+# 安装cap包
+npm install @capacitor/ios @capacitor/android
+# 添加ios支持
+npx cap add ios
+# 使用原生app xcode打开app,可以查看原生代码，然后编译在模拟器执行
+npx cap open ios
+# 或者不打开xocde 通过命令行直接编译
+npx cap run ios
+# 可以打开同步，这样就可以热更新了
+npx cap sync
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;/static/blogShared/capacitor%E9%A2%84%E8%A7%881.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这样一个可预览的nextjs的app就出来啦～&lt;/p&gt;
+&lt;p&gt;是不是很简单～&lt;/p&gt;
+&lt;p&gt;不过对比flutter和RN速度上明显还是有差距，还是要根据具体情况使用。&lt;/p&gt;
+</description>
+    <pubDate>Sun, 11 Aug 2024 20:47:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>capacitor</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/capacitor/如何安装cocoapods？</guid>
+    <title>如何安装cocoapods？</title>
+    <link>https://wxmvv.github.io/blog/capacitor/如何安装cocoapods？</link>
+    <description>&lt;p&gt;最近在尝试使用capacitor制作ios app，涉及到使用cocoapods来安装插件，但是macos安装会出现各种问题，经过查看各种方法，最后还是使用brew成功的。&lt;/p&gt;
+&lt;p&gt;其实主要问题在于macos自带的ruby版本比较低，&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;ruby --version
+# 查看ruby版本 如果是2.6那说明你需要这个教程
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;首先使用brew安装ruby&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;# 安装ruby
+brew install ruby
+# 配置PATH
+echo &amp;#39;export PATH=&amp;quot;/usr/local/opt/ruby/bin:$PATH&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
+echo &amp;#39;export LDFLAGS=&amp;quot;-L/usr/local/opt/ruby/lib&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc 
+echo &amp;#39;export CPPFLAGS=&amp;quot;-I/usr/local/opt/ruby/include&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc 
+# 重新加载配置
+source ~/.zshrc  
+# 再次查看ruby版本 这时候应该变成3.x了
+ruby --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;安装pod&lt;/h3&gt;
+&lt;p&gt;这里仍然使用brew来安装。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;brew install cocoapods
+# 按照提示link
+brew link cocoapods
+# 这里如果提示已经存在，需要按照brew给出的方法删除原文件，并再次链接
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;使用&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;# 正常显示没有报错就ok了
+pod env
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;参考&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/CocoaPods/CocoaPods/issues/12122&quot;&gt;cocoapods issues&lt;/a&gt;&lt;/p&gt;
+</description>
+    <pubDate>Sun, 11 Aug 2024 13:15:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>ios</category>
+  </item>
+
   <item>
     <guid>https://wxmvv.github.io/blog/Note/ukulele/SmileInTheMorning</guid>
     <title>名渡山辽-Smile in the morning指弹谱</title>
