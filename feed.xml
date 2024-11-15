@@ -7,9 +7,142 @@
       <language>zh-cn</language>
       <managingEditor>w05172075@outlook.com (wxm)</managingEditor>
       <webMaster>w05172075@outlook.com (wxm)</webMaster>
-      <lastBuildDate>Sun, 11 Aug 2024 20:47:00 GMT</lastBuildDate>
+      <lastBuildDate>Sun, 13 Oct 2024 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://wxmvv.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://wxmvv.github.io/blog/system/Macos/AppleScript实现鼠标连点</guid>
+    <title>20241013 AppleScript实现鼠标连点</title>
+    <link>https://wxmvv.github.io/blog/system/Macos/AppleScript实现鼠标连点</link>
+    <description>&lt;h1&gt;AppleScript 中实现鼠标与键盘自动连点&lt;/h1&gt;
+&lt;p&gt;因为最近在玩一个老游戏，开了作弊但是还需要手动点击才能升级，于是使用 applescript 来实现一下自动点击。&lt;/p&gt;
+&lt;h2&gt;事前准备&lt;/h2&gt;
+&lt;p&gt;鼠标点击使用 cliclick 包,可以使用 brew 安装 &lt;code&gt;brew install cliclick&lt;/code&gt; 键盘则直接使用 applescript 即可&lt;/p&gt;
+&lt;h2&gt;脚本实现&lt;/h2&gt;
+&lt;h3&gt;鼠标点击&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;-- 定义点击位置,点击次数,点击间隔
+set x to 615
+set y to 461
+set clickNum to 1000
+set clickNum to 0.4
+-- 执行点击
+repeat clickNum times
+do shell script &amp;quot;/usr/local/bin/cliclick c:&amp;quot; &amp;amp; x &amp;amp; &amp;quot;,&amp;quot; &amp;amp; y
+delay delayNum -- 调整延迟以控制点击速度
+end repeat
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用步骤如下&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;然后通过命令行&lt;code&gt;cliclick p&lt;/code&gt;获取你想点击的位置&lt;/li&gt;
+&lt;li&gt;填入 x,y,clickNum,clickNum 四个变量,运行即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;也可以配合电脑中的 shortcut 来实现快捷键启动&lt;/p&gt;
+&lt;h3&gt;键盘输入&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;输入文字&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;-- 定义输入内容
+set inputText to &amp;quot;hello world&amp;quot;
+-- 执行输入
+tell application &amp;quot;System Events&amp;quot;
+    keystroke inputText
+end tell
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;模拟键盘按键&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;-- 激活目标应用，比如 Safari
+tell application &amp;quot;Safari&amp;quot;
+    activate
+end tell
+
+-- 设置按键组合的次数和延迟
+set pressCount to 10 -- 重复次数
+set delayTime to 0.1 -- 每次按键后的延迟（秒）
+
+-- 模拟键盘连按
+repeat pressCount times
+    tell application &amp;quot;System Events&amp;quot;
+        key code 49 -- 这里的 49 是空格键的 keycode
+        delay delayTime
+    end tell
+end repeat
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中的 keycode 是对应键盘的键码,可以通过&lt;code&gt;System Events&lt;/code&gt;中的&lt;code&gt;key code&lt;/code&gt;来使用, &lt;a href=&quot;https://web.archive.org/web/20100501161453/http://www.classicteck.com/rbarticles/mackeyboard.php&quot;&gt;keycode&lt;/a&gt; 在这里可以查看 keycode 列表,顺便我也在下面也列出一些常用按键的键码&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;键&lt;/th&gt;
+&lt;th&gt;键码&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;Enter&lt;/td&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Backspace&lt;/td&gt;
+&lt;td&gt;51&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Tab&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;空格&lt;/td&gt;
+&lt;td&gt;49&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Delete&lt;/td&gt;
+&lt;td&gt;51&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Escape&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Command&lt;/td&gt;
+&lt;td&gt;55&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shift&lt;/td&gt;
+&lt;td&gt;56&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Caps Lock&lt;/td&gt;
+&lt;td&gt;57&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Option&lt;/td&gt;
+&lt;td&gt;58&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Control&lt;/td&gt;
+&lt;td&gt;59&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;方向左&lt;/td&gt;
+&lt;td&gt;123&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;方向右&lt;/td&gt;
+&lt;td&gt;124&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;方向下&lt;/td&gt;
+&lt;td&gt;125&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;方向上&lt;/td&gt;
+&lt;td&gt;126&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+</description>
+    <pubDate>Sun, 13 Oct 2024 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>code</category><category>applescript</category><category>macos</category>
+  </item>
+
   <item>
     <guid>https://wxmvv.github.io/blog/capacitor/Capacitor</guid>
     <title>使用Capacitor来构建你的app吧！</title>
@@ -464,9 +597,9 @@ struct ContentView: View {
     <guid>https://wxmvv.github.io/blog/system/Macos/Macos隐藏与显示文件</guid>
     <title>Macos隐藏文件&amp;显示隐藏文件</title>
     <link>https://wxmvv.github.io/blog/system/Macos/Macos隐藏与显示文件</link>
-    <description>&lt;h2&gt;macos命令使用 chflags&lt;/h2&gt;
-&lt;p&gt;最近在使用obsidian的时候，出现了文件会变成隐藏，目前原因不明，最后使用chflags nohidden命令将它们取消隐藏。&lt;/p&gt;
-&lt;p&gt;使用man chflags可以了解大致使用方式&lt;/p&gt;
+    <description>&lt;h2&gt;macos 命令使用 chflags&lt;/h2&gt;
+&lt;p&gt;最近在使用 obsidian 的时候，出现了文件会变成隐藏，目前原因不明，最后使用 chflags nohidden 命令将它们取消隐藏。&lt;/p&gt;
+&lt;p&gt;使用 man chflags 可以了解大致使用方式&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;#常用指令
 chflags hidden  # 隐藏单一文件或文件夹
 chflags nohidden # 取消隐藏单一文件或文件夹
@@ -809,15 +942,15 @@ group.Bind(
     <guid>https://wxmvv.github.io/blog/system/surge个人使用配置</guid>
     <title>surge个人使用配置</title>
     <link>https://wxmvv.github.io/blog/system/surge个人使用配置</link>
-    <description>&lt;h2&gt;为什么是surge&lt;/h2&gt;
-&lt;p&gt;之前一直在用shadowrocket，很简单，最近因为在淘宝花几块钱买了个ios软件用，结果发现店铺居然是用网球app，或者圈x解锁，于是想研究一下。&lt;/p&gt;
-&lt;p&gt;包括圈x，loon，surge，我都用了一圈，确实是surge更加顺手一些。其实代理功能大家都大差不差，surge最突出的实际上是抓数据，使用界面干净明白，简单看一下文档就上手了。还有一个重要的原因，是因为网上都说surge会更稳定，更省电(我持保留意见)，于是折腾一番弄出了自己的配置表，欢迎使用参考。&lt;/p&gt;
+    <description>&lt;h2&gt;为什么是 surge&lt;/h2&gt;
+&lt;p&gt;之前一直在用 shadowrocket，很简单，最近因为在淘宝花几块钱买了个 ios 软件用，结果发现店铺居然是用网球 app，或者圈 x 解锁，于是想研究一下。&lt;/p&gt;
+&lt;p&gt;包括圈 x，loon，surge，我都用了一圈，确实是 surge 更加顺手一些。其实代理功能大家都大差不差，surge 最突出的实际上是抓数据，使用界面干净明白，简单看一下文档就上手了。还有一个重要的原因，是因为网上都说 surge 会更稳定，更省电(我持保留意见)，于是折腾一番弄出了自己的配置表，欢迎使用参考。&lt;/p&gt;
 &lt;p&gt;模块的话，其实我并没开很多，只有一个必开&lt;a href=&quot;https://raw.githubusercontent.com/ExaAlice/Alice/main/Module/MitMAllHostnames.sgmodule&quot;&gt;MIITAllHost&lt;/a&gt;,这个打开后可以方便抓包，其他的可以在网上自行搜索，或者在各种电报群获取。&lt;/p&gt;
 &lt;h2&gt;个人配置&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;/static/blogShared/surge.conf&quot;&gt;surge.conf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;导入后替换配置中的订阅地址即可使用&lt;/p&gt;
 &lt;h2&gt;参考&lt;/h2&gt;
-&lt;p&gt;surge官方&lt;/p&gt;
+&lt;p&gt;surge 官方&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://nssurge.com/support&quot;&gt;官方&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://wiki.surge.community&quot;&gt;社区-入门指南&lt;/a&gt;&lt;/li&gt;
@@ -838,7 +971,7 @@ group.Bind(
 &lt;p&gt;一些特殊模块&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/sub-store-org/Sub-Store&quot;&gt;sub-store&lt;/a&gt; 订阅转换&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.boxjs.app&quot;&gt;box.js&lt;/a&gt; &lt;a href=&quot;https://github.com/chavyleung/scripts&quot;&gt;boxjs脚本&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.boxjs.app&quot;&gt;box.js&lt;/a&gt; &lt;a href=&quot;https://github.com/chavyleung/scripts&quot;&gt;boxjs 脚本&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/VirgilClyne/iRingo&quot;&gt;iRingo&lt;/a&gt; 解锁苹果功能&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/Script-Hub-Org/Script-Hub&quot;&gt;script.hub&lt;/a&gt; 脚本转换&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://raw.githubusercontent.com/ExaAlice/Alice/main/Module/MitMAllHostnames.sgmodule&quot;&gt;MIITAllHost&lt;/a&gt; 抓包使用&lt;/li&gt;
@@ -1040,24 +1173,30 @@ nvm() { . &amp;quot;$NVM_DIR/nvm.sh&amp;quot; ; nvm $@ ; }
 
   <item>
     <guid>https://wxmvv.github.io/blog/devtoys</guid>
-    <title>devtoys-常用在线工具</title>
+    <title>Devtoys 常用开发工具</title>
     <link>https://wxmvv.github.io/blog/devtoys</link>
     <description>&lt;blockquote&gt;
-&lt;p&gt;这里放置一些常用小工具
-参考微软的开发小工具&lt;a href=&quot;https://devtoys.app&quot;&gt;devtoys&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Devtoys 开发常用工具&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;utils&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://curlconverter.com/python/&quot;&gt;curl-to-python&lt;/a&gt;curl转python&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://colorhunt.co/palettes/popular&quot;&gt;Color Hunt&lt;/a&gt;色卡 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.iloveimg.com/zh-cn/compress-image&quot;&gt;i love img&lt;/a&gt;图片压缩 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.iconfont.cn&quot;&gt;iconfont&lt;/a&gt;图标字体&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.ittoolpro.com/jwt-parser&quot;&gt;it-tools-pro 综合工具网站&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ittoolpro.com/jwt-parser&quot;&gt;It-tools-pro&lt;/a&gt; 综合工具网站&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.iloveimg.com/zh-cn/compress-image&quot;&gt;i love img&lt;/a&gt; 图片压缩&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://colorhunt.co/palettes/popular&quot;&gt;Color Hunt&lt;/a&gt; 色卡&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.toolhelper.cn/Color/RGBToHex&quot;&gt;color converter&lt;/a&gt; 颜色转换 Hex,rgba 等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;icon collection&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.iconfont.cn&quot;&gt;iconfont&lt;/a&gt; 阿里图标库,图标转成 font&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;python&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://curlconverter.com/python/&quot;&gt;curl-to-python&lt;/a&gt;curl 转 python&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;css&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://neumorphism.io/&quot;&gt;neumorphism&lt;/a&gt; 拟态按钮css&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://cssgradient.io&quot;&gt;cssgradient&lt;/a&gt; 渐变颜色css&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://neumorphism.io/&quot;&gt;neumorphism&lt;/a&gt; 拟态按钮 css&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://cssgradient.io&quot;&gt;cssgradient&lt;/a&gt; 渐变颜色 css&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Inspiration&lt;/h3&gt;
 &lt;ul&gt;

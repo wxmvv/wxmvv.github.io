@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://wxmvv.github.io/</loc>
-<lastmod>2024-10-28</lastmod>
+<lastmod>2024-11-15</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog</loc>
-<lastmod>2024-10-28</lastmod>
+<lastmod>2024-11-15</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/projects</loc>
-<lastmod>2024-10-28</lastmod>
+<lastmod>2024-11-15</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/tags</loc>
-<lastmod>2024-10-28</lastmod>
+<lastmod>2024-11-15</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/devtoys</loc>
@@ -107,6 +107,10 @@
 <url>
 <loc>https://wxmvv.github.io/blog/system/Linux/解决nvm启动速度慢的问题</loc>
 <lastmod>2023-02-10T00:00:00.000Z</lastmod>
+</url>
+<url>
+<loc>https://wxmvv.github.io/blog/system/Macos/AppleScript实现鼠标连点</loc>
+<lastmod>2024-10-13T00:00:00.000Z</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/system/Macos/Macos隐藏与显示文件</loc>
