@@ -87,7 +87,7 @@ import { containerVariants, itemVariants } from &amp;#39;@/components/MyMotion&a
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;最终效果&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/static/blog/blog/blog%E6%96%B0%E7%9A%84%E5%8A%A8%E7%94%BB.mov&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;/static/video/blog新的动画.mp4&lt;/p&gt;
 </description>
     <pubDate>Sat, 16 Nov 2024 00:00:00 GMT</pubDate>
     <author>w05172075@outlook.com (wxm)</author>
@@ -105,6 +105,7 @@ import { containerVariants, itemVariants } from &amp;#39;@/components/MyMotion&a
 &lt;/blockquote&gt;
 &lt;p&gt;花了一些时间看过之后，觉得确实很有学习的必要，也挑选了一些更容易碰到用到的规范，写出来供大家参考，也让自己能够经常回顾。&lt;/p&gt;
 &lt;p&gt;我也在知乎找到了&amp;quot;物联网学前班&amp;quot;这篇文章 &lt;a href=&quot;https://zhuanlan.zhihu.com/p/144446995&quot;&gt;基于 Markdown 的中文文档排版规范&lt;/a&gt;，其中也有一些关于中文的排版建议，我个人觉得很有帮助，所以也一并分享出来。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/images/work.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 </description>
     <pubDate>Fri, 15 Nov 2024 00:00:00 GMT</pubDate>
     <author>w05172075@outlook.com (wxm)</author>
@@ -238,6 +239,13 @@ end repeat
 &lt;td&gt;126&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;
+&lt;h2&gt;参考&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://web.archive.org/web/20100501161453/http://www.classicteck.com/rbarticles/mackeyboard.php&quot;&gt;keycode&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW15&quot;&gt;AppleScript Language Guide&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     <pubDate>Sun, 13 Oct 2024 00:00:00 GMT</pubDate>
     <author>w05172075@outlook.com (wxm)</author>
@@ -248,38 +256,38 @@ end repeat
     <guid>https://wxmvv.github.io/blog/capacitor/使用Capacitor来构建你的app吧！</guid>
     <title>使用Capacitor来构建你的app吧！</title>
     <link>https://wxmvv.github.io/blog/capacitor/使用Capacitor来构建你的app吧！</link>
-    <description>&lt;h1&gt;尝试使用Capacitor来丰富你的app吧！&lt;/h1&gt;
+    <description>&lt;h1&gt;尝试使用 Capacitor 来丰富你的 app 吧！&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://capacitorjs.com&quot;&gt;capacitor&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;capacitor作为一个跨平台ios和安卓的框架，本身和flutter、RN并不是同一赛道，capacitor在官网也清晰的写着，基于两个平台webview来展示你的html静态网站，我们可以先用各种框架如vue、react来写一个静态网站，然后使用capacitor来把它变成app，或者仅仅把它当成一个app的扩展工具，用js库来实现一些原生不太好实现的功能。相比直接用capacitor来构建app，把它作为一个js扩展应该是一个更好的选择。&lt;/p&gt;
+&lt;p&gt;capacitor 作为一个跨平台 ios 和安卓的框架，本身和 flutter、RN 并不是同一赛道，capacitor 在官网也清晰的写着，基于两个平台 webview 来展示你的 html 静态网站，我们可以先用各种框架如 vue、react 来写一个静态网站，然后使用 capacitor 来把它变成 app，或者仅仅把它当成一个 app 的扩展工具，用 js 库来实现一些原生不太好实现的功能。相比直接用 capacitor 来构建 app，把它作为一个 js 扩展应该是一个更好的选择。&lt;/p&gt;
 &lt;h2&gt;简单尝试&lt;/h2&gt;
 &lt;h3&gt;随便新建一个项目&lt;/h3&gt;
-&lt;p&gt;我这里新建了一个nextjs项目。&lt;/p&gt;
+&lt;p&gt;我这里新建了一个 nextjs 项目。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;npx create-next-app@latest
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;记得在next.config中设定output。&lt;/p&gt;
+&lt;p&gt;记得在 next.config 中设定 output。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;output: &amp;quot;export&amp;quot;,
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;安装Capacitor&lt;/h3&gt;
+&lt;h3&gt;安装 Capacitor&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;# 安装cap命令
 npm install @capacitor/cli @capacitor/core
 # 新建cap项目
 npx cap init
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;你可以看到目录中出现了capacitor.config.json
+&lt;p&gt;你可以看到目录中出现了 capacitor.config.json
 下面有一个简单的设置。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{
-    &amp;quot;appId&amp;quot;: &amp;quot;com.example.captest&amp;quot;, //唯一id 
-    &amp;quot;appName&amp;quot;: &amp;quot;captest&amp;quot;, 
+    &amp;quot;appId&amp;quot;: &amp;quot;com.example.captest&amp;quot;, //唯一id
+    &amp;quot;appName&amp;quot;: &amp;quot;captest&amp;quot;,
     &amp;quot;webDir&amp;quot;: &amp;quot;out&amp;quot;, //这个是静态网站的位置，nextjs导出的静态页面在out文件夹
     &amp;quot;server&amp;quot;: {
-        &amp;quot;url&amp;quot;: &amp;quot;http://127.0.0.1:3000&amp;quot;,  //这里设定是对应nextjs dev模式的端口，设定后可以热更新
+        &amp;quot;url&amp;quot;: &amp;quot;http://127.0.0.1:3000&amp;quot;, //这里设定是对应nextjs dev模式的端口，设定后可以热更新
         &amp;quot;cleartext&amp;quot;: true
     }
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;安装cap对应sdk&lt;/h3&gt;
-&lt;p&gt;这里以ios项目为例，&lt;/p&gt;
-&lt;p&gt;这里特别说一下在ios开发中需要安装cocoapods，如果正常安装出错可以使用brew安装，我有个专门的日志写了如何解决这个问题。&lt;/p&gt;
+&lt;h3&gt;安装 cap 对应 sdk&lt;/h3&gt;
+&lt;p&gt;这里以 ios 项目为例，&lt;/p&gt;
+&lt;p&gt;这里特别说一下在 ios 开发中需要安装 cocoapods，如果正常安装出错可以使用 brew 安装，我有个专门的日志写了如何解决这个问题。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;# 先把nextjs的预览打开
 npm run dev
 # 安装cap包
@@ -293,10 +301,10 @@ npx cap run ios
 # 可以打开同步，这样就可以热更新了
 npx cap sync
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&quot;/static/blog/capacitor%E9%A2%84%E8%A7%881.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;这样一个可预览的nextjs的app就出来啦～&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/images/capacitor/capacitor%E9%A2%84%E8%A7%881.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这样一个可预览的 nextjs 的 app 就出来啦～&lt;/p&gt;
 &lt;p&gt;是不是很简单～&lt;/p&gt;
-&lt;p&gt;不过对比flutter和RN速度上明显还是有差距，还是要根据具体情况使用。&lt;/p&gt;
+&lt;p&gt;不过对比 flutter 和 RN 速度上明显还是有差距，还是要根据具体情况使用。&lt;/p&gt;
 </description>
     <pubDate>Sun, 11 Aug 2024 20:47:00 GMT</pubDate>
     <author>w05172075@outlook.com (wxm)</author>
@@ -349,7 +357,7 @@ pod env
     <link>https://wxmvv.github.io/blog/Note/ukulele/SmileInTheMorning</link>
     <description>&lt;p&gt;虽然很久没弹琴，也没制作谱子了，赶上这次名渡山来天津的机会，再次拿起来练一下。&lt;/p&gt;
 &lt;p&gt;就挑了一首他的新曲来练一下。刚好骑鹅尤克里里的伊老师也在扒这首曲子，我们就一起合作完成谱子的整理，放在这里。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;/static/blog/smileinthemorning.pdf&quot;&gt;smileinthemorning.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/static/pdf/ukulele/smileinthemorning.pdf&quot;&gt;smileinthemorning.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;iframe src=&quot;//player.bilibili.com/player.html?isOutside=true&amp;aid=1355658592&amp;bvid=BV1Xz421b7FU&amp;cid=1574676110&amp;p=1&amp;autoplay=0&amp;muted=0&quot; className=&#39;w-full h-[366px]&#39; scrolling=&quot;no&quot; border=&quot;0&quot; frameBorder=&quot;no&quot; autoPlay=&quot;0&quot; muted=&quot;0&quot; framespacing=&quot;0&quot; allowFullScreen={true}&gt;&lt;/iframe&gt;
 </description>
     <pubDate>Tue, 16 Jul 2024 10:17:00 GMT</pubDate>
@@ -361,13 +369,13 @@ pod env
     <guid>https://wxmvv.github.io/blog/js/Nextjs重构主页</guid>
     <title>2024年使用Nextjs重构主页</title>
     <link>https://wxmvv.github.io/blog/js/Nextjs重构主页</link>
-    <description>&lt;p&gt;最近在使用Nextjs完成工作，用的很舒服，遂决定用来重构许久不动的主页&lt;/p&gt;
+    <description>&lt;p&gt;最近在使用 Nextjs 完成工作，用的很舒服，遂决定用来重构许久不动的主页&lt;/p&gt;
 &lt;h2&gt;技术选择&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://tailwindcss.com/&quot;&gt;tailwindcss&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://nextjs.org/&quot;&gt;Nextjs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;首先是框架，除了Nextjs之外，我平时也很常用的tailwindcss，可以快速构建网站页面。
+&lt;p&gt;首先是框架，除了 Nextjs 之外，我平时也很常用的 tailwindcss，可以快速构建网站页面。
 经过查找最后决定使用&amp;quot;开箱即用&amp;quot;的 &lt;a href=&quot;https://github.com/timlrx/tailwind-nextjs-starter-blog&quot;&gt;tailwind-nextjs-starter-blog&lt;/a&gt;作为基础来重构主页。&lt;/p&gt;
 &lt;h2&gt;设计参考&lt;/h2&gt;
 &lt;ul&gt;
@@ -377,78 +385,78 @@ pod env
 &lt;h2&gt;未完成&lt;/h2&gt;
 &lt;p&gt;#todo&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; BlogLayout修改&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; &lt;strong&gt;MDX样式修改&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; BlogLayout 修改&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; &lt;strong&gt;MDX 样式修改&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 动画优化&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 字体&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 评论系统&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; i18n国际化&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; rss生成&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; i18n 国际化&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; rss 生成&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 添加音乐支持&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 音乐播放器动画&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; PDF预览&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; PDF 预览&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;问题与一些解决方案&lt;/h2&gt;
-&lt;h3&gt;favicons以及manifest&lt;/h3&gt;
+&lt;h3&gt;favicons 以及 manifest&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/Manifest&quot;&gt;MDN官方文档&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/elegantapp/pwa-asset-generator&quot;&gt;pwa-asset-generator工具&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/Manifest&quot;&gt;MDN 官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/elegantapp/pwa-asset-generator&quot;&gt;pwa-asset-generator 工具&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;动效框架&lt;/h3&gt;
 &lt;p&gt;页面的动画效果使用的&lt;a href=&quot;https://www.framer.com/motion/&quot;&gt;framer-motion&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;能打打节省开发动画的时间,并且让动画的过渡更加丝滑。&lt;/p&gt;
-&lt;p&gt;不得不说和vue相比，react的动画库真的多太多了。&lt;/p&gt;
-&lt;h3&gt;github page静态部署&lt;/h3&gt;
-&lt;p&gt;关于静态部署如何设置，在文档中写的很清楚&lt;a href=&quot;https://github.com/timlrx/tailwind-nextjs-starter-blog&quot;&gt;tailwind-nextjs-starter-blog&lt;/a&gt;，设置过就可以build了。&lt;/p&gt;
-&lt;p&gt;唯一需要注意的是，github page使用jekyll部署，会自动忽略下划线开头的文件，导致_next文件夹中的js css无法加载，在其中新建一个.nojekyll即可&lt;/p&gt;
-&lt;h3&gt;meta信息&lt;/h3&gt;
+&lt;p&gt;不得不说和 vue 相比，react 的动画库真的多太多了。&lt;/p&gt;
+&lt;h3&gt;github page 静态部署&lt;/h3&gt;
+&lt;p&gt;关于静态部署如何设置，在文档中写的很清楚&lt;a href=&quot;https://github.com/timlrx/tailwind-nextjs-starter-blog&quot;&gt;tailwind-nextjs-starter-blog&lt;/a&gt;，设置过就可以 build 了。&lt;/p&gt;
+&lt;p&gt;唯一需要注意的是，github page 使用 jekyll 部署，会自动忽略下划线开头的文件，导致_next 文件夹中的 js css 无法加载，在其中新建一个.nojekyll 即可&lt;/p&gt;
+&lt;h3&gt;meta 信息&lt;/h3&gt;
 &lt;p&gt;参考&lt;a href=&quot;https://gohugo.io/content-management/front-matter/&quot;&gt;Hugo&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;过滤Post的修改&lt;/h3&gt;
-&lt;p&gt;在修改Post过滤过程中，其实就是daaft设置为true，在dev模式还能正常显示，在build模式就会消失，如果想要做一些修改 可以搜索一个外部方法 allCoreContent ，这个方法会在NODE_ENV为production的时候过滤掉draft修改。然后做自己的修改即可。&lt;/p&gt;
+&lt;h3&gt;过滤 Post 的修改&lt;/h3&gt;
+&lt;p&gt;在修改 Post 过滤过程中，其实就是 daaft 设置为 true，在 dev 模式还能正常显示，在 build 模式就会消失，如果想要做一些修改 可以搜索一个外部方法 allCoreContent ，这个方法会在 NODE_ENV 为 production 的时候过滤掉 draft 修改。然后做自己的修改即可。&lt;/p&gt;
 &lt;h2&gt;评论系统&lt;/h2&gt;
-&lt;p&gt;tailwind-nextjs-starter-blog 所提供的comments组件似乎有一些加载问题，所以最后还是自己解决吧。&lt;/p&gt;
+&lt;p&gt;tailwind-nextjs-starter-blog 所提供的 comments 组件似乎有一些加载问题，所以最后还是自己解决吧。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://giscus.app/&quot;&gt;giscus&lt;/a&gt;
 &lt;a href=&quot;https://github.com/giscus/giscus-component&quot;&gt;giscus-react&lt;/a&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;npm i @giscus/react
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;//作为组件中使用  现在giscus官网获取id 然后将下面替换即可
-import Giscus from &amp;#39;@giscus/react&amp;#39;;
+import Giscus from &amp;quot;@giscus/react&amp;quot;;
 export default function MyApp() {
-  return (
-    &amp;lt;Giscus
-      id=&amp;quot;comments&amp;quot;
-      repo=&amp;quot;giscus/giscus-component&amp;quot;
-      repoId=&amp;quot;MDEwOlJlcG9zaXRvcnkzOTEzMTMwMjA=&amp;quot;
-      category=&amp;quot;Announcements&amp;quot;
-      categoryId=&amp;quot;DIC_kwDOF1L2fM4B-hVS&amp;quot;
-      mapping=&amp;quot;specific&amp;quot;
-      term=&amp;quot;Welcome to @giscus/react component!&amp;quot;
-      reactionsEnabled=&amp;quot;1&amp;quot;
-      emitMetadata=&amp;quot;0&amp;quot;
-      inputPosition=&amp;quot;top&amp;quot;
-      theme=&amp;quot;light&amp;quot;
-      lang=&amp;quot;en&amp;quot;
-      loading=&amp;quot;lazy&amp;quot;
-    /&amp;gt;
-  );
+    return (
+        &amp;lt;Giscus
+            id=&amp;quot;comments&amp;quot;
+            repo=&amp;quot;giscus/giscus-component&amp;quot;
+            repoId=&amp;quot;MDEwOlJlcG9zaXRvcnkzOTEzMTMwMjA=&amp;quot;
+            category=&amp;quot;Announcements&amp;quot;
+            categoryId=&amp;quot;DIC_kwDOF1L2fM4B-hVS&amp;quot;
+            mapping=&amp;quot;specific&amp;quot;
+            term=&amp;quot;Welcome to @giscus/react component!&amp;quot;
+            reactionsEnabled=&amp;quot;1&amp;quot;
+            emitMetadata=&amp;quot;0&amp;quot;
+            inputPosition=&amp;quot;top&amp;quot;
+            theme=&amp;quot;light&amp;quot;
+            lang=&amp;quot;en&amp;quot;
+            loading=&amp;quot;lazy&amp;quot;
+        /&amp;gt;
+    );
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;build后的中文路径问题&lt;/h3&gt;
-&lt;p&gt;我在dev模式中没有问题，但是当我打包build后出现路径问题。&lt;/p&gt;
+&lt;h3&gt;build 后的中文路径问题&lt;/h3&gt;
+&lt;p&gt;我在 dev 模式中没有问题，但是当我打包 build 后出现路径问题。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// app/blog/[...slug]/page.tsx
-const isDev = process.env.NODE_ENV === &amp;#39;development&amp;#39;
-const isBuild = process.env.NEXT_PUBLIC_IS_BUILD === &amp;#39;true&amp;#39;
+const isDev = process.env.NODE_ENV === &amp;quot;development&amp;quot;;
+const isBuild = process.env.NEXT_PUBLIC_IS_BUILD === &amp;quot;true&amp;quot;;
 export const generateStaticParams = async () =&amp;gt; {
     if (isDev) {
         return allBlogs.map((p) =&amp;gt; ({
-            slug: p.slug.split(&amp;#39;/&amp;#39;).map((name) =&amp;gt; encodeURIComponent(name)),
-        }))
+            slug: p.slug.split(&amp;quot;/&amp;quot;).map((name) =&amp;gt; encodeURIComponent(name)),
+        }));
     } else {
         return allBlogs.map((p) =&amp;gt; ({
-            slug: p.slug.split(&amp;#39;/&amp;#39;).map((name) =&amp;gt; decodeURI(name)),
-        }))
+            slug: p.slug.split(&amp;quot;/&amp;quot;).map((name) =&amp;gt; decodeURI(name)),
+        }));
     }
-}
+};
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// next.config.js
 const isDev = process.env.NODE_ENV === &amp;#39;development&amp;#39;
@@ -474,19 +482,28 @@ env: {
     <guid>https://wxmvv.github.io/blog/markdown/mdx常用元素</guid>
     <title>mdx常用元素</title>
     <link>https://wxmvv.github.io/blog/markdown/mdx常用元素</link>
-    <description>&lt;p&gt;这里是一些常用mdx元素&lt;/p&gt;
+    <description>&lt;p&gt;这里是一些常用 mdx 元素&lt;/p&gt;
 &lt;h2&gt;目录&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;TOCInline toc={props.toc} exclude=&amp;quot;Introduction&amp;quot; /&amp;gt;&lt;/code&gt;
 &lt;TOCInline toc={props.toc} exclude=&quot;Introduction&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;B站视频&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;iframe src=&amp;quot;//player.bilibili.com/player.html?isOutside=true&amp;amp;aid=1355658592&amp;amp;bvid=BV1Xz421b7FU&amp;amp;cid=1574676110&amp;amp;p=1&amp;amp;muted=false&amp;quot; className=&amp;#39;w-full h-[342px]&amp;#39; autoPlay scrolling=&amp;quot;no&amp;quot; border=&amp;quot;0&amp;quot; frameBorder=&amp;quot;no&amp;quot; framespacing=&amp;quot;0&amp;quot; allowFullScreen={true}&amp;gt;&amp;lt;/iframe&amp;gt;
+&lt;h2&gt;B 站视频&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;iframe
+    src=&amp;quot;//player.bilibili.com/player.html?isOutside=true&amp;amp;aid=1355658592&amp;amp;bvid=BV1Xz421b7FU&amp;amp;cid=1574676110&amp;amp;p=1&amp;amp;muted=false&amp;quot;
+    className=&amp;quot;w-full h-[342px]&amp;quot;
+    autoPlay
+    scrolling=&amp;quot;no&amp;quot;
+    border=&amp;quot;0&amp;quot;
+    frameBorder=&amp;quot;no&amp;quot;
+    framespacing=&amp;quot;0&amp;quot;
+    allowFullScreen={true}
+&amp;gt;&amp;lt;/iframe&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;iframe src=&quot;//player.bilibili.com/player.html?isOutside=true&amp;aid=1355658592&amp;bvid=BV1Xz421b7FU&amp;cid=1574676110&amp;p=1&amp;muted=false&quot; className=&#39;w-full h-[342px]&#39; autoPlay scrolling=&quot;no&quot; border=&quot;0&quot; frameBorder=&quot;no&quot; framespacing=&quot;0&quot; allowFullScreen={true}&gt;&lt;/iframe&gt;
 
-&lt;h2&gt;markdown图片&lt;/h2&gt;
+&lt;h2&gt;markdown 图片&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;![测试图片](/static/test.webp))&lt;/code&gt;
 &lt;img src=&quot;/static/test.webp&quot; alt=&quot;测试图片&quot;&gt;&lt;/p&gt;
-&lt;h2&gt;mdx图片(宽)&lt;/h2&gt;
+&lt;h2&gt;mdx 图片(宽)&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;div className=&amp;quot;flex flex-row justify-center bg-zinc-100  rounded md:-mx-28&amp;quot;&amp;gt;
     &amp;lt;img alt=&amp;quot;GitHub test&amp;quot; loading=&amp;quot;lazy&amp;quot; width=&amp;quot;2000&amp;quot; height=&amp;quot;1000&amp;quot; decoding=&amp;quot;async&amp;quot; data-nimg=&amp;quot;1&amp;quot; className=&amp;quot;my-0 rounded&amp;quot; srcSet=&amp;quot;&amp;quot; src=&amp;quot;/static/test2.webp&amp;quot; /&amp;gt;
 &amp;lt;/div&amp;gt;
@@ -495,8 +512,7 @@ env: {
   &lt;Image alt=&quot;GitHub test&quot; loading=&quot;lazy&quot; width=&quot;2000&quot; height=&quot;1000&quot; decoding=&quot;async&quot; data-nimg=&quot;1&quot; className=&quot;my-0 rounded&quot; srcSet=&quot;&quot; src=&quot;/static/test2.webp&quot; /&gt;
 &lt;/div&gt;
 
-
-&lt;h2&gt;mdx视频(普通)&lt;/h2&gt;
+&lt;h2&gt;mdx 视频(普通)&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;div className=&amp;quot;flex flex-row justify-center bg-zinc-100 rounded-sm &amp;quot;&amp;gt;
     &amp;lt;video autoPlay loop preload=&amp;quot;auto&amp;quot; playsInline className=&amp;quot;my-0 rounded&amp;quot;&amp;gt;
         &amp;lt;source src=&amp;quot;/static/test.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot;&amp;gt;
@@ -509,8 +525,7 @@ env: {
   &lt;/video&gt;
 &lt;/div&gt;
 
-
-&lt;h2&gt;mdx视频(宽)&lt;/h2&gt;
+&lt;h2&gt;mdx 视频(宽)&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;div className=&amp;quot;flex flex-row justify-center bg-zinc-100 rounded-sm md:-mx-28&amp;quot;&amp;gt;
   &amp;lt;video autoPlay loop preload=&amp;quot;auto&amp;quot; playsInline className=&amp;quot;my-0 rounded&amp;quot;&amp;gt;
     &amp;lt;source src=&amp;quot;/static/test.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot; /&amp;gt;
@@ -522,8 +537,6 @@ env: {
     &lt;source src=&quot;/static/test.mp4&quot; type=&quot;video/mp4&quot; /&gt;
   &lt;/video&gt;
 &lt;/div&gt;
-
-
 
 &lt;h2&gt;链接&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;https://google.com&amp;quot; target=&amp;quot;blank&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/p&gt;
@@ -563,7 +576,6 @@ env: {
   &lt;/div&gt;
 &lt;/div&gt;
 
-
 &lt;h3&gt;两列布局(窄)&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;div className=&amp;quot;flex flex-col gap-6 md:grid md:grid-cols-2&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;div className=&quot;flex flex-col gap-6 md:grid md:grid-cols-2&quot;&gt;
@@ -594,7 +606,6 @@ env: {
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-
 
 &lt;h3&gt;item 单列&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;div className=&amp;quot;flex flex-col gap-2&amp;quot;&amp;gt;
@@ -643,9 +654,9 @@ env: {
 &lt;li&gt;做项目计划&lt;/li&gt;
 &lt;li&gt;项目谈判&lt;/li&gt;
 &lt;li&gt;设计&lt;/li&gt;
-&lt;li&gt;excel表和BI报表的基础&lt;/li&gt;
-&lt;li&gt;PS图片，简单的图片处理&lt;/li&gt;
-&lt;li&gt;设计Logo等&lt;/li&gt;
+&lt;li&gt;excel 表和 BI 报表的基础&lt;/li&gt;
+&lt;li&gt;PS 图片，简单的图片处理&lt;/li&gt;
+&lt;li&gt;设计 Logo 等&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;为什么会学习各种技能&lt;/h2&gt;
 &lt;p&gt;原因还是因为缺少经费.只能自己学习来减少预算...
@@ -664,25 +675,25 @@ env: {
     <guid>https://wxmvv.github.io/blog/swiftUI/SwiftUI获取屏幕宽高</guid>
     <title>SwiftUI获取屏幕宽高</title>
     <link>https://wxmvv.github.io/blog/swiftUI/SwiftUI获取屏幕宽高</link>
-    <description>&lt;p&gt;在ios中如果需要做一些页面，如抽屉侧边栏，就需要获得屏幕宽度，那么如何获取呢？&lt;/p&gt;
+    <description>&lt;p&gt;在 ios 中如果需要做一些页面，如抽屉侧边栏，就需要获得屏幕宽度，那么如何获取呢？&lt;/p&gt;
 &lt;p&gt;以下是两种方式：&lt;/p&gt;
 &lt;h2&gt;通过 GeometryReader 获取&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;GeometryReader&lt;/code&gt;包装器提供了对父视图几何信息的访问，从而使你能够根据视图的实际大小来设置内容，当设备横置或者纵置，也会跟随动态调整。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;struct ContentView: View { 
-    var body: some View { 
+&lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;struct ContentView: View {
+    var body: some View {
         GeometryReader { geo in
             Text(&amp;quot;Screen Width: \(geo.size.width)&amp;quot;)
         }
-    } 
+    }
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;通过 UIScreen 获取&lt;/h2&gt;
-&lt;p&gt;UIScreen.main.bounds 将返回设备的逻辑宽度，不考虑横置或纵置的情况,包含width和height等信息，如果需要获取实际物理宽高 也可以使用 UIScreen.main.nativeBounds.width&lt;/p&gt;
+&lt;p&gt;UIScreen.main.bounds 将返回设备的逻辑宽度，不考虑横置或纵置的情况,包含 width 和 height 等信息，如果需要获取实际物理宽高 也可以使用 UIScreen.main.nativeBounds.width&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;// 通过 UIScreen.main.bounds.width 来获得宽度
-struct ContentView: View { 
-    var body: some View { 
+struct ContentView: View {
+    var body: some View {
         Text(&amp;quot;Screen Width: \(UIScreen.main.bounds.width)&amp;quot;)
-    } 
+    }
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;总结&lt;/h2&gt;
@@ -719,7 +730,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
     <link>https://wxmvv.github.io/blog/macos/Arc浏览器使用体会</link>
     <description>&lt;h2&gt;总结&lt;/h2&gt;
 &lt;p&gt;把总结放在前面：
-我的使用arc浏览器的感觉就是两个字：&lt;strong&gt;舒服！&lt;/strong&gt;（个人观点仅供参考）
+我的使用 arc 浏览器的感觉就是两个字：&lt;strong&gt;舒服！&lt;/strong&gt;（个人观点仅供参考）
 优点：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;外观花哨（有好有坏吧）&lt;/li&gt;
@@ -728,15 +739,15 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 &lt;li&gt;调试方便&lt;/li&gt;
 &lt;li&gt;多用户切换方便
 缺点：&lt;/li&gt;
-&lt;li&gt;性能开销大（笔记本可能会影响续航，如果外出还是safari）&lt;/li&gt;
-&lt;li&gt;有一些bug（比如总是提示翻译网页）&lt;/li&gt;
-&lt;li&gt;没有书签功能（对应的pin功能，不过很难用）&lt;/li&gt;
+&lt;li&gt;性能开销大（笔记本可能会影响续航，如果外出还是 safari）&lt;/li&gt;
+&lt;li&gt;有一些 bug（比如总是提示翻译网页）&lt;/li&gt;
+&lt;li&gt;没有书签功能（对应的 pin 功能，不过很难用）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;新奇的设计和花哨的外观，真的可以先体验一下，看看适不适合你。
 当然如果习惯不同也不要勉强，适合自己的才是对的。&lt;/p&gt;
 &lt;h2&gt;心路历程&lt;/h2&gt;
-&lt;p&gt;其实我很早就有关注到这个浏览器，也早早参与了测试（好像是2021年吧，有点模糊），不过当时第一次打开然后CPU飙升，风扇狂扇，本来清爽的macbook直接煎蛋，给我留下了不小的心理阴影，然后惊恐的删掉了。
-这次偶然间在b站看到有人推荐，看着让人舒适的界面，我最后还是下载了使用。之前的发热问题也没了（可能也和系统版本有关），可以使用了。&lt;/p&gt;
+&lt;p&gt;其实我很早就有关注到这个浏览器，也早早参与了测试（好像是 2021 年吧，有点模糊），不过当时第一次打开然后 CPU 飙升，风扇狂扇，本来清爽的 macbook 直接煎蛋，给我留下了不小的心理阴影，然后惊恐的删掉了。
+这次偶然间在 b 站看到有人推荐，看着让人舒适的界面，我最后还是下载了使用。之前的发热问题也没了（可能也和系统版本有关），可以使用了。&lt;/p&gt;
 &lt;h2&gt;常用快捷键&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -747,7 +758,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 &lt;/thead&gt;
 &lt;tbody&gt;&lt;tr&gt;
 &lt;td&gt;command+s&lt;/td&gt;
-&lt;td&gt;打开左侧siderbar&lt;/td&gt;
+&lt;td&gt;打开左侧 siderbar&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;ctrl+⬆️+=&lt;/td&gt;
@@ -767,7 +778,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;command+⬆️+C&lt;/td&gt;
-&lt;td&gt;复制当前url&lt;/td&gt;
+&lt;td&gt;复制当前 url&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;command+W&lt;/td&gt;
@@ -779,11 +790,11 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;command+L&lt;/td&gt;
-&lt;td&gt;打开command输入&lt;/td&gt;
+&lt;td&gt;打开 command 输入&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;
 &lt;h2&gt;画架&lt;/h2&gt;
-&lt;p&gt;我觉得arc最优秀的功能就是这个画架！如果你有用arc一定要尝试！！&lt;/p&gt;
+&lt;p&gt;我觉得 arc 最优秀的功能就是这个画架！如果你有用 arc 一定要尝试！！&lt;/p&gt;
 </description>
     <pubDate>Sat, 04 Nov 2023 14:47:00 GMT</pubDate>
     <author>w05172075@outlook.com (wxm)</author>
@@ -791,57 +802,20 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/Note/思考：为什么要写博客？</guid>
-    <title>20231104 思考：为什么要写博客？</title>
-    <link>https://wxmvv.github.io/blog/Note/思考：为什么要写博客？</link>
-    <description>&lt;h2&gt;为什么要写博客？&lt;/h2&gt;
-&lt;p&gt;最开始只是觉得大家都写，我也想写，总是坚持写了两天，第三天就放弃了，有点像朋友戒烟哈哈。&lt;/p&gt;
-&lt;p&gt;最近还是重新开始弄博客，不过今天无聊时候就在思考，我为什么要做博客呢，有什么用吗？真的有人看吗？&lt;/p&gt;
-&lt;p&gt;以下是我的思考和对应答案&lt;/p&gt;
-&lt;p&gt;为什么做博客：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;记录与整理（生活工作）&lt;/li&gt;
-&lt;li&gt;锻炼写文案&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这两个理由对我来说&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;记录与整理&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;个人成长：&lt;/strong&gt; 通过博客记录生活和工作的点点滴滴，你可以更清晰地看到自己的成长和变化，这也有助于更好地了解自己。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;知识积累：&lt;/strong&gt; 将学到的知识整理成博客形式，不仅有助于巩固所学，还能为他人提供有用的信息，同时也激励你更深入地学习。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;问题解决：&lt;/strong&gt; 在博客中记录遇到的问题和解决方法，不仅能帮助他人，也有助于自己更系统地思考和解决问题。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;锻炼写文案&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;沟通能力提升：&lt;/strong&gt; 不仅在写作方面，博客还能帮助你提高表达和沟通能力。这对于工作和日常生活中的各种情境都是有益的。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;建立个人品牌：&lt;/strong&gt; 通过博客展示你的专业知识和独特见解，逐渐建立个人品牌，这对职业发展和网络影响力都有积极作用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;创造共鸣：&lt;/strong&gt; 通过真实、有趣、引人入胜的文章，你有可能吸引到和你有共鸣的读者，建立起有意义的社交关系。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;当然，写博客是一个长期的过程，可能一开始不容易看到明显的回报。但是随着时间的推移，你会发现这不仅仅是一种记录和表达方式，更是一次自我发现和不断进步的过程。&lt;/p&gt;
-</description>
-    <pubDate>Sat, 04 Nov 2023 12:40:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
-    <category>note</category><category>diary</category>
-  </item>
-
-  <item>
     <guid>https://wxmvv.github.io/blog/swiftUI/StarlightDiary重构开始</guid>
     <title>我的项目StarlightDiary重构开始</title>
     <link>https://wxmvv.github.io/blog/swiftUI/StarlightDiary重构开始</link>
-    <description>&lt;h2&gt;重构快乐🎉！&lt;/h2&gt;
-&lt;p&gt;最近在忙很多各种各样的工作(大多数小程序以及前端项目)，最近终于闲下来一点，看着自己过去做的这个日记App实在是惨不忍睹，正好就重构一下，而且SwiftUI经过快两年的更新也加入了不少东西，都一起来用一下吧！&lt;/p&gt;
+    <description>&lt;h2&gt;重构快乐 🎉！&lt;/h2&gt;
+&lt;p&gt;最近在忙很多各种各样的工作(大多数小程序以及前端项目)，最近终于闲下来一点，看着自己过去做的这个日记 App 实在是惨不忍睹，正好就重构一下，而且 SwiftUI 经过快两年的更新也加入了不少东西，都一起来用一下吧！&lt;/p&gt;
 &lt;h2&gt;项目&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/wxmvv/StarlightDiary&quot;&gt;StarLightDiary&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;主要重构方向&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;新的UI界面，blingbling的✨&lt;/li&gt;
+&lt;li&gt;新的 UI 界面，blingbling 的 ✨&lt;/li&gt;
 &lt;li&gt;更多的设定（字体，色彩）&lt;/li&gt;
-&lt;li&gt;markdown支持&lt;/li&gt;
-&lt;li&gt;ICloud的支持&lt;/li&gt;
-&lt;li&gt;Mac支持（看情况）&lt;/li&gt;
+&lt;li&gt;markdown 支持&lt;/li&gt;
+&lt;li&gt;ICloud 的支持&lt;/li&gt;
+&lt;li&gt;Mac 支持（看情况）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;其他要说的&lt;/h2&gt;
 &lt;p&gt;也许可以顺便把之前定下的流程经验教学安排一下？&lt;/p&gt;
@@ -855,50 +829,50 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
     <guid>https://wxmvv.github.io/blog/golang/goframe开发学习系列/goframe开发学习（一）基础流程</guid>
     <title>goframe开发学习（一）基础流程开发一个API</title>
     <link>https://wxmvv.github.io/blog/golang/goframe开发学习系列/goframe开发学习（一）基础流程</link>
-    <description>&lt;p&gt;我是一名普普通通的前端程序员，并没有进过大厂工作，也不太了解各种设计模式，之前只用过flask，或者一些serverless的项目做一些简单的后端程序。第一次使用goframe的我其实也是有点一头雾水，看什么设计模式云里雾里，不过摸索了一阵子后，发现里面确实有很多设计方面的思想，不一定能用上，但是了解了也是很有帮助的（比如面试哈哈😂），总是学习是让人快乐的！&lt;/p&gt;
+    <description>&lt;p&gt;我是一名普普通通的前端程序员，并没有进过大厂工作，也不太了解各种设计模式，之前只用过 flask，或者一些 serverless 的项目做一些简单的后端程序。第一次使用 goframe 的我其实也是有点一头雾水，看什么设计模式云里雾里，不过摸索了一阵子后，发现里面确实有很多设计方面的思想，不一定能用上，但是了解了也是很有帮助的（比如面试哈哈 😂），总是学习是让人快乐的！&lt;/p&gt;
 &lt;p&gt;下面直接进入主题，我会用最精炼的步骤来开发，如果我的学习分享能给你帮助或者有任何问题，都欢迎留言或邮件联系我。&lt;/p&gt;
 &lt;h2&gt;开发准备&lt;/h2&gt;
-&lt;h3&gt;安装goframe&lt;/h3&gt;
+&lt;h3&gt;安装 goframe&lt;/h3&gt;
 &lt;h3&gt;初始化项目设置&lt;/h3&gt;
 &lt;h2&gt;开发流程！重要 gf-v2.5&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;设计数据库&lt;/li&gt;
 &lt;li&gt;设置(dao，数据库等)&lt;ul&gt;
-&lt;li&gt;在main.go中加入一行 _ &amp;quot;github.com/gogf/gf/contrib/drivers/mysql/v2&amp;quot; （如果你使用的是mysql；只需写一次）&lt;/li&gt;
+&lt;li&gt;在 main.go 中加入一行 _ &amp;quot;github.com/gogf/gf/contrib/drivers/mysql/v2&amp;quot; （如果你使用的是 mysql；只需写一次）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;gf gen dao 生成对应的 dao/do/model&lt;/li&gt;
-&lt;li&gt;编写api层：定义业务侧数据结构，提供对外接口的输入/输出数据结构&lt;/li&gt;
+&lt;li&gt;编写 api 层：定义业务侧数据结构，提供对外接口的输入/输出数据结构&lt;/li&gt;
 &lt;li&gt;gf gen ctrl 生成对应的 controller&lt;/li&gt;
-&lt;li&gt;编写model层：定义数据侧数据结构，提供对内的数据处理的输入/输出数据结构 &lt;/li&gt;
-&lt;li&gt;编写logic层，自动生成service层代码&lt;ul&gt;
-&lt;li&gt;在main.go中 加入一行 _ &amp;quot;project-name/internal/logic&amp;quot; （只需写一次）&lt;/li&gt;
+&lt;li&gt;编写 model 层：定义数据侧数据结构，提供对内的数据处理的输入/输出数据结构&lt;/li&gt;
+&lt;li&gt;编写 logic 层，自动生成 service 层代码&lt;ul&gt;
+&lt;li&gt;在 main.go 中 加入一行 _ &amp;quot;project-name/internal/logic&amp;quot; （只需写一次）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;gf gen service 生成对应的 service&lt;/li&gt;
-&lt;li&gt;编写controller层，接收/解析用户输入的参数，调用service层的服务&lt;/li&gt;
-&lt;li&gt;在cmd.go中注册路由&lt;/li&gt;
+&lt;li&gt;编写 controller 层，接收/解析用户输入的参数，调用 service 层的服务&lt;/li&gt;
+&lt;li&gt;在 cmd.go 中注册路由&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2&gt;详细&lt;/h2&gt;
-&lt;p&gt;然后是分别详解对应步骤，我只会把和goframe相关的写出来，像数据库设计这种，请自己找资料学习。&lt;/p&gt;
+&lt;p&gt;然后是分别详解对应步骤，我只会把和 goframe 相关的写出来，像数据库设计这种，请自己找资料学习。&lt;/p&gt;
 &lt;h3&gt;1.设计数据库&lt;/h3&gt;
 &lt;p&gt;注意：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;给需要的表添加 	&lt;pre&gt;&lt;code class=&quot;language-sql&quot;&gt;`created_at` datetime DEFAULT NULL COMMENT &amp;#39;创建时间&amp;#39;,
+&lt;li&gt;给需要的表添加&lt;pre&gt;&lt;code class=&quot;language-sql&quot;&gt;`created_at` datetime DEFAULT NULL COMMENT &amp;#39;创建时间&amp;#39;,
 `updated_at` datetime DEFAULT NULL COMMENT &amp;#39;修改时间&amp;#39;,
 `deleted_at` datetime DEFAULT NULL COMMENT &amp;#39;删除时间&amp;#39;,
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://goframe.org/pages/viewpage.action?pageId=84103192&quot;&gt;官方参考&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;4.编写api&lt;/h3&gt;
+&lt;h3&gt;4.编写 api&lt;/h3&gt;
 &lt;p&gt;注意：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;使用指针类型的属性参数，用于实现：当传递该参数时执行修改，不传递时不修改。(具体可以看&lt;a href=&quot;https://goframe.org/pages/viewpage.action?pageId=84103192&quot;&gt;官方参考&lt;/a&gt;)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;主要参考文档:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://goframe.org/pages/viewpage.action?pageId=47703679&quot;&gt;g.Meta使用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://goframe.org/pages/viewpage.action?pageId=47703679&quot;&gt;g.Meta 使用&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://goframe.org/pages/viewpage.action?pageId=93880327&quot;&gt;官方文档编写规范&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;// MARK:你好 顺便获取全部管理员
@@ -912,8 +886,8 @@ type Admin_HelloRes struct {
     AdminList *[]model.AdminAll `json:&amp;quot;admin_list&amp;quot; dc:&amp;quot;拿来吧你&amp;quot;`
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;6.编写model&lt;/h3&gt;
-&lt;p&gt;其实就是各种数据类型都可以放在这里，一般是input output的数据类型。&lt;/p&gt;
+&lt;h3&gt;6.编写 model&lt;/h3&gt;
+&lt;p&gt;其实就是各种数据类型都可以放在这里，一般是 input output 的数据类型。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;//有没有发现 其实API中也是这么写的，所以model其实也可以用于API编写中
 //
 type AdminAll struct {
@@ -940,8 +914,8 @@ type AdminGetAllOutput struct {
     AdminAllList []AdminAll `json:&amp;quot;list&amp;quot;`
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;7.编写logic&lt;/h3&gt;
-&lt;p&gt;这个我在一开始使用的时候其实很困惑，为啥要弄这个，直接在controller里把这些逻辑都写在一起不就好了,不过文档中说明是在面对复杂项目上，用于封装业务。可能是我的项目太简单了吧🦉(汗...&lt;/p&gt;
+&lt;h3&gt;7.编写 logic&lt;/h3&gt;
+&lt;p&gt;这个我在一开始使用的时候其实很困惑，为啥要弄这个，直接在 controller 里把这些逻辑都写在一起不就好了,不过文档中说明是在面对复杂项目上，用于封装业务。可能是我的项目太简单了吧 🦉(汗...&lt;/p&gt;
 &lt;p&gt;在看过官方示例后可以可以模仿来写。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;// /logic/jkmap_admin/admin.go
 //记得加上init 和new方法,每个logic都需要
@@ -962,9 +936,9 @@ func (s *sAdmin) GetAll(ctx context.Context) (out *model.AdminGetAllOutput, err 
     return
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;9.编写controller&lt;/h3&gt;
-&lt;p&gt;在这里调用你在logic中写的业务方法，来实现接口。&lt;/p&gt;
-&lt;h3&gt;10.在cmd中绑定接口&lt;/h3&gt;
+&lt;h3&gt;9.编写 controller&lt;/h3&gt;
+&lt;p&gt;在这里调用你在 logic 中写的业务方法，来实现接口。&lt;/p&gt;
+&lt;h3&gt;10.在 cmd 中绑定接口&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;//像这样在 cmd.go 文件中绑定你生成的controller
 group.Bind(
     //hello.NewV1(),
@@ -986,17 +960,17 @@ group.Bind(
     <guid>https://wxmvv.github.io/blog/golang/goframe开发学习系列/goframe开发学习（零）前言</guid>
     <title>goframe开发学习（零）前言</title>
     <link>https://wxmvv.github.io/blog/golang/goframe开发学习系列/goframe开发学习（零）前言</link>
-    <description>&lt;p&gt;记录自己学习的过程，同时把自己的心得分享出来，如果你也和我一样刚开始接触golang或者goframe，想要尽快入门使用，那么可以关注我的这些文章，肯定会有帮助的。&lt;/p&gt;
-&lt;h2&gt;goframe是什么&lt;/h2&gt;
-&lt;p&gt;goframe是一个基于golang的web框架，它的特点是集成了很多功能，比如orm、缓存、日志、配置、定时任务、命令行、内置服务等等，而且使用起来也很简单，只需要简单的配置就可以使用。&lt;/p&gt;
-&lt;h2&gt;为什么选择goframe&lt;/h2&gt;
-&lt;p&gt;我选择goframe的原因是因为它的功能很全面，而且使用起来也很简单，而且它的文档也很详细，基本上能想到的功能都有，而且还有很多案例，可以很快的上手。&lt;/p&gt;
+    <description>&lt;p&gt;记录自己学习的过程，同时把自己的心得分享出来，如果你也和我一样刚开始接触 golang 或者 goframe，想要尽快入门使用，那么可以关注我的这些文章，肯定会有帮助的。&lt;/p&gt;
+&lt;h2&gt;goframe 是什么&lt;/h2&gt;
+&lt;p&gt;goframe 是一个基于 golang 的 web 框架，它的特点是集成了很多功能，比如 orm、缓存、日志、配置、定时任务、命令行、内置服务等等，而且使用起来也很简单，只需要简单的配置就可以使用。&lt;/p&gt;
+&lt;h2&gt;为什么选择 goframe&lt;/h2&gt;
+&lt;p&gt;我选择 goframe 的原因是因为它的功能很全面，而且使用起来也很简单，而且它的文档也很详细，基本上能想到的功能都有，而且还有很多案例，可以很快的上手。&lt;/p&gt;
 &lt;h2&gt;开发工具&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;VSCode&lt;/li&gt;
 &lt;li&gt;ApiPost(不是广告，真的蛮好用，而且是本地的)&lt;/li&gt;
 &lt;li&gt;TablePlus(看数据库的，随便用哪个都行)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://goframe.org/&quot;&gt;goframe官网&lt;/a&gt;(怎么能不看文档！)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://goframe.org/&quot;&gt;goframe 官网&lt;/a&gt;(怎么能不看文档！)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;加油！&lt;/h2&gt;
 &lt;p&gt;让我们一起努力，共同进步！&lt;/p&gt;
@@ -1010,14 +984,14 @@ group.Bind(
     <guid>https://wxmvv.github.io/blog/markdown/github profile美化</guid>
     <title>github profile美化</title>
     <link>https://wxmvv.github.io/blog/markdown/github profile美化</link>
-    <description>&lt;h2&gt;github profile美化&lt;/h2&gt;
-&lt;p&gt;好像是去年更新的功能，今天整理github文件顺便尝试一下。&lt;/p&gt;
-&lt;p&gt;原理就是新建一个和你的github账号名一样的仓库，然后这个仓库中的read me就会显示在profile页面。&lt;/p&gt;
-&lt;p&gt;这是一个md文件，可以使用markdown，也可以使用html+css来制作样式。&lt;/p&gt;
+    <description>&lt;h2&gt;github profile 美化&lt;/h2&gt;
+&lt;p&gt;好像是去年更新的功能，今天整理 github 文件顺便尝试一下。&lt;/p&gt;
+&lt;p&gt;原理就是新建一个和你的 github 账号名一样的仓库，然后这个仓库中的 read me 就会显示在 profile 页面。&lt;/p&gt;
+&lt;p&gt;这是一个 md 文件，可以使用 markdown，也可以使用 html+css 来制作样式。&lt;/p&gt;
 &lt;p&gt;也有一些相关美化的项目可以用来搭配使用&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://skillicons.dev&quot;&gt;skillicons&lt;/a&gt; 添加小图标&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/anuraghazra/github-readme-stats&quot;&gt;github-readme-stats&lt;/a&gt; 你的github状态&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/anuraghazra/github-readme-stats&quot;&gt;github-readme-stats&lt;/a&gt; 你的 github 状态&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;好啦！快去试一下吧～(^_−)−☆&lt;/p&gt;
 </description>
@@ -1032,7 +1006,7 @@ group.Bind(
     <link>https://wxmvv.github.io/blog/Note/音乐分享-second-wind</link>
     <description>&lt;iframe src=&quot;https://open.spotify.com/embed/album/3yx7NLldcqxw39HoKLPaRG?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;352&quot; frameBorder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
 
-&lt;p&gt;最近听到的非常棒的一张专辑，非常喜欢其中的曲子的solo部分，非常有趣，整体音色会让人很舒适放松，然后solo又会像小精灵一样不多不少制造一点紧张，并且完美解决，确实很棒。&lt;/p&gt;
+&lt;p&gt;最近听到的非常棒的一张专辑，非常喜欢其中的曲子的 solo 部分，非常有趣，整体音色会让人很舒适放松，然后 solo 又会像小精灵一样不多不少制造一点紧张，并且完美解决，确实很棒。&lt;/p&gt;
 </description>
     <pubDate>Wed, 20 Sep 2023 17:12:45 GMT</pubDate>
     <author>w05172075@outlook.com (wxm)</author>
@@ -1048,7 +1022,7 @@ group.Bind(
 &lt;p&gt;包括圈 x，loon，surge，我都用了一圈，确实是 surge 更加顺手一些。其实代理功能大家都大差不差，surge 最突出的实际上是抓数据，使用界面干净明白，简单看一下文档就上手了。还有一个重要的原因，是因为网上都说 surge 会更稳定，更省电(我持保留意见)，于是折腾一番弄出了自己的配置表，欢迎使用参考。&lt;/p&gt;
 &lt;p&gt;模块的话，其实我并没开很多，只有一个必开&lt;a href=&quot;https://raw.githubusercontent.com/ExaAlice/Alice/main/Module/MitMAllHostnames.sgmodule&quot;&gt;MIITAllHost&lt;/a&gt;,这个打开后可以方便抓包，其他的可以在网上自行搜索，或者在各种电报群获取。&lt;/p&gt;
 &lt;h2&gt;个人配置&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;/static/blog/surge.conf&quot;&gt;surge.conf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/static/file/surge.conf&quot;&gt;surge.conf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;导入后替换配置中的订阅地址即可使用&lt;/p&gt;
 &lt;h2&gt;参考&lt;/h2&gt;
 &lt;p&gt;surge 官方&lt;/p&gt;
@@ -1088,60 +1062,60 @@ group.Bind(
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/obsidian/把obsidian变成IA writer(哈哈)</guid>
+    <guid>https://wxmvv.github.io/blog/markdown/把obsidian变成IA writer(哈哈)</guid>
     <title>把obsidian变成IA writer</title>
-    <link>https://wxmvv.github.io/blog/obsidian/把obsidian变成IA writer(哈哈)</link>
+    <link>https://wxmvv.github.io/blog/markdown/把obsidian变成IA writer(哈哈)</link>
     <description>&lt;h2&gt;随便说&lt;/h2&gt;
-&lt;p&gt;用了obsidian好久了，真的是符合我心中电子笔记最完美样子的软件，唯一的问题就是界面太乱，所以利用闲暇时间好好整理了一下！&lt;/p&gt;
-&lt;p&gt;之前用过IA writer，真的很干净、很舒服的界面，字体也是我喜欢的，所以我们今天的目标就是把obsidian变成IA writer！(obsidian:所以我只是IA的替身吗😭)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/static/blog/blog/%E9%A2%84%E8%A7%88%E7%9C%8B%E7%9C%8B.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2&gt;换装开始！╮(￣▽￣&amp;quot;&amp;quot;)╭&lt;/h2&gt;
+&lt;p&gt;用了 obsidian 好久了，真的是符合我心中电子笔记最完美样子的软件，唯一的问题就是界面太乱，所以利用闲暇时间好好整理了一下！&lt;/p&gt;
+&lt;p&gt;之前用过 IA writer，真的很干净、很舒服的界面，字体也是我喜欢的，所以我们今天的目标就是把 obsidian 变成 IA writer！(obsidian:所以我只是 IA 的替身吗 😭)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/images/markdown/obsidian/obsidian-IA%E9%A2%84%E8%A7%88.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;换装开始！╮(￣ ▽ ￣&amp;quot;&amp;quot;)╭&lt;/h2&gt;
 &lt;p&gt;首先是先大体上整理一下外表！
 让我们换一个主题 - 对的没错！就是你 minimal ！(主题店常年第一名的)
-虽然有直接copy IA的主题比如IB，不过实际使用效果不是很理想，minimal凭借她优秀的可调教性成为我们的选择！&lt;/p&gt;
-&lt;p&gt;我们同时还需要3个插件配合&lt;/p&gt;
+虽然有直接 copy IA 的主题比如 IB，不过实际使用效果不是很理想，minimal 凭借她优秀的可调教性成为我们的选择！&lt;/p&gt;
+&lt;p&gt;我们同时还需要 3 个插件配合&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Hider&lt;/li&gt;
 &lt;li&gt;Minimal Theme Settings&lt;/li&gt;
 &lt;li&gt;Style Settings&lt;/li&gt;
 &lt;li&gt;Focus Active Sentence (可选)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;然后是IA的字体&lt;/p&gt;
+&lt;p&gt;然后是 IA 的字体&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/iaolo/iA-Fonts&quot;&gt;IA-Fonts&lt;/a&gt; 选择你喜欢的下载并安装&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;OK！ 前期准备完成！&lt;/p&gt;
 &lt;h2&gt;设置设置！&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://docs.obsidian.md/Home&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/static/blog/blog/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/images/markdown/obsidian/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-palette&quot;&gt;#00C6FF
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;IA的大蓝色&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/static/blog/blog/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE2%202.png&quot; alt=&quot;&quot;&gt;
-&lt;img src=&quot;/static/blog/blog/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE3%201.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;点击import将下面的拷贝进去&lt;/p&gt;
+&lt;p&gt;IA 的大蓝色&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/images/markdown/obsidian/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE2%202.png&quot; alt=&quot;&quot;&gt;
+&lt;img src=&quot;/static/images/markdown/obsidian/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE3%201.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;点击 import 将下面的拷贝进去&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{
-  &amp;quot;minimal-style@@bg1@@dark&amp;quot;: &amp;quot;#191A1A&amp;quot;,
-  &amp;quot;minimal-style@@bg1@@light&amp;quot;: &amp;quot;#F7F7F7&amp;quot;,
-  &amp;quot;minimal-style@@ui1@@light&amp;quot;: &amp;quot;#00BEFF&amp;quot;,
-  &amp;quot;minimal-style@@ax1@@dark&amp;quot;: &amp;quot;#CCCCCC&amp;quot;,
-  &amp;quot;minimal-style@@ax1@@light&amp;quot;: &amp;quot;#1A1A1A&amp;quot;,
-  &amp;quot;minimal-style@@ax2@@dark&amp;quot;: &amp;quot;#CCCCCC&amp;quot;,
-  &amp;quot;minimal-style@@ax2@@light&amp;quot;: &amp;quot;#1A1A1A&amp;quot;,
-  &amp;quot;minimal-style@@code-background@@dark&amp;quot;: &amp;quot;#252524&amp;quot;,
-  &amp;quot;minimal-style@@code-background@@light&amp;quot;: &amp;quot;#EEEEEE&amp;quot;,
-  &amp;quot;minimal-style@@h1-size&amp;quot;: &amp;quot;1.5em&amp;quot;,
-  &amp;quot;minimal-style@@h2-size&amp;quot;: &amp;quot;1.2em&amp;quot;,
-  &amp;quot;minimal-style@@h3-size&amp;quot;: &amp;quot;1.125em&amp;quot;,
-  &amp;quot;minimal-style@@h3-weight&amp;quot;: 600,
-  &amp;quot;minimal-style@@h3-style&amp;quot;: &amp;quot;italic&amp;quot;,
-  &amp;quot;minimal-style@@active-line-on&amp;quot;: true,
-  &amp;quot;minimal-style@@checkbox-shape&amp;quot;: &amp;quot;checkbox-square&amp;quot;,
-  &amp;quot;minimal-style@@ribbon-style&amp;quot;: &amp;quot;ribbon-hidden&amp;quot;,
-  &amp;quot;minimal-style@@bold-weight&amp;quot;: 600
+    &amp;quot;minimal-style@@bg1@@dark&amp;quot;: &amp;quot;#191A1A&amp;quot;,
+    &amp;quot;minimal-style@@bg1@@light&amp;quot;: &amp;quot;#F7F7F7&amp;quot;,
+    &amp;quot;minimal-style@@ui1@@light&amp;quot;: &amp;quot;#00BEFF&amp;quot;,
+    &amp;quot;minimal-style@@ax1@@dark&amp;quot;: &amp;quot;#CCCCCC&amp;quot;,
+    &amp;quot;minimal-style@@ax1@@light&amp;quot;: &amp;quot;#1A1A1A&amp;quot;,
+    &amp;quot;minimal-style@@ax2@@dark&amp;quot;: &amp;quot;#CCCCCC&amp;quot;,
+    &amp;quot;minimal-style@@ax2@@light&amp;quot;: &amp;quot;#1A1A1A&amp;quot;,
+    &amp;quot;minimal-style@@code-background@@dark&amp;quot;: &amp;quot;#252524&amp;quot;,
+    &amp;quot;minimal-style@@code-background@@light&amp;quot;: &amp;quot;#EEEEEE&amp;quot;,
+    &amp;quot;minimal-style@@h1-size&amp;quot;: &amp;quot;1.5em&amp;quot;,
+    &amp;quot;minimal-style@@h2-size&amp;quot;: &amp;quot;1.2em&amp;quot;,
+    &amp;quot;minimal-style@@h3-size&amp;quot;: &amp;quot;1.125em&amp;quot;,
+    &amp;quot;minimal-style@@h3-weight&amp;quot;: 600,
+    &amp;quot;minimal-style@@h3-style&amp;quot;: &amp;quot;italic&amp;quot;,
+    &amp;quot;minimal-style@@active-line-on&amp;quot;: true,
+    &amp;quot;minimal-style@@checkbox-shape&amp;quot;: &amp;quot;checkbox-square&amp;quot;,
+    &amp;quot;minimal-style@@ribbon-style&amp;quot;: &amp;quot;ribbon-hidden&amp;quot;,
+    &amp;quot;minimal-style@@bold-weight&amp;quot;: 600
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&quot;/static/blog/blog/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE4.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/images/markdown/obsidian/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE4.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;新建一个 随便的名字.css 然后放在里面 并且打开就能看到啦！&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;.markdown-source-view.mod-cm6 .cm-content {
     /* 光标颜色 */
@@ -1161,30 +1135,29 @@ group.Bind(
     opacity: 0 !important;
 }
 /*选中的tab 标题栏和边框颜色*/
-.workspace-tab-container .workspace-tab-header{
-    box-shadow: -1px 0 0 0 var(--ia-link-color), var(--tab-stacked-shadow)!important;
+.workspace-tab-container .workspace-tab-header {
+    box-shadow: -1px 0 0 0 var(--ia-link-color), var(--tab-stacked-shadow) !important;
 }
-.workspace-tab-container .workspace-tab-header.mod-active.is-active{
-    box-shadow: -1px 0 0 0 var(--ia-primary-color), var(--tab-stacked-shadow)!important;
+.workspace-tab-container .workspace-tab-header.mod-active.is-active {
+    box-shadow: -1px 0 0 0 var(--ia-primary-color), var(--tab-stacked-shadow) !important;
 }
 .workspace-tab-header.mod-active.is-active .workspace-tab-header-inner-title,
-.workspace-tab-header.mod-active.is-active .workspace-tab-header-inner-icon
-{
+.workspace-tab-header.mod-active.is-active .workspace-tab-header-inner-icon {
     color: var(--ia-primary-color) !important;
     /* font-weight:600 !important; */
 }
-    /* 外部链接url和括号颜色 */
+/* 外部链接url和括号颜色 */
 .cm-string.cm-url,
 .cm-formatting.cm-formatting-link.cm-link,
 .cm-active &amp;gt; .cm-formatting.cm-formatting-link-string.cm-string.cm-url {
     color: var(--ia-link-color) !important;
 }
-    /* 内部链接括号颜色 */
+/* 内部链接括号颜色 */
 .cm-formatting-link.cm-formatting-link-end,
 .cm-formatting-link.cm-formatting-link-start {
     color: var(--ia-link-color) !important;
 }
-    /* 选中后的外部链接url和括号颜色 */
+/* 选中后的外部链接url和括号颜色 */
 .cm-active &amp;gt; .cm-string.cm-url {
     color: var(--ia-active-link-color) !important;
 }
@@ -1208,12 +1181,12 @@ group.Bind(
 &lt;p&gt;设置好了吗？是不是大变样了呢？哈哈&lt;/p&gt;
 &lt;h2&gt;变装结束&lt;/h2&gt;
 &lt;p&gt;还是有很多没有弄好的，比如光标宽度，选中文字颜色等，有空再折腾你啦！
-╮(￣▽￣&amp;quot;&amp;quot;)╭&lt;/p&gt;
+╮(￣ ▽ ￣&amp;quot;&amp;quot;)╭&lt;/p&gt;
 &lt;p&gt;有什么更好的建议也欢迎邮件我哦！&lt;/p&gt;
 </description>
     <pubDate>Mon, 21 Aug 2023 14:34:00 GMT</pubDate>
     <author>w05172075@outlook.com (wxm)</author>
-    <category>obsidian</category>
+    <category>obsidian</category><category>markdown</category>
   </item>
 
   <item>
@@ -1221,21 +1194,21 @@ group.Bind(
     <title>tailwindCSS以及svelte使用尝试</title>
     <link>https://wxmvv.github.io/blog/js/svelte以及tailwindcss使用尝试</link>
     <description>&lt;h2&gt;参考文档&lt;/h2&gt;
-&lt;p&gt;先看文档，tailwindCSS真的我花了一小会时间适应了一下就可以算是入门了吧，真的太方便了，但是svelte则需要认真读一下文档，要不连文件怎么建都不知道... 和vue使用有很多相似地方，不同的地方更多，尤其是使用方法似乎变简单了，不过我也没有特别深入的使用，不好做评价。&lt;/p&gt;
+&lt;p&gt;先看文档，tailwindCSS 真的我花了一小会时间适应了一下就可以算是入门了吧，真的太方便了，但是 svelte 则需要认真读一下文档，要不连文件怎么建都不知道... 和 vue 使用有很多相似地方，不同的地方更多，尤其是使用方法似乎变简单了，不过我也没有特别深入的使用，不好做评价。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://svelte.dev&quot;&gt;svelte&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://kit.svelte.dev&quot;&gt;svelte.kit - 最新项目都会使用kit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://kit.svelte.dev&quot;&gt;svelte.kit - 最新项目都会使用 kit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://tailwindcss.com&quot; title=&quot;台风天&quot;&gt;tailwindCSS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://tailwindui.com/components&quot;&gt;tailwindCSS官方组件库&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://daisyui.com&quot;&gt;DaisyUI - 基于tailwind的UI库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tailwindui.com/components&quot;&gt;tailwindCSS 官方组件库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://daisyui.com&quot;&gt;DaisyUI - 基于 tailwind 的 UI 库&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;我的项目&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://wxmvv.github.io/softwhite-homepage-svelte/&quot;&gt;softwhite&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;随便说&lt;/h2&gt;
-&lt;p&gt;去年了解到的tailwindCSS不过也没花时间去尝试，最近用了一下简直是停不下来，使用体验极为舒适，这里记录一下顺便也做下推荐。&lt;/p&gt;
-&lt;p&gt;另一个svelte，是在我看DaisyUI的示例项目时候，看到的框架，搜了下说是前端届一颗冉冉升起的新星，就一起用起来了。(vue自认为用的还不是很好，也不知道哪来的勇气在这瞎试，笑)&lt;/p&gt;
+&lt;p&gt;去年了解到的 tailwindCSS 不过也没花时间去尝试，最近用了一下简直是停不下来，使用体验极为舒适，这里记录一下顺便也做下推荐。&lt;/p&gt;
+&lt;p&gt;另一个 svelte，是在我看 DaisyUI 的示例项目时候，看到的框架，搜了下说是前端届一颗冉冉升起的新星，就一起用起来了。(vue 自认为用的还不是很好，也不知道哪来的勇气在这瞎试，笑)&lt;/p&gt;
 &lt;p&gt;使用过程中也学到很多新的东西，或者一些踩的坑，有时间也会写下来给大家参考。&lt;/p&gt;
 </description>
     <pubDate>Sun, 21 May 2023 00:00:00 GMT</pubDate>
@@ -1248,7 +1221,7 @@ group.Bind(
     <title>这个网站帮你选择Linux</title>
     <link>https://wxmvv.github.io/blog/linux/Linux发行版选择</link>
     <description>&lt;p&gt;&lt;a href=&quot;https://distrochooser.de/zh-hans&quot;&gt;这个网站帮你选择&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;我最后选择了debian。你呢？&lt;/p&gt;
+&lt;p&gt;我最后选择了 debian。你呢？&lt;/p&gt;
 </description>
     <pubDate>Fri, 10 Feb 2023 00:00:00 GMT</pubDate>
     <author>w05172075@outlook.com (wxm)</author>
@@ -1263,8 +1236,8 @@ group.Bind(
 export PATH=$HOME/.nvm/versions/node/v18.14.0/bin/:$PATH
 nvm() { . &amp;quot;$NVM_DIR/nvm.sh&amp;quot; ; nvm $@ ; }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;注释掉之前添加的nvm启动命令&lt;/p&gt;
-&lt;p&gt;然后将上面代码中的版本号改为自己想默认启动的node，存入配置文件&lt;/p&gt;
+&lt;p&gt;注释掉之前添加的 nvm 启动命令&lt;/p&gt;
+&lt;p&gt;然后将上面代码中的版本号改为自己想默认启动的 node，存入配置文件&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/e1598eb2df8e&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
 </description>
     <pubDate>Fri, 10 Feb 2023 00:00:00 GMT</pubDate>
@@ -1315,25 +1288,25 @@ nvm() { . &amp;quot;$NVM_DIR/nvm.sh&amp;quot; ; nvm $@ ; }
     <title>用SwiftUI开发APP</title>
     <link>https://wxmvv.github.io/blog/swiftUI/使用SwiftUI开发App</link>
     <description>&lt;h2&gt;做什么&lt;/h2&gt;
-&lt;p&gt;经常逛app store，对笔记/日记类的应用很感兴趣，于是决定做一个。&lt;/p&gt;
+&lt;p&gt;经常逛 app store，对笔记/日记类的应用很感兴趣，于是决定做一个。&lt;/p&gt;
 &lt;h2&gt;怎么做&lt;/h2&gt;
-&lt;p&gt;搜索如何制作ios的应用，会有各种各样的方式，比如用框架flutter，uniapp之类，或者原生的UIKit，SwiftUI，经过比较最后决定使用SwiftUI作为入门开发的方式。
-SwiftUI最大优势：相比同样原生的UIKit构建界面更方便！通过简单声明就可以实现各种效果。
-当然也有不少缺点：ios系统版本要求较高，自带组件可定制有点少等等问题。
+&lt;p&gt;搜索如何制作 ios 的应用，会有各种各样的方式，比如用框架 flutter，uniapp 之类，或者原生的 UIKit，SwiftUI，经过比较最后决定使用 SwiftUI 作为入门开发的方式。
+SwiftUI 最大优势：相比同样原生的 UIKit 构建界面更方便！通过简单声明就可以实现各种效果。
+当然也有不少缺点：ios 系统版本要求较高，自带组件可定制有点少等等问题。
 不过作为入门来说是一个很优秀的方式，因为真的足够简单。&lt;/p&gt;
 &lt;h2&gt;参考&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://sspai.com/series/147&quot;&gt;sspai的教学&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sspai.com/series/147&quot;&gt;sspai 的教学&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;App&lt;/h2&gt;
 &lt;p&gt;名称：StarlightDiary
 &lt;a href=&quot;https://wxmvv.github.io/StarlightDiary/&quot;&gt;项目地址&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;开发&amp;amp;上线&lt;/h2&gt;
-&lt;p&gt;断断续续弄了大概3个月，终于做好了。
+&lt;p&gt;断断续续弄了大概 3 个月，终于做好了。
 其中也出现不少问题，不过最终也都顺利解决。
 其中最浪费时间的是设计，一开始没有想好做什么样的界面，然后不断做不断改，浪费了很多时间，引以为戒。&lt;/p&gt;
 &lt;h2&gt;其他事&lt;/h2&gt;
-&lt;p&gt;有时间我也会把swiftUI相关基础知识，以及我碰到的问题和解决放在另一篇文章中，希望能有帮助。&lt;/p&gt;
+&lt;p&gt;有时间我也会把 swiftUI 相关基础知识，以及我碰到的问题和解决放在另一篇文章中，希望能有帮助。&lt;/p&gt;
 </description>
     <pubDate>Tue, 01 Mar 2022 00:00:00 GMT</pubDate>
     <author>w05172075@outlook.com (wxm)</author>
@@ -1345,19 +1318,19 @@ SwiftUI最大优势：相比同样原生的UIKit构建界面更方便！通过�
     <title>Pjax实现无刷新加载页面</title>
     <link>https://wxmvv.github.io/blog/js/Pjax实现无刷新加载页面</link>
     <description>&lt;p&gt;给朋友制作网站的时候，收到一个需求，就是要无刷新完成页面切换，最好还要有过渡动画。&lt;/p&gt;
-&lt;p&gt;因为是原生js做的网页，便想到使用jquery的ajax解决问题。
-不过由于考虑到文件大小并且也并没有使用jq其他功能，最后决定使用了不需要引入jq的&lt;a href=&quot;https://github.com/MoOx/pjax&quot;&gt;pjax&lt;/a&gt;。 &lt;/p&gt;
+&lt;p&gt;因为是原生 js 做的网页，便想到使用 jquery 的 ajax 解决问题。
+不过由于考虑到文件大小并且也并没有使用 jq 其他功能，最后决定使用了不需要引入 jq 的&lt;a href=&quot;https://github.com/MoOx/pjax&quot;&gt;pjax&lt;/a&gt;。&lt;/p&gt;
 &lt;h2&gt;使用&lt;/h2&gt;
 &lt;h3&gt;引入&lt;a href=&quot;https://github.com/MoOx/pjax&quot;&gt;pjax&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;script src=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js&amp;quot; &amp;gt;&amp;lt;/script&amp;gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;script src=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;script&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;$(document).ready(function () {
     var pjax = new Pjax({
-        elements: &amp;quot;a&amp;quot;, 
+        elements: &amp;quot;a&amp;quot;,
         selectors: [&amp;quot;main&amp;quot;],
-        cacheBust: false, 
-        scrollRestoration: false, 
+        cacheBust: false,
+        scrollRestoration: false,
         switches: {
             main: Pjax.switches.sideBySide,
         },
@@ -1376,39 +1349,39 @@ SwiftUI最大优势：相比同样原生的UIKit构建界面更方便！通过�
 });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;问题&lt;/h2&gt;
-&lt;h3&gt;script重载&lt;/h3&gt;
+&lt;h3&gt;script 重载&lt;/h3&gt;
 &lt;h4&gt;问题:&lt;/h4&gt;
-&lt;p&gt;因为pjax切换页面并没有完全刷新，所以页面的js不会从头执行一遍，导致js不生效。&lt;/p&gt;
+&lt;p&gt;因为 pjax 切换页面并没有完全刷新，所以页面的 js 不会从头执行一遍，导致 js 不生效。&lt;/p&gt;
 &lt;h4&gt;解决:&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;方式1 - 重载部分js&lt;/li&gt;
+&lt;li&gt;方式 1 - 重载部分 js&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;function pjax_reload() {
-  //需要执行的js
+    //需要执行的js
 }
 // Pjax 完成后，重新加载上面的函数
 document.addEventListener(&amp;quot;pjax:complete&amp;quot;, function () {
-  pjax_reload();
+    pjax_reload();
 });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
-&lt;li&gt;方式2 - 重载js文件
+&lt;li&gt;方式 2 - 重载 js 文件
 这种情况多数用于第三方文件，比如，卜算子统计的脚本、谷歌/百度/腾讯分析的脚本等，这些脚本在每一次页面加载后都需要执行。
 在引入这些文件的标签上添加 data-pjax 属性，然后将具有这个属性的标签重新添加在页面中。有时候不方便在这些标签上添加额外的属性，那么你可以在这些标签外套一层标签，如&lt;code&gt;&amp;lt;div class=&amp;quot;.pjax-reload&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;，然后将 .pjax-reload 里的元素全部重新添加到页面中即可。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;script data-pjax src=&amp;quot;https://cdn.jsdelivr.net/gh/sukkaw/busuanzi/bsz.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;div class=&amp;quot;.pjax-reload&amp;quot;&amp;gt;
-  &amp;lt;script src=&amp;quot;https://www.google-analytics.com/analytics.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script src=&amp;quot;https://www.google-analytics.com/analytics.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// jQuery 写法
 $(&amp;quot;script[data-pjax], .pjax-reload script&amp;quot;).each(function () {
-  $(this).parent().append($(this).remove());
+    $(this).parent().append($(this).remove());
 });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;参考&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://liuyib.github.io/2019/09/24/use-pjax-to-your-site/#:~:text=%E9%87%8D%E8%BD%BD%20JS%20%E8%84%9A%E6%9C%AC%201%20%E9%A1%B5%E9%9D%A2%E4%B8%8D%E5%8F%98%E9%83%A8%E5%88%86%E5%AF%B9%E5%BA%94%E7%9A%84%E4%BA%8B%E4%BB%B6%20%E6%AF%94%E5%A6%82%EF%BC%8C%E9%A1%B5%E9%9D%A2%E9%A1%B6%E9%83%A8%E6%A0%8F%E6%9C%89%E4%B8%80%E4%B8%AA%E6%90%9C%E7%B4%A2%E6%8C%89%E9%92%AE%EF%BC%8C%E7%82%B9%E5%87%BB%E4%B9%8B%E5%90%8E%E4%BC%9A%E5%BC%B9%E5%87%BA%E6%90%9C%E7%B4%A2%E6%A1%86%EF%BC%9A%20%E7%94%B1%E4%BA%8E%E9%A1%B5%E9%9D%A2%E9%A1%B6%E9%83%A8%E6%A0%8F%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E4%BB%A5%E5%85%B6%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E4%B8%8A%E7%BB%91%E5%AE%9A%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BB%8D%E7%84%B6%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%EF%BC%8C%E8%BF%99%E9%83%A8%E5%88%86%E5%85%83%E7%B4%A0%E5%AF%B9%E5%BA%94%E7%9A%84%20JS,%E4%BA%8B%E4%BB%B6%E4%B8%8D%E9%9C%80%E8%A6%81%E9%87%8D%E8%BD%BD%E3%80%82%202%20%E9%A1%B5%E9%9D%A2%E5%8F%AF%E5%8F%98%E9%83%A8%E5%88%86%E5%AF%B9%E5%BA%94%E7%9A%84%E4%BA%8B%E4%BB%B6%20%E6%AF%94%E5%A6%82%EF%BC%8C%E9%A1%B5%E9%9D%A2%E4%B8%BB%E4%BD%93%E9%83%A8%E5%88%86%E6%98%AF%E5%8F%98%E5%8C%96%E7%9A%84%EF%BC%8C%E6%87%92%E5%8A%A0%E8%BD%BD%E5%85%B6%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%EF%BC%9A%20%E5%BD%93%E9%80%9A%E8%BF%87%20Pjax%20%E5%88%87%E6%8D%A2%E9%A1%B5%E9%9D%A2%E5%90%8E%EF%BC%8C%E7%94%B1%E4%BA%8E%E4%B8%BB%E4%BD%93%E9%83%A8%E5%88%86%E6%94%B9%E5%8F%98%EF%BC%8C%E4%B8%8A%E8%BF%B0%E4%BB%A3%E7%A0%81%E5%B7%B2%E7%BB%8F%E5%A4%B1%E6%95%88%EF%BC%8C%E5%9B%A0%E6%AD%A4%E9%9C%80%E8%A6%81%E8%BF%9B%E8%A1%8C%E9%87%8D%E8%BD%BD%E3%80%82%20%E4%B8%BA%E4%BA%86%E6%96%B9%E4%BE%BF%E4%BD%BF%E7%94%A8%EF%BC%8C%E6%88%91%E4%BB%AC%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%8B%EF%BC%9A&quot;&gt;pjax使用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://liuyib.github.io/2019/09/24/use-pjax-to-your-site/#:~:text=%E9%87%8D%E8%BD%BD%20JS%20%E8%84%9A%E6%9C%AC%201%20%E9%A1%B5%E9%9D%A2%E4%B8%8D%E5%8F%98%E9%83%A8%E5%88%86%E5%AF%B9%E5%BA%94%E7%9A%84%E4%BA%8B%E4%BB%B6%20%E6%AF%94%E5%A6%82%EF%BC%8C%E9%A1%B5%E9%9D%A2%E9%A1%B6%E9%83%A8%E6%A0%8F%E6%9C%89%E4%B8%80%E4%B8%AA%E6%90%9C%E7%B4%A2%E6%8C%89%E9%92%AE%EF%BC%8C%E7%82%B9%E5%87%BB%E4%B9%8B%E5%90%8E%E4%BC%9A%E5%BC%B9%E5%87%BA%E6%90%9C%E7%B4%A2%E6%A1%86%EF%BC%9A%20%E7%94%B1%E4%BA%8E%E9%A1%B5%E9%9D%A2%E9%A1%B6%E9%83%A8%E6%A0%8F%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E4%BB%A5%E5%85%B6%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E4%B8%8A%E7%BB%91%E5%AE%9A%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BB%8D%E7%84%B6%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%EF%BC%8C%E8%BF%99%E9%83%A8%E5%88%86%E5%85%83%E7%B4%A0%E5%AF%B9%E5%BA%94%E7%9A%84%20JS,%E4%BA%8B%E4%BB%B6%E4%B8%8D%E9%9C%80%E8%A6%81%E9%87%8D%E8%BD%BD%E3%80%82%202%20%E9%A1%B5%E9%9D%A2%E5%8F%AF%E5%8F%98%E9%83%A8%E5%88%86%E5%AF%B9%E5%BA%94%E7%9A%84%E4%BA%8B%E4%BB%B6%20%E6%AF%94%E5%A6%82%EF%BC%8C%E9%A1%B5%E9%9D%A2%E4%B8%BB%E4%BD%93%E9%83%A8%E5%88%86%E6%98%AF%E5%8F%98%E5%8C%96%E7%9A%84%EF%BC%8C%E6%87%92%E5%8A%A0%E8%BD%BD%E5%85%B6%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%EF%BC%9A%20%E5%BD%93%E9%80%9A%E8%BF%87%20Pjax%20%E5%88%87%E6%8D%A2%E9%A1%B5%E9%9D%A2%E5%90%8E%EF%BC%8C%E7%94%B1%E4%BA%8E%E4%B8%BB%E4%BD%93%E9%83%A8%E5%88%86%E6%94%B9%E5%8F%98%EF%BC%8C%E4%B8%8A%E8%BF%B0%E4%BB%A3%E7%A0%81%E5%B7%B2%E7%BB%8F%E5%A4%B1%E6%95%88%EF%BC%8C%E5%9B%A0%E6%AD%A4%E9%9C%80%E8%A6%81%E8%BF%9B%E8%A1%8C%E9%87%8D%E8%BD%BD%E3%80%82%20%E4%B8%BA%E4%BA%86%E6%96%B9%E4%BE%BF%E4%BD%BF%E7%94%A8%EF%BC%8C%E6%88%91%E4%BB%AC%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%8B%EF%BC%9A&quot;&gt;pjax 使用&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/MoOx/pjax&quot;&gt;pjax&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
@@ -1422,35 +1395,34 @@ $(&amp;quot;script[data-pjax], .pjax-reload script&amp;quot;).each(function () {
     <title>hexo部署静态博客</title>
     <link>https://wxmvv.github.io/blog/markdown/hexo部署</link>
     <description>&lt;h2&gt;前言&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/image/hexo.jpeg&quot; alt=&quot;hexo&quot;&gt;&lt;/p&gt;
-&lt;p&gt;最近购买下载了IA writer，确实是一个十分干净的md编辑器，能激发自己写字的欲望。于是考虑重新开始博客部署。翻出了以前的hexo博客（大概18年部署的一直没更新，并且原来的设置文件都丢失了），整理一下重新部署。&lt;/p&gt;
-&lt;h2&gt;安装hexo和cactus主题&lt;/h2&gt;
+&lt;p&gt;最近购买下载了 IA writer，确实是一个十分干净的 md 编辑器，能激发自己写字的欲望。于是考虑重新开始博客部署。翻出了以前的 hexo 博客（大概 18 年部署的一直没更新，并且原来的设置文件都丢失了），整理一下重新部署。&lt;/p&gt;
+&lt;h2&gt;安装 hexo 和 cactus 主题&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/&quot;&gt;hexo&lt;/a&gt;
 &lt;a href=&quot;https://github.com/probberechts/hexo-theme-cactus&quot;&gt;cactus&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;hexo安装&lt;/h3&gt;
+&lt;h3&gt;hexo 安装&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;npm install hexo-cli -g
 hexo init blog
 cd blog
 npm install
 hexo server   #启动服务
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;cactus主题安装&lt;/h3&gt;
+&lt;h3&gt;cactus 主题安装&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;cd blog
 git clone https://github.com/probberechts/hexo-theme-cactus.git themes/cactus
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;配置文件参考&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot;&gt;hexo文档&lt;/a&gt;
-&lt;a href=&quot;https://github.com/probberechts/hexo-theme-cactus&quot;&gt;cactus主题&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot;&gt;hexo 文档&lt;/a&gt;
+&lt;a href=&quot;https://github.com/probberechts/hexo-theme-cactus&quot;&gt;cactus 主题&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;使用方法&lt;/h2&gt;
 &lt;p&gt;hexo new 文件名
-hexo clean 或 hexo c    清除缓存
-hexo generate  或 hexo g   生成静态文件
-hexo server 或 hexo s  本地查看
-hexo deploy 或 hexo d  上传&lt;/p&gt;
+hexo clean 或 hexo c 清除缓存
+hexo generate 或 hexo g 生成静态文件
+hexo server 或 hexo s 本地查看
+hexo deploy 或 hexo d 上传&lt;/p&gt;
 &lt;h2&gt;参考&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://hexo.io/zh-cn/&quot;&gt;hexo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/probberechts/hexo-theme-cactus&quot;&gt;cactus主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/probberechts/hexo-theme-cactus&quot;&gt;cactus 主题&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     <pubDate>Tue, 03 Nov 2020 18:47:39 GMT</pubDate>
