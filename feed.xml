@@ -7,13 +7,114 @@
       <language>zh-cn</language>
       <managingEditor>w05172075@outlook.com (wxm)</managingEditor>
       <webMaster>w05172075@outlook.com (wxm)</webMaster>
-      <lastBuildDate>Sun, 13 Oct 2024 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Sat, 16 Nov 2024 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://wxmvv.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://wxmvv.github.io/blog/system/Macos/AppleScript实现鼠标连点</guid>
+    <guid>https://wxmvv.github.io/blog/blog_new/blog新的动画，你发现没有？</guid>
+    <title>20241116 blog新的动画，你发现没有？</title>
+    <link>https://wxmvv.github.io/blog/blog_new/blog新的动画，你发现没有？</link>
+    <description>&lt;p&gt;页面出现的线性的动画，之前在刚开始重构 blog 时就想实现，不过因为当时比较忙，就暂时搁置了，最近有空，就还是使用 motion 库来实现一下。&lt;/p&gt;
+&lt;h2&gt;需要实现的效果&lt;/h2&gt;
+&lt;p&gt;页面元素依次出现，首先是过渡动画包括 opacity blur X 这三部分的变化，并且需要有一个 delay 的效果，让元素一个一个的出现。&lt;/p&gt;
+&lt;h2&gt;实现思路&lt;/h2&gt;
+&lt;p&gt;opacity blur X 这种变化，使用 motion 实现十分简单，甚至用原生 js 也很简单，问题在于 delay 的效果。页面有很多元素 甚至包括需要渲染的列表，如果一个一个添加恐怕是十分浪费时间。&lt;/p&gt;
+&lt;p&gt;花了一点时间仔细查了 motion 的文档，发现一个好东西 &lt;code&gt;staggerChildren&lt;/code&gt; (&lt;a href=&quot;https://motion.dev/docs/react-transitions&quot;&gt;文档&lt;/a&gt;) ,使用这个配合 &lt;code&gt;variants&lt;/code&gt; 属性，可以轻松实现元素和子元素的依次出现。&lt;/p&gt;
+&lt;h2&gt;代码&lt;/h2&gt;
+&lt;p&gt;先新建一个 &lt;code&gt;motionVariants.tsx&lt;/code&gt; 组件重复调用。在其中定义 &lt;code&gt;containerVariants&lt;/code&gt; 和 &lt;code&gt;itemVariants&lt;/code&gt;。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;export const containerVariants = {
+    hidden: {
+        opacity: 0,
+        filter: &amp;quot;blur(8px)&amp;quot;,
+        transform: &amp;quot;translateY(16px) translateZ(0)&amp;quot;,
+    },
+    visible: {
+        opacity: 1,
+        filter: &amp;quot;blur(0)&amp;quot;,
+        transform: &amp;quot;none&amp;quot;,
+        transition: {
+            transform: { duration: 0.4, timeConstant: 750 },
+            opacity: { duration: 0.7, timeConstant: 350 },
+            filter: { duration: 0.8, timeConstant: 350 },
+            type: &amp;quot;tween&amp;quot;,
+            duration: 0.6,
+            ease: [0.25, 0.3, 0.5, 1],
+            delayChildren: 0,
+            //   staggerChildren: 0.12, // 每个子项之间的延迟时间
+            staggerChildren: 0.08, // 每个子项之间的延迟时间
+        },
+    },
+};
+export const itemVariants = {
+    hidden: {
+        opacity: 0,
+        filter: &amp;quot;blur(8px)&amp;quot;,
+        transform: &amp;quot;translateY(16px) translateZ(0)&amp;quot;,
+        transition: {},
+    },
+    visible: {
+        opacity: 1,
+        filter: &amp;quot;blur(0)&amp;quot;,
+        transform: &amp;quot;none&amp;quot;,
+        transition: {
+            transform: { duration: 0.2, timeConstant: 350 },
+            opacity: { duration: 0.4, timeConstant: 350 },
+            filter: { duration: 0.4, timeConstant: 350 },
+            duration: 0.4,
+            ease: [0.25, 0.3, 0.5, 1],
+        },
+    },
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在你的组件中添加效果&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;import { motion } from &amp;#39;framer-motion&amp;#39;
+import { containerVariants, itemVariants } from &amp;#39;@/components/MyMotion&amp;#39;
+  return (
+    &amp;lt;&amp;gt;
+      &amp;lt;motion.div variants={containerVariants} initial=&amp;quot;hidden&amp;quot; animate=&amp;quot;visible&amp;quot;&amp;gt;
+          &amp;lt;motion.div variants={itemVariants}&amp;gt;
+            &amp;lt;h2&amp;gt;title&amp;lt;/h2&amp;gt;
+          &amp;lt;/motion.div&amp;gt;
+          &amp;lt;motion.div variants={itemVariants}&amp;gt;
+            &amp;lt;p&amp;gt;body&amp;lt;/p&amp;gt;
+          &amp;lt;/motion.div&amp;gt;
+          &amp;lt;motion.div variants={itemVariants}&amp;gt;
+            &amp;lt;p&amp;gt;link&amp;lt;/p&amp;gt;
+          &amp;lt;/motion.div&amp;gt;
+      &amp;lt;/div&amp;gt;
+    &amp;lt;/&amp;gt;
+  )
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;最终效果&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/static/blog/blog/blog%E6%96%B0%E7%9A%84%E5%8A%A8%E7%94%BB.mov&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</description>
+    <pubDate>Sat, 16 Nov 2024 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>code</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/blog_new/markdown文档规范</guid>
+    <title>开始写markdown文档之前你也许会需要看一下的排版规范</title>
+    <link>https://wxmvv.github.io/blog/blog_new/markdown文档规范</link>
+    <description>&lt;h1&gt;markdown 文档排版规范&lt;/h1&gt;
+&lt;p&gt;最近我在写文档，但是对比自己写的文档和 github 上其他大佬写的文档，总觉得差了很多意思，也许是时候学习下如何去写文档了，于是找到了 github 的文档规范 &lt;a href=&quot;https://github.github.com/gfm/&quot;&gt;GFM&lt;/a&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文档地址：&lt;a href=&quot;https://github.github.com/gfm/&quot;&gt;GMF&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;花了一些时间看过之后，觉得确实很有学习的必要，也挑选了一些更容易碰到用到的规范，写出来供大家参考，也让自己能够经常回顾。&lt;/p&gt;
+&lt;p&gt;我也在知乎找到了&amp;quot;物联网学前班&amp;quot;这篇文章 &lt;a href=&quot;https://zhuanlan.zhihu.com/p/144446995&quot;&gt;基于 Markdown 的中文文档排版规范&lt;/a&gt;，其中也有一些关于中文的排版建议，我个人觉得很有帮助，所以也一并分享出来。&lt;/p&gt;
+</description>
+    <pubDate>Fri, 15 Nov 2024 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>markdown</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/macos/AppleScript实现鼠标连点</guid>
     <title>20241013 AppleScript实现鼠标连点</title>
-    <link>https://wxmvv.github.io/blog/system/Macos/AppleScript实现鼠标连点</link>
+    <link>https://wxmvv.github.io/blog/macos/AppleScript实现鼠标连点</link>
     <description>&lt;h1&gt;AppleScript 中实现鼠标与键盘自动连点&lt;/h1&gt;
 &lt;p&gt;因为最近在玩一个老游戏，开了作弊但是还需要手动点击才能升级，于是使用 applescript 来实现一下自动点击。&lt;/p&gt;
 &lt;h2&gt;事前准备&lt;/h2&gt;
@@ -144,9 +245,9 @@ end repeat
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/capacitor/Capacitor</guid>
+    <guid>https://wxmvv.github.io/blog/capacitor/使用Capacitor来构建你的app吧！</guid>
     <title>使用Capacitor来构建你的app吧！</title>
-    <link>https://wxmvv.github.io/blog/capacitor/Capacitor</link>
+    <link>https://wxmvv.github.io/blog/capacitor/使用Capacitor来构建你的app吧！</link>
     <description>&lt;h1&gt;尝试使用Capacitor来丰富你的app吧！&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://capacitorjs.com&quot;&gt;capacitor&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;capacitor作为一个跨平台ios和安卓的框架，本身和flutter、RN并不是同一赛道，capacitor在官网也清晰的写着，基于两个平台webview来展示你的html静态网站，我们可以先用各种框架如vue、react来写一个静态网站，然后使用capacitor来把它变成app，或者仅仅把它当成一个app的扩展工具，用js库来实现一些原生不太好实现的功能。相比直接用capacitor来构建app，把它作为一个js扩展应该是一个更好的选择。&lt;/p&gt;
@@ -192,7 +293,7 @@ npx cap run ios
 # 可以打开同步，这样就可以热更新了
 npx cap sync
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&quot;/static/blogShared/capacitor%E9%A2%84%E8%A7%881.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/blog/capacitor%E9%A2%84%E8%A7%881.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;这样一个可预览的nextjs的app就出来啦～&lt;/p&gt;
 &lt;p&gt;是不是很简单～&lt;/p&gt;
 &lt;p&gt;不过对比flutter和RN速度上明显还是有差距，还是要根据具体情况使用。&lt;/p&gt;
@@ -203,28 +304,28 @@ npx cap sync
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/capacitor/如何安装cocoapods？</guid>
-    <title>如何安装cocoapods？</title>
-    <link>https://wxmvv.github.io/blog/capacitor/如何安装cocoapods？</link>
-    <description>&lt;p&gt;最近在尝试使用capacitor制作ios app，涉及到使用cocoapods来安装插件，但是macos安装会出现各种问题，经过查看各种方法，最后还是使用brew成功的。&lt;/p&gt;
-&lt;p&gt;其实主要问题在于macos自带的ruby版本比较低，&lt;/p&gt;
+    <guid>https://wxmvv.github.io/blog/capacitor/解决安装cocoapods失败的问题</guid>
+    <title>解决安装cocoapods失败的问题</title>
+    <link>https://wxmvv.github.io/blog/capacitor/解决安装cocoapods失败的问题</link>
+    <description>&lt;p&gt;最近在尝试使用 capacitor 制作 ios app，涉及到使用 cocoapods 来安装插件，但是 macos 安装会出现各种问题，经过查看各种方法，最后还是使用 brew 成功的。&lt;/p&gt;
+&lt;p&gt;其实主要问题在于 macos 自带的 ruby 版本比较低，&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;ruby --version
 # 查看ruby版本 如果是2.6那说明你需要这个教程
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;首先使用brew安装ruby&lt;/h3&gt;
+&lt;h3&gt;首先使用 brew 安装 ruby&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;# 安装ruby
 brew install ruby
 # 配置PATH
 echo &amp;#39;export PATH=&amp;quot;/usr/local/opt/ruby/bin:$PATH&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
-echo &amp;#39;export LDFLAGS=&amp;quot;-L/usr/local/opt/ruby/lib&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc 
-echo &amp;#39;export CPPFLAGS=&amp;quot;-I/usr/local/opt/ruby/include&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc 
+echo &amp;#39;export LDFLAGS=&amp;quot;-L/usr/local/opt/ruby/lib&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
+echo &amp;#39;export CPPFLAGS=&amp;quot;-I/usr/local/opt/ruby/include&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
 # 重新加载配置
-source ~/.zshrc  
+source ~/.zshrc
 # 再次查看ruby版本 这时候应该变成3.x了
 ruby --version
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;安装pod&lt;/h3&gt;
-&lt;p&gt;这里仍然使用brew来安装。&lt;/p&gt;
+&lt;h3&gt;安装 pod&lt;/h3&gt;
+&lt;p&gt;这里仍然使用 brew 来安装。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;brew install cocoapods
 # 按照提示link
 brew link cocoapods
@@ -248,12 +349,125 @@ pod env
     <link>https://wxmvv.github.io/blog/Note/ukulele/SmileInTheMorning</link>
     <description>&lt;p&gt;虽然很久没弹琴，也没制作谱子了，赶上这次名渡山来天津的机会，再次拿起来练一下。&lt;/p&gt;
 &lt;p&gt;就挑了一首他的新曲来练一下。刚好骑鹅尤克里里的伊老师也在扒这首曲子，我们就一起合作完成谱子的整理，放在这里。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;/static/blogShared/smileinthemorning.pdf&quot;&gt;smileinthemorning.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;iframe src=&quot;//player.bilibili.com/player.html?isOutside=true&amp;aid=1355658592&amp;bvid=BV1Xz421b7FU&amp;cid=1574676110&amp;p=1&amp;autoplay=0&amp;muted=0&quot; className=&#39;w-full h-[366px]&#39; scrolling=&quot;no&quot; border=&quot;0&quot; frameBorder=&quot;no&quot; autoplay=&quot;0&quot; muted=&quot;0&quot; framespacing=&quot;0&quot; allowFullScreen={true}&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;/static/blog/smileinthemorning.pdf&quot;&gt;smileinthemorning.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?isOutside=true&amp;aid=1355658592&amp;bvid=BV1Xz421b7FU&amp;cid=1574676110&amp;p=1&amp;autoplay=0&amp;muted=0&quot; className=&#39;w-full h-[366px]&#39; scrolling=&quot;no&quot; border=&quot;0&quot; frameBorder=&quot;no&quot; autoPlay=&quot;0&quot; muted=&quot;0&quot; framespacing=&quot;0&quot; allowFullScreen={true}&gt;&lt;/iframe&gt;
 </description>
     <pubDate>Tue, 16 Jul 2024 10:17:00 GMT</pubDate>
     <author>w05172075@outlook.com (wxm)</author>
     <category>music</category><category>ukulele</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/js/Nextjs重构主页</guid>
+    <title>2024年使用Nextjs重构主页</title>
+    <link>https://wxmvv.github.io/blog/js/Nextjs重构主页</link>
+    <description>&lt;p&gt;最近在使用Nextjs完成工作，用的很舒服，遂决定用来重构许久不动的主页&lt;/p&gt;
+&lt;h2&gt;技术选择&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://tailwindcss.com/&quot;&gt;tailwindcss&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://nextjs.org/&quot;&gt;Nextjs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;首先是框架，除了Nextjs之外，我平时也很常用的tailwindcss，可以快速构建网站页面。
+经过查找最后决定使用&amp;quot;开箱即用&amp;quot;的 &lt;a href=&quot;https://github.com/timlrx/tailwind-nextjs-starter-blog&quot;&gt;tailwind-nextjs-starter-blog&lt;/a&gt;作为基础来重构主页。&lt;/p&gt;
+&lt;h2&gt;设计参考&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://nelson.co/&quot;&gt;nelson&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;很喜欢这种干净的页面，但是同时又有不少小设计，作为参考来制作。&lt;/p&gt;
+&lt;h2&gt;未完成&lt;/h2&gt;
+&lt;p&gt;#todo&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; BlogLayout修改&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; &lt;strong&gt;MDX样式修改&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 动画优化&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 字体&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 评论系统&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; i18n国际化&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; rss生成&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 添加音乐支持&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 音乐播放器动画&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; PDF预览&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;问题与一些解决方案&lt;/h2&gt;
+&lt;h3&gt;favicons以及manifest&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/Manifest&quot;&gt;MDN官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/elegantapp/pwa-asset-generator&quot;&gt;pwa-asset-generator工具&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;动效框架&lt;/h3&gt;
+&lt;p&gt;页面的动画效果使用的&lt;a href=&quot;https://www.framer.com/motion/&quot;&gt;framer-motion&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;能打打节省开发动画的时间,并且让动画的过渡更加丝滑。&lt;/p&gt;
+&lt;p&gt;不得不说和vue相比，react的动画库真的多太多了。&lt;/p&gt;
+&lt;h3&gt;github page静态部署&lt;/h3&gt;
+&lt;p&gt;关于静态部署如何设置，在文档中写的很清楚&lt;a href=&quot;https://github.com/timlrx/tailwind-nextjs-starter-blog&quot;&gt;tailwind-nextjs-starter-blog&lt;/a&gt;，设置过就可以build了。&lt;/p&gt;
+&lt;p&gt;唯一需要注意的是，github page使用jekyll部署，会自动忽略下划线开头的文件，导致_next文件夹中的js css无法加载，在其中新建一个.nojekyll即可&lt;/p&gt;
+&lt;h3&gt;meta信息&lt;/h3&gt;
+&lt;p&gt;参考&lt;a href=&quot;https://gohugo.io/content-management/front-matter/&quot;&gt;Hugo&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;过滤Post的修改&lt;/h3&gt;
+&lt;p&gt;在修改Post过滤过程中，其实就是daaft设置为true，在dev模式还能正常显示，在build模式就会消失，如果想要做一些修改 可以搜索一个外部方法 allCoreContent ，这个方法会在NODE_ENV为production的时候过滤掉draft修改。然后做自己的修改即可。&lt;/p&gt;
+&lt;h2&gt;评论系统&lt;/h2&gt;
+&lt;p&gt;tailwind-nextjs-starter-blog 所提供的comments组件似乎有一些加载问题，所以最后还是自己解决吧。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://giscus.app/&quot;&gt;giscus&lt;/a&gt;
+&lt;a href=&quot;https://github.com/giscus/giscus-component&quot;&gt;giscus-react&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm i @giscus/react
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;//作为组件中使用  现在giscus官网获取id 然后将下面替换即可
+import Giscus from &amp;#39;@giscus/react&amp;#39;;
+export default function MyApp() {
+  return (
+    &amp;lt;Giscus
+      id=&amp;quot;comments&amp;quot;
+      repo=&amp;quot;giscus/giscus-component&amp;quot;
+      repoId=&amp;quot;MDEwOlJlcG9zaXRvcnkzOTEzMTMwMjA=&amp;quot;
+      category=&amp;quot;Announcements&amp;quot;
+      categoryId=&amp;quot;DIC_kwDOF1L2fM4B-hVS&amp;quot;
+      mapping=&amp;quot;specific&amp;quot;
+      term=&amp;quot;Welcome to @giscus/react component!&amp;quot;
+      reactionsEnabled=&amp;quot;1&amp;quot;
+      emitMetadata=&amp;quot;0&amp;quot;
+      inputPosition=&amp;quot;top&amp;quot;
+      theme=&amp;quot;light&amp;quot;
+      lang=&amp;quot;en&amp;quot;
+      loading=&amp;quot;lazy&amp;quot;
+    /&amp;gt;
+  );
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;build后的中文路径问题&lt;/h3&gt;
+&lt;p&gt;我在dev模式中没有问题，但是当我打包build后出现路径问题。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// app/blog/[...slug]/page.tsx
+const isDev = process.env.NODE_ENV === &amp;#39;development&amp;#39;
+const isBuild = process.env.NEXT_PUBLIC_IS_BUILD === &amp;#39;true&amp;#39;
+export const generateStaticParams = async () =&amp;gt; {
+    if (isDev) {
+        return allBlogs.map((p) =&amp;gt; ({
+            slug: p.slug.split(&amp;#39;/&amp;#39;).map((name) =&amp;gt; encodeURIComponent(name)),
+        }))
+    } else {
+        return allBlogs.map((p) =&amp;gt; ({
+            slug: p.slug.split(&amp;#39;/&amp;#39;).map((name) =&amp;gt; decodeURI(name)),
+        }))
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// next.config.js
+const isDev = process.env.NODE_ENV === &amp;#39;development&amp;#39;
+const isBuild =process.env.NODE_ENV === &amp;#39;production&amp;#39; &amp;amp;&amp;amp; process.env.NEXT_PUBLIC_IS_BUILD === &amp;#39;true&amp;#39;
+env: {
+    NEXT_PUBLIC_IS_BUILD: isBuild.toString(),
+},
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;// package.json
+&amp;quot;scripts&amp;quot;:{
+    &amp;quot;build&amp;quot;: &amp;quot;cross-env NEXT_PUBLIC_IS_BUILD=true &amp;amp;&amp;amp; cross-env INIT_CWD=$PWD next build &amp;amp;&amp;amp; cross-env NODE_OPTIONS=&amp;#39;--experimental-json-modules&amp;#39; node ./scripts/postbuild.mjs&amp;quot;,
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;最后&lt;/h2&gt;
+&lt;p&gt;有疑问可以邮件联系我。&lt;/p&gt;
+</description>
+    <pubDate>Fri, 05 Jul 2024 18:26:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>Nextjs</category><category>react</category>
   </item>
 
   <item>
@@ -419,119 +633,6 @@ pod env
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/js/react/Nextjs重构主页</guid>
-    <title>2024年使用Nextjs重构主页</title>
-    <link>https://wxmvv.github.io/blog/js/react/Nextjs重构主页</link>
-    <description>&lt;p&gt;最近在使用Nextjs完成工作，用的很舒服，遂决定用来重构许久不动的主页&lt;/p&gt;
-&lt;h2&gt;技术选择&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://tailwindcss.com/&quot;&gt;tailwindcss&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://nextjs.org/&quot;&gt;Nextjs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;首先是框架，除了Nextjs之外，我平时也很常用的tailwindcss，可以快速构建网站页面。
-经过查找最后决定使用&amp;quot;开箱即用&amp;quot;的 &lt;a href=&quot;https://github.com/timlrx/tailwind-nextjs-starter-blog&quot;&gt;tailwind-nextjs-starter-blog&lt;/a&gt;作为基础来重构主页。&lt;/p&gt;
-&lt;h2&gt;设计参考&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://nelson.co/&quot;&gt;nelson&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;很喜欢这种干净的页面，但是同时又有不少小设计，作为参考来制作。&lt;/p&gt;
-&lt;h2&gt;未完成&lt;/h2&gt;
-&lt;p&gt;#todo&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; BlogLayout修改&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; &lt;strong&gt;MDX样式修改&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 动画优化&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 字体&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 评论系统&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; i18n国际化&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; rss生成&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 添加音乐支持&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 音乐播放器动画&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; PDF预览&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;问题与一些解决方案&lt;/h2&gt;
-&lt;h3&gt;favicons以及manifest&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/Manifest&quot;&gt;MDN官方文档&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/elegantapp/pwa-asset-generator&quot;&gt;pwa-asset-generator工具&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;动效框架&lt;/h3&gt;
-&lt;p&gt;页面的动画效果使用的&lt;a href=&quot;https://www.framer.com/motion/&quot;&gt;framer-motion&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;能打打节省开发动画的时间,并且让动画的过渡更加丝滑。&lt;/p&gt;
-&lt;p&gt;不得不说和vue相比，react的动画库真的多太多了。&lt;/p&gt;
-&lt;h3&gt;github page静态部署&lt;/h3&gt;
-&lt;p&gt;关于静态部署如何设置，在文档中写的很清楚&lt;a href=&quot;https://github.com/timlrx/tailwind-nextjs-starter-blog&quot;&gt;tailwind-nextjs-starter-blog&lt;/a&gt;，设置过就可以build了。&lt;/p&gt;
-&lt;p&gt;唯一需要注意的是，github page使用jekyll部署，会自动忽略下划线开头的文件，导致_next文件夹中的js css无法加载，在其中新建一个.nojekyll即可&lt;/p&gt;
-&lt;h3&gt;meta信息&lt;/h3&gt;
-&lt;p&gt;参考&lt;a href=&quot;https://gohugo.io/content-management/front-matter/&quot;&gt;Hugo&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;过滤Post的修改&lt;/h3&gt;
-&lt;p&gt;在修改Post过滤过程中，其实就是daaft设置为true，在dev模式还能正常显示，在build模式就会消失，如果想要做一些修改 可以搜索一个外部方法 allCoreContent ，这个方法会在NODE_ENV为production的时候过滤掉draft修改。然后做自己的修改即可。&lt;/p&gt;
-&lt;h2&gt;评论系统&lt;/h2&gt;
-&lt;p&gt;tailwind-nextjs-starter-blog 所提供的comments组件似乎有一些加载问题，所以最后还是自己解决吧。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://giscus.app/&quot;&gt;giscus&lt;/a&gt;
-&lt;a href=&quot;https://github.com/giscus/giscus-component&quot;&gt;giscus-react&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm i @giscus/react
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;//作为组件中使用  现在giscus官网获取id 然后将下面替换即可
-import Giscus from &amp;#39;@giscus/react&amp;#39;;
-export default function MyApp() {
-  return (
-    &amp;lt;Giscus
-      id=&amp;quot;comments&amp;quot;
-      repo=&amp;quot;giscus/giscus-component&amp;quot;
-      repoId=&amp;quot;MDEwOlJlcG9zaXRvcnkzOTEzMTMwMjA=&amp;quot;
-      category=&amp;quot;Announcements&amp;quot;
-      categoryId=&amp;quot;DIC_kwDOF1L2fM4B-hVS&amp;quot;
-      mapping=&amp;quot;specific&amp;quot;
-      term=&amp;quot;Welcome to @giscus/react component!&amp;quot;
-      reactionsEnabled=&amp;quot;1&amp;quot;
-      emitMetadata=&amp;quot;0&amp;quot;
-      inputPosition=&amp;quot;top&amp;quot;
-      theme=&amp;quot;light&amp;quot;
-      lang=&amp;quot;en&amp;quot;
-      loading=&amp;quot;lazy&amp;quot;
-    /&amp;gt;
-  );
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;build后的中文路径问题&lt;/h3&gt;
-&lt;p&gt;我在dev模式中没有问题，但是当我打包build后出现路径问题。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// app/blog/[...slug]/page.tsx
-const isDev = process.env.NODE_ENV === &amp;#39;development&amp;#39;
-const isBuild = process.env.NEXT_PUBLIC_IS_BUILD === &amp;#39;true&amp;#39;
-export const generateStaticParams = async () =&amp;gt; {
-    if (isDev) {
-        return allBlogs.map((p) =&amp;gt; ({
-            slug: p.slug.split(&amp;#39;/&amp;#39;).map((name) =&amp;gt; encodeURIComponent(name)),
-        }))
-    } else {
-        return allBlogs.map((p) =&amp;gt; ({
-            slug: p.slug.split(&amp;#39;/&amp;#39;).map((name) =&amp;gt; decodeURI(name)),
-        }))
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// next.config.js
-const isDev = process.env.NODE_ENV === &amp;#39;development&amp;#39;
-const isBuild =process.env.NODE_ENV === &amp;#39;production&amp;#39; &amp;amp;&amp;amp; process.env.NEXT_PUBLIC_IS_BUILD === &amp;#39;true&amp;#39;
-env: {
-    NEXT_PUBLIC_IS_BUILD: isBuild.toString(),
-},
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;// package.json
-&amp;quot;scripts&amp;quot;:{
-    &amp;quot;build&amp;quot;: &amp;quot;cross-env NEXT_PUBLIC_IS_BUILD=true &amp;amp;&amp;amp; cross-env INIT_CWD=$PWD next build &amp;amp;&amp;amp; cross-env NODE_OPTIONS=&amp;#39;--experimental-json-modules&amp;#39; node ./scripts/postbuild.mjs&amp;quot;,
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;最后&lt;/h2&gt;
-&lt;p&gt;有疑问可以邮件联系我。&lt;/p&gt;
-</description>
-    <pubDate>Fri, 05 Jul 2024 18:26:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
-    <category>Nextjs</category><category>react</category>
-  </item>
-
-  <item>
     <guid>https://wxmvv.github.io/blog/Note/最近在学习sketch来设计原型</guid>
     <title>最近在学习sketch来设计原型</title>
     <link>https://wxmvv.github.io/blog/Note/最近在学习sketch来设计原型</link>
@@ -594,9 +695,9 @@ struct ContentView: View {
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/system/Macos/Macos隐藏与显示文件</guid>
+    <guid>https://wxmvv.github.io/blog/macos/Macos隐藏与显示文件</guid>
     <title>Macos隐藏文件&amp;显示隐藏文件</title>
-    <link>https://wxmvv.github.io/blog/system/Macos/Macos隐藏与显示文件</link>
+    <link>https://wxmvv.github.io/blog/macos/Macos隐藏与显示文件</link>
     <description>&lt;h2&gt;macos 命令使用 chflags&lt;/h2&gt;
 &lt;p&gt;最近在使用 obsidian 的时候，出现了文件会变成隐藏，目前原因不明，最后使用 chflags nohidden 命令将它们取消隐藏。&lt;/p&gt;
 &lt;p&gt;使用 man chflags 可以了解大致使用方式&lt;/p&gt;
@@ -613,9 +714,9 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/system/Arc浏览器使用体会</guid>
+    <guid>https://wxmvv.github.io/blog/macos/Arc浏览器使用体会</guid>
     <title>Arc浏览器使用体会</title>
-    <link>https://wxmvv.github.io/blog/system/Arc浏览器使用体会</link>
+    <link>https://wxmvv.github.io/blog/macos/Arc浏览器使用体会</link>
     <description>&lt;h2&gt;总结&lt;/h2&gt;
 &lt;p&gt;把总结放在前面：
 我的使用arc浏览器的感觉就是两个字：&lt;strong&gt;舒服！&lt;/strong&gt;（个人观点仅供参考）
@@ -939,15 +1040,15 @@ group.Bind(
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/system/surge个人使用配置</guid>
+    <guid>https://wxmvv.github.io/blog/macos/surge个人使用配置</guid>
     <title>surge个人使用配置</title>
-    <link>https://wxmvv.github.io/blog/system/surge个人使用配置</link>
+    <link>https://wxmvv.github.io/blog/macos/surge个人使用配置</link>
     <description>&lt;h2&gt;为什么是 surge&lt;/h2&gt;
 &lt;p&gt;之前一直在用 shadowrocket，很简单，最近因为在淘宝花几块钱买了个 ios 软件用，结果发现店铺居然是用网球 app，或者圈 x 解锁，于是想研究一下。&lt;/p&gt;
 &lt;p&gt;包括圈 x，loon，surge，我都用了一圈，确实是 surge 更加顺手一些。其实代理功能大家都大差不差，surge 最突出的实际上是抓数据，使用界面干净明白，简单看一下文档就上手了。还有一个重要的原因，是因为网上都说 surge 会更稳定，更省电(我持保留意见)，于是折腾一番弄出了自己的配置表，欢迎使用参考。&lt;/p&gt;
 &lt;p&gt;模块的话，其实我并没开很多，只有一个必开&lt;a href=&quot;https://raw.githubusercontent.com/ExaAlice/Alice/main/Module/MitMAllHostnames.sgmodule&quot;&gt;MIITAllHost&lt;/a&gt;,这个打开后可以方便抓包，其他的可以在网上自行搜索，或者在各种电报群获取。&lt;/p&gt;
 &lt;h2&gt;个人配置&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;/static/blogShared/surge.conf&quot;&gt;surge.conf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/static/blog/surge.conf&quot;&gt;surge.conf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;导入后替换配置中的订阅地址即可使用&lt;/p&gt;
 &lt;h2&gt;参考&lt;/h2&gt;
 &lt;p&gt;surge 官方&lt;/p&gt;
@@ -993,7 +1094,7 @@ group.Bind(
     <description>&lt;h2&gt;随便说&lt;/h2&gt;
 &lt;p&gt;用了obsidian好久了，真的是符合我心中电子笔记最完美样子的软件，唯一的问题就是界面太乱，所以利用闲暇时间好好整理了一下！&lt;/p&gt;
 &lt;p&gt;之前用过IA writer，真的很干净、很舒服的界面，字体也是我喜欢的，所以我们今天的目标就是把obsidian变成IA writer！(obsidian:所以我只是IA的替身吗😭)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/static/blogShared/%E9%A2%84%E8%A7%88%E7%9C%8B%E7%9C%8B.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/blog/blog/%E9%A2%84%E8%A7%88%E7%9C%8B%E7%9C%8B.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2&gt;换装开始！╮(￣▽￣&amp;quot;&amp;quot;)╭&lt;/h2&gt;
 &lt;p&gt;首先是先大体上整理一下外表！
 让我们换一个主题 - 对的没错！就是你 minimal ！(主题店常年第一名的)
@@ -1012,12 +1113,12 @@ group.Bind(
 &lt;p&gt;OK！ 前期准备完成！&lt;/p&gt;
 &lt;h2&gt;设置设置！&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://docs.obsidian.md/Home&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/static/blogShared/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/blog/blog/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-palette&quot;&gt;#00C6FF
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;IA的大蓝色&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/static/blogShared/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE2%202.png&quot; alt=&quot;&quot;&gt;
-&lt;img src=&quot;/static/blogShared/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE3%201.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/blog/blog/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE2%202.png&quot; alt=&quot;&quot;&gt;
+&lt;img src=&quot;/static/blog/blog/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE3%201.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;点击import将下面的拷贝进去&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{
   &amp;quot;minimal-style@@bg1@@dark&amp;quot;: &amp;quot;#191A1A&amp;quot;,
@@ -1040,7 +1141,7 @@ group.Bind(
   &amp;quot;minimal-style@@bold-weight&amp;quot;: 600
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&quot;/static/blogShared/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE4.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/blog/blog/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE4.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;新建一个 随便的名字.css 然后放在里面 并且打开就能看到啦！&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;.markdown-source-view.mod-cm6 .cm-content {
     /* 光标颜色 */
@@ -1116,9 +1217,152 @@ group.Bind(
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/js/svelte/svelte以及tailwindcss使用尝试</guid>
+    <guid>https://wxmvv.github.io/blog/release-of-tailwind-nextjs-starter-blog-v2.0</guid>
+    <title>Release of Tailwind Nextjs Starter Blog v2.0</title>
+    <link>https://wxmvv.github.io/blog/release-of-tailwind-nextjs-starter-blog-v2.0</link>
+    <description>&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Welcome to the release of Tailwind Nextjs Starter Blog template v2.0. This release is a major refactor of the codebase to support Nextjs App directory and React Server Components. Read on to discover the new features and how to migrate from V1.&lt;/p&gt;
+&lt;TOCInline toc={props.toc} exclude=&quot;Introduction&quot; /&gt;
+
+&lt;h2&gt;V1 to V2&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/static/images/github-traffic.png&quot; alt=&quot;Github Traffic&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The template was first released in January 2021 and has since been used by thousands of users. It is featured on &lt;a href=&quot;https://vercel.com/templates/next.js/tailwind-css-starter-blog&quot;&gt;Next.js Templates&lt;/a&gt;, &lt;a href=&quot;https://www.tailwindawesome.com/resources/tailwind-nextjs-starter-blog&quot;&gt;Tailwind Awesome&lt;/a&gt; among other listing sites. It attracts 200+ unique visitors daily notching 1500-2000 page views, with 1.3k forks and many other clones.&lt;/p&gt;
+&lt;p&gt;Many thanks to the community of users and contributors for making this template a success! I created a small video montage of the blogs (while cleaning up the list in the readme) to showcase the diversity of the blogs created using the template and to celebrate the milestone:&lt;/p&gt;
+&lt;video controls&gt;
+  &lt;source
+    src=&quot;https://github-production-user-asset-6210df.s3.amazonaws.com/28362229/258559849-2124c81f-b99d-4431-839c-347e01a2616c.webm&quot;
+    type=&quot;video/webm&quot;
+  /&gt;
+&lt;/video&gt;
+
+&lt;p&gt;Version 2 builds on the success of the previous version and introduces many new features and improvements. The codebase has been refactored to support Next.js App directory and React Server Components. Markdown / MDX is now processed using Contentlayer, a type-safe content SDK that validates and transforms your content into type-safe JSON data. It integrates with Pliny, a new library that provides out of the box Next.js components to enhance your static site with analytics, comments and newsletter subscription. A new command palette (⌘-k) search component is also added to the template.&lt;/p&gt;
+&lt;p&gt;Let&amp;#39;s dive into the new features and improvements in V2.&lt;/p&gt;
+&lt;h2&gt;Next.js App Directory and React Server Components&lt;/h2&gt;
+&lt;p&gt;Now that &lt;a href=&quot;https://nextjs.org/docs/app&quot;&gt;Next.js App router&lt;/a&gt; is finally stable and is mostly feature compatible with Page Router, the codebase has been migrated to new setup. This allows for a hybrid rendering approach, with the use of React Server Components generated on the server side for faster page loads and smaller bundle sizes, while retaining the ability to sprinkle in client side React components for interactivity.[^1]&lt;/p&gt;
+&lt;p&gt;With addition powers comes a &lt;a href=&quot;https://nextjs.org/docs/getting-started/react-essentials&quot;&gt;new paradigm&lt;/a&gt; to learn. I have migrated the codebase to make use of the new features as much as possible. This includes changes in the folder structure, splitting components into server vs client components, leveraging server side data fetching and using the recommended &lt;a href=&quot;https://nextjs.org/docs/app/building-your-application/optimizing/metadata&quot;&gt;Metadata&lt;/a&gt; API for SEO discoverability.&lt;/p&gt;
+&lt;p&gt;While this simplifies the codebase to some extent, it makes migration from the old codebase more difficult. If you are looking to migrate, I recommend starting from a fresh template and copying over your customizations and existing content. See the &lt;a href=&quot;#migration-recommendations&quot;&gt;migration recommendations&lt;/a&gt; section for more details.&lt;/p&gt;
+&lt;h2&gt;Typescript First&lt;/h2&gt;
+&lt;p&gt;The codebase has been migrated to Typescript. While the previous version of the template was available in both Javascript and Typescript, I decided to reduce the maintenance burden and focus on Typescript. This also allows for better type checking and code completion in IDEs.&lt;/p&gt;
+&lt;p&gt;Typescript is also a perfect match with our new type-safe markdown processor - Contentlayer.&lt;/p&gt;
+&lt;h2&gt;Contentlayer&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.contentlayer.dev/&quot;&gt;Contentlayer&lt;/a&gt; is a content SDK that validates and transforms your content into type-safe JSON data that you can easily import into your application. It makes working with local markdown or MDX files a breeze. This replaces &lt;code&gt;MDX-bundler&lt;/code&gt; and our own markdown processing workflow.&lt;/p&gt;
+&lt;p&gt;First, a content source is defined, specifying the name of the document type, the source where it is located along with the frontmatter fields and any additional computed fields that should be generated as part of the process.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts:contentlayer.config.ts&quot;&gt;export const Blog = defineDocumentType(() =&amp;gt; ({
+  name: &amp;#39;Blog&amp;#39;,
+  filePathPattern: &amp;#39;blog/**/*.mdx&amp;#39;,
+  contentType: &amp;#39;mdx&amp;#39;,
+  fields: {
+    title: { type: &amp;#39;string&amp;#39;, required: true },
+    date: { type: &amp;#39;date&amp;#39;, required: true },
+    tags: { type: &amp;#39;list&amp;#39;, of: { type: &amp;#39;string&amp;#39; }, default: [] },
+    ...
+  },
+  computedFields: {
+    readingTime: { type: &amp;#39;json&amp;#39;, resolve: (doc) =&amp;gt; readingTime(doc.body.raw) },
+    slug: {
+      type: &amp;#39;string&amp;#39;,
+      resolve: (doc) =&amp;gt; doc._raw.flattenedPath.replace(/^.+?(\/)/, &amp;#39;&amp;#39;),
+    }
+    ...
+  },
+}))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Contentlayer then processes the MDX files with our desired markdown remark or rehype plugins, validates the schema, generate type definitions and output json files that can be easily imported in our pages. Hot reloading comes out of the box, so edits to the markdown files will be reflected in the browser immediately!&lt;/p&gt;
+&lt;h2&gt;Pliny&lt;/h2&gt;
+&lt;p&gt;A large reason for the popularity of the template was its customizability and integration with other services from analytics providers to commenting solutions. However, this means that a lot of boilerplate code has to be co-located within the template even if the user does not use the feature. Updates and bug fixes had to be copied manually to the user&amp;#39;s codebase.&lt;/p&gt;
+&lt;p&gt;To solve this, I have abstracted the logic to a separate repository - &lt;a href=&quot;https://github.com/timlrx/pliny&quot;&gt;Pliny&lt;/a&gt;. Pliny provides out of the box Next.js components to enhance static sites:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Analytics&lt;ul&gt;
+&lt;li&gt;Google Analytics&lt;/li&gt;
+&lt;li&gt;Plausible Analytics&lt;/li&gt;
+&lt;li&gt;Simple Analytics&lt;/li&gt;
+&lt;li&gt;Umami Analytics&lt;/li&gt;
+&lt;li&gt;Posthog&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Comments&lt;ul&gt;
+&lt;li&gt;Disqus&lt;/li&gt;
+&lt;li&gt;Giscus&lt;/li&gt;
+&lt;li&gt;Utterances&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Newsletter (uses Next 13 API Routes)&lt;ul&gt;
+&lt;li&gt;Buttondown&lt;/li&gt;
+&lt;li&gt;Convertkit&lt;/li&gt;
+&lt;li&gt;Email Octopus&lt;/li&gt;
+&lt;li&gt;Klaviyo&lt;/li&gt;
+&lt;li&gt;Mailchimp&lt;/li&gt;
+&lt;li&gt;Revue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Command palette search with tailwind style sheet&lt;ul&gt;
+&lt;li&gt;Algolia&lt;/li&gt;
+&lt;li&gt;Kbar (local search)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;UI utility components&lt;ul&gt;
+&lt;li&gt;Bleed&lt;/li&gt;
+&lt;li&gt;Newsletter / Blog Newsletter&lt;/li&gt;
+&lt;li&gt;Pre / Code block&lt;/li&gt;
+&lt;li&gt;Table of Contents&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Choose your preferred service by modifying &lt;code&gt;siteMetadata.js&lt;/code&gt; and changing the appropriate fields. For example to change from Umami Analytics to Plausible, we can change the following fields:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-diff-js:siteMetadata.js&quot;&gt;analytics: {
+-   umamiAnalytics: {
+-     // We use an env variable for this site to avoid other users cloning our analytics ID
+-     umamiWebsiteId: process.env.NEXT_UMAMI_ID, // e.g. 123e4567-e89b-12d3-a456-426614174000
+-   },
++    plausibleAnalytics: {
++      plausibleDataDomain: &amp;#39;&amp;#39;, // e.g. tailwind-nextjs-starter-blog.vercel.app
++    },
+},
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Changes in the configuration file gets propagated to the components automatically. No modification to the template is required.&lt;/p&gt;
+&lt;p&gt;Under the hood, Pliny exports high level components such as &lt;code&gt;&amp;lt;Analytics analyticsConfig={analyticsConfig}/&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;Comments commentsConfig={commentsConfig}/&amp;gt;&lt;/code&gt; which takes in a configuration object and renders the appropriate component. Since the layouts are defined on the server side, Next.js is able to use the configuration object to determine which component to render and send only the required component bundle to the client.&lt;/p&gt;
+&lt;h2&gt;New Search Component&lt;/h2&gt;
+&lt;p&gt;What&amp;#39;s a blog in 2023 without a command palette search bar?&lt;/p&gt;
+&lt;p&gt;One of the most highly requested features have been added 🎉! The search component supports 2 search providers - Algolia and Kbar local search.&lt;/p&gt;
+&lt;h3&gt;Algolia&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://docsearch.algolia.com/&quot;&gt;Algolia Docsearch&lt;/a&gt; is popular free service used across many documentation websites. It automatically scrapes the website that has is submitted for indexing and makes the search result available via a beautiful dialog modal. The pliny component is greatly inspired by the Docusaurus implementation and comes with a stylesheet that is compatible with the Tailwind CSS theme.&lt;/p&gt;
+&lt;h3&gt;Kbar&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/timc1/kbar&quot;&gt;Kbar&lt;/a&gt; is a fast, portable, and extensible cmd+k interface. The pliny implementation uses kbar to create a local search dialog box. The component loads a JSON file, default &lt;code&gt;search.json&lt;/code&gt;, that was created in the contentlayer build process. Try pressing ⌘-k or ctrl-k to see the search bar in action!&lt;/p&gt;
+&lt;h2&gt;Styling and Layout Updates&lt;/h2&gt;
+&lt;h3&gt;Theming&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;tailwind.config.js&lt;/code&gt; has been updated to use tailwind typography defaults where possible and to use the built-in support for dark mode via the &lt;code&gt;prose-invert&lt;/code&gt; class. This replaces the previous &lt;code&gt;prose-dark&lt;/code&gt; class and configuration.&lt;/p&gt;
+&lt;p&gt;The primary theme color is updated from &lt;code&gt;teal&lt;/code&gt; to &lt;code&gt;pink&lt;/code&gt; and the primary gray theme from &lt;code&gt;neutral&lt;/code&gt; to &lt;code&gt;gray&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Inter is now replaced with Space Grotesk as the default font.&lt;/p&gt;
+&lt;h3&gt;New Layouts&lt;/h3&gt;
+&lt;p&gt;Layout components available in the &lt;code&gt;layouts&lt;/code&gt; directory, provide a simple way to customize the look and feel of the blog.[^2]&lt;/p&gt;
+&lt;p&gt;The downside of building a popular template is that you start seeing multiple similar sites everywhere 😆. While users are encouraged to customized the layouts to their liking, having more layout options that are easily switchable promotes diversity and perhaps can be a good starting point for further customizations.&lt;/p&gt;
+&lt;p&gt;In v2, I added a new post layout - &lt;code&gt;PostBanner&lt;/code&gt;. It features a large banner image and a centered content container. Check out &amp;quot;&lt;a href=&quot;/blog/pictures-of-canada&quot;&gt;Pictures of Canada&lt;/a&gt;&amp;quot; blog post which has been updated to use the new layout.&lt;/p&gt;
+&lt;p&gt;The default blog listing layout has also been updated to include a side bar with blog tags. The search bar in the previous layout has been replace with the new command palette search. To switch back to the old layout, simply change the pages that use the &lt;code&gt;ListLayoutWithTags&lt;/code&gt; component back to the original &lt;code&gt;ListLayout&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Migration Recommendations&lt;/h2&gt;
+&lt;p&gt;Due to the large changes in directory structure, setup and tooling, I recommend starting from a fresh template and copying existing content, followed by incrementally migrating changes over to the new template.&lt;/p&gt;
+&lt;p&gt;Styling changes should be relatively minor and can be copied over from the old &lt;code&gt;tailwind.config.js&lt;/code&gt; to the new one. If copying over, you might need to add back the &lt;code&gt;prose-dark&lt;/code&gt; class to components that opt into tailwind typography styling. Do modify the font import in the root layout component to use the desired font of choice.&lt;/p&gt;
+&lt;p&gt;Changes to the MDX processing pipeline and schema can be easily ported to the new Contentlayer setup. If there are changes to the frontmatter fields, you can modify the document type in &lt;code&gt;contentlayer.config.ts&lt;/code&gt; to include the new fields. Custom plugins can be added to the &lt;code&gt;remarkPlugins&lt;/code&gt; and &lt;code&gt;rehypePlugins&lt;/code&gt; properties in the &lt;code&gt;makeSource&lt;/code&gt; export of &lt;code&gt;contentlayer.config.ts&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Markdown layouts are no longer sourced automatically from the &lt;code&gt;layouts&lt;/code&gt; directory. Instead, they have to be specified in the &lt;code&gt;layouts&lt;/code&gt; object defined in &lt;code&gt;blog/[...slug]/page.tsx&lt;/code&gt;.[^3]&lt;/p&gt;
+&lt;p&gt;To port over larger components or pages, I recommend first specificing it as a client component by using the &lt;code&gt;&amp;quot;use client&amp;quot;&lt;/code&gt; directive. Once it renders correctly, you can split the interactive components (parts that rely on &lt;code&gt;use&lt;/code&gt; hooks) as a client component and keep the remaining code as a server component. Consult the comprehensive Next.js &lt;a href=&quot;https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration#migrating-from-pages-to-app&quot;&gt;migration guide&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I hope you enjoy the new features and improvements in V2. If you have any feedback or suggestions, feel free to open an issue or reach out to me on &lt;a href=&quot;https://twitter.com/timlrx&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Support&lt;/h2&gt;
+&lt;p&gt;Using the template? Support this effort by giving a star on GitHub, sharing your own blog and giving a shoutout on Twitter or be a project &lt;a href=&quot;https://github.com/sponsors/timlrx&quot;&gt;sponsor&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Licence&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/main/LICENSE&quot;&gt;MIT&lt;/a&gt; © &lt;a href=&quot;https://www.timrlx.com&quot;&gt;Timothy Lin&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[^1]: The previous version injects Preact into the production build. However, this is no longer possible as it does not support React Server Components. While overall bundle size has increased to about 85kB, most of the content can be pre-rendered on the server side, resulting in a low first contentful paint and time to interactive. Using React throughtout also leads to more consistent behavior with external libraries and components.&lt;/p&gt;
+&lt;p&gt;[^2]: This is different from Next.js App Directory layouts and are best thought of as reusable React containers.&lt;/p&gt;
+&lt;p&gt;[^3]: This takes advantage of Server Components by making it simple to specify the layout of choice in the markdown file and match against the &lt;code&gt;layouts&lt;/code&gt; object which is then used to render the appropriate layout component.&lt;/p&gt;
+</description>
+    <pubDate>Sat, 05 Aug 2023 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>next-js</category><category>tailwind</category><category>guide</category><category>feature</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/js/svelte以及tailwindcss使用尝试</guid>
     <title>tailwindCSS以及svelte使用尝试</title>
-    <link>https://wxmvv.github.io/blog/js/svelte/svelte以及tailwindcss使用尝试</link>
+    <link>https://wxmvv.github.io/blog/js/svelte以及tailwindcss使用尝试</link>
     <description>&lt;h2&gt;参考文档&lt;/h2&gt;
 &lt;p&gt;先看文档，tailwindCSS真的我花了一小会时间适应了一下就可以算是入门了吧，真的太方便了，但是svelte则需要认真读一下文档，要不连文件怎么建都不知道... 和vue使用有很多相似地方，不同的地方更多，尤其是使用方法似乎变简单了，不过我也没有特别深入的使用，不好做评价。&lt;/p&gt;
 &lt;ul&gt;
@@ -1143,9 +1387,9 @@ group.Bind(
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/system/Linux/Linux发行版选择</guid>
+    <guid>https://wxmvv.github.io/blog/linux/Linux发行版选择</guid>
     <title>这个网站帮你选择Linux</title>
-    <link>https://wxmvv.github.io/blog/system/Linux/Linux发行版选择</link>
+    <link>https://wxmvv.github.io/blog/linux/Linux发行版选择</link>
     <description>&lt;p&gt;&lt;a href=&quot;https://distrochooser.de/zh-hans&quot;&gt;这个网站帮你选择&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;我最后选择了debian。你呢？&lt;/p&gt;
 </description>
@@ -1155,9 +1399,9 @@ group.Bind(
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/system/Linux/解决nvm启动速度慢的问题</guid>
+    <guid>https://wxmvv.github.io/blog/linux/解决nvm启动速度慢的问题</guid>
     <title>解决nvm启动速度慢的问题</title>
-    <link>https://wxmvv.github.io/blog/system/Linux/解决nvm启动速度慢的问题</link>
+    <link>https://wxmvv.github.io/blog/linux/解决nvm启动速度慢的问题</link>
     <description>&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;export NVM_DIR=&amp;quot;$HOME/.nvm&amp;quot;
 export PATH=$HOME/.nvm/versions/node/v18.14.0/bin/:$PATH
 nvm() { . &amp;quot;$NVM_DIR/nvm.sh&amp;quot; ; nvm $@ ; }
@@ -1240,6 +1484,617 @@ SwiftUI最大优势：相比同样原生的UIKit构建界面更方便！通过�
   </item>
 
   <item>
+    <guid>https://wxmvv.github.io/blog/new-features-in-v1</guid>
+    <title>New features in v1</title>
+    <link>https://wxmvv.github.io/blog/new-features-in-v1</link>
+    <description>&lt;h2&gt;Overview&lt;/h2&gt;
+&lt;p&gt;A post on the new features introduced in v1.0. New features:&lt;/p&gt;
+&lt;TOCInline toc={props.toc} exclude=&quot;Overview&quot; toHeading={2} /&gt;
+
+&lt;p&gt;First load JS decreased from 43kB to 39kB despite all the new features added! [^1]&lt;/p&gt;
+&lt;p&gt;[^1]: With the new changes in Nextjs 12, first load JS increase to 45kB.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&quot;#upgrade-guide&quot;&gt;upgrade guide&lt;/a&gt; below if you are migrating from v0 version of the template.&lt;/p&gt;
+&lt;h2&gt;Theme colors&lt;/h2&gt;
+&lt;p&gt;You can easily modify the theme color by changing the primary attribute in the tailwind config file:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js:tailwind.config.js&quot;&gt;theme: {
+    colors: {
+      primary: colors.teal,
+      gray: colors.neutral,
+      ...
+    }
+  ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The primary color attribute should be assigned an object with keys from 50, 100, 200 ... 900 and the corresponding color code values.&lt;/p&gt;
+&lt;p&gt;Tailwind includes great default color palettes that can be used for theming your own website. Check out &lt;a href=&quot;https://tailwindcss.com/docs/customizing-colors&quot;&gt;customizing colors documentation page&lt;/a&gt; for the full range of options.&lt;/p&gt;
+&lt;p&gt;Migrating from v1? You can revert to the previous theme by setting &lt;code&gt;primary&lt;/code&gt; to &lt;code&gt;colors.sky&lt;/code&gt; (Tailwind 2.2.2 and above, otherwise &lt;code&gt;colors.lightBlue&lt;/code&gt;) and changing gray to &lt;code&gt;colors.gray&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;From v1.1.2+, you can also customize the style of your code blocks easily by modifying the &lt;code&gt;css/prism.css&lt;/code&gt; stylesheet. Token classnames are compatible with prismjs
+so you can copy and adapt token styles from a prismjs stylesheet e.g. &lt;a href=&quot;https://github.com/PrismJS/prism-themes&quot;&gt;prism themes&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Xdm MDX compiler&lt;/h2&gt;
+&lt;p&gt;We switched the MDX bundler from &lt;a href=&quot;https://github.com/hashicorp/next-mdx-remote&quot;&gt;next-mdx-remote&lt;/a&gt; to &lt;a href=&quot;https://github.com/kentcdodds/mdx-bundler&quot;&gt;mdx-bundler&lt;/a&gt;.
+This uses &lt;a href=&quot;https://github.com/wooorm/xdm&quot;&gt;xdm&lt;/a&gt; under the hood, the latest micromark 3 and remark, rehype libraries.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; If you were using custom remark or rehype libraries, please upgrade to micromark 3 compatible ones. If you are upgrading, please delete &lt;code&gt;node_modules&lt;/code&gt; and &lt;code&gt;package-lock.json&lt;/code&gt; to avoid having past dependencies related issues.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/wooorm/xdm&quot;&gt;xdm&lt;/a&gt; contains multiple improvements over &lt;a href=&quot;https://github.com/mdx-js/mdx&quot;&gt;@mdx-js/mdx&lt;/a&gt;, the compiler used internally by next-mdx-remote, but there might be some breaking behaviour changes.
+Please check your markdown output to verify.&lt;/p&gt;
+&lt;p&gt;Some new possibilities include loading components directly in the mdx file using the import syntax and including js code which could be compiled and bundled at the build step.&lt;/p&gt;
+&lt;p&gt;For example, the following jsx snippet can be used directly in an MDX file to render the page title component:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;// Or import PageTitle from &amp;#39;./components/PageTitle.js&amp;#39; if you are using js
+import PageTitle from &amp;#39;./components/PageTitle.tsx&amp;#39;
+;&amp;lt;PageTitle&amp;gt; Using JSX components in MDX &amp;lt;/PageTitle&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The default configuration resolves all components relative to the &lt;code&gt;components&lt;/code&gt; directory.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:
+Components which require external image loaders also require additional esbuild configuration.
+Components which are dependent on global application state on lifecycle like the Nextjs &lt;code&gt;Link&lt;/code&gt; component would also not work with this setup as each mdx file is built independently.
+For such cases, it is better to use component substitution.&lt;/p&gt;
+&lt;h2&gt;Table of contents component&lt;/h2&gt;
+&lt;p&gt;Inspired by &lt;a href=&quot;https://docusaurus.io/docs/next/markdown-features/inline-toc&quot;&gt;Docusaurus&lt;/a&gt; and Gatsby&amp;#39;s &lt;a href=&quot;https://www.gatsbyjs.com/plugins/gatsby-remark-table-of-contents/&quot;&gt;gatsby-remark-table-of-contents&lt;/a&gt;,
+the &lt;code&gt;toc&lt;/code&gt; variable containing all the top level headings of the document is passed to the MDX file and can be styled accordingly.
+To make generating a table of contents (TOC) simple, you can use the existing &lt;code&gt;TOCInline&lt;/code&gt; component.&lt;/p&gt;
+&lt;p&gt;For example, the TOC in this post was generated with the following code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;TOCInline toc={props.toc} exclude=&amp;quot;Overview&amp;quot; toHeading={2} /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can customise the headings that are displayed by configuring the &lt;code&gt;fromHeading&lt;/code&gt; and &lt;code&gt;toHeading&lt;/code&gt; props, or exclude particular headings
+by passing a string or a string array to the &lt;code&gt;exclude&lt;/code&gt; prop. By default, all headings that are of depth 3 or smaller are indented. This can be configured by changing the &lt;code&gt;indentDepth&lt;/code&gt; property.
+A &lt;code&gt;asDisclosure&lt;/code&gt; prop can be used to render the TOC within an expandable disclosure element.&lt;/p&gt;
+&lt;p&gt;Here&amp;#39;s the full TOC rendered in a disclosure element.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;TOCInline toc={props.toc} asDisclosure /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;TOCInline toc={props.toc} asDisclosure /&gt;
+
+&lt;h2&gt;Layouts&lt;/h2&gt;
+&lt;p&gt;You can map mdx blog content to layout components by configuring the frontmatter field. For example, this post is written with the new &lt;code&gt;PostSimple&lt;/code&gt; layout!&lt;/p&gt;
+&lt;h3&gt;Adding new templates&lt;/h3&gt;
+&lt;p&gt;layout templates are stored in the &lt;code&gt;./layouts&lt;/code&gt; folder. You can add your React components that you want to map to markdown content in this folder.
+The component file name must match that specified in the markdown frontmatter &lt;code&gt;layout&lt;/code&gt; field.&lt;/p&gt;
+&lt;p&gt;The only required field is &lt;code&gt;children&lt;/code&gt; which contains the rendered MDX content, though you would probably want to pass in the frontMatter contents and render it in the template.&lt;/p&gt;
+&lt;p&gt;You can configure the template to take in other fields - see &lt;code&gt;PostLayout&lt;/code&gt; component for an example.&lt;/p&gt;
+&lt;p&gt;Here&amp;#39;s an example layout which you can further customise:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;export default function ExampleLayout({ frontMatter, children }) {
+  const { date, title } = frontMatter
+
+  return (
+    &amp;lt;SectionContainer&amp;gt;
+      &amp;lt;div&amp;gt;{date}&amp;lt;/div&amp;gt;
+      &amp;lt;h1&amp;gt;{title}&amp;lt;/h1&amp;gt;
+      &amp;lt;div&amp;gt;{children}&amp;lt;/div&amp;gt;
+    &amp;lt;/SectionContainer&amp;gt;
+  )
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Configuring a blog post frontmatter&lt;/h3&gt;
+&lt;p&gt;Use the &lt;code&gt;layout&lt;/code&gt; frontmatter field to specify the template you want to map the markdown post to. Here&amp;#39;s how the frontmatter of this post looks like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: &amp;#39;New features in v1&amp;#39;
+date: &amp;#39;2021-05-26   &amp;#39;
+tags: [&amp;#39;next-js&amp;#39;, &amp;#39;tailwind&amp;#39;, &amp;#39;guide&amp;#39;]
+draft: false
+summary: &amp;#39;Introducing the new layout features - you can map mdx blog content to layout components by configuring the frontmatter field&amp;#39;
+layout: PostSimple
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can configure the default layout in the respective page section by modifying the &lt;code&gt;DEFAULT_LAYOUT&lt;/code&gt; variable.
+The &lt;code&gt;DEFAULT_LAYOUT&lt;/code&gt; for blog posts page is set to &lt;code&gt;PostLayout&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Extend&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;layout&lt;/code&gt; is mapped to wrapper which wraps the entire MDX content.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;export const MDXComponents = {
+  Image,
+  a: CustomLink,
+  pre: Pre,
+  wrapper: ({ components, layout, ...rest }) =&amp;gt; {
+    const Layout = require(`../layouts/${layout}`).default
+    return &amp;lt;Layout {...rest} /&amp;gt;
+  },
+}
+
+export const MDXLayoutRenderer = ({ layout, mdxSource, ...rest }) =&amp;gt; {
+  const MDXLayout = useMemo(() =&amp;gt; getMDXComponent(mdxSource), [mdxSource])
+
+  return &amp;lt;MDXLayout layout={layout} components={MDXComponents} {...rest} /&amp;gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use the &lt;code&gt;MDXLayoutRenderer&lt;/code&gt; component on a page where you want to accept a layout name to map to the desired layout.
+You need to pass the layout name from the layout folder (it has to be an exact match).&lt;/p&gt;
+&lt;h2&gt;Analytics&lt;/h2&gt;
+&lt;p&gt;The template now supports &lt;a href=&quot;https://plausible.io/&quot;&gt;plausible&lt;/a&gt;, &lt;a href=&quot;https://simpleanalytics.com/&quot;&gt;simple analytics&lt;/a&gt; and google analytics.
+Configure &lt;code&gt;siteMetadata.js&lt;/code&gt; with the settings that correspond with the desired analytics provider.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;analytics: {
+    // supports plausible, simpleAnalytics or googleAnalytics
+    plausibleDataDomain: &amp;#39;&amp;#39;, // e.g. tailwind-nextjs-starter-blog.vercel.app
+    simpleAnalytics: false, // true or false
+    googleAnalyticsId: &amp;#39;&amp;#39;, // e.g. UA-000000-2 or G-XXXXXXX
+  },
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Custom events are also supported. You can import the &lt;code&gt;logEvent&lt;/code&gt; function from &lt;code&gt;@components/analytics/[ANALYTICS-PROVIDER]&lt;/code&gt; file and call it when
+triggering certain events of interest. &lt;em&gt;Note&lt;/em&gt;: Additional configuration might be required depending on the analytics provider, please check their official
+documentation for more information.&lt;/p&gt;
+&lt;h2&gt;Blog comments system&lt;/h2&gt;
+&lt;p&gt;We have also added support for &lt;a href=&quot;https://github.com/laymonage/giscus&quot;&gt;giscus&lt;/a&gt;, &lt;a href=&quot;https://github.com/utterance/utterances&quot;&gt;utterances&lt;/a&gt; or disqus.
+To enable, simply configure &lt;code&gt;siteMetadata.js&lt;/code&gt; comments property with the desired provider and settings as specified in the config file.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;comment: {
+    // Select a provider and use the environment variables associated to it
+    // https://vercel.com/docs/environment-variables
+    provider: &amp;#39;giscus&amp;#39;, // supported providers: giscus, utterances, disqus
+    giscusConfig: {
+      // Visit the link below, and follow the steps in the &amp;#39;configuration&amp;#39; section
+      // https://giscus.app/
+      repo: process.env.NEXT_PUBLIC_GISCUS_REPO,
+      repositoryId: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,
+      category: process.env.NEXT_PUBLIC_GISCUS_CATEGORY,
+      categoryId: process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID,
+      mapping: &amp;#39;pathname&amp;#39;, // supported options: pathname, url, title
+      reactions: &amp;#39;1&amp;#39;, // Emoji reactions: 1 = enable / 0 = disable
+      // Send discussion metadata periodically to the parent window: 1 = enable / 0 = disable
+      metadata: &amp;#39;0&amp;#39;,
+      // theme example: light, dark, dark_dimmed, dark_high_contrast
+      // transparent_dark, preferred_color_scheme, custom
+      theme: &amp;#39;light&amp;#39;,
+      // theme when dark mode
+      darkTheme: &amp;#39;transparent_dark&amp;#39;,
+      // If the theme option above is set to &amp;#39;custom`
+      // please provide a link below to your custom theme css file.
+      // example: https://giscus.app/themes/custom_example.css
+      themeURL: &amp;#39;&amp;#39;,
+    },
+    utterancesConfig: {
+      // Visit the link below, and follow the steps in the &amp;#39;configuration&amp;#39; section
+      // https://utteranc.es/
+      repo: process.env.NEXT_PUBLIC_UTTERANCES_REPO,
+      issueTerm: &amp;#39;&amp;#39;, // supported options: pathname, url, title
+      label: &amp;#39;&amp;#39;, // label (optional): Comment 💬
+      // theme example: github-light, github-dark, preferred-color-scheme
+      // github-dark-orange, icy-dark, dark-blue, photon-dark, boxy-light
+      theme: &amp;#39;&amp;#39;,
+      // theme when dark mode
+      darkTheme: &amp;#39;&amp;#39;,
+    },
+    disqus: {
+      // https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+      shortname: process.env.NEXT_PUBLIC_DISQUS_SHORTNAME,
+    },
+  },
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Multiple authors&lt;/h2&gt;
+&lt;p&gt;Information on authors is now split from &lt;code&gt;siteMetadata.js&lt;/code&gt; and stored in its own &lt;code&gt;data/authors&lt;/code&gt; folder as a markdown file. Minimally, you will need to have a &lt;code&gt;default.md&lt;/code&gt; file with authorship information. You can create additional files as required and the file name will be used as the reference to the author.&lt;/p&gt;
+&lt;p&gt;Here&amp;#39;s how an author markdown file might look like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-md:default.md&quot;&gt;---
+name: Tails Azimuth
+avatar: /static/images/avatar.png
+occupation: Professor of Atmospheric Science
+company: Stanford University
+email: address@yoursite.com
+twitter: https://twitter.com/Twitter
+linkedin: https://www.linkedin.com
+github: https://github.com
+---
+
+A long description of yourself...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can use this information in multiple places across the template. For example in the about section of the page, we grab the default author information with this line of code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;const authorDetails = await getFileBySlug(&amp;#39;authors&amp;#39;, [&amp;#39;default&amp;#39;])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is rendered in the &lt;code&gt;AuthorLayout&lt;/code&gt; template.&lt;/p&gt;
+&lt;h3&gt;Multiple authors in blog post&lt;/h3&gt;
+&lt;p&gt;The frontmatter of a blog post accepts an optional &lt;code&gt;authors&lt;/code&gt; array field. If no field is specified, it is assumed that the default author is used. Simply pass in an array of authors to render multiple authors associated with a post.&lt;/p&gt;
+&lt;p&gt;For example, the following frontmatter will display the authors given by &lt;code&gt;data/authors/default.md&lt;/code&gt; and &lt;code&gt;data/authors/sparrowhawk.md&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-yaml&quot;&gt;title: &amp;#39;My first post&amp;#39;
+date: &amp;#39;2021-01-12&amp;#39;
+draft: false
+summary: &amp;#39;My first post&amp;#39;
+authors: [&amp;#39;default&amp;#39;, &amp;#39;sparrowhawk&amp;#39;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A demo of a multiple authors post is shown in &lt;a href=&quot;/blog/introducing-tailwind-nextjs-starter-blog&quot;&gt;Introducing Tailwind Nextjs Starter Blog post&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Copy button for code blocks&lt;/h2&gt;
+&lt;p&gt;Hover over a code block and you will notice a GitHub-inspired copy button! You can modify &lt;code&gt;./components/Pre.js&lt;/code&gt; to further customise it.
+The component is passed to &lt;code&gt;MDXComponents&lt;/code&gt; and modifies all &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; blocks.&lt;/p&gt;
+&lt;h2&gt;Line highlighting and line numbers&lt;/h2&gt;
+&lt;p&gt;Line highlighting and line numbers are now supported out of the box thanks to the new &lt;a href=&quot;https://github.com/timlrx/rehype-prism-plus&quot;&gt;rehype-prism-plus plugin&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The following javascript code block:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```js {1, 3-4} showLineNumbers
+var num1, num2, sum
+num1 = prompt(&amp;#39;Enter first number&amp;#39;)
+num2 = prompt(&amp;#39;Enter second number&amp;#39;)
+sum = parseInt(num1) + parseInt(num2) // &amp;quot;+&amp;quot; means &amp;quot;add&amp;quot;
+alert(&amp;#39;Sum = &amp;#39; + sum) // &amp;quot;+&amp;quot; means combine into a string
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;will appear as:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;var num1, num2, sum
+num1 = prompt(&amp;#39;Enter first number&amp;#39;)
+num2 = prompt(&amp;#39;Enter second number&amp;#39;)
+sum = parseInt(num1) + parseInt(num2) // &amp;quot;+&amp;quot; means &amp;quot;add&amp;quot;
+alert(&amp;#39;Sum = &amp;#39; + sum) // &amp;quot;+&amp;quot; means combine into a string
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To modify the styles, change the following class selectors in the &lt;code&gt;prism.css&lt;/code&gt; file:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;.code-highlight {
+  @apply float-left min-w-full;
+}
+
+.code-line {
+  @apply -mx-4 block border-l-4 border-opacity-0 pl-4 pr-4;
+}
+
+.code-line.inserted {
+  @apply bg-green-500 bg-opacity-20;
+}
+
+.code-line.deleted {
+  @apply bg-red-500 bg-opacity-20;
+}
+
+.highlight-line {
+  @apply -mx-4 border-l-4 border-primary-500 bg-gray-700 bg-opacity-50;
+}
+
+.line-number::before {
+  @apply -ml-2 mr-4 inline-block w-4 text-right text-gray-400;
+  content: attr(line);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Newletter component (v1.1.3)&lt;/h2&gt;
+&lt;p&gt;Introduced in v1.1.3, the newsletter component gives you an easy way to build an audience. It integrates with the following providers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mailchimp.com/&quot;&gt;Mailchimp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://buttondown.email/&quot;&gt;Buttondown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://convertkit.com/&quot;&gt;Convertkit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To use it, specify the provider which you are using in the config file and add the necessary environment variables to the &lt;code&gt;.env&lt;/code&gt; file.
+For more information on the required variables, check out &lt;code&gt;.env.sample.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Two components are exported, a default &lt;code&gt;NewsletterForm&lt;/code&gt; and a &lt;code&gt;BlogNewsletterForm&lt;/code&gt; component, which is also passed in as an MDX component
+and can be used in a blog post:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;BlogNewsletterForm title=&amp;quot;Like what you are reading?&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;BlogNewsletterForm title=&quot;Like what you are reading?&quot; /&gt;
+
+&lt;p&gt;The component relies on nextjs&amp;#39;s &lt;a href=&quot;https://nextjs.org/docs/api-routes/introduction&quot;&gt;API routes&lt;/a&gt; which requires a server-side instance of nextjs to be setup
+and is not compatible with a 100% static site export. Users should either self-host or use a compatible platform like Vercel or Netlify which supports this functionality.&lt;/p&gt;
+&lt;p&gt;A static site compatible alternative is to substitute the route in the newsletter component with a form API endpoint provider.&lt;/p&gt;
+&lt;h2&gt;Bibliography and Citations (v1.2.1)&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;rehype-citation&lt;/code&gt; plugin is added to the xdm processing pipeline in v1.2.1. This allows you to easily format citations and insert bibliography from an existing bibtex or CSL-json file.&lt;/p&gt;
+&lt;p&gt;For example, the following markdown code sample:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-md&quot;&gt;Standard citation [@Nash1950]
+In-text citations e.g. @Nash1951
+Multiple citations [see @Nash1950; @Nash1951, page 50]
+
+**References:**
+
+[^ref]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;is rendered to the following:&lt;/p&gt;
+&lt;p&gt;Standard citation [@Nash1950]&lt;br&gt;In-text citations e.g. @Nash1951&lt;br&gt;Multiple citations [see @Nash1950; @Nash1951, page 50]&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[^ref]&lt;/p&gt;
+&lt;p&gt;A bibliography will be inserted at the end of the document, but this can be overwritten by specifying a &lt;code&gt;[^Ref]&lt;/code&gt; tag at the intended location.
+The plugin uses APA citation formation, but also supports the following CSLs, &amp;#39;apa&amp;#39;, &amp;#39;vancouver&amp;#39;, &amp;#39;harvard1&amp;#39;, &amp;#39;chicago&amp;#39;, &amp;#39;mla&amp;#39;, or a path to a user-specified CSL file.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&quot;https://github.com/timlrx/rehype-citation&quot;&gt;rehype-citation readme&lt;/a&gt; for more information on the configuration options.&lt;/p&gt;
+&lt;h2&gt;Self-hosted font (v1.5.0)&lt;/h2&gt;
+&lt;p&gt;Google font has been replaced with self-hosted font from &lt;a href=&quot;https://fontsource.org/&quot;&gt;Fontsource&lt;/a&gt;. This gives the following &lt;a href=&quot;https://fontsource.org/docs/introduction&quot;&gt;advantages&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Self-hosting brings significant performance gains as loading fonts from hosted services, such as Google Fonts, lead to an extra (render blocking) network request. To provide perspective, for simple websites it has been seen to double visual load times.&lt;/p&gt;
+&lt;p&gt;Fonts remain version locked. Google often pushes updates to their fonts without notice, which may interfere with your live production projects. Manage your fonts like any other NPM dependency.&lt;/p&gt;
+&lt;p&gt;Commit to privacy. Google does track the usage of their fonts and for those who are extremely privacy concerned, self-hosting is an alternative.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This leads to a smaller font bundle and a 0.1s faster load time (&lt;a href=&quot;https://www.webpagetest.org/video/compare.php?tests=220201_AiDcFH_f68a69b758454dd52d8e67493fdef7da,220201_BiDcMC_bf2d53f14483814ba61e794311dfa771&quot;&gt;webpagetest comparison&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;To change the default Inter font:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install the preferred &lt;a href=&quot;https://fontsource.org/fonts&quot;&gt;font&lt;/a&gt; - &lt;code&gt;npm install -save @fontsource/&amp;lt;font-name&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update the import at &lt;code&gt;pages/_app.js&lt;/code&gt;- &lt;code&gt;import &amp;#39;@fontsource/&amp;lt;font-name&amp;gt;.css&amp;#39;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update the &lt;code&gt;fontfamily&lt;/code&gt; property in the tailwind css config file&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Upgrade guide&lt;/h2&gt;
+&lt;p&gt;There are significant portions of the code that has been changed from v0 to v1 including support for layouts and a new mdx engine.&lt;/p&gt;
+&lt;p&gt;There&amp;#39;s also no real reason to change if the previous one serves your needs and it might be easier to copy
+the component changes you are interested in to your existing blog rather than migrating everything over.&lt;/p&gt;
+&lt;p&gt;Nonetheless, if you want to do so and have not changed much of the template, you could clone the new version and copy over the blog post over to the new template.&lt;/p&gt;
+&lt;p&gt;Another alternative would be to pull the latest template version with the following code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;git remote add template git@github.com:timlrx/tailwind-nextjs-starter-blog.git
+git pull template v1 --allow-unrelated-histories
+rm -rf node_modules
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can see an example of such a migration in this &lt;a href=&quot;https://github.com/timlrx/timlrx.com/commit/bba1c185384fd6d5cdaac15abf802fdcff027286&quot;&gt;commit&lt;/a&gt; for my personal blog.&lt;/p&gt;
+&lt;p&gt;v1 also uses &lt;code&gt;feed.xml&lt;/code&gt; rather than &lt;code&gt;index.xml&lt;/code&gt;, to avoid some build issues with Vercel. If you are migrating you should add a redirect to &lt;code&gt;next.config.js&lt;/code&gt; like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;async redirects() {
+  return [
+    {
+      source: &amp;#39;/:path/index.xml&amp;#39;,
+      destination: &amp;#39;/:path/feed.xml&amp;#39;,
+      permanent: true,
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    <pubDate>Sat, 07 Aug 2021 15:32:14 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>next-js</category><category>tailwind</category><category>guide</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/nested-route/introducing-multi-part-posts-with-nested-routing</guid>
+    <title>Introducing Multi-part Posts with Nested Routing</title>
+    <link>https://wxmvv.github.io/blog/nested-route/introducing-multi-part-posts-with-nested-routing</link>
+    <description>&lt;h1&gt;Nested Routes&lt;/h1&gt;
+&lt;p&gt;The blog template supports posts in nested sub-folders. This helps in organisation and can be used to group posts of similar content e.g. a multi-part series. This post is itself an example of a nested route! It&amp;#39;s located in the &lt;code&gt;/data/blog/nested-route&lt;/code&gt; folder.&lt;/p&gt;
+&lt;h2&gt;How&lt;/h2&gt;
+&lt;p&gt;Simplify create multiple folders inside the main &lt;code&gt;/data/blog&lt;/code&gt; folder and add your &lt;code&gt;.md&lt;/code&gt;/&lt;code&gt;.mdx&lt;/code&gt; files to them. You can even create something like &lt;code&gt;/data/blog/nested-route/deeply-nested-route/my-post.md&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;We use Next.js catch all routes to handle the routing and path creations.&lt;/p&gt;
+&lt;h2&gt;Use Cases&lt;/h2&gt;
+&lt;p&gt;Here are some reasons to use nested routes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;More logical content organisation (blogs will still be displayed based on the created date)&lt;/li&gt;
+&lt;li&gt;Multi-part posts&lt;/li&gt;
+&lt;li&gt;Different sub-routes for each author&lt;/li&gt;
+&lt;li&gt;Internationalization (though it would be recommended to use &lt;a href=&quot;https://nextjs.org/docs/advanced-features/i18n-routing&quot;&gt;Next.js built-in i8n routing&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Note&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The previous/next post links at bottom of the template are currently sorted by date. One could explore modifying the template to refer the reader to the previous/next post in the series, rather than by date.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    <pubDate>Sun, 02 May 2021 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>multi-author</category><category>next-js</category><category>feature</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/introducing-tailwind-nextjs-starter-blog</guid>
+    <title>Introducing Tailwind Nextjs Starter Blog</title>
+    <link>https://wxmvv.github.io/blog/introducing-tailwind-nextjs-starter-blog</link>
+    <description>&lt;p&gt;&lt;img src=&quot;/static/images/twitter-card.png&quot; alt=&quot;tailwind-nextjs-banner&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;Tailwind Nextjs Starter Blog&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://vercel.com/new/git/external?repository-url=https://github.com/timlrx/tailwind-nextjs-starter-blog&quot;&gt;&lt;img src=&quot;https://vercel.com/button&quot; alt=&quot;Deploy with Vercel&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!CAUTION]
+This is the README of version 1 of the template. It is kept for historical reasons, but is no longer supported. It also serves as a nice example of &lt;a href=&quot;https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts&quot;&gt;Github Alert&lt;/a&gt;. For the actual documentation, please refer to the &lt;a href=&quot;https://github.com/timlrx/tailwind-nextjs-starter-blog&quot;&gt;Github repository&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is a &lt;a href=&quot;https://nextjs.org/&quot;&gt;Next.js&lt;/a&gt;, &lt;a href=&quot;https://tailwindcss.com/&quot;&gt;Tailwind CSS&lt;/a&gt; blogging starter template. Probably the most feature-rich Next.js markdown blogging template out there. Comes out of the box configured with the latest technologies to make technical writing a breeze. Easily configurable and customizable. Perfect as a replacement to existing Jekyll and Hugo individual blogs.&lt;/p&gt;
+&lt;p&gt;Check out the documentation below to get started.&lt;/p&gt;
+&lt;p&gt;Facing issues? Check the &lt;a href=&quot;https://github.com/timlrx/tailwind-nextjs-starter-blog/wiki&quot;&gt;FAQ page&lt;/a&gt; and do a search on past issues. Feel free to open a new issue if none has been posted previously.&lt;/p&gt;
+&lt;p&gt;Feature request? Check the past discussions to see if it has been brought up previously. Otherwise, feel free to start a new discussion thread. All ideas are welcomed!&lt;/p&gt;
+&lt;h2&gt;Examples&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://tailwind-nextjs-starter-blog.vercel.app/&quot;&gt;Demo Blog&lt;/a&gt; - this repo&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.timlrx.com&quot;&gt;My personal blog&lt;/a&gt; - modified to auto-generate blog posts with dates&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tambouille.vercel.app/&quot;&gt;Aloisdg&amp;#39;s cookbook&lt;/a&gt; - with pictures and recipes!&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tailwind-nextjs-starter-blog-seven.vercel.app/&quot;&gt;GautierArcin&amp;#39;s demo with next translate&lt;/a&gt; - includes translation of mdx posts, &lt;a href=&quot;https://github.com/GautierArcin/tailwind-nextjs-starter-blog/tree/demo/next-translate&quot;&gt;source code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://davidlevai.com/&quot;&gt;David Levai&amp;#39;s digital garden&lt;/a&gt; - customized design and added email subscriptions&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://thinhcorner.com/&quot;&gt;Thinh&amp;#39;s Corner&lt;/a&gt; - &lt;a href=&quot;https://github.com/Th1nhNg0/th1nhng0.vercel.app/blob/5e73a420828d82f01e7147512a2c3273c4ec19f8/layouts/PostLayout.js&quot;&gt;customized layout&lt;/a&gt; with sticky side table of contents&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using the template? Feel free to create a PR and add your blog to this list.&lt;/p&gt;
+&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;I wanted to port my existing blog to Nextjs and Tailwind CSS but there was no easy out of the box template to use so I decided to create one. Design is adapted from &lt;a href=&quot;https://github.com/tailwindlabs/blog.tailwindcss.com&quot;&gt;Tailwindlabs blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I wanted it to be nearly as feature-rich as popular blogging templates like &lt;a href=&quot;https://github.com/daattali/beautiful-jekyll&quot;&gt;beautiful-jekyll&lt;/a&gt; and &lt;a href=&quot;https://github.com/wowchemy/wowchemy-hugo-modules&quot;&gt;Hugo Academic&lt;/a&gt; but with the best of React&amp;#39;s ecosystem and current web development&amp;#39;s best practices.&lt;/p&gt;
+&lt;h2&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Easy styling customization with &lt;a href=&quot;https://tailwindcss.com/blog/tailwindcss-v3&quot;&gt;Tailwind 3.0&lt;/a&gt; and primary color attribute&lt;/li&gt;
+&lt;li&gt;Near perfect lighthouse score - &lt;a href=&quot;https://www.webpagetest.org/result/210111_DiC1_08f3670c3430bf4a9b76fc3b927716c5/&quot;&gt;Lighthouse report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lightweight, 45kB first load JS, uses Preact in production build&lt;/li&gt;
+&lt;li&gt;Mobile-friendly view&lt;/li&gt;
+&lt;li&gt;Light and dark theme&lt;/li&gt;
+&lt;li&gt;Self-hosted font with &lt;a href=&quot;https://fontsource.org/&quot;&gt;Fontsource&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Supports &lt;a href=&quot;https://plausible.io/&quot;&gt;plausible&lt;/a&gt;, &lt;a href=&quot;https://simpleanalytics.com/&quot;&gt;simple analytics&lt;/a&gt; and google analytics&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mdxjs.com/&quot;&gt;MDX - write JSX in markdown documents!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Server-side syntax highlighting with line numbers and line highlighting via &lt;a href=&quot;https://github.com/timlrx/rehype-prism-plus&quot;&gt;rehype-prism-plus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Math display supported via &lt;a href=&quot;https://katex.org/&quot;&gt;KaTeX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Citation and bibliography support via &lt;a href=&quot;https://github.com/timlrx/rehype-citation&quot;&gt;rehype-citation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Automatic image optimization via &lt;a href=&quot;https://nextjs.org/docs/basic-features/image-optimization&quot;&gt;next/image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Flexible data retrieval with &lt;a href=&quot;https://github.com/kentcdodds/mdx-bundler&quot;&gt;mdx-bundler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support for tags - each unique tag will be its own page&lt;/li&gt;
+&lt;li&gt;Support for multiple authors&lt;/li&gt;
+&lt;li&gt;Blog templates&lt;/li&gt;
+&lt;li&gt;TOC component&lt;/li&gt;
+&lt;li&gt;Support for nested routing of blog posts&lt;/li&gt;
+&lt;li&gt;Newsletter component with support for Mailchimp, Buttondown, Convertkit, Klaviyo, Revue, Emailoctopus and Beehiiv&lt;/li&gt;
+&lt;li&gt;Supports &lt;a href=&quot;https://github.com/laymonage/giscus&quot;&gt;giscus&lt;/a&gt;, &lt;a href=&quot;https://github.com/utterance/utterances&quot;&gt;utterances&lt;/a&gt; or disqus&lt;/li&gt;
+&lt;li&gt;Projects page&lt;/li&gt;
+&lt;li&gt;Preconfigured security headers&lt;/li&gt;
+&lt;li&gt;SEO friendly with RSS feed, sitemaps and more!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Sample posts&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://tailwind-nextjs-starter-blog.vercel.app/blog/github-markdown-guide&quot;&gt;A markdown guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tailwind-nextjs-starter-blog.vercel.app/blog/guide-to-using-images-in-nextjs&quot;&gt;Learn more about images in Next.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tailwind-nextjs-starter-blog.vercel.app/blog/deriving-ols-estimator&quot;&gt;A tour of math typesetting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tailwind-nextjs-starter-blog.vercel.app/blog/pictures-of-canada&quot;&gt;Simple MDX image grid&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tailwind-nextjs-starter-blog.vercel.app/blog/the-time-machine&quot;&gt;Example of long prose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tailwind-nextjs-starter-blog.vercel.app/blog/nested-route/introducing-multi-part-posts-with-nested-routing&quot;&gt;Example of Nested Route Post&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Quick Start Guide&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;JS (official support) - &lt;code&gt;npx degit https://github.com/timlrx/tailwind-nextjs-starter-blog.git&lt;/code&gt; or TS (community support) - &lt;code&gt;npx degit timlrx/tailwind-nextjs-starter-blog#typescript&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Personalize &lt;code&gt;siteMetadata.js&lt;/code&gt; (site related information)&lt;/li&gt;
+&lt;li&gt;Modify the content security policy in &lt;code&gt;next.config.js&lt;/code&gt; if you want to use
+any analytics provider or a commenting solution other than giscus.&lt;/li&gt;
+&lt;li&gt;Personalize &lt;code&gt;authors/default.md&lt;/code&gt; (main author)&lt;/li&gt;
+&lt;li&gt;Modify &lt;code&gt;projectsData.ts&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Modify &lt;code&gt;headerNavLinks.ts&lt;/code&gt; to customize navigation links&lt;/li&gt;
+&lt;li&gt;Add blog posts&lt;/li&gt;
+&lt;li&gt;Deploy on Vercel&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Development&lt;/h2&gt;
+&lt;p&gt;First, run the development server:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;npm start
+# or
+npm run dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Open &lt;a href=&quot;http://localhost:3000&quot;&gt;http://localhost:3000&lt;/a&gt; with your browser to see the result.&lt;/p&gt;
+&lt;p&gt;You can start editing the page by modifying &lt;code&gt;pages/index.js&lt;/code&gt;. The page auto-updates as you edit the file.&lt;/p&gt;
+&lt;h2&gt;Extend / Customize&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;data/siteMetadata.js&lt;/code&gt; - contains most of the site related information which should be modified for a user&amp;#39;s need.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;data/authors/default.md&lt;/code&gt; - default author information (required). Additional authors can be added as files in &lt;code&gt;data/authors&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;data/projectsData.js&lt;/code&gt; - data used to generate styled card on the projects page.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;data/headerNavLinks.js&lt;/code&gt; - navigation links.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;data/logo.svg&lt;/code&gt; - replace with your own logo.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;data/blog&lt;/code&gt; - replace with your own blog posts.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;public/static&lt;/code&gt; - store assets such as images and favicons.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;tailwind.config.js&lt;/code&gt; and &lt;code&gt;css/tailwind.css&lt;/code&gt; - contain the tailwind stylesheet which can be modified to change the overall look and feel of the site.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;css/prism.css&lt;/code&gt; - controls the styles associated with the code blocks. Feel free to customize it and use your preferred prismjs theme e.g. &lt;a href=&quot;https://github.com/PrismJS/prism-themes&quot;&gt;prism themes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;components/social-icons&lt;/code&gt; - to add other icons, simply copy an svg file from &lt;a href=&quot;https://simpleicons.org/&quot;&gt;Simple Icons&lt;/a&gt; and map them in &lt;code&gt;index.js&lt;/code&gt;. Other icons use &lt;a href=&quot;https://heroicons.com/&quot;&gt;heroicons&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;components/MDXComponents.js&lt;/code&gt; - pass your own JSX code or React component by specifying it over here. You can then call them directly in the &lt;code&gt;.mdx&lt;/code&gt; or &lt;code&gt;.md&lt;/code&gt; file. By default, a custom link and image component is passed.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;layouts&lt;/code&gt; - main templates used in pages.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pages&lt;/code&gt; - pages to route to. Read the &lt;a href=&quot;https://nextjs.org/docs&quot;&gt;Next.js documentation&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;next.config.js&lt;/code&gt; - configuration related to Next.js. You need to adapt the Content Security Policy if you want to load scripts, images etc. from other domains.&lt;/p&gt;
+&lt;h2&gt;Post&lt;/h2&gt;
+&lt;h3&gt;Frontmatter&lt;/h3&gt;
+&lt;p&gt;Frontmatter follows &lt;a href=&quot;https://gohugo.io/content-management/front-matter/&quot;&gt;Hugo&amp;#39;s standards&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Currently 10 fields are supported.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;title (required)
+date (required)
+tags (required, can be empty array)
+lastmod (optional)
+draft (optional)
+summary (optional)
+images (optional, if none provided defaults to socialBanner in siteMetadata config)
+authors (optional list which should correspond to the file names in `data/authors`. Uses `default` if none is specified)
+layout (optional list which should correspond to the file names in `data/layouts`)
+canonicalUrl (optional, canonical url for the post for SEO)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here&amp;#39;s an example of a post&amp;#39;s frontmatter:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: &amp;#39;Introducing Tailwind Nexjs Starter Blog&amp;#39;
+date: &amp;#39;2021-01-12&amp;#39;
+lastmod: &amp;#39;2021-01-18&amp;#39;
+tags: [&amp;#39;next-js&amp;#39;, &amp;#39;tailwind&amp;#39;, &amp;#39;guide&amp;#39;]
+draft: false
+summary: &amp;#39;Looking for a performant, out of the box template, with all the best in web technology to support your blogging needs? Checkout the Tailwind Nextjs Starter Blog template.&amp;#39;
+images: [&amp;#39;/static/images/canada/mountains.jpg&amp;#39;, &amp;#39;/static/images/canada/toronto.jpg&amp;#39;]
+authors: [&amp;#39;default&amp;#39;, &amp;#39;sparrowhawk&amp;#39;]
+layout: PostLayout
+canonicalUrl: https://tailwind-nextjs-starter-blog.vercel.app/blog/introducing-tailwind-nextjs-starter-blog
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Compose&lt;/h3&gt;
+&lt;p&gt;Run &lt;code&gt;node ./scripts/compose.js&lt;/code&gt; to bootstrap a new post.&lt;/p&gt;
+&lt;p&gt;Follow the interactive prompt to generate a post with pre-filled front matter.&lt;/p&gt;
+&lt;h2&gt;Deploy&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Vercel&lt;/strong&gt;&lt;br&gt;The easiest way to deploy the template is to use the &lt;a href=&quot;https://vercel.com&quot;&gt;Vercel Platform&lt;/a&gt; from the creators of Next.js. Check out the &lt;a href=&quot;https://nextjs.org/docs/deployment&quot;&gt;Next.js deployment documentation&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Netlify / GitHub Pages / Firebase etc.&lt;/strong&gt;&lt;br&gt;As the template uses &lt;code&gt;next/image&lt;/code&gt; for image optimization, additional configurations have to be made to deploy on other popular static hosting websites like &lt;a href=&quot;https://www.netlify.com/&quot;&gt;Netlify&lt;/a&gt; or &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;. An alternative image optimization provider such as Imgix, Cloudinary or Akamai has to be used. Alternatively, replace the &lt;code&gt;next/image&lt;/code&gt; component with a standard &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tag. See &lt;a href=&quot;https://nextjs.org/docs/basic-features/image-optimization&quot;&gt;&lt;code&gt;next/image&lt;/code&gt; documentation&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;The API routes used in the newsletter component cannot be used in a static site export. You will need to use a form API endpoint provider and substitute the route in the newsletter component accordingly. Other hosting platforms such as Netlify also offer alternative solutions - please refer to their docs for more information.&lt;/p&gt;
+&lt;h2&gt;Support&lt;/h2&gt;
+&lt;p&gt;Using the template? Support this effort by giving a star on GitHub, sharing your own blog and giving a shoutout on Twitter or be a project &lt;a href=&quot;https://github.com/sponsors/timlrx&quot;&gt;sponsor&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Licence&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/main/LICENSE&quot;&gt;MIT&lt;/a&gt; © &lt;a href=&quot;https://www.timrlx.com&quot;&gt;Timothy Lin&lt;/a&gt;&lt;/p&gt;
+</description>
+    <pubDate>Tue, 12 Jan 2021 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>next-js</category><category>tailwind</category><category>guide</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/deriving-ols-estimator</guid>
+    <title>Deriving the OLS Estimator</title>
+    <link>https://wxmvv.github.io/blog/deriving-ols-estimator</link>
+    <description>&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Parsing and display of math equations is included in this blog template. Parsing of math is enabled by &lt;code&gt;remark-math&lt;/code&gt; and &lt;code&gt;rehype-katex&lt;/code&gt;.
+KaTeX and its associated font is included in &lt;code&gt;_document.js&lt;/code&gt; so feel free to use it on any page.
+[^footnote]&lt;/p&gt;
+&lt;p&gt;[^footnote]: For the full list of supported TeX functions, check out the &lt;a href=&quot;https://katex.org/docs/supported.html&quot;&gt;KaTeX documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Inline math symbols can be included by enclosing the term between the &lt;code&gt;$&lt;/code&gt; symbol.&lt;/p&gt;
+&lt;p&gt;Math code blocks are denoted by &lt;code&gt;$$&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you intend to use the &lt;code&gt;$&lt;/code&gt; sign instead of math, you can escape it (&lt;code&gt;\$&lt;/code&gt;), or specify the HTML entity (&lt;code&gt;&amp;amp;dollar;&lt;/code&gt;) [^2]&lt;/p&gt;
+&lt;p&gt;Inline or manually enumerated footnotes are also supported. Click on the links above to see them in action.&lt;/p&gt;
+&lt;p&gt;[^2]: $10 and &amp;dollar;20.&lt;/p&gt;
+&lt;h1&gt;Deriving the OLS Estimator&lt;/h1&gt;
+&lt;p&gt;Using matrix notation, let $n$ denote the number of observations and $k$ denote the number of regressors.&lt;/p&gt;
+&lt;p&gt;The vector of outcome variables $\mathbf{Y}$ is a $n \times 1$ matrix,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-tex&quot;&gt;\mathbf{Y} = \left[\begin{array}
+  {c}
+  y_1 \\
+  . \\
+  . \\
+  . \\
+  y_n
+\end{array}\right]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;$$
+\mathbf{Y} = \left[\begin{array}
+  {c}
+  y_1 \
+  . \
+  . \
+  . \
+  y_n
+\end{array}\right]
+$$&lt;/p&gt;
+&lt;p&gt;The matrix of regressors $\mathbf{X}$ is a $n \times k$ matrix (or each row is a $k \times 1$ vector),&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-latex&quot;&gt;\mathbf{X} = \left[\begin{array}
+  {ccccc}
+  x_{11} &amp;amp; . &amp;amp; . &amp;amp; . &amp;amp; x_{1k} \\
+  . &amp;amp; . &amp;amp; . &amp;amp; . &amp;amp; .  \\
+  . &amp;amp; . &amp;amp; . &amp;amp; . &amp;amp; .  \\
+  . &amp;amp; . &amp;amp; . &amp;amp; . &amp;amp; .  \\
+  x_{n1} &amp;amp; . &amp;amp; . &amp;amp; . &amp;amp; x_{nn}
+\end{array}\right] =
+\left[\begin{array}
+  {c}
+  \mathbf{x}&amp;#39;_1 \\
+  . \\
+  . \\
+  . \\
+  \mathbf{x}&amp;#39;_n
+\end{array}\right]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;$$
+\mathbf{X} = \left[\begin{array}
+  {ccccc}
+  x_{11} &amp;amp; . &amp;amp; . &amp;amp; . &amp;amp; x_{1k} \
+  . &amp;amp; . &amp;amp; . &amp;amp; . &amp;amp; .  \
+  . &amp;amp; . &amp;amp; . &amp;amp; . &amp;amp; .  \
+  . &amp;amp; . &amp;amp; . &amp;amp; . &amp;amp; .  \
+  x_{n1} &amp;amp; . &amp;amp; . &amp;amp; . &amp;amp; x_{nn}
+\end{array}\right] =
+\left[\begin{array}
+  {c}
+  \mathbf{x}&amp;#39;_1 \
+  . \
+  . \
+  . \
+  \mathbf{x}&amp;#39;_n
+\end{array}\right]
+$$&lt;/p&gt;
+&lt;p&gt;The vector of error terms $\mathbf{U}$ is also a $n \times 1$ matrix.&lt;/p&gt;
+&lt;p&gt;At times it might be easier to use vector notation. For consistency, I will use the bold small x to denote a vector and capital letters to denote a matrix. Single observations are denoted by the subscript.&lt;/p&gt;
+&lt;h2&gt;Least Squares&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Start&lt;/strong&gt;:&lt;br&gt;$$y_i = \mathbf{x}&amp;#39;_i \beta + u_i$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Assumptions&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Linearity (given above)&lt;/li&gt;
+&lt;li&gt;$E(\mathbf{U}|\mathbf{X}) = 0$ (conditional independence)&lt;/li&gt;
+&lt;li&gt;rank($\mathbf{X}$) = $k$ (no multi-collinearity i.e. full rank)&lt;/li&gt;
+&lt;li&gt;$Var(\mathbf{U}|\mathbf{X}) = \sigma^2 I_n$ (Homoskedascity)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Aim&lt;/strong&gt;:&lt;br&gt;Find $\beta$ that minimises the sum of squared errors:&lt;/p&gt;
+&lt;p&gt;$$
+Q = \sum_{i=1}^{n}{u_i^2} = \sum_{i=1}^{n}{(y_i - \mathbf{x}&amp;#39;_i\beta)^2} = (Y-X\beta)&amp;#39;(Y-X\beta)
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;:&lt;br&gt;Hints: $Q$ is a $1 \times 1$ scalar, by symmetry $\frac{\partial b&amp;#39;Ab}{\partial b} = 2Ab$.&lt;/p&gt;
+&lt;p&gt;Take matrix derivative w.r.t $\beta$:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-tex&quot;&gt;\begin{aligned}
+  \min Q           &amp;amp; = \min_{\beta} \mathbf{Y}&amp;#39;\mathbf{Y} - 2\beta&amp;#39;\mathbf{X}&amp;#39;\mathbf{Y} +
+  \beta&amp;#39;\mathbf{X}&amp;#39;\mathbf{X}\beta \\
+                   &amp;amp; = \min_{\beta} - 2\beta&amp;#39;\mathbf{X}&amp;#39;\mathbf{Y} + \beta&amp;#39;\mathbf{X}&amp;#39;\mathbf{X}\beta \\
+  \text{[FOC]}~~~0 &amp;amp; =  - 2\mathbf{X}&amp;#39;\mathbf{Y} + 2\mathbf{X}&amp;#39;\mathbf{X}\hat{\beta}                  \\
+  \hat{\beta}      &amp;amp; = (\mathbf{X}&amp;#39;\mathbf{X})^{-1}\mathbf{X}&amp;#39;\mathbf{Y}                              \\
+                   &amp;amp; = (\sum^{n} \mathbf{x}_i \mathbf{x}&amp;#39;_i)^{-1} \sum^{n} \mathbf{x}_i y_i
+\end{aligned}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;$$
+\begin{aligned}
+  \min Q           &amp;amp; = \min_{\beta} \mathbf{Y}&amp;#39;\mathbf{Y} - 2\beta&amp;#39;\mathbf{X}&amp;#39;\mathbf{Y} +
+  \beta&amp;#39;\mathbf{X}&amp;#39;\mathbf{X}\beta \
+                   &amp;amp; = \min_{\beta} - 2\beta&amp;#39;\mathbf{X}&amp;#39;\mathbf{Y} + \beta&amp;#39;\mathbf{X}&amp;#39;\mathbf{X}\beta \
+  \text{[FOC]}~~~0 &amp;amp; =  - 2\mathbf{X}&amp;#39;\mathbf{Y} + 2\mathbf{X}&amp;#39;\mathbf{X}\hat{\beta}                  \
+  \hat{\beta}      &amp;amp; = (\mathbf{X}&amp;#39;\mathbf{X})^{-1}\mathbf{X}&amp;#39;\mathbf{Y}                              \
+                   &amp;amp; = (\sum^{n} \mathbf{x}_i \mathbf{x}&amp;#39;_i)^{-1} \sum^{n} \mathbf{x}_i y_i
+\end{aligned}
+$$&lt;/p&gt;
+</description>
+    <pubDate>Mon, 21 Dec 2020 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>next js</category><category>math</category><category>ols</category>
+  </item>
+
+  <item>
     <guid>https://wxmvv.github.io/blog/js/Pjax实现无刷新加载页面</guid>
     <title>Pjax实现无刷新加载页面</title>
     <link>https://wxmvv.github.io/blog/js/Pjax实现无刷新加载页面</link>
@@ -1317,6 +2172,64 @@ $(&amp;quot;script[data-pjax], .pjax-reload script&amp;quot;).each(function () {
   </item>
 
   <item>
+    <guid>https://wxmvv.github.io/blog/guide-to-using-images-in-nextjs</guid>
+    <title>Images in Next.js</title>
+    <link>https://wxmvv.github.io/blog/guide-to-using-images-in-nextjs</link>
+    <description>&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;The tailwind starter blog has out of the box support for &lt;a href=&quot;https://nextjs.org/docs/api-reference/next/image&quot;&gt;Next.js&amp;#39;s built-in image component&lt;/a&gt; and automatically swaps out default image tags in markdown or mdx documents to use the Image component provided.&lt;/p&gt;
+&lt;h1&gt;Usage&lt;/h1&gt;
+&lt;p&gt;To use in a new page route / javascript file, simply import the image component and call it e.g.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;import Image from &amp;#39;next/image&amp;#39;
+
+function Home() {
+  return (
+    &amp;lt;&amp;gt;
+      &amp;lt;h1&amp;gt;My Homepage&amp;lt;/h1&amp;gt;
+      &amp;lt;Image src=&amp;quot;/me.png&amp;quot; alt=&amp;quot;Picture of the author&amp;quot; width={500} height={500} /&amp;gt;
+      &amp;lt;p&amp;gt;Welcome to my homepage!&amp;lt;/p&amp;gt;
+    &amp;lt;/&amp;gt;
+  )
+}
+
+export default Home
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For a markdown file, the default image tag can be used and the default &lt;code&gt;img&lt;/code&gt; tag gets replaced by the &lt;code&gt;Image&lt;/code&gt; component in the build process.&lt;/p&gt;
+&lt;p&gt;Assuming we have a file called &lt;code&gt;ocean.jpg&lt;/code&gt; in &lt;code&gt;static/images/ocean.jpg&lt;/code&gt;, the following line of code would generate the optimized image.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![ocean](/static/images/ocean.jpg)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Alternatively, since we are using mdx, we can just use the image component directly! Note, that you would have to provide a fixed width and height. The &lt;code&gt;img&lt;/code&gt; tag method parses the dimension automatically.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&amp;lt;Image alt=&amp;quot;ocean&amp;quot; src=&amp;quot;/static/images/ocean.jpg&amp;quot; width={256} height={128} /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: If you try to save the image, it is in webp format, if your browser supports it!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/images/ocean.jpeg&quot; alt=&quot;ocean&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Photo by &lt;a href=&quot;https://unsplash.com/@yucar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;YUCAR FotoGrafik&lt;/a&gt;
+on &lt;a href=&quot;https://unsplash.com/s/photos/sea?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Benefits&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Smaller image size with Webp (~30% smaller than jpeg)&lt;/li&gt;
+&lt;li&gt;Responsive images - the correct image size is served based on the user&amp;#39;s viewport&lt;/li&gt;
+&lt;li&gt;Lazy loading - images load as they are scrolled to the viewport&lt;/li&gt;
+&lt;li&gt;Avoids &lt;a href=&quot;https://web.dev/cls/&quot;&gt;Cumulative Layout Shift&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optimization on demand instead of build-time - no increase in build time!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Limitations&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Due to the reliance on &lt;code&gt;next/image&lt;/code&gt;, unless you are using an external image CDN like Cloudinary or Imgix, it is practically required to use Vercel for hosting. This is because the component acts like a serverless function that calls a highly optimized image CDN.&lt;/p&gt;
+&lt;p&gt;If you do not want to be tied to Vercel, you can remove &lt;code&gt;imgToJsx&lt;/code&gt; in &lt;code&gt;remarkPlugins&lt;/code&gt; in &lt;code&gt;lib/mdx.js&lt;/code&gt;. This would avoid substituting the default &lt;code&gt;img&lt;/code&gt; tag.&lt;/p&gt;
+&lt;p&gt;Alternatively, one could wait for image optimization at build time to be supported. A different library, &lt;a href=&quot;https://github.com/cyrilwanner/next-optimized-images&quot;&gt;next-optimized-images&lt;/a&gt; does that, although it requires transforming the images through webpack which is not done here.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Images from external links are not passed through &lt;code&gt;next/image&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;All images have to be stored in the &lt;code&gt;public&lt;/code&gt; folder e.g &lt;code&gt;/static/images/ocean.jpeg&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    <pubDate>Wed, 11 Nov 2020 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>next js</category><category>guide</category>
+  </item>
+
+  <item>
     <guid>https://wxmvv.github.io/blog/markdown/hexo部署</guid>
     <title>hexo部署静态博客</title>
     <link>https://wxmvv.github.io/blog/markdown/hexo部署</link>
@@ -1355,6 +2268,445 @@ hexo deploy 或 hexo d  上传&lt;/p&gt;
     <pubDate>Tue, 03 Nov 2020 18:47:39 GMT</pubDate>
     <author>w05172075@outlook.com (wxm)</author>
     <category>markdown</category><category>hexo</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/github-markdown-guide</guid>
+    <title>Markdown Guide</title>
+    <link>https://wxmvv.github.io/blog/github-markdown-guide</link>
+    <description>&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Markdown and Mdx parsing is supported via &lt;code&gt;unified&lt;/code&gt;, and other remark and rehype packages. &lt;code&gt;next-mdx-remote&lt;/code&gt; allows us to parse &lt;code&gt;.mdx&lt;/code&gt; and &lt;code&gt;.md&lt;/code&gt; files in a more flexible manner without touching webpack.&lt;/p&gt;
+&lt;p&gt;GitHub flavored markdown is used. &lt;code&gt;mdx-prism&lt;/code&gt; provides syntax highlighting capabilities for code blocks. Here&amp;#39;s a demo of how everything looks.&lt;/p&gt;
+&lt;p&gt;The following markdown cheatsheet is adapted from: &lt;a href=&quot;https://guides.github.com/features/mastering-markdown/&quot;&gt;https://guides.github.com/features/mastering-markdown/&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;What is Markdown?&lt;/h1&gt;
+&lt;p&gt;Markdown is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like &lt;code&gt;#&lt;/code&gt; or &lt;code&gt;*&lt;/code&gt;.&lt;/p&gt;
+&lt;h1&gt;Syntax guide&lt;/h1&gt;
+&lt;p&gt;Here’s an overview of Markdown syntax that you can use anywhere on GitHub.com or in your own text files.&lt;/p&gt;
+&lt;h2&gt;Headers&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;# This is a h1 tag
+
+## This is a h2 tag
+
+#### This is a h4 tag
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1&gt;This is a h1 tag&lt;/h1&gt;
+&lt;h2&gt;This is a h2 tag&lt;/h2&gt;
+&lt;h4&gt;This is a h4 tag&lt;/h4&gt;
+&lt;h2&gt;Emphasis&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;_This text will be italic_
+
+**This text will be bold**
+
+_You **can** combine them_
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;This text will be italic&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This text will be bold&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;You &lt;strong&gt;can&lt;/strong&gt; combine them&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Lists&lt;/h2&gt;
+&lt;h3&gt;Unordered&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;- Item 1
+- Item 2
+  - Item 2a
+  - Item 2b
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Item 1&lt;/li&gt;
+&lt;li&gt;Item 2&lt;ul&gt;
+&lt;li&gt;Item 2a&lt;/li&gt;
+&lt;li&gt;Item 2b&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Ordered&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;1. Item 1
+1. Item 2
+1. Item 3
+   1. Item 3a
+   1. Item 3b
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Item 1&lt;/li&gt;
+&lt;li&gt;Item 2&lt;/li&gt;
+&lt;li&gt;Item 3&lt;ol&gt;
+&lt;li&gt;Item 3a&lt;/li&gt;
+&lt;li&gt;Item 3b&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Images&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+Format: ![Alt Text](url)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&quot; alt=&quot;GitHub Logo&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;Links&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;http://github.com - automatic!
+[GitHub](http://github.com)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;http://github.com&quot;&gt;http://github.com&lt;/a&gt; - automatic!
+&lt;a href=&quot;http://github.com&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Blockquotes&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;As Kanye West said:
+
+&amp;gt; We&amp;#39;re living the future so
+&amp;gt; the present is our past.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As Kanye West said:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We&amp;#39;re living the future so
+the present is our past.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Inline code&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;I think you should use an
+`&amp;lt;addr&amp;gt;` element here instead.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I think you should use an
+&lt;code&gt;&amp;lt;addr&amp;gt;&lt;/code&gt; element here instead.&lt;/p&gt;
+&lt;h2&gt;Syntax highlighting&lt;/h2&gt;
+&lt;p&gt;Here’s an example of how you can use syntax highlighting with &lt;a href=&quot;https://help.github.com/articles/basic-writing-and-formatting-syntax/&quot;&gt;GitHub Flavored Markdown&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```js:fancyAlert.js
+function fancyAlert(arg) {
+  if (arg) {
+    $.facebox({ div: &amp;#39;#foo&amp;#39; })
+  }
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And here&amp;#39;s how it looks - nicely colored with styled code titles!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js:fancyAlert.js&quot;&gt;function fancyAlert(arg) {
+  if (arg) {
+    $.facebox({ div: &amp;#39;#foo&amp;#39; })
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Footnotes&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;Here is a simple footnote[^1]. With some additional text after it.
+
+[^1]: My reference.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here is a simple footnote[^1]. With some additional text after it.&lt;/p&gt;
+&lt;p&gt;[^1]: My reference.&lt;/p&gt;
+&lt;h2&gt;Task Lists&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; list syntax required (any unordered or ordered list supported)&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; this is a complete item&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; this is an incomplete item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;p&gt;You can create tables by assembling a list of words and dividing them with hyphens &lt;code&gt;-&lt;/code&gt; (for the first row), and then separating each column with a pipe &lt;code&gt;|&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;| First Header                | Second Header                |
+| --------------------------- | ---------------------------- |
+| Content from cell 1         | Content from cell 2          |
+| Content in the first column | Content in the second column |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;First Header&lt;/th&gt;
+&lt;th&gt;Second Header&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;Content from cell 1&lt;/td&gt;
+&lt;td&gt;Content from cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Content in the first column&lt;/td&gt;
+&lt;td&gt;Content in the second column&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h2&gt;Strikethrough&lt;/h2&gt;
+&lt;p&gt;Any word wrapped with two tildes (like &lt;code&gt;~~this~~&lt;/code&gt;) will appear &lt;del&gt;crossed out&lt;/del&gt;.&lt;/p&gt;
+</description>
+    <pubDate>Fri, 11 Oct 2019 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>github</category><category>guide</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/the-time-machine</guid>
+    <title>The Time Machine</title>
+    <link>https://wxmvv.github.io/blog/the-time-machine</link>
+    <description>&lt;h1&gt;The Time Machine by H. G. Wells&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Title&lt;/em&gt;: The Time Machine&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Author&lt;/em&gt;: H. G. Wells&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Subject&lt;/em&gt;: Science Fiction&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Language&lt;/em&gt;: English&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Source&lt;/em&gt;: &lt;a href=&quot;https://www.gutenberg.org/ebooks/35&quot;&gt;Project Gutenberg&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The Time Traveller (for so it will be convenient to speak of him) was
+expounding a recondite matter to us. His pale grey eyes shone and
+twinkled, and his usually pale face was flushed and animated. The fire
+burnt brightly, and the soft radiance of the incandescent lights in the
+lilies of silver caught the bubbles that flashed and passed in our
+glasses. Our chairs, being his patents, embraced and caressed us rather
+than submitted to be sat upon, and there was that luxurious
+after-dinner atmosphere, when thought runs gracefully free of the
+trammels of precision. And he put it to us in this way—marking the
+points with a lean forefinger—as we sat and lazily admired his
+earnestness over this new paradox (as we thought it) and his fecundity.&lt;/p&gt;
+&lt;p&gt;“You must follow me carefully. I shall have to controvert one or two
+ideas that are almost universally accepted. The geometry, for instance,
+they taught you at school is founded on a misconception.”&lt;/p&gt;
+&lt;p&gt;“Is not that rather a large thing to expect us to begin upon?” said
+Filby, an argumentative person with red hair.&lt;/p&gt;
+&lt;p&gt;“I do not mean to ask you to accept anything without reasonable ground
+for it. You will soon admit as much as I need from you. You know of
+course that a mathematical line, a line of thickness &lt;em&gt;nil&lt;/em&gt;, has no real
+existence. They taught you that? Neither has a mathematical plane.
+These things are mere abstractions.”&lt;/p&gt;
+&lt;p&gt;“That is all right,” said the Psychologist.&lt;/p&gt;
+&lt;p&gt;“Nor, having only length, breadth, and thickness, can a cube have a
+real existence.”&lt;/p&gt;
+&lt;p&gt;“There I object,” said Filby. “Of course a solid body may exist. All
+real things—”&lt;/p&gt;
+&lt;p&gt;“So most people think. But wait a moment. Can an &lt;em&gt;instantaneous&lt;/em&gt; cube
+exist?”&lt;/p&gt;
+&lt;p&gt;“Don’t follow you,” said Filby.&lt;/p&gt;
+&lt;p&gt;“Can a cube that does not last for any time at all, have a real
+existence?”&lt;/p&gt;
+&lt;p&gt;Filby became pensive. “Clearly,” the Time Traveller proceeded, “any
+real body must have extension in &lt;em&gt;four&lt;/em&gt; directions: it must have
+Length, Breadth, Thickness, and—Duration. But through a natural
+infirmity of the flesh, which I will explain to you in a moment, we
+incline to overlook this fact. There are really four dimensions, three
+which we call the three planes of Space, and a fourth, Time. There is,
+however, a tendency to draw an unreal distinction between the former
+three dimensions and the latter, because it happens that our
+consciousness moves intermittently in one direction along the latter
+from the beginning to the end of our lives.”&lt;/p&gt;
+&lt;p&gt;“That,” said a very young man, making spasmodic efforts to relight his
+cigar over the lamp; “that . . . very clear indeed.”&lt;/p&gt;
+&lt;p&gt;“Now, it is very remarkable that this is so extensively overlooked,”
+continued the Time Traveller, with a slight accession of cheerfulness.
+“Really this is what is meant by the Fourth Dimension, though some
+people who talk about the Fourth Dimension do not know they mean it. It
+is only another way of looking at Time. &lt;em&gt;There is no difference between
+Time and any of the three dimensions of Space except that our
+consciousness moves along it&lt;/em&gt;. But some foolish people have got hold of
+the wrong side of that idea. You have all heard what they have to say
+about this Fourth Dimension?”&lt;/p&gt;
+&lt;p&gt;“&lt;em&gt;I&lt;/em&gt; have not,” said the Provincial Mayor.&lt;/p&gt;
+&lt;p&gt;“It is simply this. That Space, as our mathematicians have it, is
+spoken of as having three dimensions, which one may call Length,
+Breadth, and Thickness, and is always definable by reference to three
+planes, each at right angles to the others. But some philosophical
+people have been asking why &lt;em&gt;three&lt;/em&gt; dimensions particularly—why not
+another direction at right angles to the other three?—and have even
+tried to construct a Four-Dimensional geometry. Professor Simon Newcomb
+was expounding this to the New York Mathematical Society only a month
+or so ago. You know how on a flat surface, which has only two
+dimensions, we can represent a figure of a three-dimensional solid, and
+similarly they think that by models of three dimensions they could
+represent one of four—if they could master the perspective of the
+thing. See?”&lt;/p&gt;
+&lt;p&gt;“I think so,” murmured the Provincial Mayor; and, knitting his brows,
+he lapsed into an introspective state, his lips moving as one who
+repeats mystic words. “Yes, I think I see it now,” he said after some
+time, brightening in a quite transitory manner.&lt;/p&gt;
+&lt;p&gt;“Well, I do not mind telling you I have been at work upon this geometry
+of Four Dimensions for some time. Some of my results are curious. For
+instance, here is a portrait of a man at eight years old, another at
+fifteen, another at seventeen, another at twenty-three, and so on. All
+these are evidently sections, as it were, Three-Dimensional
+representations of his Four-Dimensioned being, which is a fixed and
+unalterable thing.&lt;/p&gt;
+&lt;p&gt;“Scientific people,” proceeded the Time Traveller, after the pause
+required for the proper assimilation of this, “know very well that Time
+is only a kind of Space. Here is a popular scientific diagram, a
+weather record. This line I trace with my finger shows the movement of
+the barometer. Yesterday it was so high, yesterday night it fell, then
+this morning it rose again, and so gently upward to here. Surely the
+mercury did not trace this line in any of the dimensions of Space
+generally recognised? But certainly it traced such a line, and that
+line, therefore, we must conclude, was along the Time-Dimension.”&lt;/p&gt;
+&lt;p&gt;“But,” said the Medical Man, staring hard at a coal in the fire, “if
+Time is really only a fourth dimension of Space, why is it, and why has
+it always been, regarded as something different? And why cannot we move
+in Time as we move about in the other dimensions of Space?”&lt;/p&gt;
+&lt;p&gt;The Time Traveller smiled. “Are you so sure we can move freely in
+Space? Right and left we can go, backward and forward freely enough,
+and men always have done so. I admit we move freely in two dimensions.
+But how about up and down? Gravitation limits us there.”&lt;/p&gt;
+&lt;p&gt;“Not exactly,” said the Medical Man. “There are balloons.”&lt;/p&gt;
+&lt;p&gt;“But before the balloons, save for spasmodic jumping and the
+inequalities of the surface, man had no freedom of vertical movement.”&lt;/p&gt;
+&lt;p&gt;“Still they could move a little up and down,” said the Medical Man.&lt;/p&gt;
+&lt;p&gt;“Easier, far easier down than up.”&lt;/p&gt;
+&lt;p&gt;“And you cannot move at all in Time, you cannot get away from the
+present moment.”&lt;/p&gt;
+&lt;p&gt;“My dear sir, that is just where you are wrong. That is just where the
+whole world has gone wrong. We are always getting away from the present
+moment. Our mental existences, which are immaterial and have no
+dimensions, are passing along the Time-Dimension with a uniform
+velocity from the cradle to the grave. Just as we should travel &lt;em&gt;down&lt;/em&gt;
+if we began our existence fifty miles above the earth’s surface.”&lt;/p&gt;
+&lt;p&gt;“But the great difficulty is this,” interrupted the Psychologist. ’You
+&lt;em&gt;can&lt;/em&gt; move about in all directions of Space, but you cannot move about
+in Time.”&lt;/p&gt;
+&lt;p&gt;“That is the germ of my great discovery. But you are wrong to say that
+we cannot move about in Time. For instance, if I am recalling an
+incident very vividly I go back to the instant of its occurrence: I
+become absent-minded, as you say. I jump back for a moment. Of course
+we have no means of staying back for any length of Time, any more than
+a savage or an animal has of staying six feet above the ground. But a
+civilised man is better off than the savage in this respect. He can go
+up against gravitation in a balloon, and why should he not hope that
+ultimately he may be able to stop or accelerate his drift along the
+Time-Dimension, or even turn about and travel the other way?”&lt;/p&gt;
+&lt;p&gt;“Oh, &lt;em&gt;this&lt;/em&gt;,” began Filby, “is all—”&lt;/p&gt;
+&lt;p&gt;“Why not?” said the Time Traveller.&lt;/p&gt;
+&lt;p&gt;“It’s against reason,” said Filby.&lt;/p&gt;
+&lt;p&gt;“What reason?” said the Time Traveller.&lt;/p&gt;
+&lt;p&gt;“You can show black is white by argument,” said Filby, “but you will
+never convince me.”&lt;/p&gt;
+&lt;p&gt;“Possibly not,” said the Time Traveller. “But now you begin to see the
+object of my investigations into the geometry of Four Dimensions. Long
+ago I had a vague inkling of a machine—”&lt;/p&gt;
+&lt;p&gt;“To travel through Time!” exclaimed the Very Young Man.&lt;/p&gt;
+&lt;p&gt;“That shall travel indifferently in any direction of Space and Time, as
+the driver determines.”&lt;/p&gt;
+&lt;p&gt;Filby contented himself with laughter.&lt;/p&gt;
+&lt;p&gt;“But I have experimental verification,” said the Time Traveller.&lt;/p&gt;
+&lt;p&gt;“It would be remarkably convenient for the historian,” the Psychologist
+suggested. “One might travel back and verify the accepted account of
+the Battle of Hastings, for instance!”&lt;/p&gt;
+&lt;p&gt;“Don’t you think you would attract attention?” said the Medical Man.
+“Our ancestors had no great tolerance for anachronisms.”&lt;/p&gt;
+&lt;p&gt;“One might get one’s Greek from the very lips of Homer and Plato,” the
+Very Young Man thought.&lt;/p&gt;
+&lt;p&gt;“In which case they would certainly plough you for the Little-go. The
+German scholars have improved Greek so much.”&lt;/p&gt;
+&lt;p&gt;“Then there is the future,” said the Very Young Man. “Just think! One
+might invest all one’s money, leave it to accumulate at interest, and
+hurry on ahead!”&lt;/p&gt;
+&lt;p&gt;“To discover a society,” said I, “erected on a strictly communistic
+basis.”&lt;/p&gt;
+&lt;p&gt;“Of all the wild extravagant theories!” began the Psychologist.&lt;/p&gt;
+&lt;p&gt;“Yes, so it seemed to me, and so I never talked of it until—”&lt;/p&gt;
+&lt;p&gt;“Experimental verification!” cried I. “You are going to verify &lt;em&gt;that&lt;/em&gt;?”&lt;/p&gt;
+&lt;p&gt;“The experiment!” cried Filby, who was getting brain-weary.&lt;/p&gt;
+&lt;p&gt;“Let’s see your experiment anyhow,” said the Psychologist, “though it’s
+all humbug, you know.”&lt;/p&gt;
+&lt;p&gt;The Time Traveller smiled round at us. Then, still smiling faintly, and
+with his hands deep in his trousers pockets, he walked slowly out of
+the room, and we heard his slippers shuffling down the long passage to
+his laboratory.&lt;/p&gt;
+&lt;p&gt;The Psychologist looked at us. “I wonder what he’s got?”&lt;/p&gt;
+&lt;p&gt;“Some sleight-of-hand trick or other,” said the Medical Man, and Filby
+tried to tell us about a conjuror he had seen at Burslem, but before he
+had finished his preface the Time Traveller came back, and Filby’s
+anecdote collapsed.&lt;/p&gt;
+</description>
+    <pubDate>Wed, 15 Aug 2018 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>writings</category><category>book</category><category>reflection</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/pictures-of-canada</guid>
+    <title>O Canada</title>
+    <link>https://wxmvv.github.io/blog/pictures-of-canada</link>
+    <description>&lt;p&gt;The scenic lands of Canada featuring maple leaves, snow-capped mountains, turquoise lakes and Toronto. Take in the sights in this photo gallery exhibition and see how easy it is to replicate with some MDX magic and tailwind classes.&lt;/p&gt;
+&lt;p&gt;Features images served using &lt;code&gt;next/image&lt;/code&gt; component. The locally stored images are located in a folder with the following path: &lt;code&gt;/static/images/canada/[filename].jpg&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Since we are using mdx, we can create a simple responsive flexbox grid to display our images with a few tailwind css classes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Gallery&lt;/h1&gt;
+&lt;div className=&quot;-mx-2 flex flex-wrap overflow-hidden xl:-mx-2&quot;&gt;
+  &lt;div className=&quot;my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2&quot;&gt;
+    ![Maple](/static/images/canada/maple.jpg)
+  &lt;/div&gt;
+  &lt;div className=&quot;my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2&quot;&gt;
+    ![Lake](/static/images/canada/lake.jpg)
+  &lt;/div&gt;
+  &lt;div className=&quot;my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2&quot;&gt;
+    ![Mountains](/static/images/canada/mountains.jpg)
+  &lt;/div&gt;
+  &lt;div className=&quot;my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2&quot;&gt;
+    ![Toronto](/static/images/canada/toronto.jpg)
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h1&gt;Implementation&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&amp;lt;div className=&amp;quot;-mx-2 flex flex-wrap overflow-hidden xl:-mx-2&amp;quot;&amp;gt;
+  &amp;lt;div className=&amp;quot;my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2&amp;quot;&amp;gt;
+    ![Maple](/static/images/canada/maple.jpg)
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div className=&amp;quot;my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2&amp;quot;&amp;gt;
+    ![Lake](/static/images/canada/lake.jpg)
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div className=&amp;quot;my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2&amp;quot;&amp;gt;
+    ![Mountains](/static/images/canada/mountains.jpg)
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div className=&amp;quot;my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2&amp;quot;&amp;gt;
+    ![Toronto](/static/images/canada/toronto.jpg)
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With MDX v2, one can interleave markdown in jsx as shown in the example code.&lt;/p&gt;
+&lt;h3&gt;Photo Credits&lt;/h3&gt;
+&lt;div&gt;
+  Maple photo by [Guillaume
+  Jaillet](https://unsplash.com/@i_am_g?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText)
+  on
+  [Unsplash](https://unsplash.com/s/photos/canada?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText)
+&lt;/div&gt;
+&lt;div&gt;
+  Mountains photo by [John
+  Lee](https://unsplash.com/@john_artifexfilms?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText)
+  on
+  [Unsplash](https://unsplash.com/s/photos/canada?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText)
+&lt;/div&gt;
+&lt;div&gt;
+  Lake photo by [Tj
+  Holowaychuk](https://unsplash.com/@tjholowaychuk?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText)
+  on
+  [Unsplash](https://unsplash.com/s/photos/canada?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText)
+&lt;/div&gt;
+&lt;div&gt;
+  Toronto photo by [Matthew
+  Henry](https://unsplash.com/@matthewhenry?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText)
+  on
+  [Unsplash](https://unsplash.com/s/photos/canada?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText)
+&lt;/div&gt;
+</description>
+    <pubDate>Sat, 15 Jul 2017 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>holiday</category><category>canada</category><category>images</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/code-sample</guid>
+    <title>Sample .md file</title>
+    <link>https://wxmvv.github.io/blog/code-sample</link>
+    <description>&lt;p&gt;A sample post with markdown.&lt;/p&gt;
+&lt;h2&gt;Inline Highlighting&lt;/h2&gt;
+&lt;p&gt;Sample of inline highlighting &lt;code&gt;sum = parseInt(num1) + parseInt(num2)&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Code Blocks&lt;/h2&gt;
+&lt;p&gt;Some Javascript code&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;var num1, num2, sum
+num1 = prompt(&amp;#39;Enter first number&amp;#39;)
+num2 = prompt(&amp;#39;Enter second number&amp;#39;)
+sum = parseInt(num1) + parseInt(num2) // &amp;quot;+&amp;quot; means &amp;quot;add&amp;quot;
+alert(&amp;#39;Sum = &amp;#39; + sum) // &amp;quot;+&amp;quot; means combine into a string
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Some Python code 🐍&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def fib():
+    a, b = 0, 1
+    while True:            # First iteration:
+        yield a            # yield 0 to start with and then
+        a, b = b, a + b    # a will now be 1, and b will also be 1, (0 + 1)
+
+for index, fibonacci_number in zip(range(10), fib()):
+     print(&amp;#39;{i:3}: {f:3}&amp;#39;.format(i=index, f=fibonacci_number))
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    <pubDate>Tue, 08 Mar 2016 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>markdown</category><category>code</category><category>features</category>
   </item>
 
     </channel>
