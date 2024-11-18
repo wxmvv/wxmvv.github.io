@@ -87,7 +87,11 @@ import { containerVariants, itemVariants } from &amp;#39;@/components/MyMotion&a
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;最终效果&lt;/h2&gt;
-&lt;p&gt;/static/video/blog新的动画.mp4&lt;/p&gt;
+&lt;div className=&quot;flex flex-row justify-center bg-zinc-100 rounded-sm &quot;&gt;
+  &lt;video autoPlay loop preload=&quot;auto&quot; playsInline className=&quot;my-0 rounded&quot;&gt;
+    &lt;source src=&quot;/static/video/blog新的动画.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
 </description>
     <pubDate>Sat, 16 Nov 2024 00:00:00 GMT</pubDate>
     <author>w05172075@outlook.com (wxm)</author>
