@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://wxmvv.github.io/</loc>
-<lastmod>2024-11-19</lastmod>
+<lastmod>2025-01-29</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog</loc>
-<lastmod>2024-11-19</lastmod>
+<lastmod>2025-01-29</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/projects</loc>
-<lastmod>2024-11-19</lastmod>
+<lastmod>2025-01-29</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/tags</loc>
-<lastmod>2024-11-19</lastmod>
+<lastmod>2025-01-29</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/blog新的动画，你发现没有？</loc>
@@ -69,8 +69,16 @@
 <lastmod>2023-11-16T00:00:00.000Z</lastmod>
 </url>
 <url>
+<loc>https://wxmvv.github.io/blog/macos/parallels_desktop20</loc>
+<lastmod>2024-11-21T00:00:00.000Z</lastmod>
+</url>
+<url>
 <loc>https://wxmvv.github.io/blog/macos/surge个人使用配置</loc>
 <lastmod>2023-09-03T11:13:00.000Z</lastmod>
+</url>
+<url>
+<loc>https://wxmvv.github.io/blog/macos/开始使用Markdown之前你也许需要看一下排版规范</loc>
+<lastmod>2024-06-15T00:00:00.000Z</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/markdown/github profile美化</loc>

@@ -7,12 +7,28 @@
       <language>zh-cn</language>
       <managingEditor>w05172075@outlook.com (wxm)</managingEditor>
       <webMaster>w05172075@outlook.com (wxm)</webMaster>
-      <lastBuildDate>Sat, 16 Nov 2024 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 21 Nov 2024 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://wxmvv.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
+    <guid>https://wxmvv.github.io/blog/macos/parallels_desktop20</guid>
+    <title>Parallels Desktop 20.1.1 55740</title>
+    <link>https://wxmvv.github.io/blog/macos/parallels_desktop20</link>
+    <description>&lt;p&gt;不得不说PD真的很流氓，之前买过两年，大版本一更新，旧的版本会出现各种问题，而且所谓的更新才能用新系统大部分时候也只是加了个版本号检测，纯纯逼你花钱买新版。 &lt;/p&gt;
+&lt;h2&gt;pd 本体&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://download.parallels.com/desktop/v20/20.1.1-55740/ParallelsDesktop-20.1.1-55740.dmg&quot;&gt;Parallels Desktop 20.1.1 55740&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;crack 补丁&lt;/h2&gt;
+&lt;p&gt;注意：需要先关闭 SIP &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://1drv.ms/u/s!AujtcnlMx9Vsg-4eYTiqBwDZsR3XjQ?e=EXanJD&quot;&gt;Parallels Desktop Activation Tool SIPOFF 6.3.0 MacKed&lt;/a&gt;&lt;/p&gt;
+</description>
+    <pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>macos</category><category>app</category>
+  </item>
+
+  <item>
     <guid>https://wxmvv.github.io/blog/blog新的动画，你发现没有？</guid>
-    <title>20241116 blog新的动画，你发现没有？</title>
+    <title>20241116 blog 新的动画，你发现没有？</title>
     <link>https://wxmvv.github.io/blog/blog新的动画，你发现没有？</link>
     <description>&lt;p&gt;页面出现的线性的动画，之前在刚开始重构 blog 时就想实现，不过因为当时比较忙，就暂时搁置了，最近有空，就还是使用 motion 库来实现一下。&lt;/p&gt;
 &lt;h2&gt;需要实现的效果&lt;/h2&gt;
@@ -100,7 +116,7 @@ import { containerVariants, itemVariants } from &amp;#39;@/components/MyMotion&a
 
   <item>
     <guid>https://wxmvv.github.io/blog/macos/AppleScript实现鼠标连点</guid>
-    <title>20241013 AppleScript实现鼠标连点</title>
+    <title>20241013 AppleScript 实现鼠标连点</title>
     <link>https://wxmvv.github.io/blog/macos/AppleScript实现鼠标连点</link>
     <description>&lt;h1&gt;AppleScript 中实现鼠标与键盘自动连点&lt;/h1&gt;
 &lt;p&gt;因为最近在玩一个老游戏，开了作弊但是还需要手动点击才能升级，于是使用 applescript 来实现一下自动点击。&lt;/p&gt;
@@ -240,7 +256,7 @@ end repeat
 
   <item>
     <guid>https://wxmvv.github.io/blog/capacitor/使用Capacitor来构建你的app吧！</guid>
-    <title>使用Capacitor来构建你的app吧！</title>
+    <title>使用 Capacitor 来构建你的 app 吧！</title>
     <link>https://wxmvv.github.io/blog/capacitor/使用Capacitor来构建你的app吧！</link>
     <description>&lt;h1&gt;尝试使用 Capacitor 来丰富你的 app 吧！&lt;/h1&gt;
 &lt;p&gt;capacitor&lt;a href=&quot;https://capacitorjs.com/&quot;&gt;^doc&lt;/a&gt; 作为一个跨平台 ios 和安卓的框架，本身和 flutter、RN 并不是同一赛道，capacitor 在官网也清晰的写着，基于两个平台 webview 来展示你的 html 静态网站，我们可以先用各种框架如 vue、react 来写一个静态网站，然后使用 capacitor 来把它变成 app，或者仅仅把它当成一个 app 的扩展工具，用 js 库来实现一些原生不太好实现的功能。相比直接用 capacitor 来构建 app，把它作为一个 js 扩展应该是一个更好的选择。&lt;/p&gt;
@@ -298,7 +314,7 @@ npx cap sync
 
   <item>
     <guid>https://wxmvv.github.io/blog/capacitor/解决安装cocoapods失败的问题</guid>
-    <title>解决安装cocoapods失败的问题</title>
+    <title>解决安装 cocoapods 失败的问题</title>
     <link>https://wxmvv.github.io/blog/capacitor/解决安装cocoapods失败的问题</link>
     <description>&lt;p&gt;最近在尝试使用 capacitor 制作 ios app，涉及到使用 cocoapods 来安装插件，但是 macos 安装会出现各种问题，经过查看各种方法，最后还是使用 brew 成功的。&lt;/p&gt;
 &lt;p&gt;其实主要问题在于 macos 自带的 ruby 版本比较低，&lt;/p&gt;
@@ -308,10 +324,10 @@ npx cap sync
 &lt;h3&gt;首先使用 brew 安装 ruby&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;# 安装ruby
 brew install ruby
-# 配置PATH
-echo &amp;#39;export PATH=&amp;quot;/usr/local/opt/ruby/bin:$PATH&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
-echo &amp;#39;export LDFLAGS=&amp;quot;-L/usr/local/opt/ruby/lib&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
-echo &amp;#39;export CPPFLAGS=&amp;quot;-I/usr/local/opt/ruby/include&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
+# 配置PATH 这里请仔细看brew的log信息，地址可能会不同
+echo &amp;#39;export PATH=&amp;quot;/opt/homebrew/opt/ruby/bin:$PATH&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
+echo &amp;#39;export LDFLAGS=&amp;quot;-L/opt/homebrew/opt/ruby/lib&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
+echo &amp;#39;export CPPFLAGS=&amp;quot;-I/opt/homebrew/opt/ruby/include&amp;quot;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
 # 重新加载配置
 source ~/.zshrc
 # 再次查看ruby版本 这时候应该变成3.x了
@@ -338,7 +354,7 @@ pod env
 
   <item>
     <guid>https://wxmvv.github.io/blog/Note/ukulele/SmileInTheMorning</guid>
-    <title>名渡山辽-Smile in the morning指弹谱</title>
+    <title>名渡山辽 - Smile in the morning 指弹谱</title>
     <link>https://wxmvv.github.io/blog/Note/ukulele/SmileInTheMorning</link>
     <description>&lt;p&gt;虽然很久没弹琴，也没制作谱子了，赶上这次名渡山来天津的机会，再次拿起来练一下。&lt;/p&gt;
 &lt;p&gt;就挑了一首他的新曲来练一下。刚好骑鹅尤克里里的伊老师也在扒这首曲子，我们就一起合作完成谱子的整理，放在这里。&lt;/p&gt;
@@ -352,9 +368,10 @@ pod env
 
   <item>
     <guid>https://wxmvv.github.io/blog/js/Nextjs重构主页</guid>
-    <title>2024年使用Nextjs重构主页</title>
+    <title>2024 年使用 Nextjs 重构主页</title>
     <link>https://wxmvv.github.io/blog/js/Nextjs重构主页</link>
     <description>&lt;p&gt;最近在使用 Nextjs 完成工作，用的很舒服，遂决定用来重新开发下之前 hexo 弄的主页。&lt;/p&gt;
+&lt;p&gt;项目在这里 &lt;a href=&quot;https://github.com/wxmvv/minimal-tailwind-nextjs-blog&quot;&gt;minimal-tailwind-nextjs-blog&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;技术选择&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://tailwindcss.com/&quot;&gt;tailwindcss&lt;/a&gt;&lt;/li&gt;
@@ -463,7 +480,7 @@ env: {
 
   <item>
     <guid>https://wxmvv.github.io/blog/markdown/mdx常用元素</guid>
-    <title>mdx常用元素</title>
+    <title>mdx 常用元素</title>
     <link>https://wxmvv.github.io/blog/markdown/mdx常用元素</link>
     <description>&lt;p&gt;这里是这个模版的一些常用 mdx 元素,写在这里方便复制使用。&lt;/p&gt;
 &lt;h2&gt;目录&lt;/h2&gt;
@@ -627,8 +644,21 @@ env: {
   </item>
 
   <item>
+    <guid>https://wxmvv.github.io/blog/macos/开始使用Markdown之前你也许需要看一下排版规范</guid>
+    <title>开始使用 Markdown 之前你也许需要看一下排版规范</title>
+    <link>https://wxmvv.github.io/blog/macos/开始使用Markdown之前你也许需要看一下排版规范</link>
+    <description>&lt;p&gt;最近我在写文档，但是对比自己写的文档和 github 上其他大佬写的文档，总觉得差了很多意思，也许是时候学习下如何去写文档了，于是找到了 github 的文档规范 &lt;a href=&quot;https://github.github.com/gfm/&quot;&gt;GitHub Flavored Markdown Spec&lt;/a&gt; 。&lt;/p&gt;
+&lt;p&gt;花了一些时间看过之后，觉得确实很有学习的必要，本来挑选了一些更容易碰到用到的规范，想翻一下写出来供大家参考，但是发现网上已经有人整理好了，其中也有一些关于中文的排版建议，我个人觉得很有帮助，所以也一并分享出来，「物联网学前班」这篇文章 &lt;a href=&quot;https://zhuanlan.zhihu.com/p/144446995&quot;&gt;基于 Markdown 的中文文档排版规范&lt;/a&gt; 。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/images/work.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</description>
+    <pubDate>Sat, 15 Jun 2024 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>markdown</category>
+  </item>
+
+  <item>
     <guid>https://wxmvv.github.io/blog/Note/学习Figma过程随写</guid>
-    <title>学习Figma过程随写</title>
+    <title>学习 Figma 过程随写</title>
     <link>https://wxmvv.github.io/blog/Note/学习Figma过程随写</link>
     <description>&lt;p&gt;最近在使用 Figma 制作原型设计，软件很强大没得说，但是学习起来还是需要一些时间，不过乐趣很多。&lt;/p&gt;
 &lt;p&gt;回想从编程小白一路走来，学习编程的过程中，我也走过很多弯路，到现在也快三年了，从一开始的无从下手，到现在即使遇到自己没接触过的技术，也能按部就班学习使用，也更能了解了“相比编程技术本身，编程思维才是最重要的”。&lt;/p&gt;
@@ -651,7 +681,7 @@ env: {
 
   <item>
     <guid>https://wxmvv.github.io/blog/swiftUI/SwiftUI获取屏幕宽高</guid>
-    <title>SwiftUI获取屏幕宽高</title>
+    <title>SwiftUI 获取屏幕宽高</title>
     <link>https://wxmvv.github.io/blog/swiftUI/SwiftUI获取屏幕宽高</link>
     <description>&lt;p&gt;在 ios 中如果需要做一些页面，如抽屉侧边栏，就需要获得屏幕宽度，那么如何获取呢？&lt;/p&gt;
 &lt;p&gt;以下是两种方式：&lt;/p&gt;
@@ -685,7 +715,7 @@ struct ContentView: View {
 
   <item>
     <guid>https://wxmvv.github.io/blog/macos/Macos隐藏与显示文件</guid>
-    <title>Macos隐藏文件&amp;显示隐藏文件</title>
+    <title>Macos 隐藏文件&amp;显示隐藏文件</title>
     <link>https://wxmvv.github.io/blog/macos/Macos隐藏与显示文件</link>
     <description>&lt;h2&gt;macos 命令使用 chflags&lt;/h2&gt;
 &lt;p&gt;最近在使用 obsidian 的时候，出现了文件会变成隐藏，目前原因不明，最后使用 chflags nohidden 命令将它们取消隐藏。&lt;/p&gt;
@@ -704,7 +734,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 
   <item>
     <guid>https://wxmvv.github.io/blog/macos/Arc浏览器使用体会</guid>
-    <title>Arc浏览器使用体会</title>
+    <title>Arc 浏览器使用体会</title>
     <link>https://wxmvv.github.io/blog/macos/Arc浏览器使用体会</link>
     <description>&lt;h2&gt;总结&lt;/h2&gt;
 &lt;p&gt;把总结放在前面：
@@ -781,10 +811,9 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 
   <item>
     <guid>https://wxmvv.github.io/blog/markdown/github profile美化</guid>
-    <title>github profile美化</title>
+    <title>GitHub Profile 美化</title>
     <link>https://wxmvv.github.io/blog/markdown/github profile美化</link>
-    <description>&lt;h2&gt;github profile 美化&lt;/h2&gt;
-&lt;p&gt;好像是去年更新的功能，今天整理 github 文件顺便尝试一下。&lt;/p&gt;
+    <description>&lt;p&gt;好像是去年更新的功能，今天整理 github 文件顺便尝试一下。&lt;/p&gt;
 &lt;p&gt;原理就是新建一个和你的 github 账号名一样的仓库，然后这个仓库中的 read me 就会显示在 profile 页面。&lt;/p&gt;
 &lt;p&gt;这是一个 md 文件，可以使用 markdown，也可以使用 html+css 来制作样式。&lt;/p&gt;
 &lt;p&gt;也有一些相关美化的项目可以用来搭配使用&lt;/p&gt;
@@ -801,7 +830,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 
   <item>
     <guid>https://wxmvv.github.io/blog/Note/音乐分享-second-wind</guid>
-    <title>音乐分享second-wind</title>
+    <title>音乐分享 second wind</title>
     <link>https://wxmvv.github.io/blog/Note/音乐分享-second-wind</link>
     <description>&lt;iframe src=&quot;https://open.spotify.com/embed/album/3yx7NLldcqxw39HoKLPaRG?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;352&quot; frameBorder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
 
@@ -814,9 +843,9 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 
   <item>
     <guid>https://wxmvv.github.io/blog/macos/surge个人使用配置</guid>
-    <title>surge个人使用配置</title>
+    <title>Surge 个人使用配置</title>
     <link>https://wxmvv.github.io/blog/macos/surge个人使用配置</link>
-    <description>&lt;h2&gt;为什么是 surge&lt;/h2&gt;
+    <description>&lt;h2&gt;为什么是 Surge&lt;/h2&gt;
 &lt;p&gt;之前一直在用 shadowrocket，很简单，最近因为在淘宝花几块钱买了个 ios 软件用，结果发现店铺居然是用网球 app，或者圈 x 解锁，于是想研究一下。&lt;/p&gt;
 &lt;p&gt;包括圈 x，loon，surge，我都用了一圈，确实是 surge 更加顺手一些。其实代理功能大家都大差不差，surge 最突出的实际上是抓数据，使用界面干净明白，简单看一下文档就上手了。还有一个重要的原因，是因为网上都说 surge 会更稳定，更省电(我持保留意见)，于是折腾一番弄出了自己的配置表，欢迎使用参考。&lt;/p&gt;
 &lt;p&gt;模块的话，其实我并没开很多，只有一个必开&lt;a href=&quot;https://raw.githubusercontent.com/ExaAlice/Alice/main/Module/MitMAllHostnames.sgmodule&quot;&gt;MIITAllHost&lt;/a&gt;,这个打开后可以方便抓包，其他的可以在网上自行搜索，或者在各种电报群获取。&lt;/p&gt;
@@ -862,7 +891,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 
   <item>
     <guid>https://wxmvv.github.io/blog/markdown/把obsidian变成IA writer(哈哈)</guid>
-    <title>把obsidian变成IA writer</title>
+    <title>把 Obsidian 变成 IA writer</title>
     <link>https://wxmvv.github.io/blog/markdown/把obsidian变成IA writer(哈哈)</link>
     <description>&lt;h2&gt;随便说&lt;/h2&gt;
 &lt;p&gt;用了 obsidian 好久了，真的是符合我心中电子笔记最完美样子的软件，唯一的问题就是界面太乱，所以利用闲暇时间好好整理了一下！&lt;/p&gt;
@@ -990,7 +1019,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 
   <item>
     <guid>https://wxmvv.github.io/blog/js/svelte以及tailwindcss使用尝试</guid>
-    <title>tailwindCSS以及svelte使用尝试</title>
+    <title>tailwindCSS 以及 svelte 使用尝试</title>
     <link>https://wxmvv.github.io/blog/js/svelte以及tailwindcss使用尝试</link>
     <description>&lt;h2&gt;参考文档&lt;/h2&gt;
 &lt;p&gt;先看文档，tailwindCSS 真的我花了一小会时间适应了一下就可以算是入门了吧，真的太方便了，但是 svelte 则需要认真读一下文档，要不连文件怎么建都不知道... 和 vue 使用有很多相似地方，不同的地方更多，尤其是使用方法似乎变简单了，不过我也没有特别深入的使用，不好做评价。&lt;/p&gt;
@@ -1017,7 +1046,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 
   <item>
     <guid>https://wxmvv.github.io/blog/js/解决nvm启动速度慢的问题</guid>
-    <title>解决nvm启动速度慢的问题</title>
+    <title>解决 nvm 启动速度慢的问题</title>
     <link>https://wxmvv.github.io/blog/js/解决nvm启动速度慢的问题</link>
     <description>&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;export NVM_DIR=&amp;quot;$HOME/.nvm&amp;quot;
 export PATH=$HOME/.nvm/versions/node/v18.14.0/bin/:$PATH
@@ -1072,7 +1101,7 @@ nvm() { . &amp;quot;$NVM_DIR/nvm.sh&amp;quot; ; nvm $@ ; }
 
   <item>
     <guid>https://wxmvv.github.io/blog/js/Pjax实现无刷新加载页面</guid>
-    <title>Pjax实现无刷新加载页面</title>
+    <title>Pjax 实现无刷新加载页面</title>
     <link>https://wxmvv.github.io/blog/js/Pjax实现无刷新加载页面</link>
     <description>&lt;p&gt;给朋友制作网站的时候，收到一个需求，就是要无刷新完成页面切换，最好还要有过渡动画。&lt;/p&gt;
 &lt;p&gt;因为是原生 js 做的网页，便想到使用 jquery 的 ajax 解决问题。
@@ -1149,7 +1178,7 @@ $(&amp;quot;script[data-pjax], .pjax-reload script&amp;quot;).each(function () {
 
   <item>
     <guid>https://wxmvv.github.io/blog/markdown/使用hexo部署静态博客</guid>
-    <title>使用hexo部署静态博客</title>
+    <title>使用 Hexo 部署静态博客</title>
     <link>https://wxmvv.github.io/blog/markdown/使用hexo部署静态博客</link>
     <description>&lt;h2&gt;前言&lt;/h2&gt;
 &lt;p&gt;最近购买下载了 IA writer，确实是一个十分干净的 md 编辑器，能激发自己写字的欲望。于是考虑重新开始博客部署。翻出了以前的 hexo 博客（大概 18 年部署的一直没更新，并且原来的设置文件都丢失了），整理一下重新部署。&lt;/p&gt;
@@ -1189,7 +1218,7 @@ hexo deploy 或 hexo d 上传&lt;/p&gt;
 
   <item>
     <guid>https://wxmvv.github.io/blog/markdown/markdown语法参考</guid>
-    <title>markdown语法参考</title>
+    <title>Markdown 语法参考</title>
     <link>https://wxmvv.github.io/blog/markdown/markdown语法参考</link>
     <description>&lt;h2&gt;Markdown 基础语法&lt;/h2&gt;
 &lt;h3&gt;标题&lt;/h3&gt;
