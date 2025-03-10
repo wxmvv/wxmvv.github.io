@@ -7,51 +7,9 @@
       <language>zh-cn</language>
       <managingEditor>w05172075@outlook.com (wxm)</managingEditor>
       <webMaster>w05172075@outlook.com (wxm)</webMaster>
-      <lastBuildDate>Fri, 31 Jan 2025 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 21 Nov 2024 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://wxmvv.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
-  <item>
-    <guid>https://wxmvv.github.io/blog/2025/safari插件Aria2Helper开发</guid>
-    <title>20250131 Safari插件Aria2Helper开发踩坑集</title>
-    <link>https://wxmvv.github.io/blog/2025/safari插件Aria2Helper开发</link>
-    <description>&lt;h2&gt;链接&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://apps.apple.com/us/app/aria2helper/id6742623503#?platform=mac&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wxmvv/Aira2Helper-for-Safari/refs/heads/main/Aira2Helper%20Extension/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg&quot; alt=&quot;Download on the Mac App Store&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;为何而做&lt;/h2&gt;
-&lt;p&gt;花了大概 1 周多时间，断断续续终于把这个 Aria2Helper 插件完成了。&lt;/p&gt;
-&lt;p&gt;项目地址: &lt;a href=&quot;https://github.com/wxmvv/Aira2Helper-for-Safari&quot;&gt;Aria2Helper for Safari&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在 mac 上使用 Safari 如果需要下载文件，会自动使用浏览器本身的下载器下载，速度慢而且无法断点续传。在 chrome 有很多好用的插件可以通过设置 rpc 来想配合 Motrix 下载文件，在我搜索了 app store 之后也没有看到相关功能的插件。于是决定自己开发一个。&lt;/p&gt;
-&lt;h2&gt;遇到的一些问题与解决&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;safari 不支持 notification&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;在&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/notifications&quot;&gt;mdn notification 文档&lt;/a&gt;最下面可以看到 safari 并不支持，但是我确实有在其他 safari 中看到调用 notifications 的案例。其实他们是使用的 app 端口的 notifications API，需要将信息从 web 项目发送到 app 端，然后通过 app 展示。&lt;/p&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;safari 不支持 browser.download API&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;本来想用 browser.download 这个来实现获取默认下载然后发送 aria2 的，但是&lt;a href=&quot;https://developer.apple.com/forums/thread/660046&quot;&gt;safari 不支持 browser.download API&lt;/a&gt;，于是考虑其他方案，经过尝试，选择了拦截用户点击请求的方式，拦截后获取点击链接中的文件链接，然后发送到 aria2。&lt;/p&gt;
-&lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;web 插件开发中 popup 页面的背景问题&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;我在插件中的 popup 页面，的很多地方使用了透明背景，如果是第一次运行，它会像 chrome 插件一样显示白色或黑色的背景(根据电脑是否黑暗模式)，但是当你的 safari 运行一段时间后，它的背景色会消失，变成苹果的磨砂玻璃背景，虽然很好看，但是完全随机发生,目前没有好的解决办法。&lt;/p&gt;
-&lt;ol start=&quot;4&quot;&gt;
-&lt;li&gt;动态获取并设置 body 宽度造成的问题&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;因为我是希望开发一个外观类似 safari 本身下载器外形的插件，所以想动态设置 body 宽度。
-具体实现是先将 body 的宽设置为 auto，在打开 popup 页面是根据下载项中的最宽一项设置 body 宽度，但这样会在打开的一瞬间 body 还没有设置 width，导致页面大小闪烁，无法接受，最后还是选择了使用固定宽度。&lt;/p&gt;
-&lt;ol start=&quot;5&quot;&gt;
-&lt;li&gt;app 开发模式中的调试问题&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;其中有一个 &lt;code&gt;os_log()&lt;/code&gt; 函数用于调试，但是输出不知道在哪，后来才发现是系统自带 console.app，在这里面搜索就能看到，记得打开流式传输。&lt;/p&gt;
-&lt;p&gt;还有，如果使用 &lt;code&gt;%@&lt;/code&gt; 来作为占位符，则在控制台中会显示 &amp;quot;pravite&amp;quot; 标签 ,如果像明文显示信息，可以使用 &lt;code&gt;%{public}s&lt;/code&gt; 来作为占位符。&lt;/p&gt;
-&lt;h2&gt;写在最后&lt;/h2&gt;
-&lt;p&gt;虽然比预计多花了不少时间，但是总算是完成了，后续会继续优化。&lt;/p&gt;
-&lt;p&gt;也想总结下 safari 插件开发的一些经验，方便以后开发。&lt;/p&gt;
-</description>
-    <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
-    <category>code</category><category>safari</category>
-  </item>
-
   <item>
     <guid>https://wxmvv.github.io/blog/macos/parallels_desktop20</guid>
     <title>Parallels Desktop 20.1.1 55740</title>
