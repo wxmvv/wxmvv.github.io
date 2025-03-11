@@ -16,7 +16,7 @@
     <link>https://wxmvv.github.io/blog/2025/safari插件Aria2Helper开发</link>
     <description>&lt;p&gt;花了大概 1 周多时间，断断续续终于把这个 Aria2Helper 插件完成了。如果使用有什么问题也可以邮寄联系我，或者在 github 上提 issue。&lt;/p&gt;
 &lt;p&gt;项目地址: &lt;a href=&quot;https://github.com/wxmvv/Aira2Helper-for-Safari&quot;&gt;Aria2Helper for Safari&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;App 文件: &lt;a href=&quot;/static/file/aria2Helper.dmg&quot;&gt;Aria2Helper for Safari.dmg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;App 文件: &lt;a href=&quot;https://wxmvv.github.io/static/file/aria2Helper.dmg&quot;&gt;Aria2Helper for Safari.dmg&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;商店链接&lt;/h2&gt;
 &lt;p&gt;也欢迎去 App Store 下载，支持一下我的开发。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://apps.apple.com/us/app/aria2helper/id6742623503#?platform=mac&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wxmvv/Aira2Helper-for-Safari/refs/heads/main/Aira2Helper%20Extension/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg&quot; alt=&quot;Download on the Mac App Store&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -409,7 +409,7 @@ pod env
     <link>https://wxmvv.github.io/blog/Note/SmileInTheMorning</link>
     <description>&lt;p&gt;虽然很久没弹琴，也没制作谱子了，赶上这次名渡山来天津的机会，再次拿起来练一下。&lt;/p&gt;
 &lt;p&gt;就挑了一首他的新曲来练一下。刚好骑鹅尤克里里的伊老师也在扒这首曲子，我们就一起合作完成谱子的整理，放在这里。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;/static/pdf/ukulele/smileinthemorning.pdf&quot;&gt;smileinthemorning.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://wxmvv.github.io/static/pdf/ukulele/smileinthemorning.pdf&quot;&gt;smileinthemorning.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;iframe src=&quot;//player.bilibili.com/player.html?isOutside=true&amp;aid=1355658592&amp;bvid=BV1Xz421b7FU&amp;cid=1574676110&amp;p=1&amp;autoplay=0&amp;muted=0&quot; className=&#39;w-full h-[366px]&#39; scrolling=&quot;no&quot; border=&quot;0&quot; frameBorder=&quot;no&quot; autoPlay=&quot;0&quot; muted=&quot;0&quot; framespacing=&quot;0&quot; allowFullScreen={true}&gt;&lt;/iframe&gt;
 </description>
     <pubDate>Tue, 16 Jul 2024 10:17:00 GMT</pubDate>
