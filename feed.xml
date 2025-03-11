@@ -878,7 +878,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 &lt;p&gt;包括圈 x，loon，surge，我都用了一圈，确实是 surge 更加顺手一些。其实代理功能大家都大差不差，surge 最突出的实际上是抓数据，使用界面干净明白，简单看一下文档就上手了。还有一个重要的原因，是因为网上都说 surge 会更稳定，更省电(我持保留意见)，于是折腾一番弄出了自己的配置表，欢迎使用参考。&lt;/p&gt;
 &lt;p&gt;模块的话，其实我并没开很多，只有一个必开&lt;a href=&quot;https://raw.githubusercontent.com/ExaAlice/Alice/main/Module/MitMAllHostnames.sgmodule&quot;&gt;MIITAllHost&lt;/a&gt;,这个打开后可以方便抓包，其他的可以在网上自行搜索，或者在各种电报群获取。&lt;/p&gt;
 &lt;h2&gt;个人配置&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;/static/file/surge.conf&quot;&gt;surge.conf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://wxmvv.github.io/static/file/surge.conf&quot;&gt;surge.conf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;导入后替换配置中的订阅地址即可使用&lt;/p&gt;
 &lt;h2&gt;参考&lt;/h2&gt;
 &lt;p&gt;surge 官方&lt;/p&gt;
