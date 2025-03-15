@@ -2,27 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://wxmvv.github.io/</loc>
-<lastmod>2025-03-11</lastmod>
+<lastmod>2025-03-15</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog</loc>
-<lastmod>2025-03-11</lastmod>
+<lastmod>2025-03-15</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/projects</loc>
-<lastmod>2025-03-11</lastmod>
+<lastmod>2025-03-15</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/tags</loc>
-<lastmod>2025-03-11</lastmod>
+<lastmod>2025-03-15</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/blog新的动画效果</loc>
 <lastmod>2024-11-16T00:00:00.000Z</lastmod>
-</url>
-<url>
-<loc>https://wxmvv.github.io/blog/2025/safari插件Aria2Helper开发</loc>
-<lastmod>2025-01-31T00:00:00.000Z</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/Note/SmileInTheMorning</loc>
@@ -31,6 +27,10 @@
 <url>
 <loc>https://wxmvv.github.io/blog/Note/音乐分享-second-wind</loc>
 <lastmod>2023-09-20T17:12:45.000Z</lastmod>
+</url>
+<url>
+<loc>https://wxmvv.github.io/blog/app/safari插件Aria2Helper开发</loc>
+<lastmod>2025-01-31T00:00:00.000Z</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/capacitor/使用Capacitor来构建你的app吧！</loc>
@@ -99,6 +99,10 @@
 <url>
 <loc>https://wxmvv.github.io/blog/markdown/把obsidian变成IA writer(哈哈)</loc>
 <lastmod>2023-08-21T14:34:00.000Z</lastmod>
+</url>
+<url>
+<loc>https://wxmvv.github.io/blog/repost/VPS下载测速文件100M1GB10GB</loc>
+<lastmod>2025-03-15T00:00:00.000Z</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/swiftUI/SwiftUI获取屏幕宽高</loc>
