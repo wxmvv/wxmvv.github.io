@@ -510,8 +510,7 @@ end repeat
     <guid>https://wxmvv.github.io/blog/code/capacitor/使用Capacitor来构建你的app吧！</guid>
     <title>20240811 使用 Capacitor 来构建你的 app 吧！</title>
     <link>https://wxmvv.github.io/blog/code/capacitor/使用Capacitor来构建你的app吧！</link>
-    <description>&lt;h1&gt;尝试使用 Capacitor 来丰富你的 app 吧！&lt;/h1&gt;
-&lt;p&gt;capacitor&lt;a href=&quot;https://capacitorjs.com/&quot;&gt;^doc&lt;/a&gt; 作为一个跨平台 ios 和安卓的框架，本身和 flutter、RN 并不是同一赛道，capacitor 在官网也清晰的写着，基于两个平台 webview 来展示你的 html 静态网站，我们可以先用各种框架如 vue、react 来写一个静态网站，然后使用 capacitor 来把它变成 app，或者仅仅把它当成一个 app 的扩展工具，用 js 库来实现一些原生不太好实现的功能。相比直接用 capacitor 来构建 app，把它作为一个 js 扩展应该是一个更好的选择。&lt;/p&gt;
+    <description>&lt;p&gt;capacitor&lt;a href=&quot;https://capacitorjs.com/&quot;&gt;^doc&lt;/a&gt; 作为一个跨平台 ios 和安卓的框架，本身和 flutter、RN 并不是同一赛道，capacitor 在官网也清晰的写着，基于两个平台 webview 来展示你的 html 静态网站，我们可以先用各种框架如 vue、react 来写一个静态网站，然后使用 capacitor 来把它变成 app，或者仅仅把它当成一个 app 的扩展工具，用 js 库来实现一些原生不太好实现的功能。相比直接用 capacitor 来构建 app，把它作为一个 js 扩展应该是一个更好的选择。&lt;/p&gt;
 &lt;h2&gt;简单尝试&lt;/h2&gt;
 &lt;h3&gt;随便新建一个项目&lt;/h3&gt;
 &lt;p&gt;我这里新建了一个 nextjs 项目。&lt;/p&gt;
