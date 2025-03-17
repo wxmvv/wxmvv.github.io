@@ -216,7 +216,7 @@ http://ash.download.datapacket.com/10000mb.bin
 &lt;p&gt;App 文件: &lt;a href=&quot;https://wxmvv.github.io/static/file/aria2Helper.dmg&quot;&gt;Aria2Helper for Safari.dmg&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;商店链接&lt;/h2&gt;
 &lt;p&gt;也欢迎去 App Store 下载，支持一下我的开发。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://apps.apple.com/us/app/aria2helper/id6742623503#?platform=mac&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wxmvv/Aira2Helper-for-Safari/refs/heads/main/Aira2Helper%20Extension/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg&quot; alt=&quot;Download on the Mac App Store&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://apps.apple.com/us/app/aria2helper/id6742623503#?platform=mac&quot;&gt;&lt;img src=&quot;https://wxmvv.github.io/static/images/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg&quot; alt=&quot;Download on the Mac App Store&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;为何而做&lt;/h2&gt;
 &lt;p&gt;Safari 本身的下载器无法断点续传，下载大文件到一半断网后重新下载需要重新下载，实在是让人崩溃。如果想使用其他下载方式则需要复制粘贴下载链接，如果需要下载的链接一多真的是鼠标点爆炸。在 chrome 有很多好用的插件可以通过设置 rpc 来想配合 Motrix 下载文件，而且都包含下载拦截功能，在我搜索了 app store 之后也没有看到相关功能的插件。于是决定自己开发一个。&lt;/p&gt;
 &lt;h2&gt;主要功能&lt;/h2&gt;
