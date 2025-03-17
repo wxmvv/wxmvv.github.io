@@ -12,7 +12,7 @@
       
   <item>
     <guid>https://wxmvv.github.io/blog/note/aria2Helper更新1.1</guid>
-    <title>20250315 aria2Helper更新1.1</title>
+    <title>Aria2Helper更新1.1 !</title>
     <link>https://wxmvv.github.io/blog/note/aria2Helper更新1.1</link>
     <description>&lt;p&gt;最近在使用过程中遇到一些小 bug，于是修复了一下更新了 1.1 版本，顺便添加了新功能：&lt;/p&gt;
 &lt;ul&gt;
@@ -209,7 +209,7 @@ http://ash.download.datapacket.com/10000mb.bin
 
   <item>
     <guid>https://wxmvv.github.io/blog/note/safari插件Aria2Helper开发</guid>
-    <title>20250131 Safari插件Aria2Helper开发踩坑集</title>
+    <title>Safari插件Aria2Helper开发踩坑集</title>
     <link>https://wxmvv.github.io/blog/note/safari插件Aria2Helper开发</link>
     <description>&lt;p&gt;花了大概 1 周多时间，断断续续终于把这个 Aria2Helper 插件完成了。如果使用有什么问题也可以邮寄联系我，或者在 github 上提 issue。&lt;/p&gt;
 &lt;p&gt;项目地址: &lt;a href=&quot;https://github.com/wxmvv/Aira2Helper-for-Safari&quot;&gt;Aria2Helper for Safari&lt;/a&gt;&lt;/p&gt;
@@ -280,7 +280,7 @@ http://ash.download.datapacket.com/10000mb.bin
 
   <item>
     <guid>https://wxmvv.github.io/blog/code/js/blog新的动画效果</guid>
-    <title>20241116 blog 新的动画效果</title>
+    <title>blog 新的动画效果</title>
     <link>https://wxmvv.github.io/blog/code/js/blog新的动画效果</link>
     <description>&lt;p&gt;页面出现的线性的动画，之前在刚开始重构 blog 时就想实现，不过因为当时比较忙，就暂时搁置了，最近有空，就还是使用 motion 库来实现一下。&lt;/p&gt;
 &lt;h2&gt;需要实现的效果&lt;/h2&gt;
@@ -368,7 +368,7 @@ import { containerVariants, itemVariants } from &amp;#39;@/components/MyMotion&a
 
   <item>
     <guid>https://wxmvv.github.io/blog/code/macos/AppleScript实现鼠标连点</guid>
-    <title>20241013 AppleScript 实现鼠标连点</title>
+    <title>AppleScript 实现鼠标连点</title>
     <link>https://wxmvv.github.io/blog/code/macos/AppleScript实现鼠标连点</link>
     <description>&lt;h1&gt;AppleScript 中实现鼠标与键盘自动连点&lt;/h1&gt;
 &lt;p&gt;因为最近在玩一个老游戏，开了作弊但是还需要手动点击才能升级，于是使用 applescript 来实现一下自动点击。&lt;/p&gt;
@@ -508,7 +508,7 @@ end repeat
 
   <item>
     <guid>https://wxmvv.github.io/blog/code/capacitor/使用Capacitor来构建你的app吧！</guid>
-    <title>20240811 使用 Capacitor 来构建你的 app 吧！</title>
+    <title>使用 Capacitor 来构建你的 app 吧！</title>
     <link>https://wxmvv.github.io/blog/code/capacitor/使用Capacitor来构建你的app吧！</link>
     <description>&lt;p&gt;capacitor&lt;a href=&quot;https://capacitorjs.com/&quot;&gt;^doc&lt;/a&gt; 作为一个跨平台 ios 和安卓的框架，本身和 flutter、RN 并不是同一赛道，capacitor 在官网也清晰的写着，基于两个平台 webview 来展示你的 html 静态网站，我们可以先用各种框架如 vue、react 来写一个静态网站，然后使用 capacitor 来把它变成 app，或者仅仅把它当成一个 app 的扩展工具，用 js 库来实现一些原生不太好实现的功能。相比直接用 capacitor 来构建 app，把它作为一个 js 扩展应该是一个更好的选择。&lt;/p&gt;
 &lt;h2&gt;简单尝试&lt;/h2&gt;
@@ -565,7 +565,7 @@ npx cap sync
 
   <item>
     <guid>https://wxmvv.github.io/blog/code/ios/解决安装cocoapods失败的问题</guid>
-    <title>20240811 解决安装 cocoapods 失败的问题</title>
+    <title>解决安装 cocoapods 失败的问题</title>
     <link>https://wxmvv.github.io/blog/code/ios/解决安装cocoapods失败的问题</link>
     <description>&lt;p&gt;最近在尝试使用 capacitor 制作 ios app，涉及到使用 cocoapods 来安装插件，但是 macos 安装会出现各种问题，经过查看各种方法，最后还是使用 brew 成功的。&lt;/p&gt;
 &lt;p&gt;其实主要问题在于 macos 自带的 ruby 版本比较低，&lt;/p&gt;
@@ -619,7 +619,7 @@ pod env
 
   <item>
     <guid>https://wxmvv.github.io/blog/code/js/Nextjs重构主页</guid>
-    <title>20240705 年使用 Nextjs 重构主页</title>
+    <title>2024 使用 Nextjs 重构主页</title>
     <link>https://wxmvv.github.io/blog/code/js/Nextjs重构主页</link>
     <description>&lt;p&gt;最近在使用 Nextjs 完成工作，用的很舒服，遂决定用来重新开发下之前 hexo 弄的主页。&lt;/p&gt;
 &lt;p&gt;项目在这里 &lt;a href=&quot;https://github.com/wxmvv/minimal-tailwind-nextjs-blog&quot;&gt;minimal-tailwind-nextjs-blog&lt;/a&gt;&lt;/p&gt;
@@ -909,7 +909,7 @@ env: {
 
   <item>
     <guid>https://wxmvv.github.io/blog/code/ios/SwiftUI获取屏幕宽高</guid>
-    <title>SwiftUI 获取屏幕宽高</title>
+    <title>获取屏幕宽高</title>
     <link>https://wxmvv.github.io/blog/code/ios/SwiftUI获取屏幕宽高</link>
     <description>&lt;p&gt;在 ios 中如果需要做一些页面，如抽屉侧边栏，就需要获得屏幕宽度，那么如何获取呢？&lt;/p&gt;
 &lt;p&gt;以下是两种方式：&lt;/p&gt;
@@ -958,83 +958,6 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
     <pubDate>Thu, 16 Nov 2023 00:00:00 GMT</pubDate>
     <author>w05172075@outlook.com (wxm)</author>
     <category>macos</category>
-  </item>
-
-  <item>
-    <guid>https://wxmvv.github.io/blog/code/macos/Arc浏览器使用体会</guid>
-    <title>Arc 浏览器使用体会</title>
-    <link>https://wxmvv.github.io/blog/code/macos/Arc浏览器使用体会</link>
-    <description>&lt;h2&gt;总结&lt;/h2&gt;
-&lt;p&gt;把总结放在前面：
-我的使用 arc 浏览器的感觉就是两个字：&lt;strong&gt;舒服！&lt;/strong&gt;（个人观点仅供参考）
-优点：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;外观花哨（有好有坏吧）&lt;/li&gt;
-&lt;li&gt;画架功能&lt;/li&gt;
-&lt;li&gt;快捷键可以实现更简单的分屏，新页面等等&lt;/li&gt;
-&lt;li&gt;调试方便&lt;/li&gt;
-&lt;li&gt;多用户切换方便
-缺点：&lt;/li&gt;
-&lt;li&gt;性能开销大（笔记本可能会影响续航，如果外出还是 safari）&lt;/li&gt;
-&lt;li&gt;有一些 bug（比如总是提示翻译网页）&lt;/li&gt;
-&lt;li&gt;没有书签功能（对应的 pin 功能，不过很难用）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;新奇的设计和花哨的外观，真的可以先体验一下，看看适不适合你。
-当然如果习惯不同也不要勉强，适合自己的才是对的。&lt;/p&gt;
-&lt;h2&gt;心路历程&lt;/h2&gt;
-&lt;p&gt;其实我很早就有关注到这个浏览器，也早早参与了测试（好像是 2021 年吧，有点模糊），不过当时第一次打开然后 CPU 飙升，风扇狂扇，本来清爽的 macbook 直接煎蛋，给我留下了不小的心理阴影，然后惊恐的删掉了。
-这次偶然间在 b 站看到有人推荐，看着让人舒适的界面，我最后还是下载了使用。之前的发热问题也没了（可能也和系统版本有关），可以使用了。&lt;/p&gt;
-&lt;h2&gt;常用快捷键&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;按键&lt;/th&gt;
-&lt;th&gt;功能&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;command+s&lt;/td&gt;
-&lt;td&gt;打开左侧 siderbar&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ctrl+⬆️+=&lt;/td&gt;
-&lt;td&gt;新建分屏&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ctrl+数字&lt;/td&gt;
-&lt;td&gt;切换空间&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;command+数字&lt;/td&gt;
-&lt;td&gt;切换空间中的页面&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;command+⬆️+L&lt;/td&gt;
-&lt;td&gt;打开资料库&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;command+⬆️+C&lt;/td&gt;
-&lt;td&gt;复制当前 url&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;command+W&lt;/td&gt;
-&lt;td&gt;关闭当前页面(设置里叫归档)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;command+F&lt;/td&gt;
-&lt;td&gt;搜索&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;command+L&lt;/td&gt;
-&lt;td&gt;打开 command 输入&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;h2&gt;画架&lt;/h2&gt;
-&lt;p&gt;我觉得 arc 最优秀的功能就是这个画架！如果你有用 arc 一定要尝试！！&lt;/p&gt;
-</description>
-    <pubDate>Sat, 04 Nov 2023 14:47:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
-    <category>app</category><category>chrome</category>
   </item>
 
   <item>
@@ -1247,7 +1170,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 
   <item>
     <guid>https://wxmvv.github.io/blog/code/svelte/svelte以及tailwindcss使用尝试</guid>
-    <title>20230521 tailwindCSS 以及 svelte 使用尝试</title>
+    <title>TailwindCSS 以及 Svelte 使用尝试</title>
     <link>https://wxmvv.github.io/blog/code/svelte/svelte以及tailwindcss使用尝试</link>
     <description>&lt;h2&gt;参考文档&lt;/h2&gt;
 &lt;p&gt;先看文档，tailwindCSS 真的我花了一小会时间适应了一下就可以算是入门了吧，真的太方便了，但是 svelte 则需要认真读一下文档，要不连文件怎么建都不知道... 和 vue 使用有很多相似地方，不同的地方更多，尤其是使用方法似乎变简单了，不过我也没有特别深入的使用，不好做评价。&lt;/p&gt;
@@ -1274,7 +1197,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 
   <item>
     <guid>https://wxmvv.github.io/blog/code/js/解决nvm启动速度慢的问题</guid>
-    <title>20220210 解决 nvm 启动速度慢的问题</title>
+    <title>解决 nvm 启动速度慢的问题</title>
     <link>https://wxmvv.github.io/blog/code/js/解决nvm启动速度慢的问题</link>
     <description>&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;export NVM_DIR=&amp;quot;$HOME/.nvm&amp;quot;
 export PATH=$HOME/.nvm/versions/node/v18.14.0/bin/:$PATH
@@ -1291,7 +1214,7 @@ nvm() { . &amp;quot;$NVM_DIR/nvm.sh&amp;quot; ; nvm $@ ; }
 
   <item>
     <guid>https://wxmvv.github.io/blog/code/js/Pjax实现无刷新加载页面</guid>
-    <title>20201205 Pjax 实现无刷新加载页面</title>
+    <title>Pjax 实现无刷新加载页面</title>
     <link>https://wxmvv.github.io/blog/code/js/Pjax实现无刷新加载页面</link>
     <description>&lt;p&gt;给朋友制作网站的时候，收到一个需求，就是要无刷新完成页面切换，最好还要有过渡动画。&lt;/p&gt;
 &lt;p&gt;因为是原生 js 做的网页，便想到使用 jquery 的 ajax 解决问题。
