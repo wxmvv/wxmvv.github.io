@@ -253,6 +253,11 @@ http://ash.download.datapacket.com/10000mb.bin
 &lt;li&gt;xcode 打包之后，再 run 有概率会让 safari 的 app 出现错误&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;解决办法就是 product -&amp;gt; clean build folder,如果还是有问题就打开 build 文件夹 Show Build Folder in Finder，然后将里面的文件夹都删了，在重启 safari 就好了。&lt;/p&gt;
+&lt;ol start=&quot;7&quot;&gt;
+&lt;li&gt;关于在 css 中使用系统色
+&lt;code&gt;background: -apple-system-control-accent;&lt;/code&gt;
+&lt;a href=&quot;https://stackoverflow.com/questions/62797493/how-can-i-use-the-macos-system-accent-color-in-css&quot;&gt;https://stackoverflow.com/questions/62797493/how-can-i-use-the-macos-system-accent-color-in-css&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2&gt;最后&lt;/h2&gt;
 &lt;p&gt;比预计多花了不少时间，但是总算是完成了，后续再慢慢优化吧。&lt;/p&gt;
 &lt;p&gt;也想总结下 safari 插件开发的一些经验，方便以后开发。&lt;/p&gt;
