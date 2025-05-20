@@ -41,165 +41,165 @@
 &lt;h2&gt;推荐：全球通用（Cloudflare Anycast）&lt;/h2&gt;
 &lt;p&gt;速度极快，推荐国外使用。&lt;/p&gt;
 &lt;h3&gt;100MB&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;https://speed.cloudflare.com/__down?during=download&amp;amp;bytes=104857600
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://speed.cloudflare.com/__down?during=download&amp;amp;bytes=104857600
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;1GB&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;https://speed.cloudflare.com/__down?during=download&amp;amp;bytes=1073741824
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://speed.cloudflare.com/__down?during=download&amp;amp;bytes=1073741824
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;10GB&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;https://speed.cloudflare.com/__down?during=download&amp;amp;bytes=10737418240
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://speed.cloudflare.com/__down?during=download&amp;amp;bytes=10737418240
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;中国大陆推荐&lt;/h2&gt;
 &lt;h3&gt;200MB（QQ）&lt;/h3&gt;
 &lt;p&gt;腾讯 CDN 加速。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://dldir1.qq.com/qqfile/qq/PCQQ9.7.17/QQ9.7.17.29225.exe
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://dldir1.qq.com/qqfile/qq/PCQQ9.7.17/QQ9.7.17.29225.exe
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;300MB（阿里 CDN)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;https://wirelesscdn-download.xuexi.cn/publish/xuexi_android/latest/xuexi_android_10002068.apk
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://wirelesscdn-download.xuexi.cn/publish/xuexi_android/latest/xuexi_android_10002068.apk
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;1000MB (教育网)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;http://speedtest.zju.edu.cn/1000M
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;http://speedtest.zju.edu.cn/1000M
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;1GB/10GB（电信）&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;http://vipspeedtest8.wuhan.net.cn:8080/download?size=1073741824
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;http://vipspeedtest8.wuhan.net.cn:8080/download?size=1073741824
 
 http://vipspeedtest8.wuhan.net.cn:8080/download?size=10737418240
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;2GB（推荐）&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;自适应 https://dlied4.myapp.com/myapp/1104466820/cos.release-40109/10040714_com.tencent.tmgp.sgame_a2480356_8.2.1.9_F0BvnI.apk
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;自适应 https://dlied4.myapp.com/myapp/1104466820/cos.release-40109/10040714_com.tencent.tmgp.sgame_a2480356_8.2.1.9_F0BvnI.apk
 联通 https://ml-dlied4.bytes.tcdnos.com/myapp/1104466820/cos.release-40109/10040714_com.tencent.tmgp.sgame_a2480356_8.2.1.9_F0BvnI.apk
 移动  https://875e1151af8aa9e3b793f51f6049996d.dlied1.cdntips.net/dlied4.myapp.com/myapp/1104466820/cos.release-40109/10040714_com.tencent.tmgp.sgame_a2480356_8.2.1.9_F0BvnI.apk
 电信 https://dlied4.csy.tcdnos.com/myapp/1104466820/cos.release-40109/10040714_com.tencent.tmgp.sgame_a2480356_8.2.1.9_F0BvnI.apk
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;3GB（Apple）&lt;/h3&gt;
 &lt;p&gt;国内似乎用的是金山 CDN，国际是 Akamai 和苹果自家 CDN。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;http://updates-http.cdn-apple.com/2019WinterFCS/fullrestores/041-39257/32129B6C-292C-11E9-9E72-4511412B0A59/iPhone_4.7_12.1.4_16D57_Restore.ipsw
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;http://updates-http.cdn-apple.com/2019WinterFCS/fullrestores/041-39257/32129B6C-292C-11E9-9E72-4511412B0A59/iPhone_4.7_12.1.4_16D57_Restore.ipsw
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;亚洲&lt;/h2&gt;
 &lt;h3&gt;中国香港&lt;/h3&gt;
 &lt;p&gt;100MB （Datapacket/CDN77）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;http://hkg.download.datapacket.com/100mb.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;http://hkg.download.datapacket.com/100mb.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;1000MB（Datapacket/CDN77）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;http://hkg.download.datapacket.com/1000mb.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;http://hkg.download.datapacket.com/1000mb.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;10000MB（Datapacket/CDN77）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;http://hkg.download.datapacket.com/10000mb.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;http://hkg.download.datapacket.com/10000mb.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;新加坡&lt;/h3&gt;
 &lt;p&gt;100/1000/10000MB （Datapacket/CDN77）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;http://sgp.download.datapacket.com/100mb.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;http://sgp.download.datapacket.com/100mb.bin
 http://sgp.download.datapacket.com/1000mb.bin
 http://sgp.download.datapacket.com/10000mb.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;100MB（OVH）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://sgp.proof.ovh.net/files/100Mb.dat
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://sgp.proof.ovh.net/files/100Mb.dat
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;100MB（Vultr）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://sgp-ping.vultr.com/vultr.com.100MB.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://sgp-ping.vultr.com/vultr.com.100MB.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;1GB（OVH）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://sgp.proof.ovh.net/files/1Gb.dat
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://sgp.proof.ovh.net/files/1Gb.dat
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;1GB（Vultr）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://sgp-ping.vultr.com/vultr.com.1000MB.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://sgp-ping.vultr.com/vultr.com.1000MB.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;10GB（OVH）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://sgp.proof.ovh.net/files/10Gb.dat
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://sgp.proof.ovh.net/files/10Gb.dat
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;日本东京&lt;/h3&gt;
 &lt;p&gt;100/1000/10000MB （Datapacket/CDN77）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;http://tyo.download.datapacket.com/100mb.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;http://tyo.download.datapacket.com/100mb.bin
 http://tyo.download.datapacket.com/1000mb.bin
 http://tyo.download.datapacket.com/10000mb.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;100MB/1GB（Vultr）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://hnd-jp-ping.vultr.com/vultr.com.100MB.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://hnd-jp-ping.vultr.com/vultr.com.100MB.bin
 https://hnd-jp-ping.vultr.com/vultr.com.1000MB.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;欧洲&lt;/h2&gt;
 &lt;h3&gt;德国&lt;/h3&gt;
 &lt;p&gt;推荐使用 Hetzner 的测速文件。&lt;br&gt;100MB（Nuremberg-Hetzner）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://nbg1-speed.hetzner.com/100MB.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://nbg1-speed.hetzner.com/100MB.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;100MB（Frankfurt-Vultr）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://fra-de-ping.vultr.com/vultr.com.100MB.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://fra-de-ping.vultr.com/vultr.com.100MB.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;1GB（Nuremberg-Hetzner）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://nbg1-speed.hetzner.com/1GB.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://nbg1-speed.hetzner.com/1GB.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;1GB（Frankfurt-Vultr）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://fra-de-ping.vultr.com/vultr.com.1000MB.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://fra-de-ping.vultr.com/vultr.com.1000MB.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;10GB（Nuremberg-Hetzner）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://nbg1-speed.hetzner.com/10GB.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://nbg1-speed.hetzner.com/10GB.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;10GB（Frankfurt-Hivelocity）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://speedtest.fra1.hivelocity.net/10GiB.file
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://speedtest.fra1.hivelocity.net/10GiB.file
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;法国&lt;/h3&gt;
 &lt;p&gt;100/1000/10000MB （Datapacket/CDN77）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;http://par.download.datapacket.com/100mb.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;http://par.download.datapacket.com/100mb.bin
 http://par.download.datapacket.com/1000mb.bin
 http://par.download.datapacket.com/10000mb.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;100MB（OVH）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://gra.proof.ovh.net/files/100Mb.dat
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://gra.proof.ovh.net/files/100Mb.dat
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;1GB（OVH）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://gra.proof.ovh.net/files/1Gb.dat
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://gra.proof.ovh.net/files/1Gb.dat
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;10GB（OVH）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://gra.proof.ovh.net/files/10Gb.dat
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://gra.proof.ovh.net/files/10Gb.dat
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;北美&lt;/h2&gt;
 &lt;h3&gt;美西&lt;/h3&gt;
 &lt;p&gt;100/1000/10000MB （Datapacket/CDN77 洛杉矶）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;http://lax.download.datapacket.com/100mb.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;http://lax.download.datapacket.com/100mb.bin
 http://lax.download.datapacket.com/1000mb.bin
 http://lax.download.datapacket.com/10000mb.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;100MB（Oregon-OVH）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://hil.proof.ovh.us/files/100Mb.dat
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://hil.proof.ovh.us/files/100Mb.dat
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;100MB（LA-Vultr）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://lax-ca-us-ping.vultr.com/vultr.com.100MB.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://lax-ca-us-ping.vultr.com/vultr.com.100MB.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;1GB（Oregon-OVH）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://hil.proof.ovh.us/files/1Gb.dat
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://hil.proof.ovh.us/files/1Gb.dat
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;1GB（LA-Vultr）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://lax-ca-us-ping.vultr.com/vultr.com.1000MB.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://lax-ca-us-ping.vultr.com/vultr.com.1000MB.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;10GB（Oregon-OVH）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://hil.proof.ovh.us/files/10Gb.dat
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://hil.proof.ovh.us/files/10Gb.dat
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;10GB （Oregon-Hetzner）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://hil-speed.hetzner.com/10GB.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://hil-speed.hetzner.com/10GB.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;美东&lt;/h3&gt;
 &lt;p&gt;100/1000/10000MB （Datapacket/CDN77 阿什本）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;http://ash.download.datapacket.com/100mb.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;http://ash.download.datapacket.com/100mb.bin
 http://ash.download.datapacket.com/1000mb.bin
 http://ash.download.datapacket.com/10000mb.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;100MB（Virginia-OVH）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://vin.proof.ovh.us/files/100Mb.dat
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://vin.proof.ovh.us/files/100Mb.dat
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;100MB（New Jersey-Vultr）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://nj-us-ping.vultr.com/vultr.com.100MB.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://nj-us-ping.vultr.com/vultr.com.100MB.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;1GB（Virginia-OVH）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://vin.proof.ovh.us/files/1Gb.dat
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://vin.proof.ovh.us/files/1Gb.dat
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;1GB（New Jersey-Vultr）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://nj-us-ping.vultr.com/vultr.com.1000MB.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://nj-us-ping.vultr.com/vultr.com.1000MB.bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;10GB（Virginia-OVH）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://vin.proof.ovh.us/files/10Gb.dat
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://vin.proof.ovh.us/files/10Gb.dat
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;10GB（Virginia-Hetzner）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://ash-speed.hetzner.com/10GB.bin
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;https://ash-speed.hetzner.com/10GB.bin
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     <pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate>
@@ -254,9 +254,10 @@ http://ash.download.datapacket.com/10000mb.bin
 &lt;/ol&gt;
 &lt;p&gt;解决办法就是 product -&amp;gt; clean build folder,如果还是有问题就打开 build 文件夹 Show Build Folder in Finder，然后将里面的文件夹都删了，在重启 safari 就好了。&lt;/p&gt;
 &lt;ol start=&quot;7&quot;&gt;
-&lt;li&gt;关于在 css 中使用系统色
-&lt;code&gt;background: -apple-system-control-accent;&lt;/code&gt;
-&lt;a href=&quot;https://stackoverflow.com/questions/62797493/how-can-i-use-the-macos-system-accent-color-in-css&quot;&gt;https://stackoverflow.com/questions/62797493/how-can-i-use-the-macos-system-accent-color-in-css&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;关于在 css 中使用系统色
+&lt;code&gt;background: -apple-system-control-accent;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/62797493/how-can-i-use-the-macos-system-accent-color-in-css&quot;&gt;stackoverflow参考&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2&gt;最后&lt;/h2&gt;
 &lt;p&gt;比预计多花了不少时间，但是总算是完成了，后续再慢慢优化吧。&lt;/p&gt;
@@ -296,47 +297,47 @@ http://ash.download.datapacket.com/10000mb.bin
 &lt;h2&gt;代码&lt;/h2&gt;
 &lt;p&gt;先新建一个 &lt;code&gt;motionVariants.tsx&lt;/code&gt; 组件重复调用。在其中定义 &lt;code&gt;containerVariants&lt;/code&gt; 和 &lt;code&gt;itemVariants&lt;/code&gt;。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;export const containerVariants = {
-    hidden: {
-        opacity: 0,
-        filter: &amp;quot;blur(8px)&amp;quot;,
-        transform: &amp;quot;translateY(16px) translateZ(0)&amp;quot;,
-    },
-    visible: {
-        opacity: 1,
-        filter: &amp;quot;blur(0)&amp;quot;,
-        transform: &amp;quot;none&amp;quot;,
-        transition: {
-            transform: { duration: 0.4, timeConstant: 750 },
-            opacity: { duration: 0.7, timeConstant: 350 },
-            filter: { duration: 0.8, timeConstant: 350 },
-            type: &amp;quot;tween&amp;quot;,
-            duration: 0.6,
-            ease: [0.25, 0.3, 0.5, 1],
-            delayChildren: 0,
-            //   staggerChildren: 0.12, // 每个子项之间的延迟时间
-            staggerChildren: 0.08, // 每个子项之间的延迟时间
-        },
-    },
+ hidden: {
+  opacity: 0,
+  filter: &amp;quot;blur(8px)&amp;quot;,
+  transform: &amp;quot;translateY(16px) translateZ(0)&amp;quot;,
+ },
+ visible: {
+  opacity: 1,
+  filter: &amp;quot;blur(0)&amp;quot;,
+  transform: &amp;quot;none&amp;quot;,
+  transition: {
+   transform: { duration: 0.4, timeConstant: 750 },
+   opacity: { duration: 0.7, timeConstant: 350 },
+   filter: { duration: 0.8, timeConstant: 350 },
+   type: &amp;quot;tween&amp;quot;,
+   duration: 0.6,
+   ease: [0.25, 0.3, 0.5, 1],
+   delayChildren: 0,
+   //   staggerChildren: 0.12, // 每个子项之间的延迟时间
+   staggerChildren: 0.08, // 每个子项之间的延迟时间
+  },
+ },
 };
 export const itemVariants = {
-    hidden: {
-        opacity: 0,
-        filter: &amp;quot;blur(8px)&amp;quot;,
-        transform: &amp;quot;translateY(16px) translateZ(0)&amp;quot;,
-        transition: {},
-    },
-    visible: {
-        opacity: 1,
-        filter: &amp;quot;blur(0)&amp;quot;,
-        transform: &amp;quot;none&amp;quot;,
-        transition: {
-            transform: { duration: 0.2, timeConstant: 350 },
-            opacity: { duration: 0.4, timeConstant: 350 },
-            filter: { duration: 0.4, timeConstant: 350 },
-            duration: 0.4,
-            ease: [0.25, 0.3, 0.5, 1],
-        },
-    },
+ hidden: {
+  opacity: 0,
+  filter: &amp;quot;blur(8px)&amp;quot;,
+  transform: &amp;quot;translateY(16px) translateZ(0)&amp;quot;,
+  transition: {},
+ },
+ visible: {
+  opacity: 1,
+  filter: &amp;quot;blur(0)&amp;quot;,
+  transform: &amp;quot;none&amp;quot;,
+  transition: {
+   transform: { duration: 0.2, timeConstant: 350 },
+   opacity: { duration: 0.4, timeConstant: 350 },
+   filter: { duration: 0.4, timeConstant: 350 },
+   duration: 0.4,
+   ease: [0.25, 0.3, 0.5, 1],
+  },
+ },
 };
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;在你的组件中添加效果&lt;/p&gt;
@@ -375,8 +376,7 @@ import { containerVariants, itemVariants } from &amp;#39;@/components/MyMotion&a
     <guid>https://wxmvv.github.io/blog/code/macos/AppleScript实现鼠标连点</guid>
     <title>AppleScript 实现鼠标连点</title>
     <link>https://wxmvv.github.io/blog/code/macos/AppleScript实现鼠标连点</link>
-    <description>&lt;h1&gt;AppleScript 中实现鼠标与键盘自动连点&lt;/h1&gt;
-&lt;p&gt;因为最近在玩一个老游戏，开了作弊但是还需要手动点击才能升级，于是使用 applescript 来实现一下自动点击。&lt;/p&gt;
+    <description>&lt;p&gt;因为最近在玩一个老游戏，开了作弊但是还需要手动点击才能升级，于是使用 applescript 来实现一下自动点击。&lt;/p&gt;
 &lt;h2&gt;事前准备&lt;/h2&gt;
 &lt;p&gt;鼠标点击使用 cliclick 包,可以使用 brew 安装 &lt;code&gt;brew install cliclick&lt;/code&gt; 键盘则直接使用 applescript 即可&lt;/p&gt;
 &lt;h2&gt;脚本实现&lt;/h2&gt;
@@ -515,7 +515,8 @@ end repeat
     <guid>https://wxmvv.github.io/blog/code/capacitor/使用Capacitor来构建你的app吧！</guid>
     <title>使用 Capacitor 来构建你的 app 吧！</title>
     <link>https://wxmvv.github.io/blog/code/capacitor/使用Capacitor来构建你的app吧！</link>
-    <description>&lt;p&gt;capacitor&lt;a href=&quot;https://capacitorjs.com/&quot;&gt;^doc&lt;/a&gt; 作为一个跨平台 ios 和安卓的框架，本身和 flutter、RN 并不是同一赛道，capacitor 在官网也清晰的写着，基于两个平台 webview 来展示你的 html 静态网站，我们可以先用各种框架如 vue、react 来写一个静态网站，然后使用 capacitor 来把它变成 app，或者仅仅把它当成一个 app 的扩展工具，用 js 库来实现一些原生不太好实现的功能。相比直接用 capacitor 来构建 app，把它作为一个 js 扩展应该是一个更好的选择。&lt;/p&gt;
+    <description>&lt;p&gt;capacitor[^doc] 作为一个跨平台 ios 和安卓的框架，本身和 flutter、RN 并不是同一赛道，capacitor 在官网也清晰的写着，基于两个平台 webview 来展示你的 html 静态网站，我们可以先用各种框架如 vue、react 来写一个静态网站，然后使用 capacitor 来把它变成 app，或者仅仅把它当成一个 app 的扩展工具，用 js 库来实现一些原生不太好实现的功能。相比直接用 capacitor 来构建 app，把它作为一个 js 扩展应该是一个更好的选择。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://capacitorjs.com/&quot;&gt;doc&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;简单尝试&lt;/h2&gt;
 &lt;h3&gt;随便新建一个项目&lt;/h3&gt;
 &lt;p&gt;我这里新建了一个 nextjs 项目。&lt;/p&gt;
@@ -533,13 +534,13 @@ npx cap init
 &lt;p&gt;你可以看到目录中出现了 capacitor.config.json
 下面有一个简单的设置。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{
-    &amp;quot;appId&amp;quot;: &amp;quot;com.example.captest&amp;quot;, //唯一id
-    &amp;quot;appName&amp;quot;: &amp;quot;captest&amp;quot;,
-    &amp;quot;webDir&amp;quot;: &amp;quot;out&amp;quot;, //这个是静态网站的位置，nextjs导出的静态页面在out文件夹
-    &amp;quot;server&amp;quot;: {
-        &amp;quot;url&amp;quot;: &amp;quot;http://127.0.0.1:3000&amp;quot;, //这里设定是对应nextjs dev模式的端口，设定后可以热更新
-        &amp;quot;cleartext&amp;quot;: true
-    }
+ &amp;quot;appId&amp;quot;: &amp;quot;com.example.captest&amp;quot;, //唯一id
+ &amp;quot;appName&amp;quot;: &amp;quot;captest&amp;quot;,
+ &amp;quot;webDir&amp;quot;: &amp;quot;out&amp;quot;, //这个是静态网站的位置，nextjs导出的静态页面在out文件夹
+ &amp;quot;server&amp;quot;: {
+  &amp;quot;url&amp;quot;: &amp;quot;http://127.0.0.1:3000&amp;quot;, //这里设定是对应nextjs dev模式的端口，设定后可以热更新
+  &amp;quot;cleartext&amp;quot;: true
+ }
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;安装 cap 对应 sdk&lt;/h3&gt;
@@ -673,28 +674,28 @@ pod env
 &lt;p&gt;tailwind-nextjs-starter-blog 所提供的 comments 组件似乎有一些加载问题，所以最后还是自己解决。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://giscus.app/&quot;&gt;giscus&lt;/a&gt;
 &lt;a href=&quot;https://github.com/giscus/giscus-component&quot;&gt;giscus-react&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm i @giscus/react
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;npm i @giscus/react
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;//作为组件中使用  现在giscus官网获取id 然后将下面替换即可
 import Giscus from &amp;quot;@giscus/react&amp;quot;;
 export default function MyApp() {
-    return (
-        &amp;lt;Giscus
-            id=&amp;quot;comments&amp;quot;
-            repo=&amp;quot;giscus/giscus-component&amp;quot;
-            repoId=&amp;quot;MDEwOlJlcG9zaXRvcnkzOTEzMTMwMjA=&amp;quot;
-            category=&amp;quot;Announcements&amp;quot;
-            categoryId=&amp;quot;DIC_kwDOF1L2fM4B-hVS&amp;quot;
-            mapping=&amp;quot;specific&amp;quot;
-            term=&amp;quot;Welcome to @giscus/react component!&amp;quot;
-            reactionsEnabled=&amp;quot;1&amp;quot;
-            emitMetadata=&amp;quot;0&amp;quot;
-            inputPosition=&amp;quot;top&amp;quot;
-            theme=&amp;quot;light&amp;quot;
-            lang=&amp;quot;en&amp;quot;
-            loading=&amp;quot;lazy&amp;quot;
-        /&amp;gt;
-    );
+ return (
+  &amp;lt;Giscus
+   id=&amp;quot;comments&amp;quot;
+   repo=&amp;quot;giscus/giscus-component&amp;quot;
+   repoId=&amp;quot;MDEwOlJlcG9zaXRvcnkzOTEzMTMwMjA=&amp;quot;
+   category=&amp;quot;Announcements&amp;quot;
+   categoryId=&amp;quot;DIC_kwDOF1L2fM4B-hVS&amp;quot;
+   mapping=&amp;quot;specific&amp;quot;
+   term=&amp;quot;Welcome to @giscus/react component!&amp;quot;
+   reactionsEnabled=&amp;quot;1&amp;quot;
+   emitMetadata=&amp;quot;0&amp;quot;
+   inputPosition=&amp;quot;top&amp;quot;
+   theme=&amp;quot;light&amp;quot;
+   lang=&amp;quot;en&amp;quot;
+   loading=&amp;quot;lazy&amp;quot;
+  /&amp;gt;
+ );
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;build 后的中文路径问题&lt;/h3&gt;
@@ -703,27 +704,27 @@ export default function MyApp() {
 const isDev = process.env.NODE_ENV === &amp;quot;development&amp;quot;;
 const isBuild = process.env.NEXT_PUBLIC_IS_BUILD === &amp;quot;true&amp;quot;;
 export const generateStaticParams = async () =&amp;gt; {
-    if (isDev) {
-        return allBlogs.map((p) =&amp;gt; ({
-            slug: p.slug.split(&amp;quot;/&amp;quot;).map((name) =&amp;gt; encodeURIComponent(name)),
-        }));
-    } else {
-        return allBlogs.map((p) =&amp;gt; ({
-            slug: p.slug.split(&amp;quot;/&amp;quot;).map((name) =&amp;gt; decodeURI(name)),
-        }));
-    }
+ if (isDev) {
+  return allBlogs.map((p) =&amp;gt; ({
+   slug: p.slug.split(&amp;quot;/&amp;quot;).map((name) =&amp;gt; encodeURIComponent(name)),
+  }));
+ } else {
+  return allBlogs.map((p) =&amp;gt; ({
+   slug: p.slug.split(&amp;quot;/&amp;quot;).map((name) =&amp;gt; decodeURI(name)),
+  }));
+ }
 };
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// next.config.js
 const isDev = process.env.NODE_ENV === &amp;#39;development&amp;#39;
 const isBuild =process.env.NODE_ENV === &amp;#39;production&amp;#39; &amp;amp;&amp;amp; process.env.NEXT_PUBLIC_IS_BUILD === &amp;#39;true&amp;#39;
 env: {
-    NEXT_PUBLIC_IS_BUILD: isBuild.toString(),
+ NEXT_PUBLIC_IS_BUILD: isBuild.toString(),
 },
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;// package.json
 &amp;quot;scripts&amp;quot;:{
-    &amp;quot;build&amp;quot;: &amp;quot;cross-env NEXT_PUBLIC_IS_BUILD=true &amp;amp;&amp;amp; cross-env INIT_CWD=$PWD next build &amp;amp;&amp;amp; cross-env NODE_OPTIONS=&amp;#39;--experimental-json-modules&amp;#39; node ./scripts/postbuild.mjs&amp;quot;,
+ &amp;quot;build&amp;quot;: &amp;quot;cross-env NEXT_PUBLIC_IS_BUILD=true &amp;amp;&amp;amp; cross-env INIT_CWD=$PWD next build &amp;amp;&amp;amp; cross-env NODE_OPTIONS=&amp;#39;--experimental-json-modules&amp;#39; node ./scripts/postbuild.mjs&amp;quot;,
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;最后&lt;/h2&gt;
@@ -744,14 +745,14 @@ env: {
 &lt;TOCInline toc={props.toc} exclude=&quot;Introduction&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;B 站视频&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;iframe
-    src=&amp;quot;//player.bilibili.com/player.html?isOutside=true&amp;amp;aid=1355658592&amp;amp;bvid=BV1Xz421b7FU&amp;amp;cid=1574676110&amp;amp;p=1&amp;amp;muted=false&amp;quot;
-    className=&amp;quot;w-full h-[342px]&amp;quot;
-    autoPlay
-    scrolling=&amp;quot;no&amp;quot;
-    border=&amp;quot;0&amp;quot;
-    frameBorder=&amp;quot;no&amp;quot;
-    framespacing=&amp;quot;0&amp;quot;
-    allowFullScreen={true}
+ src=&amp;quot;//player.bilibili.com/player.html?isOutside=true&amp;amp;aid=1355658592&amp;amp;bvid=BV1Xz421b7FU&amp;amp;cid=1574676110&amp;amp;p=1&amp;amp;muted=false&amp;quot;
+ className=&amp;quot;w-full h-[342px]&amp;quot;
+ autoPlay
+ scrolling=&amp;quot;no&amp;quot;
+ border=&amp;quot;0&amp;quot;
+ frameBorder=&amp;quot;no&amp;quot;
+ framespacing=&amp;quot;0&amp;quot;
+ allowFullScreen={true}
 &amp;gt;&amp;lt;/iframe&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;iframe src=&quot;//player.bilibili.com/player.html?isOutside=true&amp;aid=1355658592&amp;bvid=BV1Xz421b7FU&amp;cid=1574676110&amp;p=1&amp;muted=false&quot; className=&#39;w-full h-[342px]&#39; autoPlay scrolling=&quot;no&quot; border=&quot;0&quot; frameBorder=&quot;no&quot; framespacing=&quot;0&quot; allowFullScreen={true}&gt;&lt;/iframe&gt;
@@ -760,7 +761,7 @@ env: {
 &lt;p&gt;&lt;code&gt;![测试图片](/static/test.webp))&lt;/code&gt;
 &lt;img src=&quot;/static/test.webp&quot; alt=&quot;测试图片&quot;&gt;&lt;/p&gt;
 &lt;h2&gt;mdx 图片(宽)&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div className=&amp;quot;flex flex-row justify-center bg-zinc-100  rounded md:-mx-28&amp;quot;&amp;gt;
+&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;div className=&amp;quot;flex flex-row justify-center bg-zinc-100  rounded md:-mx-28&amp;quot;&amp;gt;
     &amp;lt;img alt=&amp;quot;GitHub test&amp;quot; loading=&amp;quot;lazy&amp;quot; width=&amp;quot;2000&amp;quot; height=&amp;quot;1000&amp;quot; decoding=&amp;quot;async&amp;quot; data-nimg=&amp;quot;1&amp;quot; className=&amp;quot;my-0 rounded&amp;quot; srcSet=&amp;quot;&amp;quot; src=&amp;quot;/static/test2.webp&amp;quot; /&amp;gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -769,7 +770,7 @@ env: {
 &lt;/div&gt;
 
 &lt;h2&gt;mdx 视频(普通)&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div className=&amp;quot;flex flex-row justify-center bg-zinc-100 rounded-sm &amp;quot;&amp;gt;
+&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;div className=&amp;quot;flex flex-row justify-center bg-zinc-100 rounded-sm &amp;quot;&amp;gt;
     &amp;lt;video autoPlay loop preload=&amp;quot;auto&amp;quot; playsInline className=&amp;quot;my-0 rounded&amp;quot;&amp;gt;
         &amp;lt;source src=&amp;quot;/static/test.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot;&amp;gt;
     &amp;lt;/video&amp;gt;
@@ -782,7 +783,7 @@ env: {
 &lt;/div&gt;
 
 &lt;h2&gt;mdx 视频(宽)&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div className=&amp;quot;flex flex-row justify-center bg-zinc-100 rounded-sm md:-mx-28&amp;quot;&amp;gt;
+&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;div className=&amp;quot;flex flex-row justify-center bg-zinc-100 rounded-sm md:-mx-28&amp;quot;&amp;gt;
   &amp;lt;video autoPlay loop preload=&amp;quot;auto&amp;quot; playsInline className=&amp;quot;my-0 rounded&amp;quot;&amp;gt;
     &amp;lt;source src=&amp;quot;/static/test.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot; /&amp;gt;
   &amp;lt;/video&amp;gt;
@@ -864,7 +865,7 @@ env: {
 &lt;/div&gt;
 
 &lt;h3&gt;item 单列&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div className=&amp;quot;flex flex-col gap-2&amp;quot;&amp;gt;
+&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;div className=&amp;quot;flex flex-col gap-2&amp;quot;&amp;gt;
     &amp;lt;video autoPlay loop preload=&amp;quot;auto&amp;quot; playsInline className=&amp;quot;my-0 rounded-md md:max-h-[540px]&amp;quot;&amp;gt;
         &amp;lt;source src=&amp;quot;/static/test.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot; /&amp;gt;
     &amp;lt;/video&amp;gt;
@@ -877,7 +878,7 @@ env: {
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;item 双列&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div className =&amp;quot;col-span-2&amp;quot;&amp;gt;
+&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;div className =&amp;quot;col-span-2&amp;quot;&amp;gt;
   &amp;lt;div className=&amp;quot;flex flex-col gap-2&amp;quot;&amp;gt;
     &amp;lt;a href=&amp;quot;https://google.com&amp;quot; target=&amp;quot;blank&amp;quot;&amp;gt;
       &amp;lt;video autoPlay loop preload=&amp;quot;auto&amp;quot; playsInline className=&amp;quot;my-0 rounded-md md:max-h-[540px]&amp;quot;&amp;gt;
@@ -921,20 +922,20 @@ env: {
 &lt;h2&gt;通过 GeometryReader 获取&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;GeometryReader&lt;/code&gt;包装器提供了对父视图几何信息的访问，从而使你能够根据视图的实际大小来设置内容，当设备横置或者纵置，也会跟随动态调整。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;struct ContentView: View {
-    var body: some View {
-        GeometryReader { geo in
-            Text(&amp;quot;Screen Width: \(geo.size.width)&amp;quot;)
-        }
-    }
+ var body: some View {
+  GeometryReader { geo in
+   Text(&amp;quot;Screen Width: \(geo.size.width)&amp;quot;)
+  }
+ }
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;通过 UIScreen 获取&lt;/h2&gt;
 &lt;p&gt;UIScreen.main.bounds 将返回设备的逻辑宽度，不考虑横置或纵置的情况,包含 width 和 height 等信息，如果需要获取实际物理宽高 也可以使用 UIScreen.main.nativeBounds.width&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;// 通过 UIScreen.main.bounds.width 来获得宽度
 struct ContentView: View {
-    var body: some View {
-        Text(&amp;quot;Screen Width: \(UIScreen.main.bounds.width)&amp;quot;)
-    }
+ var body: some View {
+  Text(&amp;quot;Screen Width: \(UIScreen.main.bounds.width)&amp;quot;)
+ }
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;总结&lt;/h2&gt;
@@ -1069,7 +1070,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 &lt;li&gt;&lt;a href=&quot;https://github.com/iaolo/iA-Fonts&quot;&gt;IA-Fonts&lt;/a&gt; 选择你喜欢的下载并安装&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;OK！ 前期准备完成！&lt;/p&gt;
-&lt;h2&gt;设置设置！&lt;/h2&gt;
+&lt;h2&gt;设置设置&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://docs.obsidian.md/Home&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/static/images/markdown/obsidian/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-palette&quot;&gt;#00C6FF
@@ -1079,87 +1080,87 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 &lt;img src=&quot;/static/images/markdown/obsidian/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE3%201.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;点击 import 将下面的拷贝进去&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{
-    &amp;quot;minimal-style@@bg1@@dark&amp;quot;: &amp;quot;#191A1A&amp;quot;,
-    &amp;quot;minimal-style@@bg1@@light&amp;quot;: &amp;quot;#F7F7F7&amp;quot;,
-    &amp;quot;minimal-style@@ui1@@light&amp;quot;: &amp;quot;#00BEFF&amp;quot;,
-    &amp;quot;minimal-style@@ax1@@dark&amp;quot;: &amp;quot;#CCCCCC&amp;quot;,
-    &amp;quot;minimal-style@@ax1@@light&amp;quot;: &amp;quot;#1A1A1A&amp;quot;,
-    &amp;quot;minimal-style@@ax2@@dark&amp;quot;: &amp;quot;#CCCCCC&amp;quot;,
-    &amp;quot;minimal-style@@ax2@@light&amp;quot;: &amp;quot;#1A1A1A&amp;quot;,
-    &amp;quot;minimal-style@@code-background@@dark&amp;quot;: &amp;quot;#252524&amp;quot;,
-    &amp;quot;minimal-style@@code-background@@light&amp;quot;: &amp;quot;#EEEEEE&amp;quot;,
-    &amp;quot;minimal-style@@h1-size&amp;quot;: &amp;quot;1.5em&amp;quot;,
-    &amp;quot;minimal-style@@h2-size&amp;quot;: &amp;quot;1.2em&amp;quot;,
-    &amp;quot;minimal-style@@h3-size&amp;quot;: &amp;quot;1.125em&amp;quot;,
-    &amp;quot;minimal-style@@h3-weight&amp;quot;: 600,
-    &amp;quot;minimal-style@@h3-style&amp;quot;: &amp;quot;italic&amp;quot;,
-    &amp;quot;minimal-style@@active-line-on&amp;quot;: true,
-    &amp;quot;minimal-style@@checkbox-shape&amp;quot;: &amp;quot;checkbox-square&amp;quot;,
-    &amp;quot;minimal-style@@ribbon-style&amp;quot;: &amp;quot;ribbon-hidden&amp;quot;,
-    &amp;quot;minimal-style@@bold-weight&amp;quot;: 600
+ &amp;quot;minimal-style@@bg1@@dark&amp;quot;: &amp;quot;#191A1A&amp;quot;,
+ &amp;quot;minimal-style@@bg1@@light&amp;quot;: &amp;quot;#F7F7F7&amp;quot;,
+ &amp;quot;minimal-style@@ui1@@light&amp;quot;: &amp;quot;#00BEFF&amp;quot;,
+ &amp;quot;minimal-style@@ax1@@dark&amp;quot;: &amp;quot;#CCCCCC&amp;quot;,
+ &amp;quot;minimal-style@@ax1@@light&amp;quot;: &amp;quot;#1A1A1A&amp;quot;,
+ &amp;quot;minimal-style@@ax2@@dark&amp;quot;: &amp;quot;#CCCCCC&amp;quot;,
+ &amp;quot;minimal-style@@ax2@@light&amp;quot;: &amp;quot;#1A1A1A&amp;quot;,
+ &amp;quot;minimal-style@@code-background@@dark&amp;quot;: &amp;quot;#252524&amp;quot;,
+ &amp;quot;minimal-style@@code-background@@light&amp;quot;: &amp;quot;#EEEEEE&amp;quot;,
+ &amp;quot;minimal-style@@h1-size&amp;quot;: &amp;quot;1.5em&amp;quot;,
+ &amp;quot;minimal-style@@h2-size&amp;quot;: &amp;quot;1.2em&amp;quot;,
+ &amp;quot;minimal-style@@h3-size&amp;quot;: &amp;quot;1.125em&amp;quot;,
+ &amp;quot;minimal-style@@h3-weight&amp;quot;: 600,
+ &amp;quot;minimal-style@@h3-style&amp;quot;: &amp;quot;italic&amp;quot;,
+ &amp;quot;minimal-style@@active-line-on&amp;quot;: true,
+ &amp;quot;minimal-style@@checkbox-shape&amp;quot;: &amp;quot;checkbox-square&amp;quot;,
+ &amp;quot;minimal-style@@ribbon-style&amp;quot;: &amp;quot;ribbon-hidden&amp;quot;,
+ &amp;quot;minimal-style@@bold-weight&amp;quot;: 600
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&quot;/static/images/markdown/obsidian/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE4.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;新建一个 随便的名字.css 然后放在里面 并且打开就能看到啦！&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;.markdown-source-view.mod-cm6 .cm-content {
-    /* 光标颜色 */
-    caret-color: var(--ia-primary-color);
+ /* 光标颜色 */
+ caret-color: var(--ia-primary-color);
 }
 /*修改顶部导航栏  hover时候才显示*/
 .view-header:hover {
-    opacity: 1 !important;
+ opacity: 1 !important;
 }
 .workspace-tabs.mod-stacked.mod-top .workspace-tab-header-container:hover {
-    opacity: 1 !important;
+ opacity: 1 !important;
 }
 .view-header {
-    opacity: 0 !important;
+ opacity: 0 !important;
 }
 .workspace-tabs.mod-stacked.mod-top .workspace-tab-header-container {
-    opacity: 0 !important;
+ opacity: 0 !important;
 }
 /*选中的tab 标题栏和边框颜色*/
 .workspace-tab-container .workspace-tab-header {
-    box-shadow: -1px 0 0 0 var(--ia-link-color), var(--tab-stacked-shadow) !important;
+ box-shadow: -1px 0 0 0 var(--ia-link-color), var(--tab-stacked-shadow) !important;
 }
 .workspace-tab-container .workspace-tab-header.mod-active.is-active {
-    box-shadow: -1px 0 0 0 var(--ia-primary-color), var(--tab-stacked-shadow) !important;
+ box-shadow: -1px 0 0 0 var(--ia-primary-color), var(--tab-stacked-shadow) !important;
 }
 .workspace-tab-header.mod-active.is-active .workspace-tab-header-inner-title,
 .workspace-tab-header.mod-active.is-active .workspace-tab-header-inner-icon {
-    color: var(--ia-primary-color) !important;
-    /* font-weight:600 !important; */
+ color: var(--ia-primary-color) !important;
+ /* font-weight:600 !important; */
 }
 /* 外部链接url和括号颜色 */
 .cm-string.cm-url,
 .cm-formatting.cm-formatting-link.cm-link,
 .cm-active &amp;gt; .cm-formatting.cm-formatting-link-string.cm-string.cm-url {
-    color: var(--ia-link-color) !important;
+ color: var(--ia-link-color) !important;
 }
 /* 内部链接括号颜色 */
 .cm-formatting-link.cm-formatting-link-end,
 .cm-formatting-link.cm-formatting-link-start {
-    color: var(--ia-link-color) !important;
+ color: var(--ia-link-color) !important;
 }
 /* 选中后的外部链接url和括号颜色 */
 .cm-active &amp;gt; .cm-string.cm-url {
-    color: var(--ia-active-link-color) !important;
+ color: var(--ia-active-link-color) !important;
 }
 
 /* theme-dark */
 .theme-dark {
-    --ia-link-color: #7b7a79;
-    --ia-active-link-color: #00bbff;
+ --ia-link-color: #7b7a79;
+ --ia-active-link-color: #00bbff;
 }
 /* theme-light */
 .theme-light {
-    --ia-link-color: #b5b3b0;
-    --ia-active-link-color: #00bbff;
+ --ia-link-color: #b5b3b0;
+ --ia-active-link-color: #00bbff;
 }
 /* theme-dark &amp;amp; theme-light */
 .theme-dark,
 .theme-light {
-    --ia-primary-color: #00bbff;
+ --ia-primary-color: #00bbff;
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;设置好了吗？是不是大变样了呢？哈哈&lt;/p&gt;
@@ -1230,57 +1231,57 @@ nvm() { . &amp;quot;$NVM_DIR/nvm.sh&amp;quot; ; nvm $@ ; }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;script&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;$(document).ready(function () {
-    var pjax = new Pjax({
-        elements: &amp;quot;a&amp;quot;,
-        selectors: [&amp;quot;main&amp;quot;],
-        cacheBust: false,
-        scrollRestoration: false,
-        switches: {
-            main: Pjax.switches.sideBySide,
-        },
-        //切换动画效果
-        switchesOptions: {
-            main: {
-                classNames: {
-                    remove: &amp;quot;Animated-easeOut Animate--noDelay&amp;quot;,
-                    add: &amp;quot;Animated-easeIn&amp;quot;,
-                    backward: &amp;quot;Animated-easeOut&amp;quot;,
-                    forward: &amp;quot;Animated-easeOut&amp;quot;,
-                },
-            },
-        },
-    });
+ var pjax = new Pjax({
+  elements: &amp;quot;a&amp;quot;,
+  selectors: [&amp;quot;main&amp;quot;],
+  cacheBust: false,
+  scrollRestoration: false,
+  switches: {
+   main: Pjax.switches.sideBySide,
+  },
+  //切换动画效果
+  switchesOptions: {
+   main: {
+    classNames: {
+     remove: &amp;quot;Animated-easeOut Animate--noDelay&amp;quot;,
+     add: &amp;quot;Animated-easeIn&amp;quot;,
+     backward: &amp;quot;Animated-easeOut&amp;quot;,
+     forward: &amp;quot;Animated-easeOut&amp;quot;,
+    },
+   },
+  },
+ });
 });
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;问题&lt;/h2&gt;
+&lt;h2&gt;问题与解决方案&lt;/h2&gt;
 &lt;h3&gt;script 重载&lt;/h3&gt;
-&lt;h4&gt;问题:&lt;/h4&gt;
+&lt;h4&gt;问题&lt;/h4&gt;
 &lt;p&gt;因为 pjax 切换页面并没有完全刷新，所以页面的 js 不会从头执行一遍，导致 js 不生效。&lt;/p&gt;
-&lt;h4&gt;解决:&lt;/h4&gt;
+&lt;h4&gt;解决&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;方式 1 - 重载部分 js&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;function pjax_reload() {
-    //需要执行的js
+ //需要执行的js
 }
 // Pjax 完成后，重新加载上面的函数
 document.addEventListener(&amp;quot;pjax:complete&amp;quot;, function () {
-    pjax_reload();
+ pjax_reload();
 });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;方式 2 - 重载 js 文件
-这种情况多数用于第三方文件，比如，卜算子统计的脚本、谷歌/百度/腾讯分析的脚本等，这些脚本在每一次页面加载后都需要执行。
-在引入这些文件的标签上添加 data-pjax 属性，然后将具有这个属性的标签重新添加在页面中。有时候不方便在这些标签上添加额外的属性，那么你可以在这些标签外套一层标签，如&lt;code&gt;&amp;lt;div class=&amp;quot;.pjax-reload&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;，然后将 .pjax-reload 里的元素全部重新添加到页面中即可。&lt;/li&gt;
+  这种情况多数用于第三方文件，比如，卜算子统计的脚本、谷歌/百度/腾讯分析的脚本等，这些脚本在每一次页面加载后都需要执行。
+  在引入这些文件的标签上添加 data-pjax 属性，然后将具有这个属性的标签重新添加在页面中。有时候不方便在这些标签上添加额外的属性，那么你可以在这些标签外套一层标签，如&lt;code&gt;&amp;lt;div class=&amp;quot;.pjax-reload&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;，然后将 .pjax-reload 里的元素全部重新添加到页面中即可。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;script data-pjax src=&amp;quot;https://cdn.jsdelivr.net/gh/sukkaw/busuanzi/bsz.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;div class=&amp;quot;.pjax-reload&amp;quot;&amp;gt;
-    &amp;lt;script src=&amp;quot;https://www.google-analytics.com/analytics.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+ &amp;lt;script src=&amp;quot;https://www.google-analytics.com/analytics.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// jQuery 写法
 $(&amp;quot;script[data-pjax], .pjax-reload script&amp;quot;).each(function () {
-    $(this).parent().append($(this).remove());
+ $(this).parent().append($(this).remove());
 });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;参考&lt;/h2&gt;
@@ -1368,11 +1369,8 @@ hexo deploy 或 hexo d 上传&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;代码&lt;/h3&gt;
 &lt;h4&gt;内嵌代码&lt;/h4&gt;
-&lt;p&gt;用两个&lt;code&gt;反引号&lt;/code&gt;键包围起来。&lt;/p&gt;
-&lt;h4&gt;代码块&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;每一行以一个Tab键、或者4个空格缩进。
-int var = 100;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用两个&lt;code&gt;反引号&lt;/code&gt;键包围起来。
+&lt;code&gt;int var = 100;&lt;/code&gt;&lt;/p&gt;
 &lt;h4&gt;固定的代码块&lt;/h4&gt;
 &lt;p&gt;以三个&lt;code&gt;反引号&lt;/code&gt;开始一行，并且以同数量的&lt;code&gt;反引号&lt;/code&gt;结束一行，中间的内容就是固定的代码块。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;NSString \*str = @&amp;quot;Hello Markdown&amp;quot;;
@@ -1471,7 +1469,7 @@ int var = 100;
 &lt;h3&gt;什么是 mdx？&lt;/h3&gt;
 &lt;p&gt;mdx  是一种书写格式，允许你在 Markdown 文档中无缝地插入 JSX 代码。 你还可以导入（import）组件，例如交互式图表或弹框，并将它们嵌入到你所书写的内容当中。&lt;/p&gt;
 &lt;p&gt;示例:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div className=&amp;quot;note&amp;quot;&amp;gt; &amp;gt; Some notable things in a block quote! &amp;lt;/div&amp;gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;div className=&amp;quot;note&amp;quot;&amp;gt; &amp;gt; Some notable things in a block quote! &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;div className=&quot;note&quot;&gt; &gt; Some notable things in a block quote! &lt;/div&gt;
 
@@ -1484,10 +1482,8 @@ int var = 100;
 &lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;![title](path)
 &amp;lt;img src=&amp;quot;链接&amp;quot; width=&amp;quot;宽度&amp;quot; height=&amp;quot;高度&amp;quot; alt=&amp;quot;图片名称&amp;quot; align=&amp;quot;center&amp;quot;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;[文档](https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md)
-
-```markdown
-在主页添加播放器
+&lt;p&gt;&lt;a href=&quot;https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md&quot;&gt;文档&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;在主页添加播放器
 https://aplayer.js.org/#/zh-Hans/
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
