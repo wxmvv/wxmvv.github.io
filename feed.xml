@@ -7,9 +7,42 @@
       <language>zh-cn</language>
       <managingEditor>w05172075@outlook.com (wxm)</managingEditor>
       <webMaster>w05172075@outlook.com (wxm)</webMaster>
-      <lastBuildDate>Sat, 15 Mar 2025 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Tue, 27 May 2025 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://wxmvv.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://wxmvv.github.io/blog/note/My Tuner也上线啦</guid>
+    <title>20250527 My Tuner 也上线啦，简单明了的调音器，支持多种乐器</title>
+    <link>https://wxmvv.github.io/blog/note/My Tuner也上线啦</link>
+    <description>&lt;img src=&quot;https://github.com/wxmvv/MyTuner/raw/main/Images/icon.png&quot; width=&quot;60&quot; height=&quot;60&quot; align=&quot;center&quot; /&gt;
+
+&lt;h2&gt;链接&lt;/h2&gt;
+&lt;p&gt;项目地址: &lt;a href=&quot;https://github.com/wxmvv/MyTuner&quot;&gt;My Tuner&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;商店链接：&lt;a href=&quot;https://apps.apple.com/app/id6746087511&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wxmvv/MyTuner/refs/heads/main/Images/appstore.svg&quot; alt=&quot;Download on the App Store&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;预览&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Dark&lt;/th&gt;
+&lt;th&gt;Light&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wxmvv/MyTuner/refs/heads/main/Images/ios-dark-shortcut.png&quot; alt=&quot;&quot;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wxmvv/MyTuner/refs/heads/main/Images/ios-light-shortcut.png&quot; alt=&quot;&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h2&gt;制作过程&lt;/h2&gt;
+&lt;p&gt;大概花了半个月时间，断断续续把这个 My Tuner 完成了。&lt;/p&gt;
+&lt;p&gt;一开始在AI的建议下从 0 开始码了一个版本，自己实现了一个FFT音高识别，无奈的是准确度有点低，最后只能先放弃，最后参考了 AudioKit 这个库实现的音高识别，准确度大大提高。&lt;/p&gt;
+&lt;p&gt;其他的功能包括设置的实现都相对简单，也算是从编程的角度对音调又有了一些更全面的尝试。&lt;/p&gt;
+&lt;p&gt;欢迎大家下载下来尝试～&lt;/p&gt;
+</description>
+    <pubDate>Tue, 27 May 2025 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>code</category>
+  </item>
+
   <item>
     <guid>https://wxmvv.github.io/blog/note/aria2Helper更新1.1</guid>
     <title>Aria2Helper更新1.1 !</title>
