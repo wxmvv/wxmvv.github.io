@@ -12,7 +12,7 @@
       
   <item>
     <guid>https://wxmvv.github.io/blog/homepage/MyTuner也上线啦</guid>
-    <title>MyTuner也上线啦，简单明了的调音器，支持多种乐器</title>
+    <title>MyTuner也上线啦，简约设计的调音器，支持多种乐器~</title>
     <link>https://wxmvv.github.io/blog/homepage/MyTuner也上线啦</link>
     <description>&lt;img src=&quot;https://github.com/wxmvv/MyTuner/raw/main/Images/icon.png&quot; width=&quot;60&quot; height=&quot;60&quot; align=&quot;center&quot; /&gt;
 
@@ -32,7 +32,7 @@
 &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wxmvv/MyTuner/refs/heads/main/Images/ios-light-shortcut.png&quot; alt=&quot;&quot;&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;
-&lt;h2&gt;制作过程&lt;/h2&gt;
+&lt;h2&gt;介绍&lt;/h2&gt;
 &lt;p&gt;大概花了半个月时间，断断续续把这个 My Tuner 完成了。&lt;/p&gt;
 &lt;p&gt;一开始在AI的建议下从 0 开始码了一个版本，自己实现了一个FFT音高识别，无奈的是准确度有点低，最后只能先放弃，最后参考了 AudioKit 这个库实现的音高识别，准确度大大提高。&lt;/p&gt;
 &lt;p&gt;其他的功能包括设置的实现都相对简单，也算是从编程的角度对音调又有了一些更全面的尝试。&lt;/p&gt;
@@ -299,6 +299,24 @@ http://ash.download.datapacket.com/10000mb.bin
     <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
     <author>w05172075@outlook.com (wxm)</author>
     <category>safari</category><category>Aria2Helper</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/note/终于通关八方旅人2</guid>
+    <title>终于通关八方旅人2</title>
+    <link>https://wxmvv.github.io/blog/note/终于通关八方旅人2</link>
+    <description>&lt;p&gt;断断续续终于通关了八方旅人2，这么久才通过一方面是最近时间少，另一方面是我的心里总是会有一些复杂的情绪，让我不想通关，希望故事能一直持续下去。&lt;/p&gt;
+&lt;p&gt;音乐部分很棒，在编曲方面可以说全面性的丰富了，不过再回去听1代的音乐，虽然没有2代乐器更多，编织更丰富，但是依然有很多亮点。仅仅听着音乐久可以让我在城镇树林间穿梭时沉浸其中。&lt;/p&gt;
+&lt;p&gt;剧情部分相比1代丰富了不少，每个人多了一个剧情场景，而且还多了双人剧情，用一条暗线将每个角色联系在一起。不过也有一些莫名其妙的狗血剧情，比如我使用的盗贼小姐开局，前三章玩完觉得有点意思，一个很正的复仇舞台剧，从杀“蛇父”那里就开始不对劲了，本来觉得“复仇爽”的故事，一下变成了狗血伦理剧？当时看完剧情的我满头问号。虽然有狗血的，但是也有我觉得很亮眼的剧情设计，比如商人部分，尤其是最后富豪开着船来支援的时候，还有最后的大战火车，这的让我有一种中二的热血感，很赞。 其他的，如猎人，神官，舞娘的剧情也都很有意思，让我印象深刻。&lt;/p&gt;
+&lt;p&gt;不过，无论是怎样精彩的旅途，也难免有结束的时候，希望下一作尽快来吧～&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/images/OctopathTraveller2/%E6%88%AA%E5%B1%8F2024-12-05%2008.51.49.jpg&quot; alt=&quot;决战！&quot;&gt;
+&lt;img src=&quot;/static/images/OctopathTraveller2/%E6%88%AA%E5%B1%8F2024-12-05%2009.02.23.jpg&quot; alt=&quot;商人&quot;&gt;
+&lt;img src=&quot;/static/images/OctopathTraveller2/%E6%88%AA%E5%B1%8F2025-02-24%2016.34.55.jpg&quot; alt=&quot;大侦探题米诺斯&quot;&gt;
+&lt;img src=&quot;/static/images/OctopathTraveller2/%E6%88%AA%E5%B1%8F2025-02-28%2015.15.20.jpg&quot; alt=&quot;舞王&quot;&gt;&lt;/p&gt;
+</description>
+    <pubDate>Tue, 03 Dec 2024 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>note</category><category>吐槽</category>
   </item>
 
   <item>
