@@ -7,9 +7,23 @@
       <language>zh-cn</language>
       <managingEditor>w05172075@outlook.com (wxm)</managingEditor>
       <webMaster>w05172075@outlook.com (wxm)</webMaster>
-      <lastBuildDate>Tue, 27 May 2025 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 03 Jul 2025 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://wxmvv.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://wxmvv.github.io/blog/code/js/完全解决nvm启动速度慢的问题2</guid>
+    <title>完全解决nvm启动速度慢的问题2</title>
+    <link>https://wxmvv.github.io/blog/code/js/完全解决nvm启动速度慢的问题2</link>
+    <description>&lt;p&gt;时隔 3 年，我终于找到了彻底解决 nvm 启动速度慢的方法，并且这个方法对 macOS 和 Windows 系统都有效！&lt;/p&gt;
+&lt;p&gt;那就是：删掉 nvm 使用 fnm！&lt;/p&gt;
+&lt;p&gt;几乎一样的使用方式，完全没有迁移成本！速度贼快！&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Schniz/fnm?tab=readme-ov-file#shell-setup&quot;&gt;fnm&lt;/a&gt;&lt;/p&gt;
+</description>
+    <pubDate>Thu, 03 Jul 2025 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>code</category>
+  </item>
+
   <item>
     <guid>https://wxmvv.github.io/blog/homepage/MyTuner也上线啦</guid>
     <title>MyTuner也上线啦，简约设计的调音器，支持多种乐器~</title>
