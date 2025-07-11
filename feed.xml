@@ -25,6 +25,20 @@
   </item>
 
   <item>
+    <guid>https://wxmvv.github.io/blog/homepage/Aria2Helper新版本1.4来啦</guid>
+    <title>Aria2Helper新版本1.4来啦!</title>
+    <link>https://wxmvv.github.io/blog/homepage/Aria2Helper新版本1.4来啦</link>
+    <description>&lt;p&gt;距离上一次更新已经很久了，这次更新带来了新的 setting 界面，使用 tailwind+daisyUI 重新构建，整体设计参考苹果系统的设置，以及&lt;a href=&quot;https://github.com/zerebos/ghostty-config&quot;&gt;ghostty-config&lt;/a&gt;项目，并且添加了更多的色彩主题。&lt;/p&gt;
+&lt;p&gt;项目地址: &lt;a href=&quot;https://github.com/wxmvv/Aria2Helper-for-Safari&quot;&gt;Aria2Helper for Safari&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://wxmvv.github.io/static/images/Aria2HelperForSafari/Aria2HelperForSafariNewSettings1.png&quot; alt=&quot;setting1&quot;&gt;
+&lt;img src=&quot;https://wxmvv.github.io/static/images/Aria2HelperForSafari/Aria2HelperForSafariNewSettings2.png&quot; alt=&quot;setting2&quot;&gt;&lt;/p&gt;
+</description>
+    <pubDate>Sat, 28 Jun 2025 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>safari</category><category>Aria2Helper</category>
+  </item>
+
+  <item>
     <guid>https://wxmvv.github.io/blog/homepage/MyTuner也上线啦</guid>
     <title>MyTuner也上线啦，简约设计的调音器，支持多种乐器~</title>
     <link>https://wxmvv.github.io/blog/homepage/MyTuner也上线啦</link>
@@ -255,9 +269,9 @@ http://ash.download.datapacket.com/10000mb.bin
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/homepage/safari插件Aria2Helper开发</guid>
+    <guid>https://wxmvv.github.io/blog/note/safari插件Aria2Helper开发</guid>
     <title>Safari插件Aria2Helper开发踩坑集</title>
-    <link>https://wxmvv.github.io/blog/homepage/safari插件Aria2Helper开发</link>
+    <link>https://wxmvv.github.io/blog/note/safari插件Aria2Helper开发</link>
     <description>&lt;p&gt;花了大概 1 周多时间，断断续续终于把这个 Aria2Helper 插件完成了。如果使用有什么问题也可以邮寄联系我，或者在 github 上提 issue。&lt;/p&gt;
 &lt;p&gt;项目地址: &lt;a href=&quot;https://github.com/wxmvv/Aria2Helper-for-Safari&quot;&gt;Aria2Helper for Safari&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;App 文件: &lt;a href=&quot;https://wxmvv.github.io/static/file/aria2Helper.zip&quot;&gt;Aria2Helper for Safari.zip&lt;/a&gt;&lt;/p&gt;
@@ -1060,14 +1074,10 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/homepage/surge个人使用配置</guid>
+    <guid>https://wxmvv.github.io/blog/vpn/surge个人使用配置</guid>
     <title>Surge 个人使用配置</title>
-    <link>https://wxmvv.github.io/blog/homepage/surge个人使用配置</link>
-    <description>&lt;h2&gt;为什么是 Surge&lt;/h2&gt;
-&lt;p&gt;之前一直在用 shadowrocket，很简单，最近因为在淘宝花几块钱买了个 ios 软件用，结果发现店铺居然是用网球 app，或者圈 x 解锁，于是想研究一下。&lt;/p&gt;
-&lt;p&gt;包括圈 x，loon，surge，我都用了一圈，确实是 surge 更加顺手一些。其实代理功能大家都大差不差，surge 最突出的实际上是抓数据，使用界面干净明白，简单看一下文档就上手了。还有一个重要的原因，是因为网上都说 surge 会更稳定，更省电(我持保留意见)，于是折腾一番弄出了自己的配置表，欢迎使用参考。&lt;/p&gt;
-&lt;p&gt;模块的话，其实我并没开很多，只有一个必开&lt;a href=&quot;https://raw.githubusercontent.com/ExaAlice/Alice/main/Module/MitMAllHostnames.sgmodule&quot;&gt;MIITAllHost&lt;/a&gt;,这个打开后可以方便抓包，其他的可以在网上自行搜索，或者在各种电报群获取。&lt;/p&gt;
-&lt;h2&gt;个人配置&lt;/h2&gt;
+    <link>https://wxmvv.github.io/blog/vpn/surge个人使用配置</link>
+    <description>&lt;h2&gt;个人配置&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://wxmvv.github.io/static/file/surge.conf&quot;&gt;surge.conf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;导入后替换配置中的订阅地址即可使用&lt;/p&gt;
 &lt;h2&gt;参考&lt;/h2&gt;
