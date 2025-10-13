@@ -7,9 +7,24 @@
       <language>zh-cn</language>
       <managingEditor>w05172075@outlook.com (wxm)</managingEditor>
       <webMaster>w05172075@outlook.com (wxm)</webMaster>
-      <lastBuildDate>Thu, 03 Jul 2025 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Mon, 13 Oct 2025 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://wxmvv.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://wxmvv.github.io/blog/music/work-music</guid>
+    <title>20251013 work music sharing</title>
+    <link>https://wxmvv.github.io/blog/music/work-music</link>
+    <description>&lt;h2&gt;youtube take your time&lt;/h2&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;450&quot; src=&quot;//music.163.com/outchain/player?type=4&amp;id=1228137686&amp;auto=0&amp;height=430&quot;&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;youtube utopic_dreamer&lt;/h2&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;450&quot; src=&quot;//music.163.com/outchain/player?type=4&amp;id=1230910500&amp;auto=0&amp;height=430&quot;&gt;&lt;/iframe&gt;
+</description>
+    <pubDate>Mon, 13 Oct 2025 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>code</category>
+  </item>
+
   <item>
     <guid>https://wxmvv.github.io/blog/code/js/完全解决nvm启动速度慢的问题2</guid>
     <title>完全解决nvm启动速度慢的问题2</title>
