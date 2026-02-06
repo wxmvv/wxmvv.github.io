@@ -7,9 +7,167 @@
       <language>zh-cn</language>
       <managingEditor>w05172075@outlook.com (wxm)</managingEditor>
       <webMaster>w05172075@outlook.com (wxm)</webMaster>
-      <lastBuildDate>Mon, 13 Oct 2025 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Fri, 06 Feb 2026 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://wxmvv.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://wxmvv.github.io/blog/code/css/实现一下液态玻璃效果</guid>
+    <title>跟风实现一下液态玻璃效果</title>
+    <link>https://wxmvv.github.io/blog/code/css/实现一下液态玻璃效果</link>
+    <description>&lt;p&gt;&lt;a href=&quot;https://juejin.cn/post/7514618352829448244&quot;&gt;参考1 juejin&lt;/a&gt;
+&lt;a href=&quot;https://kube.io/blog/liquid-glass-css-svg/&quot;&gt;参考2 kube.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考了大神的实现，自己又调整了参数，并且适配了黑暗模式，仅供参考。&lt;/p&gt;
+&lt;p&gt;效果就在主页的菜单Hover就可以看到，在Safari中svg反射效果不生效，用Chrome就能正常显示。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&amp;lt;div className=&amp;quot;liquid_glass-wrapper h-full w-full&amp;quot;&amp;gt;
+  &amp;lt;svg style={{ display: &amp;quot;none&amp;quot; }}&amp;gt;
+    &amp;lt;defs&amp;gt;
+      &amp;lt;filter
+        id=&amp;quot;liquid_glass_filter&amp;quot;
+        x=&amp;quot;0%&amp;quot;
+        y=&amp;quot;0%&amp;quot;
+        width=&amp;quot;100%&amp;quot;
+        height=&amp;quot;100%&amp;quot;
+        filterUnits=&amp;quot;objectBoundingBox&amp;quot;
+      &amp;gt;
+        &amp;lt;feDisplacementMap scale=&amp;quot;200&amp;quot; /&amp;gt;
+      &amp;lt;/filter&amp;gt;
+    &amp;lt;/defs&amp;gt;
+  &amp;lt;/svg&amp;gt;
+  &amp;lt;div className=&amp;quot;liquid_glass-outer&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;div className=&amp;quot;liquid_glass-cover&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;div className=&amp;quot;liquid_glass-sharp&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;div className=&amp;quot;liquid_glass-reflect&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;.liquid_glass-wrapper {
+  --liquid_glass-border-radius: 1rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid #00000020;
+  background: linear-gradient(180deg, #ffffff10, #fafafa00);
+  box-shadow:
+    inset 0 2px 4px 0 #fff,
+    inset 0 -4px 4px 0 hsla(0, 0%, 100%, 0.1),
+    inset 0 -4px 16px 0 #fff,
+    inset 0 4px 10px 0 hsla(240, 3%, 45%, 0.07),
+    0 4px 14px -10px rgba(53, 53, 79, 0.4),
+    0 11px 28px -10px rgba(53, 53, 79, 0.1);
+  border-radius: var(--liquid_glass-border-radius);
+}
+
+.liquid_glass-border-radius {
+  border-radius: var(--liquid_glass-border-radius);
+}
+
+.liquid_glass-outer {
+  backdrop-filter: url(#liquid_glass_filter);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: var(--liquid_glass-border-radius);
+  mask-image:
+    url(&amp;#39;data:image/svg+xml;utf8,&amp;lt;svg xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot;&amp;gt;&amp;lt;rect x=&amp;quot;0&amp;quot; y=&amp;quot;0&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot; rx=&amp;quot;0&amp;quot; ry=&amp;quot;0&amp;quot; fill=&amp;quot;white&amp;quot;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;#39;),
+    url(&amp;#39;data:image/svg+xml;utf8,&amp;lt;svg xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot;&amp;gt;&amp;lt;rect x=&amp;quot;5&amp;quot; y=&amp;quot;5&amp;quot; width=&amp;quot;calc(100% - 10px)&amp;quot; height=&amp;quot;calc(100% - 10px)&amp;quot; rx=&amp;quot;21&amp;quot; ry=&amp;quot;21&amp;quot; fill=&amp;quot;white&amp;quot;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;#39;);
+  mask-composite: exclude;
+}
+
+.liquid_glass-cover {
+  backdrop-filter: blur(2px);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: var(--liquid_glass-border-radius);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.liquid_glass-sharp {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  box-shadow:
+    inset 1px 1px 0px 0px rgba(255, 255, 255, 0.5),
+    inset -1px -1px 0px 0px rgba(255, 255, 255, 0.6);
+  border-radius: var(--liquid_glass-border-radius);
+}
+
+.liquid_glass-reflect {
+  position: absolute;
+  inset: 1px;
+  z-index: 2;
+  border-radius: var(--liquid_glass-border-radius);
+}
+
+.dark {
+  /* https://juejin.cn/post/7514618352829448244 */
+  .liquid_glass-wrapper {
+    --liquid_glass-border-radius: 1rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+
+    border: 1px solid #ffffff20;
+    background: linear-gradient(180deg, #ffffff10, #fafafa00);
+    box-shadow:
+      inset 0 2px 4px 0 #00000040,
+      inset 0 -4px 4px 0 hsla(0, 0%, 0%, 0.1),
+      inset 0 -4px 16px 0 #00000060,
+      inset 0 4px 10px 0 hsla(0, 0%, 13%, 0.07),
+      0 4px 14px -10px rgba(112, 112, 167, 0.4),
+      0 11px 28px -10px rgba(53, 53, 79, 0.1);
+    border-radius: var(--liquid_glass-border-radius);
+  }
+
+  .liquid_glass-border-radius {
+    border-radius: var(--liquid_glass-border-radius);
+  }
+
+  .liquid_glass-outer {
+    backdrop-filter: url(#liquid_glass_filter);
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: var(--liquid_glass-border-radius);
+
+    mask-image:
+      url(&amp;#39;data:image/svg+xml;utf8,&amp;lt;svg xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot;&amp;gt;&amp;lt;rect x=&amp;quot;0&amp;quot; y=&amp;quot;0&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot; rx=&amp;quot;0&amp;quot; ry=&amp;quot;0&amp;quot; fill=&amp;quot;white&amp;quot;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;#39;),
+      url(&amp;#39;data:image/svg+xml;utf8,&amp;lt;svg xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot;&amp;gt;&amp;lt;rect x=&amp;quot;5&amp;quot; y=&amp;quot;5&amp;quot; width=&amp;quot;calc(100% - 10px)&amp;quot; height=&amp;quot;calc(100% - 10px)&amp;quot; rx=&amp;quot;21&amp;quot; ry=&amp;quot;21&amp;quot; fill=&amp;quot;white&amp;quot;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;#39;);
+    mask-composite: exclude;
+  }
+
+  .liquid_glass-cover {
+    backdrop-filter: blur(2px);
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: var(--liquid_glass-border-radius);
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  .liquid_glass-sharp {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    box-shadow:
+      inset 1px 1px 0px 0px rgba(255, 255, 255, 0.2),
+      inset -1px -1px 0px 0px rgba(255, 255, 255, 0.3);
+    border-radius: var(--liquid_glass-border-radius);
+  }
+
+  .liquid_glass-reflect {
+    position: absolute;
+    inset: 1px;
+    z-index: 2;
+    border-radius: var(--liquid_glass-border-radius);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    <pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate>
+    <author>w05172075@outlook.com (wxm)</author>
+    <category>code</category><category>css</category>
+  </item>
+
   <item>
     <guid>https://wxmvv.github.io/blog/music/work-music</guid>
     <title>20251013 work music sharing</title>
