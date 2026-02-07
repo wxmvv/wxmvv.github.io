@@ -12,7 +12,7 @@
       
   <item>
     <guid>https://wxmvv.github.io/blog/homepage/实现一下液态玻璃效果</guid>
-    <title>跟风实现一下液态玻璃效果</title>
+    <title>用html和css实现一下液态玻璃(liquid glass)效果</title>
     <link>https://wxmvv.github.io/blog/homepage/实现一下液态玻璃效果</link>
     <description>&lt;p&gt;&lt;a href=&quot;https://juejin.cn/post/7514618352829448244&quot;&gt;参考1 juejin&lt;/a&gt;
 &lt;a href=&quot;https://kube.io/blog/liquid-glass-css-svg/&quot;&gt;参考2 kube.io&lt;/a&gt;&lt;/p&gt;
@@ -39,6 +39,7 @@
   &amp;lt;div className=&amp;quot;liquid_glass-reflect&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;适配了黑暗模式的css&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;.liquid_glass-wrapper {
   --liquid_glass-border-radius: 1rem;
   position: relative;
