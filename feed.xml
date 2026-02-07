@@ -5,8 +5,8 @@
       <link>https://wxmvv.github.io/blog</link>
       <description>Developer</description>
       <language>zh-cn</language>
-      <managingEditor>w05172075@outlook.com (wxm)</managingEditor>
-      <webMaster>w05172075@outlook.com (wxm)</webMaster>
+      <managingEditor>wxmvv@outlook.com (wxm)</managingEditor>
+      <webMaster>wxmvv@outlook.com (wxm)</webMaster>
       <lastBuildDate>Fri, 06 Feb 2026 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://wxmvv.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
@@ -165,7 +165,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     <pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>code</category><category>css</category>
   </item>
 
@@ -180,7 +180,7 @@
 &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;450&quot; src=&quot;//music.163.com/outchain/player?type=4&amp;id=1230910500&amp;auto=0&amp;height=430&quot;&gt;&lt;/iframe&gt;
 </description>
     <pubDate>Mon, 13 Oct 2025 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>code</category>
   </item>
 
@@ -194,7 +194,7 @@
 &lt;p&gt;&lt;a href=&quot;https://github.com/Schniz/fnm?tab=readme-ov-file#shell-setup&quot;&gt;fnm&lt;/a&gt;&lt;/p&gt;
 </description>
     <pubDate>Thu, 03 Jul 2025 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>code</category>
   </item>
 
@@ -208,7 +208,7 @@
 &lt;img src=&quot;https://wxmvv.github.io/static/images/Aria2HelperForSafari/Aria2HelperForSafariNewSettings2.png&quot; alt=&quot;setting2&quot;&gt;&lt;/p&gt;
 </description>
     <pubDate>Sat, 28 Jun 2025 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>safari</category><category>Aria2Helper</category>
   </item>
 
@@ -241,7 +241,7 @@
 &lt;p&gt;欢迎大家下载下来尝试～&lt;/p&gt;
 </description>
     <pubDate>Tue, 27 May 2025 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>music</category><category>iOS</category>
   </item>
 
@@ -262,7 +262,7 @@
 &lt;p&gt;App 文件: &lt;a href=&quot;https://wxmvv.github.io/static/file/aria2Helper.zip&quot;&gt;Aria2Helper.zip&lt;/a&gt;&lt;/p&gt;
 </description>
     <pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>safari</category><category>Aria2Helper</category>
   </item>
 
@@ -438,7 +438,7 @@ http://ash.download.datapacket.com/10000mb.bin
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     <pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>code</category>
   </item>
 
@@ -499,7 +499,7 @@ http://ash.download.datapacket.com/10000mb.bin
 &lt;p&gt;也想总结下 safari 插件开发的一些经验，方便以后开发。&lt;/p&gt;
 </description>
     <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>safari</category><category>Aria2Helper</category>
   </item>
 
@@ -517,7 +517,7 @@ http://ash.download.datapacket.com/10000mb.bin
 &lt;img src=&quot;/static/images/OctopathTraveller2/%E6%88%AA%E5%B1%8F2025-02-28%2015.15.20.jpg&quot; alt=&quot;舞王&quot;&gt;&lt;/p&gt;
 </description>
     <pubDate>Tue, 03 Dec 2024 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>note</category><category>吐槽</category>
   </item>
 
@@ -533,7 +533,7 @@ http://ash.download.datapacket.com/10000mb.bin
 &lt;p&gt;&lt;a href=&quot;https://1drv.ms/u/s!AujtcnlMx9Vsg-4eYTiqBwDZsR3XjQ?e=EXanJD&quot;&gt;Parallels Desktop Activation Tool SIPOFF 6.3.0 MacKed&lt;/a&gt;&lt;/p&gt;
 </description>
     <pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>macos</category><category>app</category>
   </item>
 
@@ -621,7 +621,7 @@ import { containerVariants, itemVariants } from &amp;#39;@/components/MyMotion&a
 &lt;/div&gt;
 </description>
     <pubDate>Sat, 16 Nov 2024 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>code</category>
   </item>
 
@@ -760,7 +760,7 @@ end repeat
 &lt;/ul&gt;
 </description>
     <pubDate>Sun, 13 Oct 2024 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>applescript</category><category>macos</category>
   </item>
 
@@ -818,7 +818,7 @@ npx cap sync
 &lt;p&gt;不过对比 flutter 和 RN 速度上明显还是有差距，还是要根据具体情况使用。&lt;/p&gt;
 </description>
     <pubDate>Sun, 11 Aug 2024 20:47:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>capacitor</category><category>ios</category>
   </item>
 
@@ -858,7 +858,7 @@ pod env
 &lt;p&gt;&lt;a href=&quot;https://github.com/CocoaPods/CocoaPods/issues/12122&quot;&gt;cocoapods issues&lt;/a&gt;&lt;/p&gt;
 </description>
     <pubDate>Sun, 11 Aug 2024 13:15:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>cocoapods</category><category>capacitor</category><category>ios</category>
   </item>
 
@@ -872,7 +872,7 @@ pod env
 &lt;iframe src=&quot;//player.bilibili.com/player.html?isOutside=true&amp;aid=1355658592&amp;bvid=BV1Xz421b7FU&amp;cid=1574676110&amp;p=1&amp;autoplay=0&amp;muted=0&quot; className=&#39;w-full h-[366px]&#39; scrolling=&quot;no&quot; border=&quot;0&quot; frameBorder=&quot;no&quot; autoPlay=&quot;0&quot; muted=&quot;0&quot; framespacing=&quot;0&quot; allowFullScreen={true}&gt;&lt;/iframe&gt;
 </description>
     <pubDate>Tue, 16 Jul 2024 10:17:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>music</category><category>ukulele</category>
   </item>
 
@@ -984,7 +984,7 @@ env: {
 &lt;p&gt;断断续续花了快 1 周时间才大概整好，其中比较花时间的是音乐播放器的动画效果，我使用 rive，从一开始画图到制作动画，还是很有趣的过程，最后效果也还可以，未来有时间我还会继续优化的。&lt;/p&gt;
 </description>
     <pubDate>Fri, 05 Jul 2024 18:26:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>Nextjs</category><category>react</category><category>js</category>
   </item>
 
@@ -1145,7 +1145,7 @@ env: {
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     <pubDate>Fri, 05 Jul 2024 18:26:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>markdown</category><category>mdx</category>
   </item>
 
@@ -1158,7 +1158,7 @@ env: {
 &lt;p&gt;&lt;img src=&quot;/static/images/work.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 </description>
     <pubDate>Sat, 15 Jun 2024 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>markdown</category>
   </item>
 
@@ -1192,7 +1192,7 @@ struct ContentView: View {
 其他情况就随意喽。&lt;/p&gt;
 </description>
     <pubDate>Sun, 19 Nov 2023 21:04:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>swift</category><category>swiftUI</category><category>ios</category>
   </item>
 
@@ -1211,7 +1211,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 &lt;p&gt;还有官方论坛相关的回答&lt;a href=&quot;https://discussionschinese.apple.com/thread/250178608&quot;&gt;url&lt;/a&gt;&lt;/p&gt;
 </description>
     <pubDate>Thu, 16 Nov 2023 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>macos</category>
   </item>
 
@@ -1230,7 +1230,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 &lt;p&gt;好啦！快去试一下吧～(^_−)−☆&lt;/p&gt;
 </description>
     <pubDate>Sun, 24 Sep 2023 14:45:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>github</category>
   </item>
 
@@ -1243,7 +1243,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 &lt;p&gt;最近听到的非常棒的一张专辑，非常喜欢其中的曲子的 solo 部分，非常有趣，整体音色会让人很舒适放松，然后 solo 又会像小精灵一样不多不少制造一点紧张，并且完美解决，确实很棒。&lt;/p&gt;
 </description>
     <pubDate>Wed, 20 Sep 2023 17:12:45 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>music</category><category>cpop</category>
   </item>
 
@@ -1287,7 +1287,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 &lt;/ul&gt;
 </description>
     <pubDate>Sun, 03 Sep 2023 11:13:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>vpn</category><category>surge</category><category>macos</category>
   </item>
 
@@ -1415,7 +1415,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 &lt;p&gt;有什么更好的建议也欢迎邮件我哦！&lt;/p&gt;
 </description>
     <pubDate>Mon, 21 Aug 2023 14:34:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>obsidian</category><category>markdown</category>
   </item>
 
@@ -1442,7 +1442,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 &lt;p&gt;使用过程中也学到很多新的东西，或者一些踩的坑，有时间也会写下来给大家参考。&lt;/p&gt;
 </description>
     <pubDate>Sun, 21 May 2023 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>js</category><category>svelte</category>
   </item>
 
@@ -1459,7 +1459,7 @@ nvm() { . &amp;quot;$NVM_DIR/nvm.sh&amp;quot; ; nvm $@ ; }
 &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/e1598eb2df8e&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
 </description>
     <pubDate>Thu, 10 Feb 2022 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>shell</category><category>macos</category>
   </item>
 
@@ -1536,7 +1536,7 @@ $(&amp;quot;script[data-pjax], .pjax-reload script&amp;quot;).each(function () {
 &lt;/ul&gt;
 </description>
     <pubDate>Sat, 05 Dec 2020 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>pjax</category><category>js</category>
   </item>
 
@@ -1576,7 +1576,7 @@ hexo deploy 或 hexo d 上传&lt;/p&gt;
 &lt;/ul&gt;
 </description>
     <pubDate>Tue, 03 Nov 2020 18:47:39 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>markdown</category><category>hexo</category>
   </item>
 
@@ -1762,7 +1762,7 @@ https://aplayer.js.org/#/zh-Hans/
 &lt;/ul&gt;
 </description>
     <pubDate>Sun, 24 Jun 2018 00:00:00 GMT</pubDate>
-    <author>w05172075@outlook.com (wxm)</author>
+    <author>wxmvv@outlook.com (wxm)</author>
     <category>markdown</category><category>mdx</category><category>hexo</category>
   </item>
 
