@@ -903,7 +903,7 @@ pod env
 &lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; rss 生成&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 音乐播放器&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 主页的线性动画效果&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; PDF 预览&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; PDF 预览&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;问题与一些解决方案&lt;/h2&gt;
 &lt;h3&gt;favicons 以及 manifest&lt;/h3&gt;
@@ -1582,7 +1582,7 @@ hexo deploy 或 hexo d 上传&lt;/p&gt;
 
   <item>
     <guid>https://wxmvv.github.io/blog/code/markdown/markdown语法参考</guid>
-    <title>Markdown 语法参考</title>
+    <title>Markdown 语法参考以及 Hexo 部分扩展语法</title>
     <link>https://wxmvv.github.io/blog/code/markdown/markdown语法参考</link>
     <description>&lt;h2&gt;Markdown 基础语法&lt;/h2&gt;
 &lt;h3&gt;标题&lt;/h3&gt;
