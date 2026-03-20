@@ -7,9 +7,21 @@
       <language>zh-cn</language>
       <managingEditor>wxmvv@outlook.com (wxm)</managingEditor>
       <webMaster>wxmvv@outlook.com (wxm)</webMaster>
-      <lastBuildDate>Fri, 06 Feb 2026 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Fri, 20 Mar 2026 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://wxmvv.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://wxmvv.github.io/blog/code/ai/2026年的codex强的可怕</guid>
+    <title>2026年的codex强的可怕</title>
+    <link>https://wxmvv.github.io/blog/code/ai/2026年的codex强的可怕</link>
+    <description>&lt;p&gt;codex真香，订阅了Plus会员一百多，用它把我的旧项目修了一个遍...就一个感受：额度太多了！用不完！根本用不完！&lt;/p&gt;
+&lt;p&gt;gpt5.4 ! gpt5.4 ! gpt5.4 ! 香！&lt;/p&gt;
+</description>
+    <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
+    <author>wxmvv@outlook.com (wxm)</author>
+    <category>code</category>
+  </item>
+
   <item>
     <guid>https://wxmvv.github.io/blog/homepage/实现一下液态玻璃效果</guid>
     <title>用html和css实现一下液态玻璃(liquid glass)效果</title>
@@ -959,11 +971,11 @@ const isBuild = process.env.NEXT_PUBLIC_IS_BUILD === &amp;quot;true&amp;quot;;
 export const generateStaticParams = async () =&amp;gt; {
   if (isDev) {
     return allBlogs.map((p) =&amp;gt; ({
-      slug: p.slug.split(&amp;quot;/&amp;quot;).map((name) =&amp;gt; encodeURIComponent(name)),
+      slug: p.slug.split(&amp;quot;/&amp;quot;).map((name) =&amp;gt; encodeURIComponent(name))
     }));
   } else {
     return allBlogs.map((p) =&amp;gt; ({
-      slug: p.slug.split(&amp;quot;/&amp;quot;).map((name) =&amp;gt; decodeURI(name)),
+      slug: p.slug.split(&amp;quot;/&amp;quot;).map((name) =&amp;gt; decodeURI(name))
     }));
   }
 };
