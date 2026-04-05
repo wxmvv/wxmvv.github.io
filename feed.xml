@@ -16,6 +16,10 @@
     <link>https://wxmvv.github.io/blog/code/ai/2026年的codex强的可怕</link>
     <description>&lt;p&gt;codex真香，订阅了Plus会员一百多，用它把我的旧项目修了一个遍...就一个感受：额度太多了！用不完！根本用不完！&lt;/p&gt;
 &lt;p&gt;gpt5.4 ! gpt5.4 ! gpt5.4 ! 香！&lt;/p&gt;
+&lt;h2&gt;0405 补充&lt;/h2&gt;
+&lt;p&gt;已经用了快一个月了，codex 给我的最大感受就是修 bug 真的很准！尤其是在公司有大型屎山项目的情况下，改 bug 甚至比 claude 还要准，并且用的 token 还少，这谁受的了。&lt;/p&gt;
+&lt;p&gt;不过也不是没有缺点，比如 codex 的审美真的很拉，相比之下 Claude 设计的 UI 就要好看很多。还有就是如果启动一个新项目，尤其在架构设计方面，codex 给出的方案会非常抽象工程化，而且起名真的苦手，很多名字结构感觉都是直接从书上扒下来的，相比之下 Claude 给出的架构方案会更贴近实际情况，并且起名明显也是参考了不少实际项目。&lt;/p&gt;
+&lt;p&gt;所以目前我也在更多使用 Claude 来制定开发计划，设计 UI，而让 codex 去执行，或者修 bug。&lt;/p&gt;
 </description>
     <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
