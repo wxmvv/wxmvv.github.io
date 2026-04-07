@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://wxmvv.github.io/</loc>
-<lastmod>2026-04-06</lastmod>
+<lastmod>2026-04-07</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog</loc>
-<lastmod>2026-04-06</lastmod>
+<lastmod>2026-04-07</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/projects</loc>
-<lastmod>2026-04-06</lastmod>
+<lastmod>2026-04-07</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/tags</loc>
-<lastmod>2026-04-06</lastmod>
+<lastmod>2026-04-07</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/homepage/MyTuner也上线啦</loc>
@@ -69,12 +69,12 @@
 <lastmod>2026-04-05T00:00:00.000Z</lastmod>
 </url>
 <url>
-<loc>https://wxmvv.github.io/blog/code/capacitor/使用Capacitor来构建你的app吧！</loc>
-<lastmod>2024-08-11T00:00:00.000Z</lastmod>
-</url>
-<url>
 <loc>https://wxmvv.github.io/blog/code/ios/SwiftUI获取屏幕宽高</loc>
 <lastmod>2023-11-19T21:04:00.000Z</lastmod>
+</url>
+<url>
+<loc>https://wxmvv.github.io/blog/code/ios/使用Capacitor来构建你的app吧！</loc>
+<lastmod>2024-08-11T00:00:00.000Z</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/code/ios/解决安装cocoapods失败的问题</loc>
@@ -87,6 +87,10 @@
 <url>
 <loc>https://wxmvv.github.io/blog/code/js/blog新的动画效果</loc>
 <lastmod>2024-11-16T00:00:00.000Z</lastmod>
+</url>
+<url>
+<loc>https://wxmvv.github.io/blog/code/js/svelte以及tailwindcss使用尝试</loc>
+<lastmod>2023-05-21T00:00:00.000Z</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/code/js/完全解决nvm启动速度慢的问题2</loc>
@@ -131,9 +135,5 @@
 <url>
 <loc>https://wxmvv.github.io/blog/code/markdown/把obsidian变成IA writer(哈哈)</loc>
 <lastmod>2023-08-21T14:34:00.000Z</lastmod>
-</url>
-<url>
-<loc>https://wxmvv.github.io/blog/code/svelte/svelte以及tailwindcss使用尝试</loc>
-<lastmod>2023-05-21T00:00:00.000Z</lastmod>
 </url>
 </urlset>

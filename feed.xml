@@ -23,7 +23,7 @@
 </description>
     <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
-    <category>code</category>
+    <category>codex</category><category>AI</category>
   </item>
 
   <item>
@@ -182,7 +182,7 @@
 </description>
     <pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
-    <category>code</category><category>css</category>
+    <category>animation</category><category>css</category>
   </item>
 
   <item>
@@ -197,7 +197,7 @@
 </description>
     <pubDate>Mon, 13 Oct 2025 00:00:00 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
-    <category>code</category>
+    <category>music</category><category>music share</category>
   </item>
 
   <item>
@@ -211,7 +211,7 @@
 </description>
     <pubDate>Thu, 03 Jul 2025 00:00:00 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
-    <category>code</category>
+    <category>shell</category><category>macos</category>
   </item>
 
   <item>
@@ -225,7 +225,7 @@
 </description>
     <pubDate>Sat, 28 Jun 2025 00:00:00 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
-    <category>safari</category><category>Aria2Helper</category>
+    <category>safari</category><category>Aria2Helper</category><category>my app</category>
   </item>
 
   <item>
@@ -258,7 +258,7 @@
 </description>
     <pubDate>Tue, 27 May 2025 00:00:00 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
-    <category>music</category><category>iOS</category>
+    <category>music</category><category>iOS</category><category>my app</category>
   </item>
 
   <item>
@@ -279,7 +279,7 @@
 </description>
     <pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
-    <category>safari</category><category>Aria2Helper</category>
+    <category>safari</category><category>Aria2Helper</category><category>my app</category>
   </item>
 
   <item>
@@ -516,7 +516,7 @@ http://ash.download.datapacket.com/10000mb.bin
 </description>
     <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
-    <category>safari</category><category>Aria2Helper</category>
+    <category>safari</category><category>Aria2Helper</category><category>my app</category>
   </item>
 
   <item>
@@ -638,7 +638,7 @@ import { containerVariants, itemVariants } from &amp;#39;@/components/MyMotion&a
 </description>
     <pubDate>Sat, 16 Nov 2024 00:00:00 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
-    <category>code</category>
+    <category>css</category><category>js</category><category>animation</category>
   </item>
 
   <item>
@@ -781,9 +781,9 @@ end repeat
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/code/capacitor/使用Capacitor来构建你的app吧！</guid>
+    <guid>https://wxmvv.github.io/blog/code/ios/使用Capacitor来构建你的app吧！</guid>
     <title>使用 Capacitor 来构建你的 app 吧！</title>
-    <link>https://wxmvv.github.io/blog/code/capacitor/使用Capacitor来构建你的app吧！</link>
+    <link>https://wxmvv.github.io/blog/code/ios/使用Capacitor来构建你的app吧！</link>
     <description>&lt;p&gt;capacitor[^doc] 作为一个跨平台 ios 和安卓的框架，本身和 flutter、RN 并不是同一赛道，capacitor 在官网也清晰的写着，基于两个平台 webview 来展示你的 html 静态网站，我们可以先用各种框架如 vue、react 来写一个静态网站，然后使用 capacitor 来把它变成 app，或者仅仅把它当成一个 app 的扩展工具，用 js 库来实现一些原生不太好实现的功能。相比直接用 capacitor 来构建 app，把它作为一个 js 扩展应该是一个更好的选择。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://capacitorjs.com/&quot;&gt;doc&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;简单尝试&lt;/h2&gt;
@@ -835,7 +835,7 @@ npx cap sync
 </description>
     <pubDate>Sun, 11 Aug 2024 20:47:00 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
-    <category>capacitor</category><category>ios</category>
+    <category>capacitor</category><category>iOS</category>
   </item>
 
   <item>
@@ -875,7 +875,7 @@ pod env
 </description>
     <pubDate>Sun, 11 Aug 2024 13:15:00 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
-    <category>cocoapods</category><category>capacitor</category><category>ios</category>
+    <category>cocoapods</category><category>capacitor</category><category>iOS</category>
   </item>
 
   <item>
@@ -1209,7 +1209,7 @@ struct ContentView: View {
 </description>
     <pubDate>Sun, 19 Nov 2023 21:04:00 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
-    <category>swift</category><category>swiftUI</category><category>ios</category>
+    <category>swift</category><category>swiftUI</category><category>iOS</category>
   </item>
 
   <item>
@@ -1247,7 +1247,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 </description>
     <pubDate>Sun, 24 Sep 2023 14:45:00 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
-    <category>github</category>
+    <category>github</category><category>githubprofile</category><category>markdown</category>
   </item>
 
   <item>
@@ -1260,7 +1260,7 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
 </description>
     <pubDate>Wed, 20 Sep 2023 17:12:45 GMT</pubDate>
     <author>wxmvv@outlook.com (wxm)</author>
-    <category>music</category><category>cpop</category>
+    <category>music</category><category>cpop</category><category>music share</category>
   </item>
 
   <item>
@@ -1436,9 +1436,9 @@ chflags -R hidden # 隐藏或取消隐藏目录所有文件
   </item>
 
   <item>
-    <guid>https://wxmvv.github.io/blog/code/svelte/svelte以及tailwindcss使用尝试</guid>
+    <guid>https://wxmvv.github.io/blog/code/js/svelte以及tailwindcss使用尝试</guid>
     <title>TailwindCSS 以及 Svelte 使用尝试</title>
-    <link>https://wxmvv.github.io/blog/code/svelte/svelte以及tailwindcss使用尝试</link>
+    <link>https://wxmvv.github.io/blog/code/js/svelte以及tailwindcss使用尝试</link>
     <description>&lt;h2&gt;参考文档&lt;/h2&gt;
 &lt;p&gt;先看文档，tailwindCSS 真的我花了一小会时间适应了一下就可以算是入门了吧，真的太方便了，但是 svelte 则需要认真读一下文档，要不连文件怎么建都不知道... 和 vue 使用有很多相似地方，不同的地方更多，尤其是使用方法似乎变简单了，不过我也没有特别深入的使用，不好做评价。&lt;/p&gt;
 &lt;ul&gt;
