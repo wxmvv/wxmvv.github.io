@@ -7,9 +7,76 @@
       <language>zh-cn</language>
       <managingEditor>wxmvv@outlook.com (wxm)</managingEditor>
       <webMaster>wxmvv@outlook.com (wxm)</webMaster>
-      <lastBuildDate>Fri, 20 Mar 2026 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Fri, 08 May 2026 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://wxmvv.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://wxmvv.github.io/blog/code/从 vscode 迁移到 zed</guid>
+    <title>从 vscode 迁移到 zed</title>
+    <link>https://wxmvv.github.io/blog/code/从 vscode 迁移到 zed</link>
+    <description>&lt;p&gt;经过大概2个月的磨合，最终从vscode迁移到zed，所有我在vscode中需要的功能zed已经可以全部提供，所有我在vscode讨厌的功能，zed也都可以作对应的设置，并且在速度方面zed可以说全方面碾压vscode。&lt;/p&gt;
+&lt;h2&gt;vscode让我难受的地方&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;无法去掉的 AI copilot&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这个真的是，自从微软接管 github copilot 后，就不断在vscode中添加AI功能，当然这是没问题的，不过当我不想使用的时候却总是会在各种未知看到它，真的很烦。&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;速度&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;没想到这个居然会成为问题，因为在之前这个可是vscode的强项，但是随着越来越臃肿的app，确实出现了很多问题&lt;/p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;Vim模式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;vscode的Vim模式总是出现各种问题，使用很难受。按键冲突不说，经常用着用着就挂了，无语。&lt;/p&gt;
+&lt;h2&gt;那zed呢？&lt;/h2&gt;
+&lt;p&gt;zed大概是4年前知道，那个时候感觉只有快，其他的都没法和vscode比，尤其是稳定性，并且各种语言适配都有问题，连输入预测都没有。但是如今2026年zed已经发版1.0了，再次相遇已经是一个成熟的代码编辑器了。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;舒适的Vim模式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;zed上使用vim模式真的丝滑，甚至可以使用helix模式，并且在vim模式原生就适配了，不会出任何问题的稳定，以及各种符合直觉的按键设置，我只能用&amp;quot;舒适&amp;quot;来形容。&lt;/p&gt;
+&lt;p&gt;并且可以通过keymap来自定义各种vim按键组合，很适合折腾。&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;直观的lsp信息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;你可以在底部看到lsp的全部信息，包括占用运行情况等，并且设置编辑很方便。&lt;/p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;干净的界面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;舒服干净的界面，烦人的ai可以轻松在设置中关闭，令人心情愉悦。&lt;/p&gt;
+&lt;h2&gt;后话&lt;/h2&gt;
+&lt;p&gt;在如今的ai时代，可能代码编辑器已经没那么重要了，但是zed依然值得。不过话又说回来，zed的agent做的真的挺烂的哈哈。&lt;/p&gt;
+</description>
+    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+    <author>wxmvv@outlook.com (wxm)</author>
+    <category>code</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/note/最近的机场波动以及surge相关</guid>
+    <title>最近的机场波动以及surge相关的瓜</title>
+    <link>https://wxmvv.github.io/blog/note/最近的机场波动以及surge相关</link>
+    <description>&lt;p&gt;&lt;a href=&quot;https://github.com/XTLS/BBS/issues/16&quot;&gt;关于我对 REALITY、uTLS、鹦鹉已死，以及 Sukka 那些人的一些看法&lt;/a&gt;
+&lt;a href=&quot;https://github.com/XTLS/BBS/issues/19&quot;&gt;从双重标准到“大新闻”：浅谈代理协议设计与实现上的一些本质问题与优先级区别&lt;/a&gt;
+&lt;a href=&quot;https://github.com/XTLS/BBS/issues/26&quot;&gt;XTLS、ShadowTLS、REALITY，客户端真的需要大改 TLS 库吗？ECH 与 EIP&lt;/a&gt;&lt;/p&gt;
+</description>
+    <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+    <author>wxmvv@outlook.com (wxm)</author>
+    <category>surge</category><category>科学上网</category>
+  </item>
+
+  <item>
+    <guid>https://wxmvv.github.io/blog/code/pi才是我心目中code-cli最完美的样子</guid>
+    <title>pi才是我心目中code-cli最完美的样子</title>
+    <link>https://wxmvv.github.io/blog/code/pi才是我心目中code-cli最完美的样子</link>
+    <description>&lt;p&gt;就是推荐一下。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/badlogic/pi-mono&quot;&gt;pi-mono&lt;/a&gt;
+&lt;a href=&quot;https://shittycodingagent.ai/packages&quot;&gt;pi的插件市场&lt;/a&gt;&lt;/p&gt;
+</description>
+    <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+    <author>wxmvv@outlook.com (wxm)</author>
+    <category>AI</category><category>Agent</category><category>CLI</category>
+  </item>
+
   <item>
     <guid>https://wxmvv.github.io/blog/code/ai/2026年的codex强的可怕</guid>
     <title>2026年的codex强的可怕</title>

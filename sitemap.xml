@@ -2,19 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://wxmvv.github.io/</loc>
-<lastmod>2026-04-29</lastmod>
+<lastmod>2026-05-19</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog</loc>
-<lastmod>2026-04-29</lastmod>
+<lastmod>2026-05-19</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/projects</loc>
-<lastmod>2026-04-29</lastmod>
+<lastmod>2026-05-19</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/tags</loc>
-<lastmod>2026-04-29</lastmod>
+<lastmod>2026-05-19</lastmod>
+</url>
+<url>
+<loc>https://wxmvv.github.io/blog/code/pi才是我心目中code-cli最完美的样子</loc>
+<lastmod>2026-04-10T00:00:00.000Z</lastmod>
+</url>
+<url>
+<loc>https://wxmvv.github.io/blog/code/从 vscode 迁移到 zed</loc>
+<lastmod>2026-05-08T00:00:00.000Z</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/homepage/MyTuner也上线啦</loc>
@@ -51,6 +59,10 @@
 <url>
 <loc>https://wxmvv.github.io/blog/note/safari插件Aria2Helper开发</loc>
 <lastmod>2025-01-31T00:00:00.000Z</lastmod>
+</url>
+<url>
+<loc>https://wxmvv.github.io/blog/note/最近的机场波动以及surge相关</loc>
+<lastmod>2026-05-08T00:00:00.000Z</lastmod>
 </url>
 <url>
 <loc>https://wxmvv.github.io/blog/note/终于通关八方旅人2</loc>
