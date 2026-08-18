@@ -7,9 +7,31 @@
       <language>zh-cn</language>
       <managingEditor>wxmvv@outlook.com (wxm)</managingEditor>
       <webMaster>wxmvv@outlook.com (wxm)</webMaster>
-      <lastBuildDate>Fri, 08 May 2026 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Wed, 15 Jul 2026 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://wxmvv.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://wxmvv.github.io/blog/note/ai已经成为开发主体了</guid>
+    <title>ai已经成为开发主体了</title>
+    <link>https://wxmvv.github.io/blog/note/ai已经成为开发主体了</link>
+    <description>&lt;p&gt;ai的发展太快了，回顾去年2025年末尾，我还在使用者 ”对话框复制+粘贴“ 的模式去使用ai编程。再看今年，这半年多工作我已经基本没有手动去写过逻辑或者改bug了，全部都是claude code或pi在写。&lt;/p&gt;
+&lt;h2&gt;工作流的进化&lt;/h2&gt;
+&lt;p&gt;最早：回顾这半年的工作，前几个月我还是在复制粘贴结合人工手写代码，保证每一行代码我都可以理解和负责。&lt;/p&gt;
+&lt;p&gt;转变：随着大模型的不断变强，以及skill的流行，我去安装尝试了很多skill以及自己也针对自己负责的项目写了很多针对的skill。同时在工作中慢慢切换agent工具去写，不过还是会审核ai写的代码，并且也总能找到一些问题。也同时会去更准确的描述需求，让ai去修改代码。&lt;/p&gt;
+&lt;p&gt;目前：到最近呢，我开始精简skill，只保留我确定需要并且有用的skill，并且在提示词方面会写的更加详细精确，ai给出的代码基本一次就能过。而且随着各种开发工具cli的普及，甚至可以让agent按流程自动化处理很多事情如api、产品对接等等。&lt;/p&gt;
+&lt;h2&gt;我对目前的工作与ai开发的一些思考&lt;/h2&gt;
+&lt;p&gt;首先就是对ai大模型未来发展的预期，就我使用来说其实目前的大模型已经可以完美完成很复杂的代码任务了，当然最领先的claude或gpt在工作中用起来无疑会更省时省力，但是其实就拿deepseek v4 flash也足够完成工作中的任务了，我觉得他们的区别主要在于对意图的领会，也就说对于稍差一点的dsv4只要你提供的提示词prompt将你的需求描述准确完全可以达到claude和gpt的水平。而且我觉得以目前的ai来说其实已经到了一个瓶颈，未来方向未知，但是肯定不会在短时间发生质变。&lt;/p&gt;
+&lt;p&gt;第二个要说的是agent，也就是对代码开发的工程化的发展。这个我倒是觉得还有可发展的空间，尤其是对于一些办公环境的适配，对于一些特定办公软件等等。&lt;/p&gt;
+&lt;p&gt;最后是一个老生常谈的问题，我也会经常问我自己，ai目前能不能替代我呢？其实就目前来看，如果只是前端工作慢慢确实会被替代，对于ai写的代码js部分在我使用了skill进行规范后简直无可挑剔，只有一些样式需要手动调整，但是随着工作的进行，我也会慢慢发现，工作中写代码的时间变少了，相对的和产品经理沟通产品设计的时间反而变多了一些，并且随着ai开发的效率提高，我也能更快的去验证方案的可行性。&lt;/p&gt;
+&lt;h2&gt;随便写写&lt;/h2&gt;
+&lt;p&gt;随着年纪增大，阅历增加，其实会发现真实生活中很多时候代码写的好与不好其实都没啥关系，更多的在于“沟通”，不管是和领导汇报，或者忽悠买家之类的，这些所谓“人情世故”，这些ai也是真的替代不了，起码目前是这样。&lt;/p&gt;
+&lt;p&gt;不过不管怎样生活还要继续，ai的提效对我来说，让我有了很多时间“发呆”，我觉得也是真的挺开心的。&lt;/p&gt;
+</description>
+    <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
+    <author>wxmvv@outlook.com (wxm)</author>
+    <category>note</category><category>ai</category>
+  </item>
+
   <item>
     <guid>https://wxmvv.github.io/blog/code/从 vscode 迁移到 zed</guid>
     <title>从 vscode 迁移到 zed</title>
