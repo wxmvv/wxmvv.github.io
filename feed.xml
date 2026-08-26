@@ -1116,40 +1116,40 @@ env: {
 &lt;iframe src=&quot;//player.bilibili.com/player.html?isOutside=true&amp;aid=1355658592&amp;bvid=BV1Xz421b7FU&amp;cid=1574676110&amp;p=1&amp;muted=false&quot; className=&#39;w-full h-[342px]&#39; autoPlay scrolling=&quot;no&quot; border=&quot;0&quot; frameBorder=&quot;no&quot; framespacing=&quot;0&quot; allowFullScreen={true}&gt;&lt;/iframe&gt;
 
 &lt;h2&gt;markdown 图片&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;![测试图片](/static/test.webp))&lt;/code&gt;
-&lt;img src=&quot;/static/test.webp&quot; alt=&quot;测试图片&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;![测试图片](/static/images/test.webp))&lt;/code&gt;
+&lt;img src=&quot;/static/images/test.webp&quot; alt=&quot;测试图片&quot;&gt;&lt;/p&gt;
 &lt;h2&gt;mdx 图片(宽)&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;div className=&amp;quot;flex flex-row justify-center bg-zinc-100  rounded md:-mx-28&amp;quot;&amp;gt;
-  &amp;lt;img alt=&amp;quot;GitHub test&amp;quot; loading=&amp;quot;lazy&amp;quot; width=&amp;quot;2000&amp;quot; height=&amp;quot;1000&amp;quot; decoding=&amp;quot;async&amp;quot; data-nimg=&amp;quot;1&amp;quot; className=&amp;quot;my-0 rounded&amp;quot; srcSet=&amp;quot;&amp;quot; src=&amp;quot;/static/test2.webp&amp;quot; /&amp;gt;
+  &amp;lt;img alt=&amp;quot;GitHub test&amp;quot; loading=&amp;quot;lazy&amp;quot; width=&amp;quot;2000&amp;quot; height=&amp;quot;1000&amp;quot; decoding=&amp;quot;async&amp;quot; data-nimg=&amp;quot;1&amp;quot; className=&amp;quot;my-0 rounded&amp;quot; srcSet=&amp;quot;&amp;quot; src=&amp;quot;/static/images/test2.webp&amp;quot; /&amp;gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;div className=&quot;flex flex-row justify-center bg-zinc-100  rounded md:-mx-28&quot;&gt;
-  &lt;Image alt=&quot;GitHub test&quot; loading=&quot;lazy&quot; width=&quot;2000&quot; height=&quot;1000&quot; decoding=&quot;async&quot; data-nimg=&quot;1&quot; className=&quot;my-0 rounded&quot; srcSet=&quot;&quot; src=&quot;/static/test2.webp&quot; /&gt;
+  &lt;Image alt=&quot;GitHub test&quot; loading=&quot;lazy&quot; width=&quot;2000&quot; height=&quot;1000&quot; decoding=&quot;async&quot; data-nimg=&quot;1&quot; className=&quot;my-0 rounded&quot; srcSet=&quot;&quot; src=&quot;/static/images/test2.webp&quot; /&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;mdx 视频(普通)&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;div className=&amp;quot;flex flex-row justify-center bg-zinc-100 rounded-sm &amp;quot;&amp;gt;
     &amp;lt;video autoPlay loop preload=&amp;quot;auto&amp;quot; playsInline className=&amp;quot;my-0 rounded&amp;quot;&amp;gt;
-        &amp;lt;source src=&amp;quot;/static/test.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot;&amp;gt;
+        &amp;lt;source src=&amp;quot;/static/video/test_video.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot;&amp;gt;
     &amp;lt;/video&amp;gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;div className=&quot;flex flex-row justify-center bg-zinc-100 rounded-sm &quot;&gt;
   &lt;video autoPlay loop preload=&quot;auto&quot; playsInline className=&quot;my-0 rounded&quot;&gt;
-    &lt;source src=&quot;/static/test.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+    &lt;source src=&quot;/static/video/test_video.mp4&quot; type=&quot;video/mp4&quot; /&gt;
   &lt;/video&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;mdx 视频(宽)&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;div className=&amp;quot;flex flex-row justify-center bg-zinc-100 rounded-sm md:-mx-28&amp;quot;&amp;gt;
   &amp;lt;video autoPlay loop preload=&amp;quot;auto&amp;quot; playsInline className=&amp;quot;my-0 rounded&amp;quot;&amp;gt;
-    &amp;lt;source src=&amp;quot;/static/test.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot; /&amp;gt;
+    &amp;lt;source src=&amp;quot;/static/video/test_video.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot; /&amp;gt;
   &amp;lt;/video&amp;gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;div className=&quot;flex flex-row justify-center bg-zinc-100 rounded-sm md:-mx-28&quot;&gt;
   &lt;video autoPlay loop preload=&quot;auto&quot; playsInline className=&quot;rounded my-0&quot;&gt;
-    &lt;source src=&quot;/static/test.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+    &lt;source src=&quot;/static/video/test_video.mp4&quot; type=&quot;video/mp4&quot; /&gt;
   &lt;/video&gt;
 &lt;/div&gt;
 
@@ -1165,7 +1165,7 @@ env: {
 &lt;div className=&quot;grid gap-6 md:grid-cols-2 md:-mx-24&quot;&gt;
   &lt;div className=&quot;flex flex-col gap-2&quot;&gt;
       &lt;video autoPlay loop preload=&quot;auto&quot; playsInline className=&quot;my-0 rounded-md md:max-h-[540px]&quot;&gt;
-          &lt;source src=&quot;/static/test.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+          &lt;source src=&quot;/static/video/test_video.mp4&quot; type=&quot;video/mp4&quot; /&gt;
       &lt;/video&gt;
       &lt;div className=&quot;flex flex-col px-2 pt-2&quot;&gt;
           &lt;div&gt;Github Test&lt;/div&gt;
@@ -1178,7 +1178,7 @@ env: {
     &lt;div className=&quot;flex flex-col gap-2&quot;&gt;
       &lt;a href=&quot;https://google.com&quot; target=&quot;blank&quot;&gt;
         &lt;video autoPlay loop preload=&quot;auto&quot; playsInline className=&quot;my-0 rounded-md md:max-h-[540px]&quot;&gt;
-          &lt;source src=&quot;/static/test.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+          &lt;source src=&quot;/static/video/test_video.mp4&quot; type=&quot;video/mp4&quot; /&gt;
         &lt;/video&gt;
       &lt;/a&gt;
       &lt;div className=&quot;flex flex-col px-2 pt-2&quot;&gt;
@@ -1196,7 +1196,7 @@ env: {
 &lt;div className=&quot;flex flex-col gap-6 md:grid md:grid-cols-2&quot;&gt;
   &lt;div className=&quot;flex flex-col gap-2&quot;&gt;
       &lt;video autoPlay loop preload=&quot;auto&quot; playsInline className=&quot;my-0 rounded-md md:max-h-[540px]&quot;&gt;
-          &lt;source src=&quot;/static/test.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+          &lt;source src=&quot;/static/video/test_video.mp4&quot; type=&quot;video/mp4&quot; /&gt;
       &lt;/video&gt;
       &lt;div className=&quot;flex flex-col px-2 pt-2&quot;&gt;
           &lt;div&gt;Github Test&lt;/div&gt;
@@ -1209,7 +1209,7 @@ env: {
     &lt;div className=&quot;flex flex-col gap-2&quot;&gt;
       &lt;a href=&quot;https://google.com&quot; target=&quot;blank&quot;&gt;
         &lt;video autoPlay loop preload=&quot;auto&quot; playsInline className=&quot;my-0 rounded-md md:max-h-[540px]&quot;&gt;
-          &lt;source src=&quot;/static/test.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+          &lt;source src=&quot;/static/video/test_video.mp4&quot; type=&quot;video/mp4&quot; /&gt;
         &lt;/video&gt;
       &lt;/a&gt;
       &lt;div className=&quot;flex flex-col px-2 pt-2&quot;&gt;
@@ -1225,7 +1225,7 @@ env: {
 &lt;h3&gt;item 单列&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;&amp;lt;div className=&amp;quot;flex flex-col gap-2&amp;quot;&amp;gt;
   &amp;lt;video autoPlay loop preload=&amp;quot;auto&amp;quot; playsInline className=&amp;quot;my-0 rounded-md md:max-h-[540px]&amp;quot;&amp;gt;
-    &amp;lt;source src=&amp;quot;/static/test.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot; /&amp;gt;
+    &amp;lt;source src=&amp;quot;/static/video/test_video.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot; /&amp;gt;
   &amp;lt;/video&amp;gt;
   &amp;lt;div className=&amp;quot;flex flex-col px-2 pt-2&amp;quot;&amp;gt;
     &amp;lt;div&amp;gt;Github Test&amp;lt;/div&amp;gt;
@@ -1238,7 +1238,7 @@ env: {
   &amp;lt;div className=&amp;quot;flex flex-col gap-2&amp;quot;&amp;gt;
     &amp;lt;a href=&amp;quot;https://google.com&amp;quot; target=&amp;quot;blank&amp;quot;&amp;gt;
       &amp;lt;video autoPlay loop preload=&amp;quot;auto&amp;quot; playsInline className=&amp;quot;my-0 rounded-md md:max-h-[540px]&amp;quot;&amp;gt;
-        &amp;lt;source src=&amp;quot;/static/test.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot; /&amp;gt;
+        &amp;lt;source src=&amp;quot;/static/video/test_video.mp4&amp;quot; type=&amp;quot;video/mp4&amp;quot; /&amp;gt;
       &amp;lt;/video&amp;gt;
     &amp;lt;/a&amp;gt;
     &amp;lt;div className=&amp;quot;flex flex-col px-2 pt-2&amp;quot;&amp;gt;
