@@ -246,7 +246,7 @@
 &lt;li&gt;修复了一些 content 脚本 bug&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;项目地址: &lt;a href=&quot;https://github.com/wxmvv/Aria2Helper-for-Safari&quot;&gt;Aria2Helper for Safari&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;App 文件: &lt;a href=&quot;https://wxmvv.github.io/static/file/aria2Helper.zip&quot;&gt;Aria2Helper.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;App 文件: &lt;a href=&quot;https://wxmvv.dev/blog/assets/file/aria2Helper.zip&quot;&gt;Aria2Helper.zip&lt;/a&gt;&lt;/p&gt;
 </content:encoded><category>safari</category><category>Aria2Helper</category><category>my app</category><category>note</category><author>wxmvv@outlook.com (wxm)</author><comments>https://wxmvv.dev/blog/note/aria2helper%E6%9B%B4%E6%96%B011/#comments</comments></item><item><title>VPS下载测速文件100M/1GB/10GB</title><link>https://wxmvv.dev/blog/vpn/vps%E4%B8%8B%E8%BD%BD%E6%B5%8B%E9%80%9F%E6%96%87%E4%BB%B6100m1gb10gb/</link><guid isPermaLink="true">https://wxmvv.dev/blog/vpn/vps%E4%B8%8B%E8%BD%BD%E6%B5%8B%E9%80%9F%E6%96%87%E4%BB%B6100m1gb10gb/</guid><pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;转载自 &lt;a href=&quot;https://lot.pm/vps-download-speedtest-files.html&quot;&gt;lot.pm&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -372,7 +372,7 @@
 &lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;https://ash-speed.hetzner.com/10GB.bin&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 </content:encoded><category>code</category><category>vpn</category><author>wxmvv@outlook.com (wxm)</author><comments>https://wxmvv.dev/blog/vpn/vps%E4%B8%8B%E8%BD%BD%E6%B5%8B%E9%80%9F%E6%96%87%E4%BB%B6100m1gb10gb/#comments</comments></item><item><title>Safari插件Aria2Helper开发踩坑集</title><link>https://wxmvv.dev/blog/note/safari%E6%8F%92%E4%BB%B6aria2helper%E5%BC%80%E5%8F%91/</link><guid isPermaLink="true">https://wxmvv.dev/blog/note/safari%E6%8F%92%E4%BB%B6aria2helper%E5%BC%80%E5%8F%91/</guid><pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;花了大概 1 周多时间，断断续续终于把这个 Aria2Helper 插件完成了。如果使用有什么问题也可以邮寄联系我，或者在 github 上提 issue。&lt;/p&gt;
 &lt;p&gt;项目地址: &lt;a href=&quot;https://github.com/wxmvv/Aria2Helper-for-Safari&quot;&gt;Aria2Helper for Safari&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;App 文件: &lt;a href=&quot;https://wxmvv.github.io/static/file/aria2Helper.zip&quot;&gt;Aria2Helper for Safari.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;App 文件: &lt;a href=&quot;https://wxmvv.dev/blog/assets/file/aria2Helper.zip&quot;&gt;Aria2Helper for Safari.zip&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;商店链接&lt;/h2&gt;
 &lt;p&gt;也欢迎去 App Store 下载，支持一下我的开发。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://apps.apple.com/us/app/aria2helper/id6742623503#?platform=mac&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wxmvv/Aria2Helper-for-Safari/refs/heads/main/Shared%20(Extension)/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg&quot; alt=&quot;Download on the Mac App Store&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -448,7 +448,7 @@
 &lt;span&gt;&lt;span&gt;  hidden: {&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    opacity: &lt;/span&gt;&lt;span&gt;0&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    filter: &lt;/span&gt;&lt;span&gt;&quot;blur(8px)&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;    transform: &lt;/span&gt;&lt;span&gt;&quot;translateY(16px) translateZ(0)&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    transform: &lt;/span&gt;&lt;span&gt;&quot;translateY(16px) translateZ(0)&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  },&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  visible: {&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    opacity: &lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/span&gt;
@@ -463,16 +463,16 @@
 &lt;span&gt;&lt;span&gt;      ease: [&lt;/span&gt;&lt;span&gt;0.25&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;0.3&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;0.5&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;],&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;      delayChildren: &lt;/span&gt;&lt;span&gt;0&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;      //   staggerChildren: 0.12, // 每个子项之间的延迟时间&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;      staggerChildren: &lt;/span&gt;&lt;span&gt;0.08&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;// 每个子项之间的延迟时间&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;    },&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;  },&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;      staggerChildren: &lt;/span&gt;&lt;span&gt;0.08&lt;/span&gt;&lt;span&gt; // 每个子项之间的延迟时间&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    }&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;  }&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;};&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;export&lt;/span&gt;&lt;span&gt; const&lt;/span&gt;&lt;span&gt; itemVariants&lt;/span&gt;&lt;span&gt; =&lt;/span&gt;&lt;span&gt; {&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  hidden: {&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    opacity: &lt;/span&gt;&lt;span&gt;0&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    filter: &lt;/span&gt;&lt;span&gt;&quot;blur(8px)&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    transform: &lt;/span&gt;&lt;span&gt;&quot;translateY(16px) translateZ(0)&quot;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;    transition: {},&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    transition: {}&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  },&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  visible: {&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    opacity: &lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/span&gt;
@@ -483,9 +483,9 @@
 &lt;span&gt;&lt;span&gt;      opacity: { duration: &lt;/span&gt;&lt;span&gt;0.4&lt;/span&gt;&lt;span&gt;, timeConstant: &lt;/span&gt;&lt;span&gt;350&lt;/span&gt;&lt;span&gt; },&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;      filter: { duration: &lt;/span&gt;&lt;span&gt;0.4&lt;/span&gt;&lt;span&gt;, timeConstant: &lt;/span&gt;&lt;span&gt;350&lt;/span&gt;&lt;span&gt; },&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;      duration: &lt;/span&gt;&lt;span&gt;0.4&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;      ease: [&lt;/span&gt;&lt;span&gt;0.25&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;0.3&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;0.5&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;],&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;    },&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;  },&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;      ease: [&lt;/span&gt;&lt;span&gt;0.25&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;0.3&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;0.5&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    }&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;  }&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;在你的组件中添加效果&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;import&lt;/span&gt;&lt;span&gt; { motion } &lt;/span&gt;&lt;span&gt;from&lt;/span&gt;&lt;span&gt; &apos;framer-motion&apos;&lt;/span&gt;&lt;/span&gt;
@@ -713,7 +713,7 @@
 &lt;p&gt;&lt;a href=&quot;https://github.com/CocoaPods/CocoaPods/issues/12122&quot;&gt;cocoapods issues&lt;/a&gt;&lt;/p&gt;
 </content:encoded><category>cocoapods</category><category>capacitor</category><category>iOS</category><category>code</category><author>wxmvv@outlook.com (wxm)</author><comments>https://wxmvv.dev/blog/code/ios/%E8%A7%A3%E5%86%B3%E5%AE%89%E8%A3%85cocoapods%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/#comments</comments></item><item><title>名渡山辽 - Smile in the morning 指弹谱</title><link>https://wxmvv.dev/blog/homepage/smileinthemorning/</link><guid isPermaLink="true">https://wxmvv.dev/blog/homepage/smileinthemorning/</guid><pubDate>Tue, 16 Jul 2024 10:17:00 GMT</pubDate><content:encoded>&lt;p&gt;虽然很久没弹琴，也没制作谱子了，赶上这次名渡山来天津的机会，再次拿起来练一下。&lt;/p&gt;
 &lt;p&gt;就挑了一首他的新曲来练一下。刚好骑鹅尤克里里的伊老师也在扒这首曲子，我们就一起合作完成谱子的整理，放在这里。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://wxmvv.github.io/static/pdf/ukulele/smileinthemorning.pdf&quot; alt=&quot;smileinthemorning.pdf&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img /&gt;&lt;/p&gt;
 
 </content:encoded><category>music</category><category>ukulele</category><author>wxmvv@outlook.com (wxm)</author><comments>https://wxmvv.dev/blog/homepage/smileinthemorning/#comments</comments></item><item><title>mdx 常用元素</title><link>https://wxmvv.dev/blog/code/markdown/mdx%E5%B8%B8%E7%94%A8%E5%85%83%E7%B4%A0/</link><guid isPermaLink="true">https://wxmvv.dev/blog/code/markdown/mdx%E5%B8%B8%E7%94%A8%E5%85%83%E7%B4%A0/</guid><pubDate>Fri, 05 Jul 2024 18:26:00 GMT</pubDate><content:encoded>&lt;p&gt;这里是这个模版的一些常用 mdx 元素,写在这里方便复制使用。&lt;/p&gt;
 &lt;h2&gt;目录&lt;/h2&gt;
@@ -736,7 +736,17 @@
 &lt;img alt=&quot;测试图片&quot; loading=&quot;lazy&quot; width=&quot;1890&quot; height=&quot;1417&quot; src=&quot;https://wxmvv.dev/_astro/work.BYxyjiar_UkVKJ.webp&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;mdx 图片(宽)&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-row justify-center bg-zinc-100  rounded md:-mx-28&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;img&lt;/span&gt;&lt;span&gt; alt&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;GitHub test&quot;&lt;/span&gt;&lt;span&gt; loading&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;lazy&quot;&lt;/span&gt;&lt;span&gt; width&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;2000&quot;&lt;/span&gt;&lt;span&gt; height&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;1000&quot;&lt;/span&gt;&lt;span&gt; decoding&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;async&quot;&lt;/span&gt;&lt;span&gt; data-nimg&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;1&quot;&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded&quot;&lt;/span&gt;&lt;span&gt; srcSet&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;&quot;&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;../../../assets/images/test2.webp&quot;&lt;/span&gt;&lt;span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;img&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    alt&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;GitHub test&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    loading&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;lazy&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    width&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;2000&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    height&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;1000&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    decoding&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;async&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    data-nimg&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;1&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    srcSet&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;../../../assets/images/test2.webp&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;  /&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;
   &lt;img alt=&quot;GitHub test&quot; loading=&quot;lazy&quot; width=&quot;2000&quot; height=&quot;1000&quot; src=&quot;https://wxmvv.dev/blog/assets/images/test2.webp&quot; /&gt;
@@ -744,7 +754,7 @@
 &lt;h2&gt;mdx 视频(普通)&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-row justify-center bg-zinc-100 rounded-sm &quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt; autoPlay&lt;/span&gt;&lt;span&gt; loop&lt;/span&gt;&lt;span&gt; preload&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;auto&quot;&lt;/span&gt;&lt;span&gt; playsInline&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;        &amp;lt;&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;/static/video/test_video.mp4&quot;&lt;/span&gt;&lt;span&gt; type&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;        &amp;lt;&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;../../../assets/video/test_video.mp4&quot;&lt;/span&gt;&lt;span&gt; type&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;/&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;
@@ -755,7 +765,7 @@
 &lt;h2&gt;mdx 视频(宽)&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-row justify-center bg-zinc-100 rounded-sm md:-mx-28&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt; autoPlay&lt;/span&gt;&lt;span&gt; loop&lt;/span&gt;&lt;span&gt; preload&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;auto&quot;&lt;/span&gt;&lt;span&gt; playsInline&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;/static/video/test_video.mp4&quot;&lt;/span&gt;&lt;span&gt; type&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;../../../assets/video/test_video.mp4&quot;&lt;/span&gt;&lt;span&gt; type&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  &amp;lt;/&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;
@@ -832,11 +842,13 @@
 &lt;h3&gt;item 单列&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-col gap-2&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt; autoPlay&lt;/span&gt;&lt;span&gt; loop&lt;/span&gt;&lt;span&gt; preload&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;auto&quot;&lt;/span&gt;&lt;span&gt; playsInline&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded-md md:max-h-[540px]&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;/static/video/test_video.mp4&quot;&lt;/span&gt;&lt;span&gt; type&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;../../../assets/video/test_video.mp4&quot;&lt;/span&gt;&lt;span&gt; type&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  &amp;lt;/&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-col px-2 pt-2&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;Github Test&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;imgDesc text-zinc-400&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;Github Test Github Test Github Test Github Test Github Test Github Test Github Test&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;imgDesc text-zinc-400&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;      Github Test Github Test Github Test Github Test Github Test Github Test Github Test&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    &amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  &amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;item 双列&lt;/h3&gt;
@@ -844,12 +856,14 @@
 &lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-col gap-2&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt; href&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;https://google.com&quot;&lt;/span&gt;&lt;span&gt; target&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;blank&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;      &amp;lt;&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt; autoPlay&lt;/span&gt;&lt;span&gt; loop&lt;/span&gt;&lt;span&gt; preload&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;auto&quot;&lt;/span&gt;&lt;span&gt; playsInline&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded-md md:max-h-[540px]&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;        &amp;lt;&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;/static/video/test_video.mp4&quot;&lt;/span&gt;&lt;span&gt; type&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;        &amp;lt;&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;../../../assets/video/test_video.mp4&quot;&lt;/span&gt;&lt;span&gt; type&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;      &amp;lt;/&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;/&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-col px-2 pt-2&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;      &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;Github Test&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;      &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;imgDesc text-zinc-400&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;Github Test Github Test Github Test Github Test Github Test Github Test&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;      &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;imgDesc text-zinc-400&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;        Github Test Github Test Github Test Github Test Github Test Github Test&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;      &amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  &amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -995,7 +1009,7 @@
 </content:encoded><category>github</category><category>githubprofile</category><category>markdown</category><category>code</category><author>wxmvv@outlook.com (wxm)</author><comments>https://wxmvv.dev/blog/code/markdown/github-profile%E7%BE%8E%E5%8C%96/#comments</comments></item><item><title>音乐分享 second wind</title><link>https://wxmvv.dev/blog/music/%E9%9F%B3%E4%B9%90%E5%88%86%E4%BA%AB-second-wind/</link><guid isPermaLink="true">https://wxmvv.dev/blog/music/%E9%9F%B3%E4%B9%90%E5%88%86%E4%BA%AB-second-wind/</guid><pubDate>Wed, 20 Sep 2023 17:12:45 GMT</pubDate><content:encoded>
 &lt;p&gt;最近听到的非常棒的一张专辑，非常喜欢其中的曲子的 solo 部分，非常有趣，整体音色会让人很舒适放松，然后 solo 又会像小精灵一样不多不少制造一点紧张，并且完美解决，确实很棒。&lt;/p&gt;
 </content:encoded><category>music</category><category>cpop</category><category>music share</category><author>wxmvv@outlook.com (wxm)</author><comments>https://wxmvv.dev/blog/music/%E9%9F%B3%E4%B9%90%E5%88%86%E4%BA%AB-second-wind/#comments</comments></item><item><title>Surge 个人使用配置</title><link>https://wxmvv.dev/blog/vpn/surge%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE/</link><guid isPermaLink="true">https://wxmvv.dev/blog/vpn/surge%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE/</guid><pubDate>Sun, 03 Sep 2023 11:13:00 GMT</pubDate><content:encoded>&lt;h2&gt;个人配置&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://wxmvv.github.io/static/file/surge.conf&quot;&gt;surge.conf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://wxmvv.dev/blog/assets/file/surge.conf&quot;&gt;surge.conf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;导入后替换配置中的订阅地址即可使用&lt;/p&gt;
 &lt;h2&gt;参考&lt;/h2&gt;
 &lt;p&gt;surge 官方&lt;/p&gt;

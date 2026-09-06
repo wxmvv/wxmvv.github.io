@@ -19,7 +19,7 @@
 <span class="line"><span style="color:#E1E4E8">  hidden: {</span></span>
 <span class="line"><span style="color:#E1E4E8">    opacity: </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#E1E4E8">    filter: </span><span style="color:#9ECBFF">"blur(8px)"</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#E1E4E8">    transform: </span><span style="color:#9ECBFF">"translateY(16px) translateZ(0)"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    transform: </span><span style="color:#9ECBFF">"translateY(16px) translateZ(0)"</span></span>
 <span class="line"><span style="color:#E1E4E8">  },</span></span>
 <span class="line"><span style="color:#E1E4E8">  visible: {</span></span>
 <span class="line"><span style="color:#E1E4E8">    opacity: </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">,</span></span>
@@ -34,16 +34,16 @@
 <span class="line"><span style="color:#E1E4E8">      ease: [</span><span style="color:#79B8FF">0.25</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0.3</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0.5</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">],</span></span>
 <span class="line"><span style="color:#E1E4E8">      delayChildren: </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#6A737D">      //   staggerChildren: 0.12, // 每个子项之间的延迟时间</span></span>
-<span class="line"><span style="color:#E1E4E8">      staggerChildren: </span><span style="color:#79B8FF">0.08</span><span style="color:#E1E4E8">, </span><span style="color:#6A737D">// 每个子项之间的延迟时间</span></span>
-<span class="line"><span style="color:#E1E4E8">    },</span></span>
-<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#E1E4E8">      staggerChildren: </span><span style="color:#79B8FF">0.08</span><span style="color:#6A737D"> // 每个子项之间的延迟时间</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
 <span class="line"><span style="color:#E1E4E8">};</span></span>
 <span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> const</span><span style="color:#79B8FF"> itemVariants</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#E1E4E8">  hidden: {</span></span>
 <span class="line"><span style="color:#E1E4E8">    opacity: </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#E1E4E8">    filter: </span><span style="color:#9ECBFF">"blur(8px)"</span><span style="color:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#E1E4E8">    transform: </span><span style="color:#9ECBFF">"translateY(16px) translateZ(0)"</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#E1E4E8">    transition: {},</span></span>
+<span class="line"><span style="color:#E1E4E8">    transition: {}</span></span>
 <span class="line"><span style="color:#E1E4E8">  },</span></span>
 <span class="line"><span style="color:#E1E4E8">  visible: {</span></span>
 <span class="line"><span style="color:#E1E4E8">    opacity: </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">,</span></span>
@@ -54,9 +54,9 @@
 <span class="line"><span style="color:#E1E4E8">      opacity: { duration: </span><span style="color:#79B8FF">0.4</span><span style="color:#E1E4E8">, timeConstant: </span><span style="color:#79B8FF">350</span><span style="color:#E1E4E8"> },</span></span>
 <span class="line"><span style="color:#E1E4E8">      filter: { duration: </span><span style="color:#79B8FF">0.4</span><span style="color:#E1E4E8">, timeConstant: </span><span style="color:#79B8FF">350</span><span style="color:#E1E4E8"> },</span></span>
 <span class="line"><span style="color:#E1E4E8">      duration: </span><span style="color:#79B8FF">0.4</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#E1E4E8">      ease: [</span><span style="color:#79B8FF">0.25</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0.3</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0.5</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">],</span></span>
-<span class="line"><span style="color:#E1E4E8">    },</span></span>
-<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#E1E4E8">      ease: [</span><span style="color:#79B8FF">0.25</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0.3</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0.5</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
 <span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>
 <p>在你的组件中添加效果</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="js"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { motion } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> 'framer-motion'</span></span>
@@ -80,7 +80,7 @@
 <h2 id="最终效果">最终效果</h2>
 <div className="flex flex-row justify-center bg-zinc-100 rounded-sm ">
   <video autoPlay loop preload="auto" playsInline className="my-0 rounded">
-    <source src="/static/video/blog新的动画.mp4" type="video/mp4" />
+    <source src="../../../assets/video/blog新的动画.mp4" type="video/mp4" />
   </video>
 </div>
 </div></article><section id="comments" aria-label="评论" data-astro-cid-nuen6n26><blog-comments data-config="{&quot;repo&quot;:&quot;wxmvv/wxmvv.github.io&quot;,&quot;repositoryId&quot;:&quot;R_kgDOI7nK0A&quot;,&quot;category&quot;:&quot;Announcements&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOI7nK0M4Cgqgb&quot;,&quot;mapping&quot;:&quot;pathname&quot;,&quot;reactions&quot;:&quot;1&quot;,&quot;metadata&quot;:&quot;0&quot;,&quot;theme&quot;:&quot;light&quot;,&quot;darkTheme&quot;:&quot;transparent_dark&quot;,&quot;themeURL&quot;:&quot;&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}" data-astro-cid-nuen6n26="true"></blog-comments></section><script type="module">var e=class extends HTMLElement{colorScheme=window.matchMedia(`(prefers-color-scheme: dark)`);config;getTheme(){let e=this.colorScheme.matches?this.config.darkTheme:this.config.theme;return e===`custom`?this.config.themeURL:e}updateTheme=()=>{this.querySelector(`iframe.giscus-frame`)?.contentWindow?.postMessage({giscus:{setConfig:{theme:this.getTheme()}}},`https://giscus.app`)};connectedCallback(){this.config=JSON.parse(this.dataset.config);let e=document.createElement(`script`);e.src=`https://giscus.app/client.js`,e.async=!0,e.crossOrigin=`anonymous`,Object.assign(e.dataset,{repo:this.config.repo,repoId:this.config.repositoryId,category:this.config.category,categoryId:this.config.categoryId,mapping:this.config.mapping,reactionsEnabled:this.config.reactions,emitMetadata:this.config.metadata,inputPosition:`top`,theme:this.getTheme(),lang:this.config.lang??`en`,loading:`lazy`}),this.replaceChildren(e),this.colorScheme.addEventListener(`change`,this.updateTheme)}disconnectedCallback(){this.colorScheme.removeEventListener(`change`,this.updateTheme)}};customElements.get(`blog-comments`)||customElements.define(`blog-comments`,e);</script></main></div><footer class="bg-transparent text-gray-500/5 dark:text-gray-100/5 text-end pt-10">&copy; 2026wxm. All rights reserved.</footer></div></body></html>
