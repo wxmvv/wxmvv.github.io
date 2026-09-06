@@ -1,5 +1,0 @@
-User-Agent: *
-Allow: /
-
-Host: https://wxmvv.github.io
-Sitemap: https://wxmvv.github.io/sitemap.xml
