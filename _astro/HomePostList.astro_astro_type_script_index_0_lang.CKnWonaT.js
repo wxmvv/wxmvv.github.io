@@ -20,13 +20,13 @@ var e=new WeakMap,t=0;function n(n,r={}){let i=r.edgeWidth??3,a=r.edgeFeather??2
 
   border: 1px solid #00000020;
   background: linear-gradient(180deg, #ffffff10, #fafafa00);
-  box-shadow:
-    inset 0 2px 4px 0 #fff,
-    inset 0 -4px 4px 0 hsla(0, 0%, 100%, 0.1),
-    inset 0 -4px 16px 0 #fff,
-    inset 0 4px 10px 0 hsla(240, 3%, 45%, 0.07),
-    0 4px 14px -10px rgba(53, 53, 79, 0.4),
-    0 11px 28px -10px rgba(53, 53, 79, 0.1);
+  // box-shadow:
+  //   inset 0 2px 4px 0 #fff,
+  //   inset 0 -4px 4px 0 hsla(0, 0%, 100%, 0.1),
+  //   inset 0 -4px 16px 0 #fff,
+  //   inset 0 4px 10px 0 hsla(240, 3%, 45%, 0.07),
+  //   0 4px 14px -10px rgba(53, 53, 79, 0.4),
+  //   0 11px 28px -10px rgba(53, 53, 79, 0.1);
   border-radius: var(--liquid-glass3-border-radius);
 }
 
@@ -62,7 +62,7 @@ var e=new WeakMap,t=0;function n(n,r={}){let i=r.edgeWidth??3,a=r.edgeFeather??2
 
   box-shadow:
     inset 1px 1px 0px 0px rgba(255, 255, 255, 0.5),
-    inset -1px -1px 0px 0px rgba(255, 255, 255, 0.6);
+    inset -1px -1px 0px 0px rgba(255, 255, 255, 0.3);
   border-radius: var(--liquid-glass3-border-radius);
 }
 
@@ -78,7 +78,7 @@ var e=new WeakMap,t=0;function n(n,r={}){let i=r.edgeWidth??3,a=r.edgeFeather??2
 }
 
 
-.dark {
+@media (prefers-color-scheme: dark) {
   
   .liquid-glass3-wrapper {
     --liquid-glass3-border-radius: 1rem;
@@ -88,13 +88,13 @@ var e=new WeakMap,t=0;function n(n,r={}){let i=r.edgeWidth??3,a=r.edgeFeather??2
 
     border: 1px solid #ffffff20;
     background: linear-gradient(180deg, #ffffff10, #fafafa00);
-    box-shadow:
-      inset 0 2px 4px 0 #00000040,
-      inset 0 -4px 4px 0 hsla(0, 0%, 0%, 0.1),
-      inset 0 -4px 16px 0 #00000060,
-      inset 0 4px 10px 0 hsla(0, 0%, 13%, 0.07),
-      0 4px 14px -10px rgba(112, 112, 167, 0.4),
-      0 11px 28px -10px rgba(53, 53, 79, 0.1);
+    // box-shadow:
+    //   inset 0 2px 4px 0 #00000040,
+    //   inset 0 -4px 4px 0 hsla(0, 0%, 0%, 0.1),
+    //   inset 0 -4px 16px 0 #00000060,
+    //   inset 0 4px 10px 0 hsla(0, 0%, 13%, 0.07),
+    //   0 4px 14px -10px rgba(112, 112, 167, 0.4),
+    //   0 11px 28px -10px rgba(53, 53, 79, 0.1);
     border-radius: var(--liquid-glass3-border-radius);
   }
 
@@ -113,8 +113,8 @@ var e=new WeakMap,t=0;function n(n,r={}){let i=r.edgeWidth??3,a=r.edgeFeather??2
     inset: 0;
     z-index: 3;
     box-shadow:
-      inset 1px 1px 0px 0px rgba(255, 255, 255, 0.2),
-      inset -1px -1px 0px 0px rgba(255, 255, 255, 0.3);
+      inset 1px 1px 0px 0px rgba(0, 0, 0, 0.1),
+      inset -1px -1px 0px 0px rgba(0, 0, 0, 0.1);
     border-radius: var(--liquid-glass3-border-radius);
   }
 
