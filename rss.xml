@@ -813,26 +813,27 @@
 &lt;h2&gt;最后&lt;/h2&gt;
 &lt;p&gt;断断续续花了快 1 周时间才大概整好，其中比较花时间的是音乐播放器的动画效果，我使用 rive，从一开始画图到制作动画，还是很有趣的过程，最后效果也还可以，未来有时间我还会继续优化的。&lt;/p&gt;
 </content:encoded><category>Nextjs</category><category>react</category><category>js</category><category>code</category><author>wxmvv@outlook.com (wxm)</author><comments>https://wxmvv.dev/blog/code/js/nextjs%E9%87%8D%E6%9E%84%E4%B8%BB%E9%A1%B5/#comments</comments></item><item><title>mdx 常用元素</title><link>https://wxmvv.dev/blog/code/markdown/mdx%E5%B8%B8%E7%94%A8%E5%85%83%E7%B4%A0/</link><guid isPermaLink="true">https://wxmvv.dev/blog/code/markdown/mdx%E5%B8%B8%E7%94%A8%E5%85%83%E7%B4%A0/</guid><pubDate>Fri, 05 Jul 2024 18:26:00 GMT</pubDate><content:encoded>&lt;p&gt;这里是这个模版的一些常用 mdx 元素,写在这里方便复制使用。&lt;/p&gt;
-&lt;h2&gt;目录&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;TOCInline toc={props.toc} exclude=&quot;Introduction&quot; /&amp;gt;&lt;/code&gt;
-&lt;/p&gt;
+&lt;h2&gt;引入组件&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;import&lt;/span&gt;&lt;span&gt; { Image } &lt;/span&gt;&lt;span&gt;from&lt;/span&gt;&lt;span&gt; &quot;astro:assets&quot;&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2&gt;B 站视频&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;iframe&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;  src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;//player.bilibili.com/player.html?isOutside=true&amp;amp;aid=1355658592&amp;amp;bvid=BV1Xz421b7FU&amp;amp;cid=1574676110&amp;amp;p=1&amp;amp;muted=false&quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;  className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;w-full h-[342px]&quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;  autoPlay&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;  src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;//player.bilibili.com/player.html?isOutside=true&amp;amp;aid=1355658592&amp;amp;bvid=BV1Xz421b7FU&amp;amp;cid=1574676110&amp;amp;p=1&amp;amp;autoplay=0&amp;amp;muted=0&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;  style&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;width:100%;height:344px;&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;  autoPlay&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;0&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;  muted&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;0&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  scrolling&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;no&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  border&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;0&quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;  frameBorder&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;no&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;  frameborder&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;no&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  framespacing&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;0&quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;  allowFullScreen&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;true&lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;  allowfullscreen&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;iframe&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2&gt;markdown 图片&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;![测试图片](../../../assets/images/work.jpg))&lt;/code&gt;
-&lt;img alt=&quot;测试图片&quot; loading=&quot;lazy&quot; width=&quot;1890&quot; height=&quot;1417&quot; src=&quot;https://wxmvv.dev/_astro/work.BYxyjiar_UkVKJ.webp&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://wxmvv.dev/_astro/work.BYxyjiar_UkVKJ.webp&quot; alt=&quot;测试图片&quot; loading=&quot;lazy&quot; width=&quot;1890&quot; height=&quot;1417&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;mdx 图片(宽)&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-row justify-center bg-zinc-100  rounded md:-mx-28&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-row justify-center bg-zinc-100  rounded md:-mx-28&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;img&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    alt&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;GitHub test&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    loading&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;lazy&quot;&lt;/span&gt;&lt;/span&gt;
@@ -840,131 +841,64 @@
 &lt;span&gt;&lt;span&gt;    height&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;1000&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    decoding&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;async&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    data-nimg&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;1&quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;    className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    srcSet&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;../../../assets/images/test2.webp&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  /&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;
-  &lt;img alt=&quot;GitHub test&quot; loading=&quot;lazy&quot; width=&quot;2000&quot; height=&quot;1000&quot; src=&quot;https://wxmvv.dev/blog/assets/images/test2.webp&quot; /&gt;
-&lt;/div&gt;
+&lt;div&gt;&lt;img alt=&quot;GitHub test&quot; loading=&quot;lazy&quot; width=&quot;2000&quot; height=&quot;1000&quot; src=&quot;https://wxmvv.dev/blog/assets/images/test2.webp&quot; /&gt;&lt;/div&gt;
 &lt;h2&gt;mdx 视频(普通)&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-row justify-center bg-zinc-100 rounded-sm &quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt; autoPlay&lt;/span&gt;&lt;span&gt; loop&lt;/span&gt;&lt;span&gt; preload&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;auto&quot;&lt;/span&gt;&lt;span&gt; playsInline&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-row justify-center bg-zinc-100 rounded-sm &quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt; autoPlay&lt;/span&gt;&lt;span&gt; loop&lt;/span&gt;&lt;span&gt; preload&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;auto&quot;&lt;/span&gt;&lt;span&gt; playsInline&lt;/span&gt;&lt;span&gt; class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;        &amp;lt;&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;../../../assets/video/test_video.mp4&quot;&lt;/span&gt;&lt;span&gt; type&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;/&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;
-  
-    
-  
-&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
 &lt;h2&gt;mdx 视频(宽)&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-row justify-center bg-zinc-100 rounded-sm md:-mx-28&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt; autoPlay&lt;/span&gt;&lt;span&gt; loop&lt;/span&gt;&lt;span&gt; preload&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;auto&quot;&lt;/span&gt;&lt;span&gt; playsInline&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-row justify-center bg-zinc-100 rounded-sm md:-mx-28&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt; autoPlay&lt;/span&gt;&lt;span&gt; loop&lt;/span&gt;&lt;span&gt; preload&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;auto&quot;&lt;/span&gt;&lt;span&gt; playsInline&lt;/span&gt;&lt;span&gt; class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;../../../assets/video/test_video.mp4&quot;&lt;/span&gt;&lt;span&gt; type&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  &amp;lt;/&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;
-  
-    
-  
-&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
 &lt;h2&gt;链接&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;a href=&quot;https://google.com&quot; target=&quot;blank&quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;div&gt;
-  &lt;a href=&quot;https://google.com/&quot; target=&quot;blank&quot;&gt;前往谷歌&lt;/a&gt;
-&lt;/div&gt;
+&lt;div&gt;&lt;a href=&quot;https://google.com/&quot; target=&quot;blank&quot;&gt;&lt;p&gt;前往谷歌&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;h2&gt;布局&lt;/h2&gt;
 &lt;h3&gt;两列布局(宽)&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;div className=&quot;grid gap-6 md:grid-cols-2 md:-mx-24&quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;div&gt;
-  &lt;div&gt;
-      
-          
-      
-      &lt;div&gt;
-          &lt;div&gt;Github Test&lt;/div&gt;
-          &lt;div&gt;
-           Github Test Github Test Github Test Github Test Github Test Github Test
-          &lt;/div&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;div&gt;
-      &lt;a href=&quot;https://google.com/&quot; target=&quot;blank&quot;&gt;
-        
-          
-        
-      &lt;/a&gt;
-      &lt;div&gt;
-      &lt;div&gt;Github Test&lt;/div&gt;
-      &lt;div&gt;
-        Github Test Github Test Github Test Github Test Github Test Github Test
-      &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;div class=&quot;grid gap-6 md:grid-cols-2 md:-mx-24&quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;Github Test&lt;/div&gt;&lt;div&gt;&lt;p&gt;Github Test Github Test Github Test Github Test Github Test Github Test&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;a href=&quot;https://google.com/&quot; target=&quot;blank&quot;&gt;&lt;/a&gt;&lt;div&gt;&lt;div&gt;Github Test&lt;/div&gt;&lt;div&gt;&lt;p&gt;Github Test Github Test Github Test Github Test Github Test Github Test&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h3&gt;两列布局(窄)&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;div className=&quot;flex flex-col gap-6 md:grid md:grid-cols-2&quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;div&gt;
-  &lt;div&gt;
-      
-          
-      
-      &lt;div&gt;
-          &lt;div&gt;Github Test&lt;/div&gt;
-          &lt;div&gt;
-            Github Test Github Test Github Test Github Test Github Test Github Test Github Test
-          &lt;/div&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;div&gt;
-      &lt;a href=&quot;https://google.com/&quot; target=&quot;blank&quot;&gt;
-        
-          
-        
-      &lt;/a&gt;
-      &lt;div&gt;
-      &lt;div&gt;Github Test&lt;/div&gt;
-      &lt;div&gt;
-       Github Test Github Test Github Test Github Test Github Test Github Test Github Test
-      &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;div class=&quot;flex flex-col gap-6 md:grid md:grid-cols-2&quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;Github Test&lt;/div&gt;&lt;div&gt;&lt;p&gt;Github Test Github Test Github Test Github Test Github Test Github Test Github Test&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;a href=&quot;https://google.com/&quot; target=&quot;blank&quot;&gt;&lt;/a&gt;&lt;div&gt;&lt;div&gt;Github Test&lt;/div&gt;&lt;div&gt;&lt;p&gt;Github Test Github Test Github Test Github Test Github Test Github Test Github Test&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h3&gt;item 单列&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-col gap-2&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt; autoPlay&lt;/span&gt;&lt;span&gt; loop&lt;/span&gt;&lt;span&gt; preload&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;auto&quot;&lt;/span&gt;&lt;span&gt; playsInline&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded-md md:max-h-[540px]&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-col gap-2&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt; autoPlay&lt;/span&gt;&lt;span&gt; loop&lt;/span&gt;&lt;span&gt; preload&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;auto&quot;&lt;/span&gt;&lt;span&gt; playsInline&lt;/span&gt;&lt;span&gt; class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded-md md:max-h-[540px]&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;../../../assets/video/test_video.mp4&quot;&lt;/span&gt;&lt;span&gt; type&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  &amp;lt;/&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-col px-2 pt-2&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-col px-2 pt-2&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;Github Test&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;imgDesc text-zinc-400&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;imgDesc text-zinc-400&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;      Github Test Github Test Github Test Github Test Github Test Github Test Github Test&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  &amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;item 双列&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;col-span-2&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-col gap-2&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;col-span-2&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;  &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-col gap-2&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt; href&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;https://google.com&quot;&lt;/span&gt;&lt;span&gt; target&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;blank&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;      &amp;lt;&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt; autoPlay&lt;/span&gt;&lt;span&gt; loop&lt;/span&gt;&lt;span&gt; preload&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;auto&quot;&lt;/span&gt;&lt;span&gt; playsInline&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded-md md:max-h-[540px]&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;      &amp;lt;&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt; autoPlay&lt;/span&gt;&lt;span&gt; loop&lt;/span&gt;&lt;span&gt; preload&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;auto&quot;&lt;/span&gt;&lt;span&gt; playsInline&lt;/span&gt;&lt;span&gt; class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;my-0 rounded-md md:max-h-[540px]&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;        &amp;lt;&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;../../../assets/video/test_video.mp4&quot;&lt;/span&gt;&lt;span&gt; type&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;      &amp;lt;/&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;/&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-col px-2 pt-2&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;    &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;flex flex-col px-2 pt-2&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;      &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;Github Test&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;      &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; className&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;imgDesc text-zinc-400&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;      &amp;lt;&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt; class&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&quot;imgDesc text-zinc-400&quot;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;        Github Test Github Test Github Test Github Test Github Test Github Test&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;      &amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;    &amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;  &amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-</content:encoded><category>markdown</category><category>mdx</category><category>code</category><author>wxmvv@outlook.com (wxm)</author><comments>https://wxmvv.dev/blog/code/markdown/mdx%E5%B8%B8%E7%94%A8%E5%85%83%E7%B4%A0/#comments</comments></item><item><title>开始使用 Markdown 之前你也许需要看一下排版规范</title><link>https://wxmvv.dev/blog/code/markdown/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8markdown%E4%B9%8B%E5%89%8D%E4%BD%A0%E4%B9%9F%E8%AE%B8%E9%9C%80%E8%A6%81%E7%9C%8B%E4%B8%80%E4%B8%8B%E6%8E%92%E7%89%88%E8%A7%84%E8%8C%83/</link><guid isPermaLink="true">https://wxmvv.dev/blog/code/markdown/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8markdown%E4%B9%8B%E5%89%8D%E4%BD%A0%E4%B9%9F%E8%AE%B8%E9%9C%80%E8%A6%81%E7%9C%8B%E4%B8%80%E4%B8%8B%E6%8E%92%E7%89%88%E8%A7%84%E8%8C%83/</guid><description>GitHub 的 Markdown 规范，以及中文排版规范链接</description><pubDate>Sat, 15 Jun 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近我在写文档，但是对比自己写的文档和 github 上其他大佬写的文档，总觉得差了很多意思，也许是时候学习下如何去写文档了，于是找到了 github 的文档规范 &lt;a href=&quot;https://github.github.com/gfm/&quot;&gt;GitHub Flavored Markdown Spec&lt;/a&gt; 。&lt;/p&gt;
+&lt;span&gt;&lt;span&gt;&amp;lt;/&lt;/span&gt;&lt;span&gt;div&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</content:encoded><category>markdown</category><category>mdx</category><category>code</category><author>wxmvv@outlook.com (wxm)</author><comments>https://wxmvv.dev/blog/code/markdown/mdx%E5%B8%B8%E7%94%A8%E5%85%83%E7%B4%A0/#comments</comments></item><item><title>开始使用 Markdown 之前你也许需要看一下排版规范</title><link>https://wxmvv.dev/blog/code/markdown/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8markdown%E4%B9%8B%E5%89%8D%E4%BD%A0%E4%B9%9F%E8%AE%B8%E9%9C%80%E8%A6%81%E7%9C%8B%E4%B8%80%E4%B8%8B%E6%8E%92%E7%89%88%E8%A7%84%E8%8C%83/</link><guid isPermaLink="true">https://wxmvv.dev/blog/code/markdown/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8markdown%E4%B9%8B%E5%89%8D%E4%BD%A0%E4%B9%9F%E8%AE%B8%E9%9C%80%E8%A6%81%E7%9C%8B%E4%B8%80%E4%B8%8B%E6%8E%92%E7%89%88%E8%A7%84%E8%8C%83/</guid><description>GitHub 的 Markdown 规范，以及中文排版规范链接</description><pubDate>Sat, 15 Jun 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近我在写文档，但是对比自己写的文档和 github 上其他大佬写的文档，总觉得差了很多意思，也许是时候学习下如何去写文档了，于是找到了 github 的文档规范 &lt;a href=&quot;https://github.github.com/gfm/&quot;&gt;GitHub Flavored Markdown Spec&lt;/a&gt; 。&lt;/p&gt;
 &lt;p&gt;花了一些时间看过之后，觉得确实很有学习的必要，本来挑选了一些更容易碰到用到的规范，想翻一下写出来供大家参考，但是发现网上已经有人整理好了，其中也有一些关于中文的排版建议，我个人觉得很有帮助，所以也一并分享出来，「物联网学前班」这篇文章 &lt;a href=&quot;https://zhuanlan.zhihu.com/p/144446995&quot;&gt;基于 Markdown 的中文文档排版规范&lt;/a&gt; 。&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&quot;&quot; loading=&quot;lazy&quot; width=&quot;1890&quot; height=&quot;1417&quot; src=&quot;https://wxmvv.dev/_astro/work.BYxyjiar_UkVKJ.webp&quot; /&gt;&lt;/p&gt;
 </content:encoded><category>markdown</category><category>code</category><author>wxmvv@outlook.com (wxm)</author></item><item><title>获取屏幕宽高</title><link>https://wxmvv.dev/blog/code/ios/swiftui%E8%8E%B7%E5%8F%96%E5%B1%8F%E5%B9%95%E5%AE%BD%E9%AB%98/</link><guid isPermaLink="true">https://wxmvv.dev/blog/code/ios/swiftui%E8%8E%B7%E5%8F%96%E5%B1%8F%E5%B9%95%E5%AE%BD%E9%AB%98/</guid><pubDate>Sun, 19 Nov 2023 21:04:00 GMT</pubDate><content:encoded>&lt;p&gt;在 ios 中如果需要做一些页面，如抽屉侧边栏，就需要获得屏幕宽度，那么如何获取呢？&lt;/p&gt;
